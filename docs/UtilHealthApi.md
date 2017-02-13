@@ -1,0 +1,54 @@
+# WWW::SwaggerClient::UtilHealthApi
+
+## Load the API package
+```perl
+use WWW::SwaggerClient::Object::UtilHealthApi;
+```
+
+All URIs are relative to *https://integration.knetikcloud.com/*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**get_health**](UtilHealthApi.md#get_health) | **GET** /health | Get health info
+
+
+# **get_health**
+> object get_health()
+
+Get health info
+
+### Example 
+```perl
+use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::UtilHealthApi;
+
+my $api_instance = WWW::SwaggerClient::UtilHealthApi->new();
+
+eval { 
+    my $result = $api_instance->get_health();
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling UtilHealthApi->get_health: $@\n";
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**object**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+

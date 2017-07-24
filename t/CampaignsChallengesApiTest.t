@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -75,9 +75,9 @@ isa_ok($api, 'KnetikCloud::CampaignsChallengesApi');
 # delete_challenge_activity test
 #
 {
-    my $activity_id = undef; # replace NULL with a proper value
+    my $id = undef; # replace NULL with a proper value
     my $challenge_id = undef; # replace NULL with a proper value
-    my $result = $api->delete_challenge_activity(activity_id => $activity_id, challenge_id => $challenge_id);
+    my $result = $api->delete_challenge_activity(id => $id, challenge_id => $challenge_id);
 }
 
 #
@@ -129,8 +129,9 @@ isa_ok($api, 'KnetikCloud::CampaignsChallengesApi');
 # get_challenge_activity test
 #
 {
-    my $activity_id = undef; # replace NULL with a proper value
-    my $result = $api->get_challenge_activity(activity_id => $activity_id);
+    my $id = undef; # replace NULL with a proper value
+    my $challenge_id = undef; # replace NULL with a proper value
+    my $result = $api->get_challenge_activity(id => $id, challenge_id => $challenge_id);
 }
 
 #
@@ -218,10 +219,10 @@ isa_ok($api, 'KnetikCloud::CampaignsChallengesApi');
 # update_challenge_activity test
 #
 {
-    my $activity_id = undef; # replace NULL with a proper value
+    my $id = undef; # replace NULL with a proper value
     my $challenge_id = undef; # replace NULL with a proper value
     my $challenge_activity_resource = undef; # replace NULL with a proper value
-    my $result = $api->update_challenge_activity(activity_id => $activity_id, challenge_id => $challenge_id, challenge_activity_resource => $challenge_activity_resource);
+    my $result = $api->update_challenge_activity(id => $id, challenge_id => $challenge_id, challenge_activity_resource => $challenge_activity_resource);
 }
 
 #

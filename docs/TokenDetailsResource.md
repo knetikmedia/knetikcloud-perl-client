@@ -8,6 +8,7 @@ use KnetikCloud::Object::TokenDetailsResource;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**client_id** | **string** |  | [optional] 
 **roles** | **ARRAY[string]** |  | [optional] 
 **user_id** | **int** |  | [optional] 
 

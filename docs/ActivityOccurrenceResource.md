@@ -1,8 +1,8 @@
-# KnetikCloud::Object::AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings
+# KnetikCloud::Object::ActivityOccurrenceResource
 
 ## Load the model package
 ```perl
-use KnetikCloud::Object::AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings;
+use KnetikCloud::Object::ActivityOccurrenceResource;
 ```
 
 ## Properties

@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -44,7 +44,7 @@ use base ("Class::Accessor", "Class::Data::Inheritable");
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -142,6 +142,13 @@ __PACKAGE__->class_documentation({description => '',
 }                                 );
 
 __PACKAGE__->method_documentation({
+    'client_id' => {
+    	datatype => 'string',
+    	base_name => 'client_id',
+    	description => '',
+    	format => '',
+    	read_only => '',
+    		},
     'roles' => {
     	datatype => 'ARRAY[string]',
     	base_name => 'roles',
@@ -159,11 +166,13 @@ __PACKAGE__->method_documentation({
 });
 
 __PACKAGE__->swagger_types( {
+    'client_id' => 'string',
     'roles' => 'ARRAY[string]',
     'user_id' => 'int'
 } );
 
 __PACKAGE__->attribute_map( {
+    'client_id' => 'client_id',
     'roles' => 'roles',
     'user_id' => 'user_id'
 } );

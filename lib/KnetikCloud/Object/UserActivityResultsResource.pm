@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -44,7 +44,7 @@ use base ("Class::Accessor", "Class::Data::Inheritable");
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -142,31 +142,10 @@ __PACKAGE__->class_documentation({description => '',
 }                                 );
 
 __PACKAGE__->method_documentation({
-    'currency_rewards' => {
-    	datatype => 'ARRAY[RewardCurrencyResource]',
-    	base_name => 'currency_rewards',
-    	description => 'Any currency rewarded to this user',
-    	format => '',
-    	read_only => '',
-    		},
-    'item_rewards' => {
-    	datatype => 'ARRAY[RewardItemResource]',
-    	base_name => 'item_rewards',
-    	description => 'Any items rewarded to this user',
-    	format => '',
-    	read_only => '',
-    		},
-    'rank' => {
-    	datatype => 'int',
-    	base_name => 'rank',
-    	description => 'The position of the user in the leaderboard. Null means non-compete or disqualification',
-    	format => '',
-    	read_only => '',
-    		},
     'score' => {
     	datatype => 'int',
     	base_name => 'score',
-    	description => 'The raw score in this leaderboard. Null means non-compete or disqualification',
+    	description => 'The raw score. Null means non-compete or disqualification',
     	format => '',
     	read_only => '',
     		},
@@ -177,40 +156,25 @@ __PACKAGE__->method_documentation({
     	format => '',
     	read_only => '',
     		},
-    'ties' => {
+    'user_id' => {
     	datatype => 'int',
-    	base_name => 'ties',
-    	description => 'The number of users tied at this rank, including this user. 1 means no tie',
-    	format => '',
-    	read_only => '',
-    		},
-    'user' => {
-    	datatype => 'SimpleUserResource',
-    	base_name => 'user',
-    	description => 'The player for this entry',
+    	base_name => 'user_id',
+    	description => 'The id of the player',
     	format => '',
     	read_only => '',
     		},
 });
 
 __PACKAGE__->swagger_types( {
-    'currency_rewards' => 'ARRAY[RewardCurrencyResource]',
-    'item_rewards' => 'ARRAY[RewardItemResource]',
-    'rank' => 'int',
     'score' => 'int',
     'tags' => 'ARRAY[string]',
-    'ties' => 'int',
-    'user' => 'SimpleUserResource'
+    'user_id' => 'int'
 } );
 
 __PACKAGE__->attribute_map( {
-    'currency_rewards' => 'currency_rewards',
-    'item_rewards' => 'item_rewards',
-    'rank' => 'rank',
     'score' => 'score',
     'tags' => 'tags',
-    'ties' => 'ties',
-    'user' => 'user'
+    'user_id' => 'user_id'
 } );
 
 __PACKAGE__->mk_accessors(keys %{__PACKAGE__->attribute_map});

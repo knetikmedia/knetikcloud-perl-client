@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -44,7 +44,7 @@ use base ("Class::Accessor", "Class::Data::Inheritable");
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -149,6 +149,13 @@ __PACKAGE__->method_documentation({
     	format => '',
     	read_only => '',
     		},
+    'bundle_sku' => {
+    	datatype => 'string',
+    	base_name => 'bundle_sku',
+    	description => 'The SKU of a bundle item from the invoice that the target item is within.',
+    	format => '',
+    	read_only => '',
+    		},
     'notes' => {
     	datatype => 'string',
     	base_name => 'notes',
@@ -167,12 +174,14 @@ __PACKAGE__->method_documentation({
 
 __PACKAGE__->swagger_types( {
     'amount' => 'double',
+    'bundle_sku' => 'string',
     'notes' => 'string',
     'sku' => 'string'
 } );
 
 __PACKAGE__->attribute_map( {
     'amount' => 'amount',
+    'bundle_sku' => 'bundle_sku',
     'notes' => 'notes',
     'sku' => 'sku'
 } );

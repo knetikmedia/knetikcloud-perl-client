@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -44,7 +44,7 @@ use base ("Class::Accessor", "Class::Data::Inheritable");
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -159,7 +159,7 @@ __PACKAGE__->method_documentation({
     'grant_types' => {
     	datatype => 'ARRAY[string]',
     	base_name => 'grant_types',
-    	description => 'The oauth grant type as in: password (username/password auth), client_credentials (server-to-server, private clients), refresh_token (to allow clients to refresh their initial token), facebook, google, etc) See documentation for a complete list. use dedicated endpoint PUT /grant-types to edit this list',
+    	description => 'The oauth grant type as in: password (username/password auth), client_credentials (server-to-server, private clients), refresh_token (to allow clients to refresh their initial token), facebook, google, etc) See documentation for a complete list. Use dedicated endpoint PUT /grant-types to edit this list',
     	format => '',
     	read_only => '',
     		},

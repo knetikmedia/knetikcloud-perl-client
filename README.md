@@ -2,7 +2,7 @@
 
 KnetikCloud::Role - a Moose role for the Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 # VERSION
 
@@ -307,15 +307,16 @@ use KnetikCloud::UtilVersionApi;
 
 To load the models:
 ```perl
-use KnetikCloud::Object::AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings;
-use KnetikCloud::Object::ARequestToResetAUsersPasswordByUsingAKnownUserProperty;
 use KnetikCloud::Object::AchievementDefinitionResource;
 use KnetikCloud::Object::ActionResource;
 use KnetikCloud::Object::ActionVariableResource;
 use KnetikCloud::Object::ActivityEntitlementResource;
 use KnetikCloud::Object::ActivityOccurrenceCreationFailure;
 use KnetikCloud::Object::ActivityOccurrenceJoinResult;
+use KnetikCloud::Object::ActivityOccurrenceResource;
 use KnetikCloud::Object::ActivityOccurrenceResults;
+use KnetikCloud::Object::ActivityOccurrenceResultsResource;
+use KnetikCloud::Object::ActivityResource;
 use KnetikCloud::Object::ActivityUserResource;
 use KnetikCloud::Object::AddressResource;
 use KnetikCloud::Object::AggregateCountResource;
@@ -325,10 +326,7 @@ use KnetikCloud::Object::AnswerResource;
 use KnetikCloud::Object::ApplyPaymentRequest;
 use KnetikCloud::Object::ArticleResource;
 use KnetikCloud::Object::ArtistResource;
-use KnetikCloud::Object::AudioGroupProperty;
-use KnetikCloud::Object::AudioGroupPropertyDefinitionResource;
-use KnetikCloud::Object::AudioProperty;
-use KnetikCloud::Object::AudioPropertyDefinitionResource;
+use KnetikCloud::Object::AvailableSettingResource;
 use KnetikCloud::Object::BareActivityResource;
 use KnetikCloud::Object::BareChallengeActivityResource;
 use KnetikCloud::Object::Batch;
@@ -338,8 +336,6 @@ use KnetikCloud::Object::BatchReturn;
 use KnetikCloud::Object::Behavior;
 use KnetikCloud::Object::BehaviorDefinitionResource;
 use KnetikCloud::Object::BillingReport;
-use KnetikCloud::Object::BooleanProperty;
-use KnetikCloud::Object::BooleanPropertyDefinitionResource;
 use KnetikCloud::Object::BooleanResource;
 use KnetikCloud::Object::BreCategoryResource;
 use KnetikCloud::Object::BreEvent;
@@ -351,9 +347,7 @@ use KnetikCloud::Object::BreRuleLog;
 use KnetikCloud::Object::BreTriggerParameterDefinition;
 use KnetikCloud::Object::BreTriggerResource;
 use KnetikCloud::Object::BroadcastableEvent;
-use KnetikCloud::Object::BundleItem;
 use KnetikCloud::Object::BundledSku;
-use KnetikCloud::Object::CacheClearEvent;
 use KnetikCloud::Object::CampaignResource;
 use KnetikCloud::Object::Cart;
 use KnetikCloud::Object::CartItemRequest;
@@ -376,49 +370,34 @@ use KnetikCloud::Object::CommentSearch;
 use KnetikCloud::Object::Config;
 use KnetikCloud::Object::ConfigLookupResource;
 use KnetikCloud::Object::ConstantResource;
-use KnetikCloud::Object::Consumable;
 use KnetikCloud::Object::ContributionResource;
 use KnetikCloud::Object::Country;
 use KnetikCloud::Object::CountryResource;
 use KnetikCloud::Object::CountryTaxResource;
 use KnetikCloud::Object::CouponDefinition;
-use KnetikCloud::Object::CouponItem;
 use KnetikCloud::Object::CreateBillingAgreementRequest;
 use KnetikCloud::Object::CreatePayPalPaymentRequest;
 use KnetikCloud::Object::CurrencyResource;
 use KnetikCloud::Object::CustomerConfig;
 use KnetikCloud::Object::DatabaseConfig;
 use KnetikCloud::Object::DateOperationResource;
-use KnetikCloud::Object::DateProperty;
-use KnetikCloud::Object::DatePropertyDefinitionResource;
 use KnetikCloud::Object::DeltaResource;
 use KnetikCloud::Object::DeviceResource;
 use KnetikCloud::Object::Discount;
 use KnetikCloud::Object::DispositionCount;
 use KnetikCloud::Object::DispositionResource;
 use KnetikCloud::Object::DoubleOperationResource;
-use KnetikCloud::Object::DoubleProperty;
-use KnetikCloud::Object::DoublePropertyDefinitionResource;
 use KnetikCloud::Object::EntitlementGrantRequest;
-use KnetikCloud::Object::EntitlementItem;
 use KnetikCloud::Object::ErrorResource;
 use KnetikCloud::Object::EventContextResource;
-use KnetikCloud::Object::Expirable;
 use KnetikCloud::Object::ExpressionResource;
 use KnetikCloud::Object::Expressionobject;
 use KnetikCloud::Object::FacebookToken;
-use KnetikCloud::Object::FileGroupProperty;
-use KnetikCloud::Object::FileGroupPropertyDefinitionResource;
-use KnetikCloud::Object::FileProperty;
-use KnetikCloud::Object::FilePropertyDefinitionResource;
 use KnetikCloud::Object::FinalizeBillingAgreementRequest;
 use KnetikCloud::Object::FinalizePayPalPaymentRequest;
 use KnetikCloud::Object::FlagReportResource;
 use KnetikCloud::Object::FlagResource;
-use KnetikCloud::Object::FormattedTextProperty;
-use KnetikCloud::Object::FormattedTextPropertyDefinitionResource;
 use KnetikCloud::Object::ForwardLog;
-use KnetikCloud::Object::Fulfillable;
 use KnetikCloud::Object::FulfillmentType;
 use KnetikCloud::Object::GlobalCheckAndIncrementResource;
 use KnetikCloud::Object::GlobalResource;
@@ -427,16 +406,10 @@ use KnetikCloud::Object::GoogleToken;
 use KnetikCloud::Object::GrantTypeResource;
 use KnetikCloud::Object::GroupMemberResource;
 use KnetikCloud::Object::GroupResource;
-use KnetikCloud::Object::GuestPlayable;
-use KnetikCloud::Object::ImageGroupProperty;
-use KnetikCloud::Object::ImageGroupPropertyDefinitionResource;
-use KnetikCloud::Object::ImageProperty;
-use KnetikCloud::Object::ImagePropertyDefinitionResource;
+use KnetikCloud::Object::IOConfig;
 use KnetikCloud::Object::ImportJobOutputResource;
 use KnetikCloud::Object::ImportJobResource;
 use KnetikCloud::Object::IntegerOperationResource;
-use KnetikCloud::Object::IntegerProperty;
-use KnetikCloud::Object::IntegerPropertyDefinitionResource;
 use KnetikCloud::Object::InventorySubscriptionResource;
 use KnetikCloud::Object::InvoiceCreateRequest;
 use KnetikCloud::Object::InvoiceItemResource;
@@ -450,12 +423,9 @@ use KnetikCloud::Object::KeyValuePairstringstring;
 use KnetikCloud::Object::LeaderboardEntryResource;
 use KnetikCloud::Object::LeaderboardResource;
 use KnetikCloud::Object::LevelingResource;
-use KnetikCloud::Object::LimitedGettable;
 use KnetikCloud::Object::LimitedGettableGroup;
 use KnetikCloud::Object::Localizer;
 use KnetikCloud::Object::LocationLogResource;
-use KnetikCloud::Object::LongProperty;
-use KnetikCloud::Object::LongPropertyDefinitionResource;
 use KnetikCloud::Object::LookupResource;
 use KnetikCloud::Object::LookupTypeResource;
 use KnetikCloud::Object::Maintenance;
@@ -464,7 +434,6 @@ use KnetikCloud::Object::Mapstringobject;
 use KnetikCloud::Object::MetricResource;
 use KnetikCloud::Object::MongoDatabaseConfig;
 use KnetikCloud::Object::NestedCategory;
-use KnetikCloud::Object::NewCustomerEvent;
 use KnetikCloud::Object::NewPasswordRequest;
 use KnetikCloud::Object::OAuth2Resource;
 use KnetikCloud::Object::OauthAccessTokenResource;
@@ -546,6 +515,7 @@ use KnetikCloud::Object::PageResourceWalletTotalResponse;
 use KnetikCloud::Object::PageResourceWalletTransactionResource;
 use KnetikCloud::Object::PageResourcestring;
 use KnetikCloud::Object::ParameterResource;
+use KnetikCloud::Object::PasswordResetRequest;
 use KnetikCloud::Object::PayBySavedMethodRequest;
 use KnetikCloud::Object::PaymentAuthorizationResource;
 use KnetikCloud::Object::PaymentMethodResource;
@@ -554,10 +524,8 @@ use KnetikCloud::Object::PermissionResource;
 use KnetikCloud::Object::PollAnswerResource;
 use KnetikCloud::Object::PollResource;
 use KnetikCloud::Object::PollResponseResource;
-use KnetikCloud::Object::PreReqEntitlement;
 use KnetikCloud::Object::PredicateOperation;
 use KnetikCloud::Object::PredicateResource;
-use KnetikCloud::Object::PriceOverridable;
 use KnetikCloud::Object::Property;
 use KnetikCloud::Object::PropertyDefinitionResource;
 use KnetikCloud::Object::PropertyFieldListResource;
@@ -569,7 +537,6 @@ use KnetikCloud::Object::RawSMSResource;
 use KnetikCloud::Object::ReactivateSubscriptionRequest;
 use KnetikCloud::Object::RefundRequest;
 use KnetikCloud::Object::RefundResource;
-use KnetikCloud::Object::RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc;
 use KnetikCloud::Object::Result;
 use KnetikCloud::Object::RevenueCountryReportResource;
 use KnetikCloud::Object::RevenueProductReportResource;
@@ -585,7 +552,6 @@ use KnetikCloud::Object::Schedule;
 use KnetikCloud::Object::SearchReferenceMapping;
 use KnetikCloud::Object::SelectedSettingResource;
 use KnetikCloud::Object::SettingOption;
-use KnetikCloud::Object::ShippingItem;
 use KnetikCloud::Object::SimpleReferenceResourceint;
 use KnetikCloud::Object::SimpleReferenceResourcelong;
 use KnetikCloud::Object::SimpleReferenceResourceobject;
@@ -594,30 +560,23 @@ use KnetikCloud::Object::SimpleUserResource;
 use KnetikCloud::Object::SimpleWallet;
 use KnetikCloud::Object::Sku;
 use KnetikCloud::Object::SkuRequest;
-use KnetikCloud::Object::Spendable;
 use KnetikCloud::Object::SqlDatabaseConfig;
 use KnetikCloud::Object::StateResource;
 use KnetikCloud::Object::StateTaxResource;
-use KnetikCloud::Object::StoreItem;
 use KnetikCloud::Object::StoreItemTemplateResource;
 use KnetikCloud::Object::StringOperationResource;
 use KnetikCloud::Object::StripeCreatePaymentMethod;
 use KnetikCloud::Object::StripePaymentRequest;
-use KnetikCloud::Object::Subscription;
 use KnetikCloud::Object::SubscriptionCreditResource;
 use KnetikCloud::Object::SubscriptionPlan;
 use KnetikCloud::Object::SubscriptionPlanResource;
+use KnetikCloud::Object::SubscriptionPriceOverrideRequest;
 use KnetikCloud::Object::SubscriptionResource;
 use KnetikCloud::Object::SubscriptionTemplateResource;
 use KnetikCloud::Object::TemplateEmailResource;
 use KnetikCloud::Object::TemplateResource;
 use KnetikCloud::Object::TemplateSMSResource;
-use KnetikCloud::Object::TextProperty;
-use KnetikCloud::Object::TextPropertyDefinitionResource;
-use KnetikCloud::Object::TheDefinitionOfAnActivityParametersExDifficultyLevel;
 use KnetikCloud::Object::TierResource;
-use KnetikCloud::Object::TimePeriodGettable;
-use KnetikCloud::Object::TimePeriodUsable;
 use KnetikCloud::Object::TokenDetailsResource;
 use KnetikCloud::Object::TransactionResource;
 use KnetikCloud::Object::TypeHintLookupResource;
@@ -625,6 +584,7 @@ use KnetikCloud::Object::UsageInfo;
 use KnetikCloud::Object::UserAchievementGroupResource;
 use KnetikCloud::Object::UserAchievementResource;
 use KnetikCloud::Object::UserActionLog;
+use KnetikCloud::Object::UserActivityResults;
 use KnetikCloud::Object::UserActivityResultsResource;
 use KnetikCloud::Object::UserBaseResource;
 use KnetikCloud::Object::UserInventoryAddRequest;
@@ -639,16 +599,61 @@ use KnetikCloud::Object::VariableTypeResource;
 use KnetikCloud::Object::VendorEmailLookupResource;
 use KnetikCloud::Object::VendorResource;
 use KnetikCloud::Object::Version;
-use KnetikCloud::Object::VideoGroupProperty;
-use KnetikCloud::Object::VideoGroupPropertyDefinitionResource;
-use KnetikCloud::Object::VideoProperty;
-use KnetikCloud::Object::VideoPropertyDefinitionResource;
 use KnetikCloud::Object::VideoRelationshipResource;
 use KnetikCloud::Object::VideoResource;
 use KnetikCloud::Object::WalletAlterRequest;
 use KnetikCloud::Object::WalletTotalResponse;
 use KnetikCloud::Object::WalletTransactionResource;
 use KnetikCloud::Object::XsollaPaymentRequest;
+use KnetikCloud::Object::AudioPropertyDefinitionResource;
+use KnetikCloud::Object::BooleanProperty;
+use KnetikCloud::Object::BooleanPropertyDefinitionResource;
+use KnetikCloud::Object::CacheClearEvent;
+use KnetikCloud::Object::Consumable;
+use KnetikCloud::Object::DateProperty;
+use KnetikCloud::Object::DatePropertyDefinitionResource;
+use KnetikCloud::Object::DoubleProperty;
+use KnetikCloud::Object::DoublePropertyDefinitionResource;
+use KnetikCloud::Object::EntitlementItem;
+use KnetikCloud::Object::Expirable;
+use KnetikCloud::Object::FileGroupProperty;
+use KnetikCloud::Object::FileGroupPropertyDefinitionResource;
+use KnetikCloud::Object::FileProperty;
+use KnetikCloud::Object::FilePropertyDefinitionResource;
+use KnetikCloud::Object::FormattedTextProperty;
+use KnetikCloud::Object::FormattedTextPropertyDefinitionResource;
+use KnetikCloud::Object::Fulfillable;
+use KnetikCloud::Object::GuestPlayable;
+use KnetikCloud::Object::ImagePropertyDefinitionResource;
+use KnetikCloud::Object::IntegerProperty;
+use KnetikCloud::Object::IntegerPropertyDefinitionResource;
+use KnetikCloud::Object::LimitedGettable;
+use KnetikCloud::Object::LongProperty;
+use KnetikCloud::Object::LongPropertyDefinitionResource;
+use KnetikCloud::Object::NewCustomerEvent;
+use KnetikCloud::Object::PreReqEntitlement;
+use KnetikCloud::Object::PriceOverridable;
+use KnetikCloud::Object::RemoveCustomerEvent;
+use KnetikCloud::Object::Spendable;
+use KnetikCloud::Object::StoreItem;
+use KnetikCloud::Object::TextProperty;
+use KnetikCloud::Object::TextPropertyDefinitionResource;
+use KnetikCloud::Object::TimePeriodGettable;
+use KnetikCloud::Object::TimePeriodUsable;
+use KnetikCloud::Object::VideoPropertyDefinitionResource;
+use KnetikCloud::Object::AudioGroupProperty;
+use KnetikCloud::Object::AudioGroupPropertyDefinitionResource;
+use KnetikCloud::Object::AudioProperty;
+use KnetikCloud::Object::BundleItem;
+use KnetikCloud::Object::CouponItem;
+use KnetikCloud::Object::ImageGroupProperty;
+use KnetikCloud::Object::ImageGroupPropertyDefinitionResource;
+use KnetikCloud::Object::ImageProperty;
+use KnetikCloud::Object::ShippingItem;
+use KnetikCloud::Object::Subscription;
+use KnetikCloud::Object::VideoGroupProperty;
+use KnetikCloud::Object::VideoGroupPropertyDefinitionResource;
+use KnetikCloud::Object::VideoProperty;
 
 ````
 
@@ -763,15 +768,16 @@ use KnetikCloud::UtilSecurityApi;
 use KnetikCloud::UtilVersionApi;
 
 # load the models
-use KnetikCloud::Object::AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings;
-use KnetikCloud::Object::ARequestToResetAUsersPasswordByUsingAKnownUserProperty;
 use KnetikCloud::Object::AchievementDefinitionResource;
 use KnetikCloud::Object::ActionResource;
 use KnetikCloud::Object::ActionVariableResource;
 use KnetikCloud::Object::ActivityEntitlementResource;
 use KnetikCloud::Object::ActivityOccurrenceCreationFailure;
 use KnetikCloud::Object::ActivityOccurrenceJoinResult;
+use KnetikCloud::Object::ActivityOccurrenceResource;
 use KnetikCloud::Object::ActivityOccurrenceResults;
+use KnetikCloud::Object::ActivityOccurrenceResultsResource;
+use KnetikCloud::Object::ActivityResource;
 use KnetikCloud::Object::ActivityUserResource;
 use KnetikCloud::Object::AddressResource;
 use KnetikCloud::Object::AggregateCountResource;
@@ -781,10 +787,7 @@ use KnetikCloud::Object::AnswerResource;
 use KnetikCloud::Object::ApplyPaymentRequest;
 use KnetikCloud::Object::ArticleResource;
 use KnetikCloud::Object::ArtistResource;
-use KnetikCloud::Object::AudioGroupProperty;
-use KnetikCloud::Object::AudioGroupPropertyDefinitionResource;
-use KnetikCloud::Object::AudioProperty;
-use KnetikCloud::Object::AudioPropertyDefinitionResource;
+use KnetikCloud::Object::AvailableSettingResource;
 use KnetikCloud::Object::BareActivityResource;
 use KnetikCloud::Object::BareChallengeActivityResource;
 use KnetikCloud::Object::Batch;
@@ -794,8 +797,6 @@ use KnetikCloud::Object::BatchReturn;
 use KnetikCloud::Object::Behavior;
 use KnetikCloud::Object::BehaviorDefinitionResource;
 use KnetikCloud::Object::BillingReport;
-use KnetikCloud::Object::BooleanProperty;
-use KnetikCloud::Object::BooleanPropertyDefinitionResource;
 use KnetikCloud::Object::BooleanResource;
 use KnetikCloud::Object::BreCategoryResource;
 use KnetikCloud::Object::BreEvent;
@@ -807,9 +808,7 @@ use KnetikCloud::Object::BreRuleLog;
 use KnetikCloud::Object::BreTriggerParameterDefinition;
 use KnetikCloud::Object::BreTriggerResource;
 use KnetikCloud::Object::BroadcastableEvent;
-use KnetikCloud::Object::BundleItem;
 use KnetikCloud::Object::BundledSku;
-use KnetikCloud::Object::CacheClearEvent;
 use KnetikCloud::Object::CampaignResource;
 use KnetikCloud::Object::Cart;
 use KnetikCloud::Object::CartItemRequest;
@@ -832,49 +831,34 @@ use KnetikCloud::Object::CommentSearch;
 use KnetikCloud::Object::Config;
 use KnetikCloud::Object::ConfigLookupResource;
 use KnetikCloud::Object::ConstantResource;
-use KnetikCloud::Object::Consumable;
 use KnetikCloud::Object::ContributionResource;
 use KnetikCloud::Object::Country;
 use KnetikCloud::Object::CountryResource;
 use KnetikCloud::Object::CountryTaxResource;
 use KnetikCloud::Object::CouponDefinition;
-use KnetikCloud::Object::CouponItem;
 use KnetikCloud::Object::CreateBillingAgreementRequest;
 use KnetikCloud::Object::CreatePayPalPaymentRequest;
 use KnetikCloud::Object::CurrencyResource;
 use KnetikCloud::Object::CustomerConfig;
 use KnetikCloud::Object::DatabaseConfig;
 use KnetikCloud::Object::DateOperationResource;
-use KnetikCloud::Object::DateProperty;
-use KnetikCloud::Object::DatePropertyDefinitionResource;
 use KnetikCloud::Object::DeltaResource;
 use KnetikCloud::Object::DeviceResource;
 use KnetikCloud::Object::Discount;
 use KnetikCloud::Object::DispositionCount;
 use KnetikCloud::Object::DispositionResource;
 use KnetikCloud::Object::DoubleOperationResource;
-use KnetikCloud::Object::DoubleProperty;
-use KnetikCloud::Object::DoublePropertyDefinitionResource;
 use KnetikCloud::Object::EntitlementGrantRequest;
-use KnetikCloud::Object::EntitlementItem;
 use KnetikCloud::Object::ErrorResource;
 use KnetikCloud::Object::EventContextResource;
-use KnetikCloud::Object::Expirable;
 use KnetikCloud::Object::ExpressionResource;
 use KnetikCloud::Object::Expressionobject;
 use KnetikCloud::Object::FacebookToken;
-use KnetikCloud::Object::FileGroupProperty;
-use KnetikCloud::Object::FileGroupPropertyDefinitionResource;
-use KnetikCloud::Object::FileProperty;
-use KnetikCloud::Object::FilePropertyDefinitionResource;
 use KnetikCloud::Object::FinalizeBillingAgreementRequest;
 use KnetikCloud::Object::FinalizePayPalPaymentRequest;
 use KnetikCloud::Object::FlagReportResource;
 use KnetikCloud::Object::FlagResource;
-use KnetikCloud::Object::FormattedTextProperty;
-use KnetikCloud::Object::FormattedTextPropertyDefinitionResource;
 use KnetikCloud::Object::ForwardLog;
-use KnetikCloud::Object::Fulfillable;
 use KnetikCloud::Object::FulfillmentType;
 use KnetikCloud::Object::GlobalCheckAndIncrementResource;
 use KnetikCloud::Object::GlobalResource;
@@ -883,16 +867,10 @@ use KnetikCloud::Object::GoogleToken;
 use KnetikCloud::Object::GrantTypeResource;
 use KnetikCloud::Object::GroupMemberResource;
 use KnetikCloud::Object::GroupResource;
-use KnetikCloud::Object::GuestPlayable;
-use KnetikCloud::Object::ImageGroupProperty;
-use KnetikCloud::Object::ImageGroupPropertyDefinitionResource;
-use KnetikCloud::Object::ImageProperty;
-use KnetikCloud::Object::ImagePropertyDefinitionResource;
+use KnetikCloud::Object::IOConfig;
 use KnetikCloud::Object::ImportJobOutputResource;
 use KnetikCloud::Object::ImportJobResource;
 use KnetikCloud::Object::IntegerOperationResource;
-use KnetikCloud::Object::IntegerProperty;
-use KnetikCloud::Object::IntegerPropertyDefinitionResource;
 use KnetikCloud::Object::InventorySubscriptionResource;
 use KnetikCloud::Object::InvoiceCreateRequest;
 use KnetikCloud::Object::InvoiceItemResource;
@@ -906,12 +884,9 @@ use KnetikCloud::Object::KeyValuePairstringstring;
 use KnetikCloud::Object::LeaderboardEntryResource;
 use KnetikCloud::Object::LeaderboardResource;
 use KnetikCloud::Object::LevelingResource;
-use KnetikCloud::Object::LimitedGettable;
 use KnetikCloud::Object::LimitedGettableGroup;
 use KnetikCloud::Object::Localizer;
 use KnetikCloud::Object::LocationLogResource;
-use KnetikCloud::Object::LongProperty;
-use KnetikCloud::Object::LongPropertyDefinitionResource;
 use KnetikCloud::Object::LookupResource;
 use KnetikCloud::Object::LookupTypeResource;
 use KnetikCloud::Object::Maintenance;
@@ -920,7 +895,6 @@ use KnetikCloud::Object::Mapstringobject;
 use KnetikCloud::Object::MetricResource;
 use KnetikCloud::Object::MongoDatabaseConfig;
 use KnetikCloud::Object::NestedCategory;
-use KnetikCloud::Object::NewCustomerEvent;
 use KnetikCloud::Object::NewPasswordRequest;
 use KnetikCloud::Object::OAuth2Resource;
 use KnetikCloud::Object::OauthAccessTokenResource;
@@ -1002,6 +976,7 @@ use KnetikCloud::Object::PageResourceWalletTotalResponse;
 use KnetikCloud::Object::PageResourceWalletTransactionResource;
 use KnetikCloud::Object::PageResourcestring;
 use KnetikCloud::Object::ParameterResource;
+use KnetikCloud::Object::PasswordResetRequest;
 use KnetikCloud::Object::PayBySavedMethodRequest;
 use KnetikCloud::Object::PaymentAuthorizationResource;
 use KnetikCloud::Object::PaymentMethodResource;
@@ -1010,10 +985,8 @@ use KnetikCloud::Object::PermissionResource;
 use KnetikCloud::Object::PollAnswerResource;
 use KnetikCloud::Object::PollResource;
 use KnetikCloud::Object::PollResponseResource;
-use KnetikCloud::Object::PreReqEntitlement;
 use KnetikCloud::Object::PredicateOperation;
 use KnetikCloud::Object::PredicateResource;
-use KnetikCloud::Object::PriceOverridable;
 use KnetikCloud::Object::Property;
 use KnetikCloud::Object::PropertyDefinitionResource;
 use KnetikCloud::Object::PropertyFieldListResource;
@@ -1025,7 +998,6 @@ use KnetikCloud::Object::RawSMSResource;
 use KnetikCloud::Object::ReactivateSubscriptionRequest;
 use KnetikCloud::Object::RefundRequest;
 use KnetikCloud::Object::RefundResource;
-use KnetikCloud::Object::RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc;
 use KnetikCloud::Object::Result;
 use KnetikCloud::Object::RevenueCountryReportResource;
 use KnetikCloud::Object::RevenueProductReportResource;
@@ -1041,7 +1013,6 @@ use KnetikCloud::Object::Schedule;
 use KnetikCloud::Object::SearchReferenceMapping;
 use KnetikCloud::Object::SelectedSettingResource;
 use KnetikCloud::Object::SettingOption;
-use KnetikCloud::Object::ShippingItem;
 use KnetikCloud::Object::SimpleReferenceResourceint;
 use KnetikCloud::Object::SimpleReferenceResourcelong;
 use KnetikCloud::Object::SimpleReferenceResourceobject;
@@ -1050,30 +1021,23 @@ use KnetikCloud::Object::SimpleUserResource;
 use KnetikCloud::Object::SimpleWallet;
 use KnetikCloud::Object::Sku;
 use KnetikCloud::Object::SkuRequest;
-use KnetikCloud::Object::Spendable;
 use KnetikCloud::Object::SqlDatabaseConfig;
 use KnetikCloud::Object::StateResource;
 use KnetikCloud::Object::StateTaxResource;
-use KnetikCloud::Object::StoreItem;
 use KnetikCloud::Object::StoreItemTemplateResource;
 use KnetikCloud::Object::StringOperationResource;
 use KnetikCloud::Object::StripeCreatePaymentMethod;
 use KnetikCloud::Object::StripePaymentRequest;
-use KnetikCloud::Object::Subscription;
 use KnetikCloud::Object::SubscriptionCreditResource;
 use KnetikCloud::Object::SubscriptionPlan;
 use KnetikCloud::Object::SubscriptionPlanResource;
+use KnetikCloud::Object::SubscriptionPriceOverrideRequest;
 use KnetikCloud::Object::SubscriptionResource;
 use KnetikCloud::Object::SubscriptionTemplateResource;
 use KnetikCloud::Object::TemplateEmailResource;
 use KnetikCloud::Object::TemplateResource;
 use KnetikCloud::Object::TemplateSMSResource;
-use KnetikCloud::Object::TextProperty;
-use KnetikCloud::Object::TextPropertyDefinitionResource;
-use KnetikCloud::Object::TheDefinitionOfAnActivityParametersExDifficultyLevel;
 use KnetikCloud::Object::TierResource;
-use KnetikCloud::Object::TimePeriodGettable;
-use KnetikCloud::Object::TimePeriodUsable;
 use KnetikCloud::Object::TokenDetailsResource;
 use KnetikCloud::Object::TransactionResource;
 use KnetikCloud::Object::TypeHintLookupResource;
@@ -1081,6 +1045,7 @@ use KnetikCloud::Object::UsageInfo;
 use KnetikCloud::Object::UserAchievementGroupResource;
 use KnetikCloud::Object::UserAchievementResource;
 use KnetikCloud::Object::UserActionLog;
+use KnetikCloud::Object::UserActivityResults;
 use KnetikCloud::Object::UserActivityResultsResource;
 use KnetikCloud::Object::UserBaseResource;
 use KnetikCloud::Object::UserInventoryAddRequest;
@@ -1095,16 +1060,61 @@ use KnetikCloud::Object::VariableTypeResource;
 use KnetikCloud::Object::VendorEmailLookupResource;
 use KnetikCloud::Object::VendorResource;
 use KnetikCloud::Object::Version;
-use KnetikCloud::Object::VideoGroupProperty;
-use KnetikCloud::Object::VideoGroupPropertyDefinitionResource;
-use KnetikCloud::Object::VideoProperty;
-use KnetikCloud::Object::VideoPropertyDefinitionResource;
 use KnetikCloud::Object::VideoRelationshipResource;
 use KnetikCloud::Object::VideoResource;
 use KnetikCloud::Object::WalletAlterRequest;
 use KnetikCloud::Object::WalletTotalResponse;
 use KnetikCloud::Object::WalletTransactionResource;
 use KnetikCloud::Object::XsollaPaymentRequest;
+use KnetikCloud::Object::AudioPropertyDefinitionResource;
+use KnetikCloud::Object::BooleanProperty;
+use KnetikCloud::Object::BooleanPropertyDefinitionResource;
+use KnetikCloud::Object::CacheClearEvent;
+use KnetikCloud::Object::Consumable;
+use KnetikCloud::Object::DateProperty;
+use KnetikCloud::Object::DatePropertyDefinitionResource;
+use KnetikCloud::Object::DoubleProperty;
+use KnetikCloud::Object::DoublePropertyDefinitionResource;
+use KnetikCloud::Object::EntitlementItem;
+use KnetikCloud::Object::Expirable;
+use KnetikCloud::Object::FileGroupProperty;
+use KnetikCloud::Object::FileGroupPropertyDefinitionResource;
+use KnetikCloud::Object::FileProperty;
+use KnetikCloud::Object::FilePropertyDefinitionResource;
+use KnetikCloud::Object::FormattedTextProperty;
+use KnetikCloud::Object::FormattedTextPropertyDefinitionResource;
+use KnetikCloud::Object::Fulfillable;
+use KnetikCloud::Object::GuestPlayable;
+use KnetikCloud::Object::ImagePropertyDefinitionResource;
+use KnetikCloud::Object::IntegerProperty;
+use KnetikCloud::Object::IntegerPropertyDefinitionResource;
+use KnetikCloud::Object::LimitedGettable;
+use KnetikCloud::Object::LongProperty;
+use KnetikCloud::Object::LongPropertyDefinitionResource;
+use KnetikCloud::Object::NewCustomerEvent;
+use KnetikCloud::Object::PreReqEntitlement;
+use KnetikCloud::Object::PriceOverridable;
+use KnetikCloud::Object::RemoveCustomerEvent;
+use KnetikCloud::Object::Spendable;
+use KnetikCloud::Object::StoreItem;
+use KnetikCloud::Object::TextProperty;
+use KnetikCloud::Object::TextPropertyDefinitionResource;
+use KnetikCloud::Object::TimePeriodGettable;
+use KnetikCloud::Object::TimePeriodUsable;
+use KnetikCloud::Object::VideoPropertyDefinitionResource;
+use KnetikCloud::Object::AudioGroupProperty;
+use KnetikCloud::Object::AudioGroupPropertyDefinitionResource;
+use KnetikCloud::Object::AudioProperty;
+use KnetikCloud::Object::BundleItem;
+use KnetikCloud::Object::CouponItem;
+use KnetikCloud::Object::ImageGroupProperty;
+use KnetikCloud::Object::ImageGroupPropertyDefinitionResource;
+use KnetikCloud::Object::ImageProperty;
+use KnetikCloud::Object::ShippingItem;
+use KnetikCloud::Object::Subscription;
+use KnetikCloud::Object::VideoGroupProperty;
+use KnetikCloud::Object::VideoGroupPropertyDefinitionResource;
+use KnetikCloud::Object::VideoProperty;
 
 # for displaying the API response data
 use Data::Dumper;
@@ -1223,13 +1233,13 @@ Class | Method | HTTP request | Description
 *CampaignsChallengesApi* | [**create_challenge_activity_template**](docs/CampaignsChallengesApi.md#create_challenge_activity_template) | **POST** /challenge-activities/templates | Create a challenge activity template
 *CampaignsChallengesApi* | [**create_challenge_template**](docs/CampaignsChallengesApi.md#create_challenge_template) | **POST** /challenges/templates | Create a challenge template
 *CampaignsChallengesApi* | [**delete_challenge**](docs/CampaignsChallengesApi.md#delete_challenge) | **DELETE** /challenges/{id} | Delete a challenge
-*CampaignsChallengesApi* | [**delete_challenge_activity**](docs/CampaignsChallengesApi.md#delete_challenge_activity) | **DELETE** /challenges/{challenge_id}/activities/{activity_id} | Delete a challenge activity
+*CampaignsChallengesApi* | [**delete_challenge_activity**](docs/CampaignsChallengesApi.md#delete_challenge_activity) | **DELETE** /challenges/{challenge_id}/activities/{id} | Delete a challenge activity
 *CampaignsChallengesApi* | [**delete_challenge_activity_template**](docs/CampaignsChallengesApi.md#delete_challenge_activity_template) | **DELETE** /challenge-activities/templates/{id} | Delete a challenge activity template
 *CampaignsChallengesApi* | [**delete_challenge_event**](docs/CampaignsChallengesApi.md#delete_challenge_event) | **DELETE** /challenges/events/{id} | Delete a challenge event
 *CampaignsChallengesApi* | [**delete_challenge_template**](docs/CampaignsChallengesApi.md#delete_challenge_template) | **DELETE** /challenges/templates/{id} | Delete a challenge template
 *CampaignsChallengesApi* | [**get_challenge**](docs/CampaignsChallengesApi.md#get_challenge) | **GET** /challenges/{id} | Retrieve a challenge
 *CampaignsChallengesApi* | [**get_challenge_activities**](docs/CampaignsChallengesApi.md#get_challenge_activities) | **GET** /challenges/{challenge_id}/activities | List and search challenge activities
-*CampaignsChallengesApi* | [**get_challenge_activity**](docs/CampaignsChallengesApi.md#get_challenge_activity) | **GET** /challenges/{challenge_id}/activities/{activity_id} | Get a single challenge activity
+*CampaignsChallengesApi* | [**get_challenge_activity**](docs/CampaignsChallengesApi.md#get_challenge_activity) | **GET** /challenges/{challenge_id}/activities/{id} | Get a single challenge activity
 *CampaignsChallengesApi* | [**get_challenge_activity_template**](docs/CampaignsChallengesApi.md#get_challenge_activity_template) | **GET** /challenge-activities/templates/{id} | Get a single challenge activity template
 *CampaignsChallengesApi* | [**get_challenge_activity_templates**](docs/CampaignsChallengesApi.md#get_challenge_activity_templates) | **GET** /challenge-activities/templates | List and search challenge activity templates
 *CampaignsChallengesApi* | [**get_challenge_event**](docs/CampaignsChallengesApi.md#get_challenge_event) | **GET** /challenges/events/{id} | Retrieve a single challenge event details
@@ -1238,7 +1248,7 @@ Class | Method | HTTP request | Description
 *CampaignsChallengesApi* | [**get_challenge_templates**](docs/CampaignsChallengesApi.md#get_challenge_templates) | **GET** /challenges/templates | List and search challenge templates
 *CampaignsChallengesApi* | [**get_challenges**](docs/CampaignsChallengesApi.md#get_challenges) | **GET** /challenges | Retrieve a list of challenges
 *CampaignsChallengesApi* | [**update_challenge**](docs/CampaignsChallengesApi.md#update_challenge) | **PUT** /challenges/{id} | Update a challenge
-*CampaignsChallengesApi* | [**update_challenge_activity**](docs/CampaignsChallengesApi.md#update_challenge_activity) | **PUT** /challenges/{challenge_id}/activities/{activity_id} | Update a challenge activity
+*CampaignsChallengesApi* | [**update_challenge_activity**](docs/CampaignsChallengesApi.md#update_challenge_activity) | **PUT** /challenges/{challenge_id}/activities/{id} | Update a challenge activity
 *CampaignsChallengesApi* | [**update_challenge_activity_template**](docs/CampaignsChallengesApi.md#update_challenge_activity_template) | **PUT** /challenge-activities/templates/{id} | Update an challenge activity template
 *CampaignsChallengesApi* | [**update_challenge_template**](docs/CampaignsChallengesApi.md#update_challenge_template) | **PUT** /challenges/templates/{id} | Update a challenge template
 *CampaignsRewardsApi* | [**create_reward_set**](docs/CampaignsRewardsApi.md#create_reward_set) | **POST** /rewards | Create a reward set
@@ -1382,6 +1392,7 @@ Class | Method | HTTP request | Description
 *InvoicesApi* | [**get_invoices**](docs/InvoicesApi.md#get_invoices) | **GET** /invoices | Retrieve invoices
 *InvoicesApi* | [**get_payment_statuses**](docs/InvoicesApi.md#get_payment_statuses) | **GET** /invoices/payment-statuses | Lists available payment statuses
 *InvoicesApi* | [**pay_invoice**](docs/InvoicesApi.md#pay_invoice) | **POST** /invoices/{id}/payments | Trigger payment of an invoice
+*InvoicesApi* | [**set_bundled_invoice_item_fulfillment_status**](docs/InvoicesApi.md#set_bundled_invoice_item_fulfillment_status) | **PUT** /invoices/{id}/items/{bundleSku}/bundled-skus/{sku}/fulfillment-status | Set the fulfillment status of a bundled invoice item
 *InvoicesApi* | [**set_external_ref**](docs/InvoicesApi.md#set_external_ref) | **PUT** /invoices/{id}/external-ref | Set the external reference of an invoice
 *InvoicesApi* | [**set_invoice_item_fulfillment_status**](docs/InvoicesApi.md#set_invoice_item_fulfillment_status) | **PUT** /invoices/{id}/items/{sku}/fulfillment-status | Set the fulfillment status of an invoice item
 *InvoicesApi* | [**set_order_notes**](docs/InvoicesApi.md#set_order_notes) | **PUT** /invoices/{id}/order-notes | Set the order notes of an invoice
@@ -1489,7 +1500,7 @@ Class | Method | HTTP request | Description
 *SearchApi* | [**delete_search_indexes**](docs/SearchApi.md#delete_search_indexes) | **DELETE** /search/index/{type} | Delete all objects in an index
 *SearchApi* | [**search_index**](docs/SearchApi.md#search_index) | **POST** /search/index/{type} | Search an index
 *SocialFacebookApi* | [**link_accounts**](docs/SocialFacebookApi.md#link_accounts) | **POST** /social/facebook/users | Link facebook account
-*SocialGoogleApi* | [**link_accounts1**](docs/SocialGoogleApi.md#link_accounts1) | **POST** /social/google/users | Link facebook account
+*SocialGoogleApi* | [**link_accounts1**](docs/SocialGoogleApi.md#link_accounts1) | **POST** /social/google/users | Link google account
 *StoreApi* | [**create_item_template**](docs/StoreApi.md#create_item_template) | **POST** /store/items/templates | Create an item template
 *StoreApi* | [**create_store_item**](docs/StoreApi.md#create_store_item) | **POST** /store/items | Create a store item
 *StoreApi* | [**delete_item_template**](docs/StoreApi.md#delete_item_template) | **DELETE** /store/items/templates/{id} | Delete an item template
@@ -1658,6 +1669,7 @@ Class | Method | HTTP request | Description
 *UsersSubscriptionsApi* | [**set_subscription_payment_method**](docs/UsersSubscriptionsApi.md#set_subscription_payment_method) | **PUT** /users/{user_id}/subscriptions/{inventory_id}/payment-method | Set the payment method to use for a subscription
 *UsersSubscriptionsApi* | [**set_subscription_status**](docs/UsersSubscriptionsApi.md#set_subscription_status) | **PUT** /users/{user_id}/subscriptions/{inventory_id}/status | Set the status of a subscription
 *UsersSubscriptionsApi* | [**set_user_subscription_plan**](docs/UsersSubscriptionsApi.md#set_user_subscription_plan) | **PUT** /users/{user_id}/subscriptions/{inventory_id}/plan | Set a new subscription plan for a user
+*UsersSubscriptionsApi* | [**set_user_subscription_price**](docs/UsersSubscriptionsApi.md#set_user_subscription_price) | **PUT** /users/{user_id}/subscriptions/{inventory_id}/price-override | Set a new subscription price for a user
 *UtilBatchApi* | [**get_batch**](docs/UtilBatchApi.md#get_batch) | **GET** /batch/{token} | Get batch result with token
 *UtilBatchApi* | [**send_batch**](docs/UtilBatchApi.md#send_batch) | **POST** /batch | Request to run API call given the method, content type, path url, and body of request
 *UtilHealthApi* | [**get_health**](docs/UtilHealthApi.md#get_health) | **GET** /health | Get health info
@@ -1671,15 +1683,16 @@ Class | Method | HTTP request | Description
 
 
 # DOCUMENTATION FOR MODELS
- - [KnetikCloud::Object::AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings](docs/AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings.md)
- - [KnetikCloud::Object::ARequestToResetAUsersPasswordByUsingAKnownUserProperty](docs/ARequestToResetAUsersPasswordByUsingAKnownUserProperty.md)
  - [KnetikCloud::Object::AchievementDefinitionResource](docs/AchievementDefinitionResource.md)
  - [KnetikCloud::Object::ActionResource](docs/ActionResource.md)
  - [KnetikCloud::Object::ActionVariableResource](docs/ActionVariableResource.md)
  - [KnetikCloud::Object::ActivityEntitlementResource](docs/ActivityEntitlementResource.md)
  - [KnetikCloud::Object::ActivityOccurrenceCreationFailure](docs/ActivityOccurrenceCreationFailure.md)
  - [KnetikCloud::Object::ActivityOccurrenceJoinResult](docs/ActivityOccurrenceJoinResult.md)
+ - [KnetikCloud::Object::ActivityOccurrenceResource](docs/ActivityOccurrenceResource.md)
  - [KnetikCloud::Object::ActivityOccurrenceResults](docs/ActivityOccurrenceResults.md)
+ - [KnetikCloud::Object::ActivityOccurrenceResultsResource](docs/ActivityOccurrenceResultsResource.md)
+ - [KnetikCloud::Object::ActivityResource](docs/ActivityResource.md)
  - [KnetikCloud::Object::ActivityUserResource](docs/ActivityUserResource.md)
  - [KnetikCloud::Object::AddressResource](docs/AddressResource.md)
  - [KnetikCloud::Object::AggregateCountResource](docs/AggregateCountResource.md)
@@ -1689,10 +1702,7 @@ Class | Method | HTTP request | Description
  - [KnetikCloud::Object::ApplyPaymentRequest](docs/ApplyPaymentRequest.md)
  - [KnetikCloud::Object::ArticleResource](docs/ArticleResource.md)
  - [KnetikCloud::Object::ArtistResource](docs/ArtistResource.md)
- - [KnetikCloud::Object::AudioGroupProperty](docs/AudioGroupProperty.md)
- - [KnetikCloud::Object::AudioGroupPropertyDefinitionResource](docs/AudioGroupPropertyDefinitionResource.md)
- - [KnetikCloud::Object::AudioProperty](docs/AudioProperty.md)
- - [KnetikCloud::Object::AudioPropertyDefinitionResource](docs/AudioPropertyDefinitionResource.md)
+ - [KnetikCloud::Object::AvailableSettingResource](docs/AvailableSettingResource.md)
  - [KnetikCloud::Object::BareActivityResource](docs/BareActivityResource.md)
  - [KnetikCloud::Object::BareChallengeActivityResource](docs/BareChallengeActivityResource.md)
  - [KnetikCloud::Object::Batch](docs/Batch.md)
@@ -1702,8 +1712,6 @@ Class | Method | HTTP request | Description
  - [KnetikCloud::Object::Behavior](docs/Behavior.md)
  - [KnetikCloud::Object::BehaviorDefinitionResource](docs/BehaviorDefinitionResource.md)
  - [KnetikCloud::Object::BillingReport](docs/BillingReport.md)
- - [KnetikCloud::Object::BooleanProperty](docs/BooleanProperty.md)
- - [KnetikCloud::Object::BooleanPropertyDefinitionResource](docs/BooleanPropertyDefinitionResource.md)
  - [KnetikCloud::Object::BooleanResource](docs/BooleanResource.md)
  - [KnetikCloud::Object::BreCategoryResource](docs/BreCategoryResource.md)
  - [KnetikCloud::Object::BreEvent](docs/BreEvent.md)
@@ -1715,9 +1723,7 @@ Class | Method | HTTP request | Description
  - [KnetikCloud::Object::BreTriggerParameterDefinition](docs/BreTriggerParameterDefinition.md)
  - [KnetikCloud::Object::BreTriggerResource](docs/BreTriggerResource.md)
  - [KnetikCloud::Object::BroadcastableEvent](docs/BroadcastableEvent.md)
- - [KnetikCloud::Object::BundleItem](docs/BundleItem.md)
  - [KnetikCloud::Object::BundledSku](docs/BundledSku.md)
- - [KnetikCloud::Object::CacheClearEvent](docs/CacheClearEvent.md)
  - [KnetikCloud::Object::CampaignResource](docs/CampaignResource.md)
  - [KnetikCloud::Object::Cart](docs/Cart.md)
  - [KnetikCloud::Object::CartItemRequest](docs/CartItemRequest.md)
@@ -1740,49 +1746,34 @@ Class | Method | HTTP request | Description
  - [KnetikCloud::Object::Config](docs/Config.md)
  - [KnetikCloud::Object::ConfigLookupResource](docs/ConfigLookupResource.md)
  - [KnetikCloud::Object::ConstantResource](docs/ConstantResource.md)
- - [KnetikCloud::Object::Consumable](docs/Consumable.md)
  - [KnetikCloud::Object::ContributionResource](docs/ContributionResource.md)
  - [KnetikCloud::Object::Country](docs/Country.md)
  - [KnetikCloud::Object::CountryResource](docs/CountryResource.md)
  - [KnetikCloud::Object::CountryTaxResource](docs/CountryTaxResource.md)
  - [KnetikCloud::Object::CouponDefinition](docs/CouponDefinition.md)
- - [KnetikCloud::Object::CouponItem](docs/CouponItem.md)
  - [KnetikCloud::Object::CreateBillingAgreementRequest](docs/CreateBillingAgreementRequest.md)
  - [KnetikCloud::Object::CreatePayPalPaymentRequest](docs/CreatePayPalPaymentRequest.md)
  - [KnetikCloud::Object::CurrencyResource](docs/CurrencyResource.md)
  - [KnetikCloud::Object::CustomerConfig](docs/CustomerConfig.md)
  - [KnetikCloud::Object::DatabaseConfig](docs/DatabaseConfig.md)
  - [KnetikCloud::Object::DateOperationResource](docs/DateOperationResource.md)
- - [KnetikCloud::Object::DateProperty](docs/DateProperty.md)
- - [KnetikCloud::Object::DatePropertyDefinitionResource](docs/DatePropertyDefinitionResource.md)
  - [KnetikCloud::Object::DeltaResource](docs/DeltaResource.md)
  - [KnetikCloud::Object::DeviceResource](docs/DeviceResource.md)
  - [KnetikCloud::Object::Discount](docs/Discount.md)
  - [KnetikCloud::Object::DispositionCount](docs/DispositionCount.md)
  - [KnetikCloud::Object::DispositionResource](docs/DispositionResource.md)
  - [KnetikCloud::Object::DoubleOperationResource](docs/DoubleOperationResource.md)
- - [KnetikCloud::Object::DoubleProperty](docs/DoubleProperty.md)
- - [KnetikCloud::Object::DoublePropertyDefinitionResource](docs/DoublePropertyDefinitionResource.md)
  - [KnetikCloud::Object::EntitlementGrantRequest](docs/EntitlementGrantRequest.md)
- - [KnetikCloud::Object::EntitlementItem](docs/EntitlementItem.md)
  - [KnetikCloud::Object::ErrorResource](docs/ErrorResource.md)
  - [KnetikCloud::Object::EventContextResource](docs/EventContextResource.md)
- - [KnetikCloud::Object::Expirable](docs/Expirable.md)
  - [KnetikCloud::Object::ExpressionResource](docs/ExpressionResource.md)
  - [KnetikCloud::Object::Expressionobject](docs/Expressionobject.md)
  - [KnetikCloud::Object::FacebookToken](docs/FacebookToken.md)
- - [KnetikCloud::Object::FileGroupProperty](docs/FileGroupProperty.md)
- - [KnetikCloud::Object::FileGroupPropertyDefinitionResource](docs/FileGroupPropertyDefinitionResource.md)
- - [KnetikCloud::Object::FileProperty](docs/FileProperty.md)
- - [KnetikCloud::Object::FilePropertyDefinitionResource](docs/FilePropertyDefinitionResource.md)
  - [KnetikCloud::Object::FinalizeBillingAgreementRequest](docs/FinalizeBillingAgreementRequest.md)
  - [KnetikCloud::Object::FinalizePayPalPaymentRequest](docs/FinalizePayPalPaymentRequest.md)
  - [KnetikCloud::Object::FlagReportResource](docs/FlagReportResource.md)
  - [KnetikCloud::Object::FlagResource](docs/FlagResource.md)
- - [KnetikCloud::Object::FormattedTextProperty](docs/FormattedTextProperty.md)
- - [KnetikCloud::Object::FormattedTextPropertyDefinitionResource](docs/FormattedTextPropertyDefinitionResource.md)
  - [KnetikCloud::Object::ForwardLog](docs/ForwardLog.md)
- - [KnetikCloud::Object::Fulfillable](docs/Fulfillable.md)
  - [KnetikCloud::Object::FulfillmentType](docs/FulfillmentType.md)
  - [KnetikCloud::Object::GlobalCheckAndIncrementResource](docs/GlobalCheckAndIncrementResource.md)
  - [KnetikCloud::Object::GlobalResource](docs/GlobalResource.md)
@@ -1791,16 +1782,10 @@ Class | Method | HTTP request | Description
  - [KnetikCloud::Object::GrantTypeResource](docs/GrantTypeResource.md)
  - [KnetikCloud::Object::GroupMemberResource](docs/GroupMemberResource.md)
  - [KnetikCloud::Object::GroupResource](docs/GroupResource.md)
- - [KnetikCloud::Object::GuestPlayable](docs/GuestPlayable.md)
- - [KnetikCloud::Object::ImageGroupProperty](docs/ImageGroupProperty.md)
- - [KnetikCloud::Object::ImageGroupPropertyDefinitionResource](docs/ImageGroupPropertyDefinitionResource.md)
- - [KnetikCloud::Object::ImageProperty](docs/ImageProperty.md)
- - [KnetikCloud::Object::ImagePropertyDefinitionResource](docs/ImagePropertyDefinitionResource.md)
+ - [KnetikCloud::Object::IOConfig](docs/IOConfig.md)
  - [KnetikCloud::Object::ImportJobOutputResource](docs/ImportJobOutputResource.md)
  - [KnetikCloud::Object::ImportJobResource](docs/ImportJobResource.md)
  - [KnetikCloud::Object::IntegerOperationResource](docs/IntegerOperationResource.md)
- - [KnetikCloud::Object::IntegerProperty](docs/IntegerProperty.md)
- - [KnetikCloud::Object::IntegerPropertyDefinitionResource](docs/IntegerPropertyDefinitionResource.md)
  - [KnetikCloud::Object::InventorySubscriptionResource](docs/InventorySubscriptionResource.md)
  - [KnetikCloud::Object::InvoiceCreateRequest](docs/InvoiceCreateRequest.md)
  - [KnetikCloud::Object::InvoiceItemResource](docs/InvoiceItemResource.md)
@@ -1814,12 +1799,9 @@ Class | Method | HTTP request | Description
  - [KnetikCloud::Object::LeaderboardEntryResource](docs/LeaderboardEntryResource.md)
  - [KnetikCloud::Object::LeaderboardResource](docs/LeaderboardResource.md)
  - [KnetikCloud::Object::LevelingResource](docs/LevelingResource.md)
- - [KnetikCloud::Object::LimitedGettable](docs/LimitedGettable.md)
  - [KnetikCloud::Object::LimitedGettableGroup](docs/LimitedGettableGroup.md)
  - [KnetikCloud::Object::Localizer](docs/Localizer.md)
  - [KnetikCloud::Object::LocationLogResource](docs/LocationLogResource.md)
- - [KnetikCloud::Object::LongProperty](docs/LongProperty.md)
- - [KnetikCloud::Object::LongPropertyDefinitionResource](docs/LongPropertyDefinitionResource.md)
  - [KnetikCloud::Object::LookupResource](docs/LookupResource.md)
  - [KnetikCloud::Object::LookupTypeResource](docs/LookupTypeResource.md)
  - [KnetikCloud::Object::Maintenance](docs/Maintenance.md)
@@ -1828,7 +1810,6 @@ Class | Method | HTTP request | Description
  - [KnetikCloud::Object::MetricResource](docs/MetricResource.md)
  - [KnetikCloud::Object::MongoDatabaseConfig](docs/MongoDatabaseConfig.md)
  - [KnetikCloud::Object::NestedCategory](docs/NestedCategory.md)
- - [KnetikCloud::Object::NewCustomerEvent](docs/NewCustomerEvent.md)
  - [KnetikCloud::Object::NewPasswordRequest](docs/NewPasswordRequest.md)
  - [KnetikCloud::Object::OAuth2Resource](docs/OAuth2Resource.md)
  - [KnetikCloud::Object::OauthAccessTokenResource](docs/OauthAccessTokenResource.md)
@@ -1910,6 +1891,7 @@ Class | Method | HTTP request | Description
  - [KnetikCloud::Object::PageResourceWalletTransactionResource](docs/PageResourceWalletTransactionResource.md)
  - [KnetikCloud::Object::PageResourcestring](docs/PageResourcestring.md)
  - [KnetikCloud::Object::ParameterResource](docs/ParameterResource.md)
+ - [KnetikCloud::Object::PasswordResetRequest](docs/PasswordResetRequest.md)
  - [KnetikCloud::Object::PayBySavedMethodRequest](docs/PayBySavedMethodRequest.md)
  - [KnetikCloud::Object::PaymentAuthorizationResource](docs/PaymentAuthorizationResource.md)
  - [KnetikCloud::Object::PaymentMethodResource](docs/PaymentMethodResource.md)
@@ -1918,10 +1900,8 @@ Class | Method | HTTP request | Description
  - [KnetikCloud::Object::PollAnswerResource](docs/PollAnswerResource.md)
  - [KnetikCloud::Object::PollResource](docs/PollResource.md)
  - [KnetikCloud::Object::PollResponseResource](docs/PollResponseResource.md)
- - [KnetikCloud::Object::PreReqEntitlement](docs/PreReqEntitlement.md)
  - [KnetikCloud::Object::PredicateOperation](docs/PredicateOperation.md)
  - [KnetikCloud::Object::PredicateResource](docs/PredicateResource.md)
- - [KnetikCloud::Object::PriceOverridable](docs/PriceOverridable.md)
  - [KnetikCloud::Object::Property](docs/Property.md)
  - [KnetikCloud::Object::PropertyDefinitionResource](docs/PropertyDefinitionResource.md)
  - [KnetikCloud::Object::PropertyFieldListResource](docs/PropertyFieldListResource.md)
@@ -1933,7 +1913,6 @@ Class | Method | HTTP request | Description
  - [KnetikCloud::Object::ReactivateSubscriptionRequest](docs/ReactivateSubscriptionRequest.md)
  - [KnetikCloud::Object::RefundRequest](docs/RefundRequest.md)
  - [KnetikCloud::Object::RefundResource](docs/RefundResource.md)
- - [KnetikCloud::Object::RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc](docs/RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.md)
  - [KnetikCloud::Object::Result](docs/Result.md)
  - [KnetikCloud::Object::RevenueCountryReportResource](docs/RevenueCountryReportResource.md)
  - [KnetikCloud::Object::RevenueProductReportResource](docs/RevenueProductReportResource.md)
@@ -1949,7 +1928,6 @@ Class | Method | HTTP request | Description
  - [KnetikCloud::Object::SearchReferenceMapping](docs/SearchReferenceMapping.md)
  - [KnetikCloud::Object::SelectedSettingResource](docs/SelectedSettingResource.md)
  - [KnetikCloud::Object::SettingOption](docs/SettingOption.md)
- - [KnetikCloud::Object::ShippingItem](docs/ShippingItem.md)
  - [KnetikCloud::Object::SimpleReferenceResourceint](docs/SimpleReferenceResourceint.md)
  - [KnetikCloud::Object::SimpleReferenceResourcelong](docs/SimpleReferenceResourcelong.md)
  - [KnetikCloud::Object::SimpleReferenceResourceobject](docs/SimpleReferenceResourceobject.md)
@@ -1958,30 +1936,23 @@ Class | Method | HTTP request | Description
  - [KnetikCloud::Object::SimpleWallet](docs/SimpleWallet.md)
  - [KnetikCloud::Object::Sku](docs/Sku.md)
  - [KnetikCloud::Object::SkuRequest](docs/SkuRequest.md)
- - [KnetikCloud::Object::Spendable](docs/Spendable.md)
  - [KnetikCloud::Object::SqlDatabaseConfig](docs/SqlDatabaseConfig.md)
  - [KnetikCloud::Object::StateResource](docs/StateResource.md)
  - [KnetikCloud::Object::StateTaxResource](docs/StateTaxResource.md)
- - [KnetikCloud::Object::StoreItem](docs/StoreItem.md)
  - [KnetikCloud::Object::StoreItemTemplateResource](docs/StoreItemTemplateResource.md)
  - [KnetikCloud::Object::StringOperationResource](docs/StringOperationResource.md)
  - [KnetikCloud::Object::StripeCreatePaymentMethod](docs/StripeCreatePaymentMethod.md)
  - [KnetikCloud::Object::StripePaymentRequest](docs/StripePaymentRequest.md)
- - [KnetikCloud::Object::Subscription](docs/Subscription.md)
  - [KnetikCloud::Object::SubscriptionCreditResource](docs/SubscriptionCreditResource.md)
  - [KnetikCloud::Object::SubscriptionPlan](docs/SubscriptionPlan.md)
  - [KnetikCloud::Object::SubscriptionPlanResource](docs/SubscriptionPlanResource.md)
+ - [KnetikCloud::Object::SubscriptionPriceOverrideRequest](docs/SubscriptionPriceOverrideRequest.md)
  - [KnetikCloud::Object::SubscriptionResource](docs/SubscriptionResource.md)
  - [KnetikCloud::Object::SubscriptionTemplateResource](docs/SubscriptionTemplateResource.md)
  - [KnetikCloud::Object::TemplateEmailResource](docs/TemplateEmailResource.md)
  - [KnetikCloud::Object::TemplateResource](docs/TemplateResource.md)
  - [KnetikCloud::Object::TemplateSMSResource](docs/TemplateSMSResource.md)
- - [KnetikCloud::Object::TextProperty](docs/TextProperty.md)
- - [KnetikCloud::Object::TextPropertyDefinitionResource](docs/TextPropertyDefinitionResource.md)
- - [KnetikCloud::Object::TheDefinitionOfAnActivityParametersExDifficultyLevel](docs/TheDefinitionOfAnActivityParametersExDifficultyLevel.md)
  - [KnetikCloud::Object::TierResource](docs/TierResource.md)
- - [KnetikCloud::Object::TimePeriodGettable](docs/TimePeriodGettable.md)
- - [KnetikCloud::Object::TimePeriodUsable](docs/TimePeriodUsable.md)
  - [KnetikCloud::Object::TokenDetailsResource](docs/TokenDetailsResource.md)
  - [KnetikCloud::Object::TransactionResource](docs/TransactionResource.md)
  - [KnetikCloud::Object::TypeHintLookupResource](docs/TypeHintLookupResource.md)
@@ -1989,6 +1960,7 @@ Class | Method | HTTP request | Description
  - [KnetikCloud::Object::UserAchievementGroupResource](docs/UserAchievementGroupResource.md)
  - [KnetikCloud::Object::UserAchievementResource](docs/UserAchievementResource.md)
  - [KnetikCloud::Object::UserActionLog](docs/UserActionLog.md)
+ - [KnetikCloud::Object::UserActivityResults](docs/UserActivityResults.md)
  - [KnetikCloud::Object::UserActivityResultsResource](docs/UserActivityResultsResource.md)
  - [KnetikCloud::Object::UserBaseResource](docs/UserBaseResource.md)
  - [KnetikCloud::Object::UserInventoryAddRequest](docs/UserInventoryAddRequest.md)
@@ -2003,16 +1975,61 @@ Class | Method | HTTP request | Description
  - [KnetikCloud::Object::VendorEmailLookupResource](docs/VendorEmailLookupResource.md)
  - [KnetikCloud::Object::VendorResource](docs/VendorResource.md)
  - [KnetikCloud::Object::Version](docs/Version.md)
- - [KnetikCloud::Object::VideoGroupProperty](docs/VideoGroupProperty.md)
- - [KnetikCloud::Object::VideoGroupPropertyDefinitionResource](docs/VideoGroupPropertyDefinitionResource.md)
- - [KnetikCloud::Object::VideoProperty](docs/VideoProperty.md)
- - [KnetikCloud::Object::VideoPropertyDefinitionResource](docs/VideoPropertyDefinitionResource.md)
  - [KnetikCloud::Object::VideoRelationshipResource](docs/VideoRelationshipResource.md)
  - [KnetikCloud::Object::VideoResource](docs/VideoResource.md)
  - [KnetikCloud::Object::WalletAlterRequest](docs/WalletAlterRequest.md)
  - [KnetikCloud::Object::WalletTotalResponse](docs/WalletTotalResponse.md)
  - [KnetikCloud::Object::WalletTransactionResource](docs/WalletTransactionResource.md)
  - [KnetikCloud::Object::XsollaPaymentRequest](docs/XsollaPaymentRequest.md)
+ - [KnetikCloud::Object::AudioPropertyDefinitionResource](docs/AudioPropertyDefinitionResource.md)
+ - [KnetikCloud::Object::BooleanProperty](docs/BooleanProperty.md)
+ - [KnetikCloud::Object::BooleanPropertyDefinitionResource](docs/BooleanPropertyDefinitionResource.md)
+ - [KnetikCloud::Object::CacheClearEvent](docs/CacheClearEvent.md)
+ - [KnetikCloud::Object::Consumable](docs/Consumable.md)
+ - [KnetikCloud::Object::DateProperty](docs/DateProperty.md)
+ - [KnetikCloud::Object::DatePropertyDefinitionResource](docs/DatePropertyDefinitionResource.md)
+ - [KnetikCloud::Object::DoubleProperty](docs/DoubleProperty.md)
+ - [KnetikCloud::Object::DoublePropertyDefinitionResource](docs/DoublePropertyDefinitionResource.md)
+ - [KnetikCloud::Object::EntitlementItem](docs/EntitlementItem.md)
+ - [KnetikCloud::Object::Expirable](docs/Expirable.md)
+ - [KnetikCloud::Object::FileGroupProperty](docs/FileGroupProperty.md)
+ - [KnetikCloud::Object::FileGroupPropertyDefinitionResource](docs/FileGroupPropertyDefinitionResource.md)
+ - [KnetikCloud::Object::FileProperty](docs/FileProperty.md)
+ - [KnetikCloud::Object::FilePropertyDefinitionResource](docs/FilePropertyDefinitionResource.md)
+ - [KnetikCloud::Object::FormattedTextProperty](docs/FormattedTextProperty.md)
+ - [KnetikCloud::Object::FormattedTextPropertyDefinitionResource](docs/FormattedTextPropertyDefinitionResource.md)
+ - [KnetikCloud::Object::Fulfillable](docs/Fulfillable.md)
+ - [KnetikCloud::Object::GuestPlayable](docs/GuestPlayable.md)
+ - [KnetikCloud::Object::ImagePropertyDefinitionResource](docs/ImagePropertyDefinitionResource.md)
+ - [KnetikCloud::Object::IntegerProperty](docs/IntegerProperty.md)
+ - [KnetikCloud::Object::IntegerPropertyDefinitionResource](docs/IntegerPropertyDefinitionResource.md)
+ - [KnetikCloud::Object::LimitedGettable](docs/LimitedGettable.md)
+ - [KnetikCloud::Object::LongProperty](docs/LongProperty.md)
+ - [KnetikCloud::Object::LongPropertyDefinitionResource](docs/LongPropertyDefinitionResource.md)
+ - [KnetikCloud::Object::NewCustomerEvent](docs/NewCustomerEvent.md)
+ - [KnetikCloud::Object::PreReqEntitlement](docs/PreReqEntitlement.md)
+ - [KnetikCloud::Object::PriceOverridable](docs/PriceOverridable.md)
+ - [KnetikCloud::Object::RemoveCustomerEvent](docs/RemoveCustomerEvent.md)
+ - [KnetikCloud::Object::Spendable](docs/Spendable.md)
+ - [KnetikCloud::Object::StoreItem](docs/StoreItem.md)
+ - [KnetikCloud::Object::TextProperty](docs/TextProperty.md)
+ - [KnetikCloud::Object::TextPropertyDefinitionResource](docs/TextPropertyDefinitionResource.md)
+ - [KnetikCloud::Object::TimePeriodGettable](docs/TimePeriodGettable.md)
+ - [KnetikCloud::Object::TimePeriodUsable](docs/TimePeriodUsable.md)
+ - [KnetikCloud::Object::VideoPropertyDefinitionResource](docs/VideoPropertyDefinitionResource.md)
+ - [KnetikCloud::Object::AudioGroupProperty](docs/AudioGroupProperty.md)
+ - [KnetikCloud::Object::AudioGroupPropertyDefinitionResource](docs/AudioGroupPropertyDefinitionResource.md)
+ - [KnetikCloud::Object::AudioProperty](docs/AudioProperty.md)
+ - [KnetikCloud::Object::BundleItem](docs/BundleItem.md)
+ - [KnetikCloud::Object::CouponItem](docs/CouponItem.md)
+ - [KnetikCloud::Object::ImageGroupProperty](docs/ImageGroupProperty.md)
+ - [KnetikCloud::Object::ImageGroupPropertyDefinitionResource](docs/ImageGroupPropertyDefinitionResource.md)
+ - [KnetikCloud::Object::ImageProperty](docs/ImageProperty.md)
+ - [KnetikCloud::Object::ShippingItem](docs/ShippingItem.md)
+ - [KnetikCloud::Object::Subscription](docs/Subscription.md)
+ - [KnetikCloud::Object::VideoGroupProperty](docs/VideoGroupProperty.md)
+ - [KnetikCloud::Object::VideoGroupPropertyDefinitionResource](docs/VideoGroupPropertyDefinitionResource.md)
+ - [KnetikCloud::Object::VideoProperty](docs/VideoProperty.md)
 
 
 # DOCUMENTATION FOR AUTHORIZATION

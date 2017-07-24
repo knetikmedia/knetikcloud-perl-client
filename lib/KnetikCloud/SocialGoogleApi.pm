@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -54,19 +54,19 @@ sub new {
 #
 # link_accounts1
 #
-# Link facebook account
+# Link google account
 # 
-# @param GoogleToken $facebook_token The token from facebook (optional)
+# @param GoogleToken $google_token The token from google (optional)
 {
     my $params = {
-    'facebook_token' => {
+    'google_token' => {
         data_type => 'GoogleToken',
-        description => 'The token from facebook',
+        description => 'The token from google',
         required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'link_accounts1' } = { 
-    	summary => 'Link facebook account',
+    	summary => 'Link google account',
         params => $params,
         returns => undef,
         };
@@ -93,8 +93,8 @@ sub link_accounts1 {
 
     my $_body_data;
     # body params
-    if ( exists $args{'facebook_token'}) {
-        $_body_data = $args{'facebook_token'};
+    if ( exists $args{'google_token'}) {
+        $_body_data = $args{'google_token'};
     }
 
     # authentication setting, if any

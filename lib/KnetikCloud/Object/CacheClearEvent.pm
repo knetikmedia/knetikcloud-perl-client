@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -44,7 +44,7 @@ use base ("Class::Accessor", "Class::Data::Inheritable");
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -205,6 +205,20 @@ __PACKAGE__->method_documentation({
     	format => '',
     	read_only => '',
     		},
+    'customer_setup' => {
+    	datatype => 'boolean',
+    	base_name => 'customer_setup',
+    	description => '',
+    	format => '',
+    	read_only => '',
+    		},
+    'customer_teardown' => {
+    	datatype => 'boolean',
+    	base_name => 'customer_teardown',
+    	description => '',
+    	format => '',
+    	read_only => '',
+    		},
 });
 
 __PACKAGE__->swagger_types( {
@@ -216,7 +230,9 @@ __PACKAGE__->swagger_types( {
     'specifics' => 'string',
     'synchronous' => 'boolean',
     'timestamp' => 'int',
-    'type' => 'string'
+    'type' => 'string',
+    'customer_setup' => 'boolean',
+    'customer_teardown' => 'boolean'
 } );
 
 __PACKAGE__->attribute_map( {
@@ -228,7 +244,9 @@ __PACKAGE__->attribute_map( {
     'specifics' => 'specifics',
     'synchronous' => 'synchronous',
     'timestamp' => 'timestamp',
-    'type' => 'type'
+    'type' => 'type',
+    'customer_setup' => 'customer_setup',
+    'customer_teardown' => 'customer_teardown'
 } );
 
 __PACKAGE__->mk_accessors(keys %{__PACKAGE__->attribute_map});

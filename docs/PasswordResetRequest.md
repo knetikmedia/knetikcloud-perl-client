@@ -1,8 +1,8 @@
-# KnetikCloud::Object::ARequestToResetAUsersPasswordByUsingAKnownUserProperty
+# KnetikCloud::Object::PasswordResetRequest
 
 ## Load the model package
 ```perl
-use KnetikCloud::Object::ARequestToResetAUsersPasswordByUsingAKnownUserProperty;
+use KnetikCloud::Object::PasswordResetRequest;
 ```
 
 ## Properties

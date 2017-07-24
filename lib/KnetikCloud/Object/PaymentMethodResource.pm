@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -44,7 +44,7 @@ use base ("Class::Accessor", "Class::Data::Inheritable");
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -187,7 +187,7 @@ __PACKAGE__->method_documentation({
     'id' => {
     	datatype => 'int',
     	base_name => 'id',
-    	description => 'The unique ID for that resource',
+    	description => 'The unique ID of the resource',
     	format => '',
     	read_only => '',
     		},
@@ -198,17 +198,10 @@ __PACKAGE__->method_documentation({
     	format => '',
     	read_only => '',
     		},
-    'long_description' => {
-    	datatype => 'string',
-    	base_name => 'long_description',
-    	description => 'The user friendly name of that resource. Defaults to blank string',
-    	format => '',
-    	read_only => '',
-    		},
     'name' => {
     	datatype => 'string',
     	base_name => 'name',
-    	description => 'The user friendly name of that resource',
+    	description => 'The user friendly name of the resource',
     	format => '',
     	read_only => '',
     		},
@@ -223,13 +216,6 @@ __PACKAGE__->method_documentation({
     	datatype => 'string',
     	base_name => 'payment_type',
     	description => 'The generic payment type. Default is card',
-    	format => '',
-    	read_only => '',
-    		},
-    'short_description' => {
-    	datatype => 'string',
-    	base_name => 'short_description',
-    	description => 'The user friendly name of that resource. Defaults to blank string',
     	format => '',
     	read_only => '',
     		},
@@ -286,11 +272,9 @@ __PACKAGE__->swagger_types( {
     'expiration_year' => 'int',
     'id' => 'int',
     'last4' => 'string',
-    'long_description' => 'string',
     'name' => 'string',
     'payment_method_type' => 'PaymentMethodTypeResource',
     'payment_type' => 'string',
-    'short_description' => 'string',
     'sort' => 'int',
     'token' => 'string',
     'unique_key' => 'string',
@@ -308,11 +292,9 @@ __PACKAGE__->attribute_map( {
     'expiration_year' => 'expiration_year',
     'id' => 'id',
     'last4' => 'last4',
-    'long_description' => 'long_description',
     'name' => 'name',
     'payment_method_type' => 'payment_method_type',
     'payment_type' => 'payment_type',
-    'short_description' => 'short_description',
     'sort' => 'sort',
     'token' => 'token',
     'unique_key' => 'unique_key',

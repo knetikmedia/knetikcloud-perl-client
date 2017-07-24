@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -530,7 +530,9 @@ sub get_article_templates {
 # List and search articles
 # 
 # @param string $filter_category Filter for articles from a specific category by id (optional)
-# @param string $filter_tagset Filter for articles with specified tags (separated by comma) (optional)
+# @param string $filter_tagset Filter for articles with at least one of a specified set of tags (separated by comma) (optional)
+# @param string $filter_tag_intersection Filter for articles with all of a specified set of tags (separated by comma) (optional)
+# @param string $filter_tag_exclusion Filter for articles with none of a specified set of tags (separated by comma) (optional)
 # @param string $filter_title Filter for articles whose title contains a string (optional)
 # @param int $size The number of objects returned per page (optional, default to 25)
 # @param int $page The number of the page returned, starting with 1 (optional, default to 1)
@@ -544,7 +546,17 @@ sub get_article_templates {
     },
     'filter_tagset' => {
         data_type => 'string',
-        description => 'Filter for articles with specified tags (separated by comma)',
+        description => 'Filter for articles with at least one of a specified set of tags (separated by comma)',
+        required => '0',
+    },
+    'filter_tag_intersection' => {
+        data_type => 'string',
+        description => 'Filter for articles with all of a specified set of tags (separated by comma)',
+        required => '0',
+    },
+    'filter_tag_exclusion' => {
+        data_type => 'string',
+        description => 'Filter for articles with none of a specified set of tags (separated by comma)',
         required => '0',
     },
     'filter_title' => {
@@ -602,6 +614,16 @@ sub get_articles {
     # query params
     if ( exists $args{'filter_tagset'}) {
         $query_params->{'filter_tagset'} = $self->{api_client}->to_query_value($args{'filter_tagset'});
+    }
+
+    # query params
+    if ( exists $args{'filter_tag_intersection'}) {
+        $query_params->{'filter_tag_intersection'} = $self->{api_client}->to_query_value($args{'filter_tag_intersection'});
+    }
+
+    # query params
+    if ( exists $args{'filter_tag_exclusion'}) {
+        $query_params->{'filter_tag_exclusion'} = $self->{api_client}->to_query_value($args{'filter_tag_exclusion'});
     }
 
     # query params

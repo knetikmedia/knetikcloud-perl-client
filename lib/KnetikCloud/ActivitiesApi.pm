@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -56,11 +56,11 @@ sub new {
 #
 # Create an activity
 # 
-# @param RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc $activity_resource The activity resource object (optional)
+# @param ActivityResource $activity_resource The activity resource object (optional)
 {
     my $params = {
     'activity_resource' => {
-        data_type => 'RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc',
+        data_type => 'ActivityResource',
         description => 'The activity resource object',
         required => '0',
     },
@@ -68,10 +68,10 @@ sub new {
     __PACKAGE__->method_documentation->{ 'create_activity' } = { 
     	summary => 'Create an activity',
         params => $params,
-        returns => 'RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc',
+        returns => 'ActivityResource',
         };
 }
-# @return RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc
+# @return ActivityResource
 #
 sub create_activity {
     my ($self, %args) = @_;
@@ -107,7 +107,7 @@ sub create_activity {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc', $response);
+    my $_response_object = $self->{api_client}->deserialize('ActivityResource', $response);
     return $_response_object;
 }
 
@@ -117,7 +117,7 @@ sub create_activity {
 # Create a new activity occurrence. Ex: start a game
 # 
 # @param boolean $test if true, indicates that the occurrence should NOT be created. This can be used to test for eligibility and valid settings (optional, default to false)
-# @param AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings $activity_occurrence_resource The activity occurrence object (optional)
+# @param ActivityOccurrenceResource $activity_occurrence_resource The activity occurrence object (optional)
 {
     my $params = {
     'test' => {
@@ -126,7 +126,7 @@ sub create_activity {
         required => '0',
     },
     'activity_occurrence_resource' => {
-        data_type => 'AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings',
+        data_type => 'ActivityOccurrenceResource',
         description => 'The activity occurrence object',
         required => '0',
     },
@@ -134,10 +134,10 @@ sub create_activity {
     __PACKAGE__->method_documentation->{ 'create_activity_occurrence' } = { 
     	summary => 'Create a new activity occurrence. Ex: start a game',
         params => $params,
-        returns => 'AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings',
+        returns => 'ActivityOccurrenceResource',
         };
 }
-# @return AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings
+# @return ActivityOccurrenceResource
 #
 sub create_activity_occurrence {
     my ($self, %args) = @_;
@@ -178,7 +178,7 @@ sub create_activity_occurrence {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings', $response);
+    my $_response_object = $self->{api_client}->deserialize('ActivityOccurrenceResource', $response);
     return $_response_object;
 }
 
@@ -386,7 +386,7 @@ sub delete_activity_template {
 # 
 # @param boolean $filter_template Filter for activities that are templates, or specifically not if false (optional)
 # @param string $filter_name Filter for activities that have a name starting with specified string (optional)
-# @param Object $filter_id Filter for activities with an id in the given comma separated list of ids (optional)
+# @param string $filter_id Filter for activities with an id in the given comma separated list of ids (optional)
 # @param int $size The number of objects returned per page (optional, default to 25)
 # @param int $page The number of the page returned, starting with 1 (optional, default to 1)
 # @param string $order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
@@ -403,7 +403,7 @@ sub delete_activity_template {
         required => '0',
     },
     'filter_id' => {
-        data_type => 'Object',
+        data_type => 'string',
         description => 'Filter for activities with an id in the given comma separated list of ids',
         required => '0',
     },
@@ -511,10 +511,10 @@ sub get_activities {
     __PACKAGE__->method_documentation->{ 'get_activity' } = { 
     	summary => 'Get a single activity',
         params => $params,
-        returns => 'RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc',
+        returns => 'ActivityResource',
         };
 }
-# @return RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc
+# @return ActivityResource
 #
 sub get_activity {
     my ($self, %args) = @_;
@@ -557,7 +557,7 @@ sub get_activity {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc', $response);
+    my $_response_object = $self->{api_client}->deserialize('ActivityResource', $response);
     return $_response_object;
 }
 
@@ -716,7 +716,7 @@ sub get_activity_templates {
 # Sets the status of an activity occurrence to FINISHED and logs metrics
 # 
 # @param int $activity_occurrence_id The id of the activity occurrence (required)
-# @param ActivityOccurrenceResults $activity_occurrence_results The activity occurrence object (optional)
+# @param ActivityOccurrenceResultsResource $activity_occurrence_results The activity occurrence object (optional)
 {
     my $params = {
     'activity_occurrence_id' => {
@@ -725,7 +725,7 @@ sub get_activity_templates {
         required => '1',
     },
     'activity_occurrence_results' => {
-        data_type => 'ActivityOccurrenceResults',
+        data_type => 'ActivityOccurrenceResultsResource',
         description => 'The activity occurrence object',
         required => '0',
     },
@@ -794,7 +794,7 @@ sub set_activity_occurrence_results {
 # Update an activity
 # 
 # @param int $id The id of the activity (required)
-# @param RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc $activity_resource The activity resource object (optional)
+# @param ActivityResource $activity_resource The activity resource object (optional)
 {
     my $params = {
     'id' => {
@@ -803,7 +803,7 @@ sub set_activity_occurrence_results {
         required => '1',
     },
     'activity_resource' => {
-        data_type => 'RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc',
+        data_type => 'ActivityResource',
         description => 'The activity resource object',
         required => '0',
     },
@@ -811,10 +811,10 @@ sub set_activity_occurrence_results {
     __PACKAGE__->method_documentation->{ 'update_activity' } = { 
     	summary => 'Update an activity',
         params => $params,
-        returns => 'RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc',
+        returns => 'ActivityResource',
         };
 }
-# @return RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc
+# @return ActivityResource
 #
 sub update_activity {
     my ($self, %args) = @_;
@@ -862,7 +862,7 @@ sub update_activity {
     if (!$response) {
         return;
     }
-    my $_response_object = $self->{api_client}->deserialize('RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc', $response);
+    my $_response_object = $self->{api_client}->deserialize('ActivityResource', $response);
     return $_response_object;
 }
 

@@ -14,13 +14,13 @@ Method | HTTP request | Description
 [**create_challenge_activity_template**](CampaignsChallengesApi.md#create_challenge_activity_template) | **POST** /challenge-activities/templates | Create a challenge activity template
 [**create_challenge_template**](CampaignsChallengesApi.md#create_challenge_template) | **POST** /challenges/templates | Create a challenge template
 [**delete_challenge**](CampaignsChallengesApi.md#delete_challenge) | **DELETE** /challenges/{id} | Delete a challenge
-[**delete_challenge_activity**](CampaignsChallengesApi.md#delete_challenge_activity) | **DELETE** /challenges/{challenge_id}/activities/{activity_id} | Delete a challenge activity
+[**delete_challenge_activity**](CampaignsChallengesApi.md#delete_challenge_activity) | **DELETE** /challenges/{challenge_id}/activities/{id} | Delete a challenge activity
 [**delete_challenge_activity_template**](CampaignsChallengesApi.md#delete_challenge_activity_template) | **DELETE** /challenge-activities/templates/{id} | Delete a challenge activity template
 [**delete_challenge_event**](CampaignsChallengesApi.md#delete_challenge_event) | **DELETE** /challenges/events/{id} | Delete a challenge event
 [**delete_challenge_template**](CampaignsChallengesApi.md#delete_challenge_template) | **DELETE** /challenges/templates/{id} | Delete a challenge template
 [**get_challenge**](CampaignsChallengesApi.md#get_challenge) | **GET** /challenges/{id} | Retrieve a challenge
 [**get_challenge_activities**](CampaignsChallengesApi.md#get_challenge_activities) | **GET** /challenges/{challenge_id}/activities | List and search challenge activities
-[**get_challenge_activity**](CampaignsChallengesApi.md#get_challenge_activity) | **GET** /challenges/{challenge_id}/activities/{activity_id} | Get a single challenge activity
+[**get_challenge_activity**](CampaignsChallengesApi.md#get_challenge_activity) | **GET** /challenges/{challenge_id}/activities/{id} | Get a single challenge activity
 [**get_challenge_activity_template**](CampaignsChallengesApi.md#get_challenge_activity_template) | **GET** /challenge-activities/templates/{id} | Get a single challenge activity template
 [**get_challenge_activity_templates**](CampaignsChallengesApi.md#get_challenge_activity_templates) | **GET** /challenge-activities/templates | List and search challenge activity templates
 [**get_challenge_event**](CampaignsChallengesApi.md#get_challenge_event) | **GET** /challenges/events/{id} | Retrieve a single challenge event details
@@ -29,7 +29,7 @@ Method | HTTP request | Description
 [**get_challenge_templates**](CampaignsChallengesApi.md#get_challenge_templates) | **GET** /challenges/templates | List and search challenge templates
 [**get_challenges**](CampaignsChallengesApi.md#get_challenges) | **GET** /challenges | Retrieve a list of challenges
 [**update_challenge**](CampaignsChallengesApi.md#update_challenge) | **PUT** /challenges/{id} | Update a challenge
-[**update_challenge_activity**](CampaignsChallengesApi.md#update_challenge_activity) | **PUT** /challenges/{challenge_id}/activities/{activity_id} | Update a challenge activity
+[**update_challenge_activity**](CampaignsChallengesApi.md#update_challenge_activity) | **PUT** /challenges/{challenge_id}/activities/{id} | Update a challenge activity
 [**update_challenge_activity_template**](CampaignsChallengesApi.md#update_challenge_activity_template) | **PUT** /challenge-activities/templates/{id} | Update an challenge activity template
 [**update_challenge_template**](CampaignsChallengesApi.md#update_challenge_template) | **PUT** /challenges/templates/{id} | Update a challenge template
 
@@ -279,9 +279,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_challenge_activity**
-> delete_challenge_activity(activity_id => $activity_id, challenge_id => $challenge_id)
+> delete_challenge_activity(id => $id, challenge_id => $challenge_id)
 
 Delete a challenge activity
+
+A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
 
 ### Example 
 ```perl
@@ -293,11 +295,11 @@ use KnetikCloud::CampaignsChallengesApi;
 $KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
 
 my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
-my $activity_id = 789; # int | The activity id
+my $id = 789; # int | The challenge_activity id
 my $challenge_id = 789; # int | The challenge id
 
 eval { 
-    $api_instance->delete_challenge_activity(activity_id => $activity_id, challenge_id => $challenge_id);
+    $api_instance->delete_challenge_activity(id => $id, challenge_id => $challenge_id);
 };
 if ($@) {
     warn "Exception when calling CampaignsChallengesApi->delete_challenge_activity: $@\n";
@@ -308,7 +310,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **activity_id** | **int**| The activity id | 
+ **id** | **int**| The challenge_activity id | 
  **challenge_id** | **int**| The challenge id | 
 
 ### Return type
@@ -567,9 +569,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_challenge_activity**
-> ChallengeActivityResource get_challenge_activity(activity_id => $activity_id)
+> ChallengeActivityResource get_challenge_activity(id => $id, challenge_id => $challenge_id)
 
 Get a single challenge activity
+
+A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
 
 ### Example 
 ```perl
@@ -578,10 +582,11 @@ use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
 
 my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
-my $activity_id = 789; # int | The activity id
+my $id = 789; # int | The challenge_activity id
+my $challenge_id = 789; # int | The challenge id
 
 eval { 
-    my $result = $api_instance->get_challenge_activity(activity_id => $activity_id);
+    my $result = $api_instance->get_challenge_activity(id => $id, challenge_id => $challenge_id);
     print Dumper($result);
 };
 if ($@) {
@@ -593,7 +598,8 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **activity_id** | **int**| The activity id | 
+ **id** | **int**| The challenge_activity id | 
+ **challenge_id** | **int**| The challenge id | 
 
 ### Return type
 
@@ -1014,9 +1020,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_challenge_activity**
-> ChallengeActivityResource update_challenge_activity(activity_id => $activity_id, challenge_id => $challenge_id, challenge_activity_resource => $challenge_activity_resource)
+> ChallengeActivityResource update_challenge_activity(id => $id, challenge_id => $challenge_id, challenge_activity_resource => $challenge_activity_resource)
 
 Update a challenge activity
+
+A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
 
 ### Example 
 ```perl
@@ -1028,12 +1036,12 @@ use KnetikCloud::CampaignsChallengesApi;
 $KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
 
 my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
-my $activity_id = 789; # int | The activity id
+my $id = 789; # int | The challenge_activity id
 my $challenge_id = 789; # int | The challenge id
 my $challenge_activity_resource = KnetikCloud::Object::ChallengeActivityResource->new(); # ChallengeActivityResource | The challenge activity resource object
 
 eval { 
-    my $result = $api_instance->update_challenge_activity(activity_id => $activity_id, challenge_id => $challenge_id, challenge_activity_resource => $challenge_activity_resource);
+    my $result = $api_instance->update_challenge_activity(id => $id, challenge_id => $challenge_id, challenge_activity_resource => $challenge_activity_resource);
     print Dumper($result);
 };
 if ($@) {
@@ -1045,7 +1053,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **activity_id** | **int**| The activity id | 
+ **id** | **int**| The challenge_activity id | 
  **challenge_id** | **int**| The challenge id | 
  **challenge_activity_resource** | [**ChallengeActivityResource**](ChallengeActivityResource.md)| The challenge activity resource object | [optional] 
 

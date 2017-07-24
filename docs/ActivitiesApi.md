@@ -25,7 +25,7 @@ Method | HTTP request | Description
 
 
 # **create_activity**
-> RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc create_activity(activity_resource => $activity_resource)
+> ActivityResource create_activity(activity_resource => $activity_resource)
 
 Create an activity
 
@@ -39,7 +39,7 @@ use KnetikCloud::ActivitiesApi;
 $KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
 
 my $api_instance = KnetikCloud::ActivitiesApi->new();
-my $activity_resource = KnetikCloud::Object::RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc->new(); # RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc | The activity resource object
+my $activity_resource = KnetikCloud::Object::ActivityResource->new(); # ActivityResource | The activity resource object
 
 eval { 
     my $result = $api_instance->create_activity(activity_resource => $activity_resource);
@@ -54,11 +54,11 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **activity_resource** | [**RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc**](RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.md)| The activity resource object | [optional] 
+ **activity_resource** | [**ActivityResource**](ActivityResource.md)| The activity resource object | [optional] 
 
 ### Return type
 
-[**RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc**](RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.md)
+[**ActivityResource**](ActivityResource.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_activity_occurrence**
-> AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings create_activity_occurrence(test => $test, activity_occurrence_resource => $activity_occurrence_resource)
+> ActivityOccurrenceResource create_activity_occurrence(test => $test, activity_occurrence_resource => $activity_occurrence_resource)
 
 Create a new activity occurrence. Ex: start a game
 
@@ -89,7 +89,7 @@ $KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
 
 my $api_instance = KnetikCloud::ActivitiesApi->new();
 my $test = 1; # boolean | if true, indicates that the occurrence should NOT be created. This can be used to test for eligibility and valid settings
-my $activity_occurrence_resource = KnetikCloud::Object::AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings->new(); # AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings | The activity occurrence object
+my $activity_occurrence_resource = KnetikCloud::Object::ActivityOccurrenceResource->new(); # ActivityOccurrenceResource | The activity occurrence object
 
 eval { 
     my $result = $api_instance->create_activity_occurrence(test => $test, activity_occurrence_resource => $activity_occurrence_resource);
@@ -105,11 +105,11 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **test** | **boolean**| if true, indicates that the occurrence should NOT be created. This can be used to test for eligibility and valid settings | [optional] [default to false]
- **activity_occurrence_resource** | [**AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings**](AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings.md)| The activity occurrence object | [optional] 
+ **activity_occurrence_resource** | [**ActivityOccurrenceResource**](ActivityOccurrenceResource.md)| The activity occurrence object | [optional] 
 
 ### Return type
 
-[**AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings**](AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings.md)
+[**ActivityOccurrenceResource**](ActivityOccurrenceResource.md)
 
 ### Authorization
 
@@ -281,7 +281,7 @@ use KnetikCloud::ActivitiesApi;
 my $api_instance = KnetikCloud::ActivitiesApi->new();
 my $filter_template = 1; # boolean | Filter for activities that are templates, or specifically not if false
 my $filter_name = 'filter_name_example'; # string | Filter for activities that have a name starting with specified string
-my $filter_id = ; # Object | Filter for activities with an id in the given comma separated list of ids
+my $filter_id = 'filter_id_example'; # string | Filter for activities with an id in the given comma separated list of ids
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filter_template** | **boolean**| Filter for activities that are templates, or specifically not if false | [optional] 
  **filter_name** | **string**| Filter for activities that have a name starting with specified string | [optional] 
- **filter_id** | [**Object**](.md)| Filter for activities with an id in the given comma separated list of ids | [optional] 
+ **filter_id** | **string**| Filter for activities with an id in the given comma separated list of ids | [optional] 
  **size** | **int**| The number of objects returned per page | [optional] [default to 25]
  **page** | **int**| The number of the page returned, starting with 1 | [optional] [default to 1]
  **order** | **string**| A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] | [optional] [default to id:ASC]
@@ -322,7 +322,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_activity**
-> RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc get_activity(id => $id)
+> ActivityResource get_activity(id => $id)
 
 Get a single activity
 
@@ -352,7 +352,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc**](RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.md)
+[**ActivityResource**](ActivityResource.md)
 
 ### Authorization
 
@@ -479,7 +479,7 @@ $KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
 
 my $api_instance = KnetikCloud::ActivitiesApi->new();
 my $activity_occurrence_id = 789; # int | The id of the activity occurrence
-my $activity_occurrence_results = KnetikCloud::Object::ActivityOccurrenceResults->new(); # ActivityOccurrenceResults | The activity occurrence object
+my $activity_occurrence_results = KnetikCloud::Object::ActivityOccurrenceResultsResource->new(); # ActivityOccurrenceResultsResource | The activity occurrence object
 
 eval { 
     my $result = $api_instance->set_activity_occurrence_results(activity_occurrence_id => $activity_occurrence_id, activity_occurrence_results => $activity_occurrence_results);
@@ -495,7 +495,7 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **activity_occurrence_id** | **int**| The id of the activity occurrence | 
- **activity_occurrence_results** | [**ActivityOccurrenceResults**](ActivityOccurrenceResults.md)| The activity occurrence object | [optional] 
+ **activity_occurrence_results** | [**ActivityOccurrenceResultsResource**](ActivityOccurrenceResultsResource.md)| The activity occurrence object | [optional] 
 
 ### Return type
 
@@ -513,7 +513,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_activity**
-> RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc update_activity(id => $id, activity_resource => $activity_resource)
+> ActivityResource update_activity(id => $id, activity_resource => $activity_resource)
 
 Update an activity
 
@@ -528,7 +528,7 @@ $KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
 
 my $api_instance = KnetikCloud::ActivitiesApi->new();
 my $id = 789; # int | The id of the activity
-my $activity_resource = KnetikCloud::Object::RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc->new(); # RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc | The activity resource object
+my $activity_resource = KnetikCloud::Object::ActivityResource->new(); # ActivityResource | The activity resource object
 
 eval { 
     my $result = $api_instance->update_activity(id => $id, activity_resource => $activity_resource);
@@ -544,11 +544,11 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The id of the activity | 
- **activity_resource** | [**RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc**](RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.md)| The activity resource object | [optional] 
+ **activity_resource** | [**ActivityResource**](ActivityResource.md)| The activity resource object | [optional] 
 
 ### Return type
 
-[**RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc**](RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.md)
+[**ActivityResource**](ActivityResource.md)
 
 ### Authorization
 

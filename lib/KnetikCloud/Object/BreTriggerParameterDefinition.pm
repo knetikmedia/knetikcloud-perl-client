@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -44,7 +44,7 @@ use base ("Class::Accessor", "Class::Data::Inheritable");
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -149,6 +149,13 @@ __PACKAGE__->method_documentation({
     	format => '',
     	read_only => '',
     		},
+    'optional' => {
+    	datatype => 'boolean',
+    	base_name => 'optional',
+    	description => 'Whether this parameter can be left off when firing the event. Default false',
+    	format => '',
+    	read_only => '',
+    		},
     'type' => {
     	datatype => 'string',
     	base_name => 'type',
@@ -160,11 +167,13 @@ __PACKAGE__->method_documentation({
 
 __PACKAGE__->swagger_types( {
     'name' => 'string',
+    'optional' => 'boolean',
     'type' => 'string'
 } );
 
 __PACKAGE__->attribute_map( {
     'name' => 'name',
+    'optional' => 'optional',
     'type' => 'type'
 } );
 

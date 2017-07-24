@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -44,7 +44,7 @@ use base ("Class::Accessor", "Class::Data::Inheritable");
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -177,6 +177,13 @@ __PACKAGE__->method_documentation({
     	format => '',
     	read_only => '',
     		},
+    'last_activity' => {
+    	datatype => 'int',
+    	base_name => 'last_activity',
+    	description => 'The date the user last interacted with the API (private)',
+    	format => '',
+    	read_only => '',
+    		},
     'last_updated' => {
     	datatype => 'int',
     	base_name => 'last_updated',
@@ -206,6 +213,7 @@ __PACKAGE__->swagger_types( {
     'email' => 'string',
     'fullname' => 'string',
     'id' => 'int',
+    'last_activity' => 'int',
     'last_updated' => 'int',
     'member_since' => 'int',
     'username' => 'string'
@@ -217,6 +225,7 @@ __PACKAGE__->attribute_map( {
     'email' => 'email',
     'fullname' => 'fullname',
     'id' => 'id',
+    'last_activity' => 'last_activity',
     'last_updated' => 'last_updated',
     'member_since' => 'member_since',
     'username' => 'username'

@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('KnetikCloud::Object::ARequestToResetAUsersPasswordByUsingAKnownUserProperty');
+use_ok('KnetikCloud::Object::UserActivityResults');
 
-my $instance = KnetikCloud::Object::ARequestToResetAUsersPasswordByUsingAKnownUserProperty->new();
+my $instance = KnetikCloud::Object::UserActivityResults->new();
 
-isa_ok($instance, 'KnetikCloud::Object::ARequestToResetAUsersPasswordByUsingAKnownUserProperty');
+isa_ok($instance, 'KnetikCloud::Object::UserActivityResults');
 

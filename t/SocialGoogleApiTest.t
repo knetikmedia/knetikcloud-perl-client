@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -33,8 +33,8 @@ isa_ok($api, 'KnetikCloud::SocialGoogleApi');
 # link_accounts1 test
 #
 {
-    my $facebook_token = undef; # replace NULL with a proper value
-    my $result = $api->link_accounts1(facebook_token => $facebook_token);
+    my $google_token = undef; # replace NULL with a proper value
+    my $result = $api->link_accounts1(google_token => $google_token);
 }
 
 

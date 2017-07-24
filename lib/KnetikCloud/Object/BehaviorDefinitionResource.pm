@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -44,7 +44,7 @@ use base ("Class::Accessor", "Class::Data::Inheritable");
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -157,7 +157,7 @@ __PACKAGE__->method_documentation({
     	read_only => '',
     		},
     'properties' => {
-    	datatype => 'ARRAY[PropertyDefinitionResource]',
+    	datatype => 'ARRAY[PropertyFieldResource]',
     	base_name => 'properties',
     	description => 'Configurable properties of the behavior',
     	format => '',
@@ -175,7 +175,7 @@ __PACKAGE__->method_documentation({
 __PACKAGE__->swagger_types( {
     'description' => 'string',
     'prerequisite_behaviors' => 'ARRAY[Behavior]',
-    'properties' => 'ARRAY[PropertyDefinitionResource]',
+    'properties' => 'ARRAY[PropertyFieldResource]',
     'type_hint' => 'string'
 } );
 

@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -1096,11 +1096,11 @@ sub start_password_reset {
 #
 # Reset a user's password without user id
 # 
-# @param ARequestToResetAUsersPasswordByUsingAKnownUserProperty $password_reset An object containing one of three methods to look up a user (optional)
+# @param PasswordResetRequest $password_reset An object containing one of three methods to look up a user (optional)
 {
     my $params = {
     'password_reset' => {
-        data_type => 'ARequestToResetAUsersPasswordByUsingAKnownUserProperty',
+        data_type => 'PasswordResetRequest',
         description => 'An object containing one of three methods to look up a user',
         required => '0',
     },

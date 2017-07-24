@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -388,13 +388,13 @@ sub delete_challenge {
 #
 # Delete a challenge activity
 # 
-# @param int $activity_id The activity id (required)
+# @param int $id The challenge_activity id (required)
 # @param int $challenge_id The challenge id (required)
 {
     my $params = {
-    'activity_id' => {
+    'id' => {
         data_type => 'int',
-        description => 'The activity id',
+        description => 'The challenge_activity id',
         required => '1',
     },
     'challenge_id' => {
@@ -414,9 +414,9 @@ sub delete_challenge {
 sub delete_challenge_activity {
     my ($self, %args) = @_;
 
-    # verify the required parameter 'activity_id' is set
-    unless (exists $args{'activity_id'}) {
-      croak("Missing the required parameter 'activity_id' when calling delete_challenge_activity");
+    # verify the required parameter 'id' is set
+    unless (exists $args{'id'}) {
+      croak("Missing the required parameter 'id' when calling delete_challenge_activity");
     }
 
     # verify the required parameter 'challenge_id' is set
@@ -425,7 +425,7 @@ sub delete_challenge_activity {
     }
 
     # parse inputs
-    my $_resource_path = '/challenges/{challenge_id}/activities/{activity_id}';
+    my $_resource_path = '/challenges/{challenge_id}/activities/{id}';
 
     my $_method = 'DELETE';
     my $query_params = {};
@@ -440,9 +440,9 @@ sub delete_challenge_activity {
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
     # path params
-    if ( exists $args{'activity_id'}) {
-        my $_base_variable = "{" . "activity_id" . "}";
-        my $_base_value = $self->{api_client}->to_path_value($args{'activity_id'});
+    if ( exists $args{'id'}) {
+        my $_base_variable = "{" . "id" . "}";
+        my $_base_value = $self->{api_client}->to_path_value($args{'id'});
         $_resource_path =~ s/$_base_variable/$_base_value/g;
     }
 
@@ -847,12 +847,18 @@ sub get_challenge_activities {
 #
 # Get a single challenge activity
 # 
-# @param int $activity_id The activity id (required)
+# @param int $id The challenge_activity id (required)
+# @param int $challenge_id The challenge id (required)
 {
     my $params = {
-    'activity_id' => {
+    'id' => {
         data_type => 'int',
-        description => 'The activity id',
+        description => 'The challenge_activity id',
+        required => '1',
+    },
+    'challenge_id' => {
+        data_type => 'int',
+        description => 'The challenge id',
         required => '1',
     },
     };
@@ -867,13 +873,18 @@ sub get_challenge_activities {
 sub get_challenge_activity {
     my ($self, %args) = @_;
 
-    # verify the required parameter 'activity_id' is set
-    unless (exists $args{'activity_id'}) {
-      croak("Missing the required parameter 'activity_id' when calling get_challenge_activity");
+    # verify the required parameter 'id' is set
+    unless (exists $args{'id'}) {
+      croak("Missing the required parameter 'id' when calling get_challenge_activity");
+    }
+
+    # verify the required parameter 'challenge_id' is set
+    unless (exists $args{'challenge_id'}) {
+      croak("Missing the required parameter 'challenge_id' when calling get_challenge_activity");
     }
 
     # parse inputs
-    my $_resource_path = '/challenges/{challenge_id}/activities/{activity_id}';
+    my $_resource_path = '/challenges/{challenge_id}/activities/{id}';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -888,9 +899,16 @@ sub get_challenge_activity {
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
     # path params
-    if ( exists $args{'activity_id'}) {
-        my $_base_variable = "{" . "activity_id" . "}";
-        my $_base_value = $self->{api_client}->to_path_value($args{'activity_id'});
+    if ( exists $args{'id'}) {
+        my $_base_variable = "{" . "id" . "}";
+        my $_base_value = $self->{api_client}->to_path_value($args{'id'});
+        $_resource_path =~ s/$_base_variable/$_base_value/g;
+    }
+
+    # path params
+    if ( exists $args{'challenge_id'}) {
+        my $_base_variable = "{" . "challenge_id" . "}";
+        my $_base_value = $self->{api_client}->to_path_value($args{'challenge_id'});
         $_resource_path =~ s/$_base_variable/$_base_value/g;
     }
 
@@ -1609,14 +1627,14 @@ sub update_challenge {
 #
 # Update a challenge activity
 # 
-# @param int $activity_id The activity id (required)
+# @param int $id The challenge_activity id (required)
 # @param int $challenge_id The challenge id (required)
 # @param ChallengeActivityResource $challenge_activity_resource The challenge activity resource object (optional)
 {
     my $params = {
-    'activity_id' => {
+    'id' => {
         data_type => 'int',
-        description => 'The activity id',
+        description => 'The challenge_activity id',
         required => '1',
     },
     'challenge_id' => {
@@ -1641,9 +1659,9 @@ sub update_challenge {
 sub update_challenge_activity {
     my ($self, %args) = @_;
 
-    # verify the required parameter 'activity_id' is set
-    unless (exists $args{'activity_id'}) {
-      croak("Missing the required parameter 'activity_id' when calling update_challenge_activity");
+    # verify the required parameter 'id' is set
+    unless (exists $args{'id'}) {
+      croak("Missing the required parameter 'id' when calling update_challenge_activity");
     }
 
     # verify the required parameter 'challenge_id' is set
@@ -1652,7 +1670,7 @@ sub update_challenge_activity {
     }
 
     # parse inputs
-    my $_resource_path = '/challenges/{challenge_id}/activities/{activity_id}';
+    my $_resource_path = '/challenges/{challenge_id}/activities/{id}';
 
     my $_method = 'PUT';
     my $query_params = {};
@@ -1667,9 +1685,9 @@ sub update_challenge_activity {
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
 
     # path params
-    if ( exists $args{'activity_id'}) {
-        my $_base_variable = "{" . "activity_id" . "}";
-        my $_base_value = $self->{api_client}->to_path_value($args{'activity_id'});
+    if ( exists $args{'id'}) {
+        my $_base_variable = "{" . "id" . "}";
+        my $_base_value = $self->{api_client}->to_path_value($args{'id'});
         $_resource_path =~ s/$_base_variable/$_base_value/g;
     }
 

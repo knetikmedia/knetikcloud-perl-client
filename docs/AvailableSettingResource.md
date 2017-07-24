@@ -1,8 +1,8 @@
-# KnetikCloud::Object::TheDefinitionOfAnActivityParametersExDifficultyLevel
+# KnetikCloud::Object::AvailableSettingResource
 
 ## Load the model package
 ```perl
-use KnetikCloud::Object::TheDefinitionOfAnActivityParametersExDifficultyLevel;
+use KnetikCloud::Object::AvailableSettingResource;
 ```
 
 ## Properties

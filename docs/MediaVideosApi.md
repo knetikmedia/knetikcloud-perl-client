@@ -867,12 +867,12 @@ use KnetikCloud::MediaVideosApi;
 
 my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $exclude_flagged = 1; # boolean | Skip videos that have been flagged by the current user
-my $filter_videos_by_uploader = ; # Object | Filter for videos by uploader id
+my $filter_videos_by_uploader = 56; # int | Filter for videos by uploader id
 my $filter_category = 'filter_category_example'; # string | Filter for videos from a specific category by id
 my $filter_tagset = 'filter_tagset_example'; # string | Filter for videos with specified tags (separated by comma)
 my $filter_videos_by_name = 'filter_videos_by_name_example'; # string | Filter for videos which name *STARTS* with the given string
-my $filter_videos_by_contributor = ; # Object | Filter for videos with contribution from the artist specified by ID
-my $filter_videos_by_author = ; # Object | Filter for videos with an artist as author specified by ID
+my $filter_videos_by_contributor = 56; # int | Filter for videos with contribution from the artist specified by ID
+my $filter_videos_by_author = 56; # int | Filter for videos with an artist as author specified by ID
 my $filter_has_author = 1; # boolean | Filter for videos that have an author set if true, or that have no author if false
 my $filter_has_uploader = 1; # boolean | Filter for videos that have an uploader set if true, or that have no uploader if false
 my $filter_related_to = 'filter_related_to_example'; # string | Filter for videos that have designated a particular video as the TO of a relationship. Pattern should match VIDEO_ID or VIDEO_ID:DETAILS to match with a specific details string as well
@@ -896,12 +896,12 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **exclude_flagged** | **boolean**| Skip videos that have been flagged by the current user | [optional] [default to true]
- **filter_videos_by_uploader** | [**Object**](.md)| Filter for videos by uploader id | [optional] 
+ **filter_videos_by_uploader** | **int**| Filter for videos by uploader id | [optional] 
  **filter_category** | **string**| Filter for videos from a specific category by id | [optional] 
  **filter_tagset** | **string**| Filter for videos with specified tags (separated by comma) | [optional] 
  **filter_videos_by_name** | **string**| Filter for videos which name *STARTS* with the given string | [optional] 
- **filter_videos_by_contributor** | [**Object**](.md)| Filter for videos with contribution from the artist specified by ID | [optional] 
- **filter_videos_by_author** | [**Object**](.md)| Filter for videos with an artist as author specified by ID | [optional] 
+ **filter_videos_by_contributor** | **int**| Filter for videos with contribution from the artist specified by ID | [optional] 
+ **filter_videos_by_author** | **int**| Filter for videos with an artist as author specified by ID | [optional] 
  **filter_has_author** | **boolean**| Filter for videos that have an author set if true, or that have no author if false | [optional] 
  **filter_has_uploader** | **boolean**| Filter for videos that have an uploader set if true, or that have no uploader if false | [optional] 
  **filter_related_to** | **string**| Filter for videos that have designated a particular video as the TO of a relationship. Pattern should match VIDEO_ID or VIDEO_ID:DETAILS to match with a specific details string as well | [optional] 

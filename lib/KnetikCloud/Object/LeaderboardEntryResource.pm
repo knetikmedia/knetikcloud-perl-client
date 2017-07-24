@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -44,7 +44,7 @@ use base ("Class::Accessor", "Class::Data::Inheritable");
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -156,6 +156,13 @@ __PACKAGE__->method_documentation({
     	format => '',
     	read_only => '',
     		},
+    'updated_date' => {
+    	datatype => 'int',
+    	base_name => 'updated_date',
+    	description => 'The date this score was recorded or updated. Unix timestamp in seconds',
+    	format => '',
+    	read_only => '',
+    		},
     'user' => {
     	datatype => 'SimpleUserResource',
     	base_name => 'user',
@@ -168,12 +175,14 @@ __PACKAGE__->method_documentation({
 __PACKAGE__->swagger_types( {
     'rank' => 'int',
     'score' => 'int',
+    'updated_date' => 'int',
     'user' => 'SimpleUserResource'
 } );
 
 __PACKAGE__->attribute_map( {
     'rank' => 'rank',
     'score' => 'score',
+    'updated_date' => 'updated_date',
     'user' => 'user'
 } );
 

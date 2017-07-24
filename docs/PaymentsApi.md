@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_payment_methods**
-> ARRAY[PaymentMethodResource] get_payment_methods(user_id => $user_id, size => $size, page => $page, order => $order)
+> ARRAY[PaymentMethodResource] get_payment_methods(user_id => $user_id, filter_name => $filter_name, filter_payment_type => $filter_payment_type, filter_payment_method_type_id => $filter_payment_method_type_id, filter_payment_method_type_name => $filter_payment_method_type_name, size => $size, page => $page, order => $order)
 
 Get all payment methods for a user
 
@@ -180,12 +180,16 @@ $KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
 
 my $api_instance = KnetikCloud::PaymentsApi->new();
 my $user_id = 56; # int | ID of the user for whom the payment methods are being retrieved
+my $filter_name = 'filter_name_example'; # string | Filter for payment methods whose name starts with a given string
+my $filter_payment_type = 'filter_payment_type_example'; # string | Filter for payment methods with a specific payment type
+my $filter_payment_method_type_id = 56; # int | Filter for payment methods with a specific payment method type by id
+my $filter_payment_method_type_name = 'filter_payment_method_type_name_example'; # string | Filter for payment methods whose payment method type name starts with a given string
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | a comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
 
 eval { 
-    my $result = $api_instance->get_payment_methods(user_id => $user_id, size => $size, page => $page, order => $order);
+    my $result = $api_instance->get_payment_methods(user_id => $user_id, filter_name => $filter_name, filter_payment_type => $filter_payment_type, filter_payment_method_type_id => $filter_payment_method_type_id, filter_payment_method_type_name => $filter_payment_method_type_name, size => $size, page => $page, order => $order);
     print Dumper($result);
 };
 if ($@) {
@@ -198,6 +202,10 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**| ID of the user for whom the payment methods are being retrieved | 
+ **filter_name** | **string**| Filter for payment methods whose name starts with a given string | [optional] 
+ **filter_payment_type** | **string**| Filter for payment methods with a specific payment type | [optional] 
+ **filter_payment_method_type_id** | **int**| Filter for payment methods with a specific payment method type by id | [optional] 
+ **filter_payment_method_type_name** | **string**| Filter for payment methods whose payment method type name starts with a given string | [optional] 
  **size** | **int**| The number of objects returned per page | [optional] [default to 25]
  **page** | **int**| The number of the page returned, starting with 1 | [optional] [default to 1]
  **order** | **string**| a comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] | [optional] [default to id:ASC]

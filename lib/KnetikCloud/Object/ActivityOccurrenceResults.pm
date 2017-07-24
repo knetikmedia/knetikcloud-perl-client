@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -44,7 +44,7 @@ use base ("Class::Accessor", "Class::Data::Inheritable");
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -143,7 +143,7 @@ __PACKAGE__->class_documentation({description => '',
 
 __PACKAGE__->method_documentation({
     'users' => {
-    	datatype => 'ARRAY[UserActivityResultsResource]',
+    	datatype => 'ARRAY[UserActivityResults]',
     	base_name => 'users',
     	description => 'The game results for each user. Include all users that played (paid to get in) even if they were eliminated without a result. A null metric is allowed',
     	format => '',
@@ -152,7 +152,7 @@ __PACKAGE__->method_documentation({
 });
 
 __PACKAGE__->swagger_types( {
-    'users' => 'ARRAY[UserActivityResultsResource]'
+    'users' => 'ARRAY[UserActivityResults]'
 } );
 
 __PACKAGE__->attribute_map( {

@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -44,7 +44,7 @@ use base ("Class::Accessor", "Class::Data::Inheritable");
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -198,17 +198,31 @@ __PACKAGE__->method_documentation({
     	format => '',
     	read_only => '',
     		},
+    'price_override' => {
+    	datatype => 'double',
+    	base_name => 'price_override',
+    	description => 'The recurring price that has been set to override the base price. Null if not overriding',
+    	format => '',
+    	read_only => '',
+    		},
+    'price_override_reason' => {
+    	datatype => 'string',
+    	base_name => 'price_override_reason',
+    	description => 'An explanation for the reason the price is being overridden',
+    	format => '',
+    	read_only => '',
+    		},
     'recurring_price' => {
     	datatype => 'double',
     	base_name => 'recurring_price',
-    	description => 'The recurring price',
+    	description => 'The default recurring price',
     	format => '',
     	read_only => '',
     		},
     'sku' => {
     	datatype => 'string',
     	base_name => 'sku',
-    	description => 'The sku of the subscription',
+    	description => 'The recurring sku of the subscription',
     	format => '',
     	read_only => '',
     		},
@@ -244,6 +258,8 @@ __PACKAGE__->swagger_types( {
     'inventory_status' => 'string',
     'item_id' => 'int',
     'payment_method' => 'PaymentMethodResource',
+    'price_override' => 'double',
+    'price_override_reason' => 'string',
     'recurring_price' => 'double',
     'sku' => 'string',
     'start_date' => 'int',
@@ -260,6 +276,8 @@ __PACKAGE__->attribute_map( {
     'inventory_status' => 'inventory_status',
     'item_id' => 'item_id',
     'payment_method' => 'payment_method',
+    'price_override' => 'price_override',
+    'price_override_reason' => 'price_override_reason',
     'recurring_price' => 'recurring_price',
     'sku' => 'sku',
     'start_date' => 'start_date',

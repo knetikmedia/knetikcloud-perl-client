@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -301,6 +301,10 @@ sub get_payment_method {
 # Get all payment methods for a user
 # 
 # @param int $user_id ID of the user for whom the payment methods are being retrieved (required)
+# @param string $filter_name Filter for payment methods whose name starts with a given string (optional)
+# @param string $filter_payment_type Filter for payment methods with a specific payment type (optional)
+# @param int $filter_payment_method_type_id Filter for payment methods with a specific payment method type by id (optional)
+# @param string $filter_payment_method_type_name Filter for payment methods whose payment method type name starts with a given string (optional)
 # @param int $size The number of objects returned per page (optional, default to 25)
 # @param int $page The number of the page returned, starting with 1 (optional, default to 1)
 # @param string $order a comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
@@ -310,6 +314,26 @@ sub get_payment_method {
         data_type => 'int',
         description => 'ID of the user for whom the payment methods are being retrieved',
         required => '1',
+    },
+    'filter_name' => {
+        data_type => 'string',
+        description => 'Filter for payment methods whose name starts with a given string',
+        required => '0',
+    },
+    'filter_payment_type' => {
+        data_type => 'string',
+        description => 'Filter for payment methods with a specific payment type',
+        required => '0',
+    },
+    'filter_payment_method_type_id' => {
+        data_type => 'int',
+        description => 'Filter for payment methods with a specific payment method type by id',
+        required => '0',
+    },
+    'filter_payment_method_type_name' => {
+        data_type => 'string',
+        description => 'Filter for payment methods whose payment method type name starts with a given string',
+        required => '0',
     },
     'size' => {
         data_type => 'int',
@@ -357,6 +381,26 @@ sub get_payment_methods {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    # query params
+    if ( exists $args{'filter_name'}) {
+        $query_params->{'filter_name'} = $self->{api_client}->to_query_value($args{'filter_name'});
+    }
+
+    # query params
+    if ( exists $args{'filter_payment_type'}) {
+        $query_params->{'filter_payment_type'} = $self->{api_client}->to_query_value($args{'filter_payment_type'});
+    }
+
+    # query params
+    if ( exists $args{'filter_payment_method_type_id'}) {
+        $query_params->{'filter_payment_method_type_id'} = $self->{api_client}->to_query_value($args{'filter_payment_method_type_id'});
+    }
+
+    # query params
+    if ( exists $args{'filter_payment_method_type_name'}) {
+        $query_params->{'filter_payment_method_type_name'} = $self->{api_client}->to_query_value($args{'filter_payment_method_type_name'});
+    }
 
     # query params
     if ( exists $args{'size'}) {

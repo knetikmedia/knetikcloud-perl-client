@@ -9,15 +9,15 @@ All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**link_accounts1**](SocialGoogleApi.md#link_accounts1) | **POST** /social/google/users | Link facebook account
+[**link_accounts1**](SocialGoogleApi.md#link_accounts1) | **POST** /social/google/users | Link google account
 
 
 # **link_accounts1**
-> link_accounts1(facebook_token => $facebook_token)
+> link_accounts1(google_token => $google_token)
 
-Link facebook account
+Link google account
 
-Links the current user account to a facebook account, using the acccess token from facebook. Can also be used to update the access token after it has expired.
+Links the current user account to a google account, using the acccess token from google. Can also be used to update the access token after it has expired.
 
 ### Example 
 ```perl
@@ -29,10 +29,10 @@ use KnetikCloud::SocialGoogleApi;
 $KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
 
 my $api_instance = KnetikCloud::SocialGoogleApi->new();
-my $facebook_token = KnetikCloud::Object::GoogleToken->new(); # GoogleToken | The token from facebook
+my $google_token = KnetikCloud::Object::GoogleToken->new(); # GoogleToken | The token from google
 
 eval { 
-    $api_instance->link_accounts1(facebook_token => $facebook_token);
+    $api_instance->link_accounts1(google_token => $google_token);
 };
 if ($@) {
     warn "Exception when calling SocialGoogleApi->link_accounts1: $@\n";
@@ -43,7 +43,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **facebook_token** | [**GoogleToken**](GoogleToken.md)| The token from facebook | [optional] 
+ **google_token** | [**GoogleToken**](GoogleToken.md)| The token from google | [optional] 
 
 ### Return type
 

@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -94,6 +94,16 @@ isa_ok($api, 'KnetikCloud::UsersSubscriptionsApi');
     my $inventory_id = undef; # replace NULL with a proper value
     my $plan_id = undef; # replace NULL with a proper value
     my $result = $api->set_user_subscription_plan(user_id => $user_id, inventory_id => $inventory_id, plan_id => $plan_id);
+}
+
+#
+# set_user_subscription_price test
+#
+{
+    my $user_id = undef; # replace NULL with a proper value
+    my $inventory_id = undef; # replace NULL with a proper value
+    my $the override details = undef; # replace NULL with a proper value
+    my $result = $api->set_user_subscription_price(user_id => $user_id, inventory_id => $inventory_id, the override details => $the override details);
 }
 
 

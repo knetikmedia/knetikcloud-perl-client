@@ -691,7 +691,7 @@ use KnetikCloud::Configuration;
 use KnetikCloud::UsersApi;
 
 my $api_instance = KnetikCloud::UsersApi->new();
-my $password_reset = KnetikCloud::Object::ARequestToResetAUsersPasswordByUsingAKnownUserProperty->new(); # ARequestToResetAUsersPasswordByUsingAKnownUserProperty | An object containing one of three methods to look up a user
+my $password_reset = KnetikCloud::Object::PasswordResetRequest->new(); # PasswordResetRequest | An object containing one of three methods to look up a user
 
 eval { 
     $api_instance->submit_password_reset(password_reset => $password_reset);
@@ -705,7 +705,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **password_reset** | [**ARequestToResetAUsersPasswordByUsingAKnownUserProperty**](ARequestToResetAUsersPasswordByUsingAKnownUserProperty.md)| An object containing one of three methods to look up a user | [optional] 
+ **password_reset** | [**PasswordResetRequest**](PasswordResetRequest.md)| An object containing one of three methods to look up a user | [optional] 
 
 ### Return type
 

@@ -8,7 +8,6 @@ use KnetikCloud::Object::InvoiceItemResource;
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**affiliate_id** | **int** |  | [optional] 
 **bundle_sku** | **string** |  | [optional] 
 **current_fulfillment_status** | **string** |  | [optional] 
 **id** | **int** |  | [optional] 

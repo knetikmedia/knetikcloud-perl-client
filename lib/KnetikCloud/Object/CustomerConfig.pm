@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -44,7 +44,7 @@ use base ("Class::Accessor", "Class::Data::Inheritable");
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -156,6 +156,13 @@ __PACKAGE__->method_documentation({
     	format => '',
     	read_only => '',
     		},
+    'io' => {
+    	datatype => 'IOConfig',
+    	base_name => 'io',
+    	description => '',
+    	format => '',
+    	read_only => '',
+    		},
     'name' => {
     	datatype => 'string',
     	base_name => 'name',
@@ -175,6 +182,7 @@ __PACKAGE__->method_documentation({
 __PACKAGE__->swagger_types( {
     'aliases' => 'string',
     'database' => 'DatabaseConfig',
+    'io' => 'IOConfig',
     'name' => 'string',
     's3_config' => 'S3Config'
 } );
@@ -182,6 +190,7 @@ __PACKAGE__->swagger_types( {
 __PACKAGE__->attribute_map( {
     'aliases' => 'aliases',
     'database' => 'database',
+    'io' => 'io',
     'name' => 'name',
     's3_config' => 's3_config'
 } );

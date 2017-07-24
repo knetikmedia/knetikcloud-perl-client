@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -328,7 +328,7 @@ sub get_invoice_logs {
 # @param string $filter_item_name Filters invoices by item name containing the given string (optional)
 # @param string $filter_external_ref Filters invoices by external reference. (optional)
 # @param string $filter_created_date Filters invoices by creation date. Multiple values possible for range search. Format: filter_created_date&#x3D;OP,ts&amp;... where OP in (GT, LT, GOE, LOE, EQ) and ts is a unix timestamp in seconds. Ex: filter_created_date&#x3D;GT,1452154258,LT,1554254874 (optional)
-# @param Object $filter_vendor_ids Filters invoices for ones from one of the vendors whose id is in the given comma separated list (optional)
+# @param string $filter_vendor_ids Filters invoices for ones from one of the vendors whose id is in the given comma separated list (optional)
 # @param string $filter_currency Filters invoices by currency. ISO3 currency code (optional)
 # @param string $filter_shipping_state_name Filters invoices by shipping address: Exact match state name (optional)
 # @param string $filter_shipping_country_name Filters invoices by shipping address: Exact match country name (optional)
@@ -376,7 +376,7 @@ sub get_invoice_logs {
         required => '0',
     },
     'filter_vendor_ids' => {
-        data_type => 'Object',
+        data_type => 'string',
         description => 'Filters invoices for ones from one of the vendors whose id is in the given comma separated list',
         required => '0',
     },
@@ -663,6 +663,121 @@ sub pay_invoice {
     # body params
     if ( exists $args{'request'}) {
         $_body_data = $args{'request'};
+    }
+
+    # authentication setting, if any
+    my $auth_settings = [qw(OAuth2 )];
+
+    # make the API Call
+    $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    return;
+}
+
+#
+# set_bundled_invoice_item_fulfillment_status
+#
+# Set the fulfillment status of a bundled invoice item
+# 
+# @param int $id The id of the invoice (required)
+# @param string $bundle_sku The sku of the bundle in the invoice that contains the given target (required)
+# @param string $sku The sku of an item in the bundle in the invoice (required)
+# @param string $status The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39; (required)
+{
+    my $params = {
+    'id' => {
+        data_type => 'int',
+        description => 'The id of the invoice',
+        required => '1',
+    },
+    'bundle_sku' => {
+        data_type => 'string',
+        description => 'The sku of the bundle in the invoice that contains the given target',
+        required => '1',
+    },
+    'sku' => {
+        data_type => 'string',
+        description => 'The sku of an item in the bundle in the invoice',
+        required => '1',
+    },
+    'status' => {
+        data_type => 'string',
+        description => 'The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39;',
+        required => '1',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'set_bundled_invoice_item_fulfillment_status' } = { 
+    	summary => 'Set the fulfillment status of a bundled invoice item',
+        params => $params,
+        returns => undef,
+        };
+}
+# @return void
+#
+sub set_bundled_invoice_item_fulfillment_status {
+    my ($self, %args) = @_;
+
+    # verify the required parameter 'id' is set
+    unless (exists $args{'id'}) {
+      croak("Missing the required parameter 'id' when calling set_bundled_invoice_item_fulfillment_status");
+    }
+
+    # verify the required parameter 'bundle_sku' is set
+    unless (exists $args{'bundle_sku'}) {
+      croak("Missing the required parameter 'bundle_sku' when calling set_bundled_invoice_item_fulfillment_status");
+    }
+
+    # verify the required parameter 'sku' is set
+    unless (exists $args{'sku'}) {
+      croak("Missing the required parameter 'sku' when calling set_bundled_invoice_item_fulfillment_status");
+    }
+
+    # verify the required parameter 'status' is set
+    unless (exists $args{'status'}) {
+      croak("Missing the required parameter 'status' when calling set_bundled_invoice_item_fulfillment_status");
+    }
+
+    # parse inputs
+    my $_resource_path = '/invoices/{id}/items/{bundleSku}/bundled-skus/{sku}/fulfillment-status';
+
+    my $_method = 'PUT';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    # path params
+    if ( exists $args{'id'}) {
+        my $_base_variable = "{" . "id" . "}";
+        my $_base_value = $self->{api_client}->to_path_value($args{'id'});
+        $_resource_path =~ s/$_base_variable/$_base_value/g;
+    }
+
+    # path params
+    if ( exists $args{'bundle_sku'}) {
+        my $_base_variable = "{" . "bundleSku" . "}";
+        my $_base_value = $self->{api_client}->to_path_value($args{'bundle_sku'});
+        $_resource_path =~ s/$_base_variable/$_base_value/g;
+    }
+
+    # path params
+    if ( exists $args{'sku'}) {
+        my $_base_variable = "{" . "sku" . "}";
+        my $_base_value = $self->{api_client}->to_path_value($args{'sku'});
+        $_resource_path =~ s/$_base_variable/$_base_value/g;
+    }
+
+    my $_body_data;
+    # body params
+    if ( exists $args{'status'}) {
+        $_body_data = $args{'status'};
     }
 
     # authentication setting, if any

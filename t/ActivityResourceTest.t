@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -25,9 +25,9 @@ use strict;
 use warnings;
 
 
-use_ok('KnetikCloud::Object::TheDefinitionOfAnActivityParametersExDifficultyLevel');
+use_ok('KnetikCloud::Object::ActivityResource');
 
-my $instance = KnetikCloud::Object::TheDefinitionOfAnActivityParametersExDifficultyLevel->new();
+my $instance = KnetikCloud::Object::ActivityResource->new();
 
-isa_ok($instance, 'KnetikCloud::Object::TheDefinitionOfAnActivityParametersExDifficultyLevel');
+isa_ok($instance, 'KnetikCloud::Object::ActivityResource');
 

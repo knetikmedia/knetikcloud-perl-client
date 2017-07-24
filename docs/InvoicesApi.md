@@ -16,6 +16,7 @@ Method | HTTP request | Description
 [**get_invoices**](InvoicesApi.md#get_invoices) | **GET** /invoices | Retrieve invoices
 [**get_payment_statuses**](InvoicesApi.md#get_payment_statuses) | **GET** /invoices/payment-statuses | Lists available payment statuses
 [**pay_invoice**](InvoicesApi.md#pay_invoice) | **POST** /invoices/{id}/payments | Trigger payment of an invoice
+[**set_bundled_invoice_item_fulfillment_status**](InvoicesApi.md#set_bundled_invoice_item_fulfillment_status) | **PUT** /invoices/{id}/items/{bundleSku}/bundled-skus/{sku}/fulfillment-status | Set the fulfillment status of a bundled invoice item
 [**set_external_ref**](InvoicesApi.md#set_external_ref) | **PUT** /invoices/{id}/external-ref | Set the external reference of an invoice
 [**set_invoice_item_fulfillment_status**](InvoicesApi.md#set_invoice_item_fulfillment_status) | **PUT** /invoices/{id}/items/{sku}/fulfillment-status | Set the fulfillment status of an invoice item
 [**set_order_notes**](InvoicesApi.md#set_order_notes) | **PUT** /invoices/{id}/order-notes | Set the order notes of an invoice
@@ -234,7 +235,7 @@ my $filter_payment_status = 'filter_payment_status_example'; # string | Filters 
 my $filter_item_name = 'filter_item_name_example'; # string | Filters invoices by item name containing the given string
 my $filter_external_ref = 'filter_external_ref_example'; # string | Filters invoices by external reference.
 my $filter_created_date = 'filter_created_date_example'; # string | Filters invoices by creation date. Multiple values possible for range search. Format: filter_created_date=OP,ts&... where OP in (GT, LT, GOE, LOE, EQ) and ts is a unix timestamp in seconds. Ex: filter_created_date=GT,1452154258,LT,1554254874
-my $filter_vendor_ids = ; # Object | Filters invoices for ones from one of the vendors whose id is in the given comma separated list
+my $filter_vendor_ids = 'filter_vendor_ids_example'; # string | Filters invoices for ones from one of the vendors whose id is in the given comma separated list
 my $filter_currency = 'filter_currency_example'; # string | Filters invoices by currency. ISO3 currency code
 my $filter_shipping_state_name = 'filter_shipping_state_name_example'; # string | Filters invoices by shipping address: Exact match state name
 my $filter_shipping_country_name = 'filter_shipping_country_name_example'; # string | Filters invoices by shipping address: Exact match country name
@@ -265,7 +266,7 @@ Name | Type | Description  | Notes
  **filter_item_name** | **string**| Filters invoices by item name containing the given string | [optional] 
  **filter_external_ref** | **string**| Filters invoices by external reference. | [optional] 
  **filter_created_date** | **string**| Filters invoices by creation date. Multiple values possible for range search. Format: filter_created_date&#x3D;OP,ts&amp;... where OP in (GT, LT, GOE, LOE, EQ) and ts is a unix timestamp in seconds. Ex: filter_created_date&#x3D;GT,1452154258,LT,1554254874 | [optional] 
- **filter_vendor_ids** | [**Object**](.md)| Filters invoices for ones from one of the vendors whose id is in the given comma separated list | [optional] 
+ **filter_vendor_ids** | **string**| Filters invoices for ones from one of the vendors whose id is in the given comma separated list | [optional] 
  **filter_currency** | **string**| Filters invoices by currency. ISO3 currency code | [optional] 
  **filter_shipping_state_name** | **string**| Filters invoices by shipping address: Exact match state name | [optional] 
  **filter_shipping_country_name** | **string**| Filters invoices by shipping address: Exact match country name | [optional] 
@@ -363,6 +364,60 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The id of the invoice | 
  **request** | [**PayBySavedMethodRequest**](PayBySavedMethodRequest.md)| Payment info | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **set_bundled_invoice_item_fulfillment_status**
+> set_bundled_invoice_item_fulfillment_status(id => $id, bundle_sku => $bundle_sku, sku => $sku, status => $status)
+
+Set the fulfillment status of a bundled invoice item
+
+This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which.
+
+### Example 
+```perl
+use Data::Dumper;
+use KnetikCloud::Configuration;
+use KnetikCloud::InvoicesApi;
+
+# Configure OAuth2 access token for authorization: OAuth2
+$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+
+my $api_instance = KnetikCloud::InvoicesApi->new();
+my $id = 56; # int | The id of the invoice
+my $bundle_sku = 'bundle_sku_example'; # string | The sku of the bundle in the invoice that contains the given target
+my $sku = 'sku_example'; # string | The sku of an item in the bundle in the invoice
+my $status = KnetikCloud::Object::string->new(); # string | The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  'unfulfilled', 'fulfilled', 'not fulfillable', 'failed', 'processing', 'failed_permanent', 'delayed'
+
+eval { 
+    $api_instance->set_bundled_invoice_item_fulfillment_status(id => $id, bundle_sku => $bundle_sku, sku => $sku, status => $status);
+};
+if ($@) {
+    warn "Exception when calling InvoicesApi->set_bundled_invoice_item_fulfillment_status: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| The id of the invoice | 
+ **bundle_sku** | **string**| The sku of the bundle in the invoice that contains the given target | 
+ **sku** | **string**| The sku of an item in the bundle in the invoice | 
+ **status** | **string**| The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39; | 
 
 ### Return type
 

@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -100,6 +100,17 @@ isa_ok($api, 'KnetikCloud::InvoicesApi');
     my $id = undef; # replace NULL with a proper value
     my $request = undef; # replace NULL with a proper value
     my $result = $api->pay_invoice(id => $id, request => $request);
+}
+
+#
+# set_bundled_invoice_item_fulfillment_status test
+#
+{
+    my $id = undef; # replace NULL with a proper value
+    my $bundle_sku = undef; # replace NULL with a proper value
+    my $sku = undef; # replace NULL with a proper value
+    my $status = undef; # replace NULL with a proper value
+    my $result = $api->set_bundled_invoice_item_fulfillment_status(id => $id, bundle_sku => $bundle_sku, sku => $sku, status => $status);
 }
 
 #

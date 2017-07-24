@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -1362,12 +1362,12 @@ sub get_video_relationships {
 # Search videos using the documented filters
 # 
 # @param boolean $exclude_flagged Skip videos that have been flagged by the current user (optional, default to true)
-# @param Object $filter_videos_by_uploader Filter for videos by uploader id (optional)
+# @param int $filter_videos_by_uploader Filter for videos by uploader id (optional)
 # @param string $filter_category Filter for videos from a specific category by id (optional)
 # @param string $filter_tagset Filter for videos with specified tags (separated by comma) (optional)
 # @param string $filter_videos_by_name Filter for videos which name *STARTS* with the given string (optional)
-# @param Object $filter_videos_by_contributor Filter for videos with contribution from the artist specified by ID (optional)
-# @param Object $filter_videos_by_author Filter for videos with an artist as author specified by ID (optional)
+# @param int $filter_videos_by_contributor Filter for videos with contribution from the artist specified by ID (optional)
+# @param int $filter_videos_by_author Filter for videos with an artist as author specified by ID (optional)
 # @param boolean $filter_has_author Filter for videos that have an author set if true, or that have no author if false (optional)
 # @param boolean $filter_has_uploader Filter for videos that have an uploader set if true, or that have no uploader if false (optional)
 # @param string $filter_related_to Filter for videos that have designated a particular video as the TO of a relationship. Pattern should match VIDEO_ID or VIDEO_ID:DETAILS to match with a specific details string as well (optional)
@@ -1384,7 +1384,7 @@ sub get_video_relationships {
         required => '0',
     },
     'filter_videos_by_uploader' => {
-        data_type => 'Object',
+        data_type => 'int',
         description => 'Filter for videos by uploader id',
         required => '0',
     },
@@ -1404,12 +1404,12 @@ sub get_video_relationships {
         required => '0',
     },
     'filter_videos_by_contributor' => {
-        data_type => 'Object',
+        data_type => 'int',
         description => 'Filter for videos with contribution from the artist specified by ID',
         required => '0',
     },
     'filter_videos_by_author' => {
-        data_type => 'Object',
+        data_type => 'int',
         description => 'Filter for videos with an artist as author specified by ID',
         required => '0',
     },

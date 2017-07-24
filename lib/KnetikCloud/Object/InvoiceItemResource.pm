@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -44,7 +44,7 @@ use base ("Class::Accessor", "Class::Data::Inheritable");
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -142,13 +142,6 @@ __PACKAGE__->class_documentation({description => '',
 }                                 );
 
 __PACKAGE__->method_documentation({
-    'affiliate_id' => {
-    	datatype => 'int',
-    	base_name => 'affiliate_id',
-    	description => '',
-    	format => '',
-    	read_only => '',
-    		},
     'bundle_sku' => {
     	datatype => 'string',
     	base_name => 'bundle_sku',
@@ -264,7 +257,6 @@ __PACKAGE__->method_documentation({
 });
 
 __PACKAGE__->swagger_types( {
-    'affiliate_id' => 'int',
     'bundle_sku' => 'string',
     'current_fulfillment_status' => 'string',
     'id' => 'int',
@@ -284,7 +276,6 @@ __PACKAGE__->swagger_types( {
 } );
 
 __PACKAGE__->attribute_map( {
-    'affiliate_id' => 'affiliate_id',
     'bundle_sku' => 'bundle_sku',
     'current_fulfillment_status' => 'current_fulfillment_status',
     'id' => 'id',

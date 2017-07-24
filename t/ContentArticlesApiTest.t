@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -94,11 +94,13 @@ isa_ok($api, 'KnetikCloud::ContentArticlesApi');
 {
     my $filter_category = undef; # replace NULL with a proper value
     my $filter_tagset = undef; # replace NULL with a proper value
+    my $filter_tag_intersection = undef; # replace NULL with a proper value
+    my $filter_tag_exclusion = undef; # replace NULL with a proper value
     my $filter_title = undef; # replace NULL with a proper value
     my $size = undef; # replace NULL with a proper value
     my $page = undef; # replace NULL with a proper value
     my $order = undef; # replace NULL with a proper value
-    my $result = $api->get_articles(filter_category => $filter_category, filter_tagset => $filter_tagset, filter_title => $filter_title, size => $size, page => $page, order => $order);
+    my $result = $api->get_articles(filter_category => $filter_category, filter_tagset => $filter_tagset, filter_tag_intersection => $filter_tag_intersection, filter_tag_exclusion => $filter_tag_exclusion, filter_title => $filter_title, size => $size, page => $page, order => $order);
 }
 
 #

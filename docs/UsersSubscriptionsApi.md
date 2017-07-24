@@ -16,6 +16,7 @@ Method | HTTP request | Description
 [**set_subscription_payment_method**](UsersSubscriptionsApi.md#set_subscription_payment_method) | **PUT** /users/{user_id}/subscriptions/{inventory_id}/payment-method | Set the payment method to use for a subscription
 [**set_subscription_status**](UsersSubscriptionsApi.md#set_subscription_status) | **PUT** /users/{user_id}/subscriptions/{inventory_id}/status | Set the status of a subscription
 [**set_user_subscription_plan**](UsersSubscriptionsApi.md#set_user_subscription_plan) | **PUT** /users/{user_id}/subscriptions/{inventory_id}/plan | Set a new subscription plan for a user
+[**set_user_subscription_price**](UsersSubscriptionsApi.md#set_user_subscription_price) | **PUT** /users/{user_id}/subscriptions/{inventory_id}/price-override | Set a new subscription price for a user
 
 
 # **get_user_subscription_details**
@@ -353,6 +354,58 @@ Name | Type | Description  | Notes
  **user_id** | **int**| The id of the user | 
  **inventory_id** | **int**| The id of the user&#39;s inventory | 
  **plan_id** | **string**| The id of the new plan. Must be from the same subscription | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **set_user_subscription_price**
+> set_user_subscription_price(user_id => $user_id, inventory_id => $inventory_id, the override details => $the override details)
+
+Set a new subscription price for a user
+
+This new price will be what the user is charged at the begining of each new period. This override is specific to the current subscription and will not carry over if they end and later re-subscribe. It will persist if the plan is changed using the setUserSubscriptionPlan endpoint.
+
+### Example 
+```perl
+use Data::Dumper;
+use KnetikCloud::Configuration;
+use KnetikCloud::UsersSubscriptionsApi;
+
+# Configure OAuth2 access token for authorization: OAuth2
+$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+
+my $api_instance = KnetikCloud::UsersSubscriptionsApi->new();
+my $user_id = 56; # int | The id of the user
+my $inventory_id = 56; # int | The id of the user's inventory
+my $the override details = KnetikCloud::Object::SubscriptionPriceOverrideRequest->new(); # SubscriptionPriceOverrideRequest | override
+
+eval { 
+    $api_instance->set_user_subscription_price(user_id => $user_id, inventory_id => $inventory_id, the override details => $the override details);
+};
+if ($@) {
+    warn "Exception when calling UsersSubscriptionsApi->set_user_subscription_price: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **int**| The id of the user | 
+ **inventory_id** | **int**| The id of the user&#39;s inventory | 
+ **the override details** | [**SubscriptionPriceOverrideRequest**](SubscriptionPriceOverrideRequest.md)| override | [optional] 
 
 ### Return type
 

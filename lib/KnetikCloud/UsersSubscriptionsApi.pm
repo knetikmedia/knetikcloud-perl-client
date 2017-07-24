@@ -2,7 +2,7 @@
 
 Knetik Platform API Documentation latest 
 
-This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
 
 OpenAPI spec version: latest 
 Contact: support@knetik.com
@@ -665,6 +665,98 @@ sub set_user_subscription_plan {
     # body params
     if ( exists $args{'plan_id'}) {
         $_body_data = $args{'plan_id'};
+    }
+
+    # authentication setting, if any
+    my $auth_settings = [qw(OAuth2 )];
+
+    # make the API Call
+    $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    return;
+}
+
+#
+# set_user_subscription_price
+#
+# Set a new subscription price for a user
+# 
+# @param int $user_id The id of the user (required)
+# @param int $inventory_id The id of the user&#39;s inventory (required)
+# @param SubscriptionPriceOverrideRequest $the override details override (optional)
+{
+    my $params = {
+    'user_id' => {
+        data_type => 'int',
+        description => 'The id of the user',
+        required => '1',
+    },
+    'inventory_id' => {
+        data_type => 'int',
+        description => 'The id of the user&#39;s inventory',
+        required => '1',
+    },
+    'the override details' => {
+        data_type => 'SubscriptionPriceOverrideRequest',
+        description => 'override',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'set_user_subscription_price' } = { 
+    	summary => 'Set a new subscription price for a user',
+        params => $params,
+        returns => undef,
+        };
+}
+# @return void
+#
+sub set_user_subscription_price {
+    my ($self, %args) = @_;
+
+    # verify the required parameter 'user_id' is set
+    unless (exists $args{'user_id'}) {
+      croak("Missing the required parameter 'user_id' when calling set_user_subscription_price");
+    }
+
+    # verify the required parameter 'inventory_id' is set
+    unless (exists $args{'inventory_id'}) {
+      croak("Missing the required parameter 'inventory_id' when calling set_user_subscription_price");
+    }
+
+    # parse inputs
+    my $_resource_path = '/users/{user_id}/subscriptions/{inventory_id}/price-override';
+
+    my $_method = 'PUT';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    # path params
+    if ( exists $args{'user_id'}) {
+        my $_base_variable = "{" . "user_id" . "}";
+        my $_base_value = $self->{api_client}->to_path_value($args{'user_id'});
+        $_resource_path =~ s/$_base_variable/$_base_value/g;
+    }
+
+    # path params
+    if ( exists $args{'inventory_id'}) {
+        my $_base_variable = "{" . "inventory_id" . "}";
+        my $_base_value = $self->{api_client}->to_path_value($args{'inventory_id'});
+        $_resource_path =~ s/$_base_variable/$_base_value/g;
+    }
+
+    my $_body_data;
+    # body params
+    if ( exists $args{'the override details'}) {
+        $_body_data = $args{'the override details'};
     }
 
     # authentication setting, if any

@@ -21,10 +21,10 @@ Get details for a template property type
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::TemplatesPropertiesApi;
+my $api_instance = KnetikCloud::TemplatesPropertiesApi->new(
+);
 
-my $api_instance = KnetikCloud::TemplatesPropertiesApi->new();
 my $type = 'type_example'; # string | type
 
 eval { 
@@ -65,10 +65,10 @@ List template property types
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::TemplatesPropertiesApi;
+my $api_instance = KnetikCloud::TemplatesPropertiesApi->new(
+);
 
-my $api_instance = KnetikCloud::TemplatesPropertiesApi->new();
 
 eval { 
     my $result = $api_instance->get_template_property_types();

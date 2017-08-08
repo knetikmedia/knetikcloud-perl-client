@@ -29,13 +29,13 @@ Create a new role
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthRolesApi;
+my $api_instance = KnetikCloud::AuthRolesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthRolesApi->new();
 my $role_resource = KnetikCloud::Object::RoleResource->new(); # RoleResource | The role resource object
 
 eval { 
@@ -76,13 +76,13 @@ Delete a role
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthRolesApi;
+my $api_instance = KnetikCloud::AuthRolesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthRolesApi->new();
 my $role = 'role_example'; # string | The role value
 my $force = 1; # boolean | If true, removes role from users/clients
 
@@ -124,13 +124,13 @@ Get roles for a client
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthRolesApi;
+my $api_instance = KnetikCloud::AuthRolesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthRolesApi->new();
 my $client_key = 'client_key_example'; # string | The client key
 
 eval { 
@@ -171,13 +171,13 @@ Get a single role
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthRolesApi;
+my $api_instance = KnetikCloud::AuthRolesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthRolesApi->new();
 my $role = 'role_example'; # string | The role value
 
 eval { 
@@ -211,26 +211,28 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_roles**
-> PageResourceRoleResource get_roles(size => $size, page => $page, order => $order)
+> PageResourceRoleResource get_roles(filter_name => $filter_name, filter_role => $filter_role, size => $size, page => $page, order => $order)
 
 List and search roles
 
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthRolesApi;
+my $api_instance = KnetikCloud::AuthRolesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthRolesApi->new();
+my $filter_name = 'filter_name_example'; # string | Filter for roles that have a name starting with specified string
+my $filter_role = 'filter_role_example'; # string | Filter for roles that have a role starting with specified string
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
 
 eval { 
-    my $result = $api_instance->get_roles(size => $size, page => $page, order => $order);
+    my $result = $api_instance->get_roles(filter_name => $filter_name, filter_role => $filter_role, size => $size, page => $page, order => $order);
     print Dumper($result);
 };
 if ($@) {
@@ -242,6 +244,8 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **filter_name** | **string**| Filter for roles that have a name starting with specified string | [optional] 
+ **filter_role** | **string**| Filter for roles that have a role starting with specified string | [optional] 
  **size** | **int**| The number of objects returned per page | [optional] [default to 25]
  **page** | **int**| The number of the page returned, starting with 1 | [optional] [default to 1]
  **order** | **string**| A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] | [optional] 
@@ -269,13 +273,13 @@ Get roles for a user
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthRolesApi;
+my $api_instance = KnetikCloud::AuthRolesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthRolesApi->new();
 my $user_id = 56; # int | The user's id
 
 eval { 
@@ -316,13 +320,13 @@ Set roles for a client
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthRolesApi;
+my $api_instance = KnetikCloud::AuthRolesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthRolesApi->new();
 my $client_key = 'client_key_example'; # string | The client key
 my $roles_list = [KnetikCloud::Object::ARRAY[string]->new()]; # ARRAY[string] | The list of unique roles
 
@@ -365,13 +369,13 @@ Set permissions for a role
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthRolesApi;
+my $api_instance = KnetikCloud::AuthRolesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthRolesApi->new();
 my $role = 'role_example'; # string | The role value
 my $permissions_list = [KnetikCloud::Object::ARRAY[string]->new()]; # ARRAY[string] | The list of unique permissions
 
@@ -414,13 +418,13 @@ Set roles for a user
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthRolesApi;
+my $api_instance = KnetikCloud::AuthRolesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthRolesApi->new();
 my $user_id = 56; # int | The user's id
 my $roles_list = [KnetikCloud::Object::ARRAY[string]->new()]; # ARRAY[string] | The list of unique roles
 
@@ -463,13 +467,13 @@ Update a role
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthRolesApi;
+my $api_instance = KnetikCloud::AuthRolesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthRolesApi->new();
 my $role = 'role_example'; # string | The role value
 my $role_resource = KnetikCloud::Object::RoleResource->new(); # RoleResource | The role resource object
 

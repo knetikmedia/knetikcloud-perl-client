@@ -28,25 +28,22 @@ use Carp qw( croak );
 use Log::Any qw($log);
 
 use KnetikCloud::ApiClient;
-use KnetikCloud::Configuration;
 
 use base "Class::Data::Inheritable";
 
 __PACKAGE__->mk_classdata('method_documentation' => {});
 
 sub new {
-    my $class   = shift;
-    my (%self) = (
-        'api_client' => KnetikCloud::ApiClient->instance,
-        @_
-    );
+    my $class = shift;
+    my $api_client;
 
-    #my $self = {
-    #    #api_client => $options->{api_client}
-    #    api_client => $default_api_client
-    #}; 
+    if ($_[0] && ref $_[0] && ref $_[0] eq 'KnetikCloud::ApiClient' ) {
+        $api_client = $_[0];
+    } else {
+        $api_client = KnetikCloud::ApiClient->new(@_);
+    }
 
-    bless \%self, $class;
+    bless { api_client => $api_client }, $class;
 
 }
 
@@ -586,7 +583,7 @@ sub get_user_levels {
 # 
 # @param int $user_id The id of the user (required)
 # @param string $name The level schema name (required)
-# @param int $progress The amount of progress to add (optional)
+# @param IntWrapper $progress The amount of progress to add (optional)
 {
     my $params = {
     'user_id' => {
@@ -600,7 +597,7 @@ sub get_user_levels {
         required => '1',
     },
     'progress' => {
-        data_type => 'int',
+        data_type => 'IntWrapper',
         description => 'The amount of progress to add',
         required => '0',
     },
@@ -678,7 +675,7 @@ sub increment_progress {
 # 
 # @param int $user_id The id of the user (required)
 # @param string $name The level schema name (required)
-# @param int $progress The new progress amount (optional)
+# @param IntWrapper $progress The new progress amount (optional)
 {
     my $params = {
     'user_id' => {
@@ -692,7 +689,7 @@ sub increment_progress {
         required => '1',
     },
     'progress' => {
-        data_type => 'int',
+        data_type => 'IntWrapper',
         description => 'The new progress amount',
         required => '0',
     },

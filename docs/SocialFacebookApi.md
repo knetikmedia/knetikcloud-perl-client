@@ -22,13 +22,13 @@ Links the current user account to a facebook account, using the acccess token fr
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::SocialFacebookApi;
+my $api_instance = KnetikCloud::SocialFacebookApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::SocialFacebookApi->new();
 my $facebook_token = KnetikCloud::Object::FacebookToken->new(); # FacebookToken | The token from facebook
 
 eval { 

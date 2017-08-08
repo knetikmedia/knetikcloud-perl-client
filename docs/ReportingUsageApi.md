@@ -25,13 +25,13 @@ Returns aggregated endpoint usage information by day
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ReportingUsageApi;
+my $api_instance = KnetikCloud::ReportingUsageApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ReportingUsageApi->new();
 my $start_date = 789; # int | The beginning of the range being requested, unix timestamp in seconds
 my $end_date = 789; # int | The ending of the range being requested, unix timestamp in seconds
 my $combine_endpoints = 1; # boolean | Whether to combine counts from different endpoint. Removes the url and method from the result object
@@ -84,13 +84,13 @@ Returns aggregated endpoint usage information by hour
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ReportingUsageApi;
+my $api_instance = KnetikCloud::ReportingUsageApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ReportingUsageApi->new();
 my $start_date = 789; # int | The beginning of the range being requested, unix timestamp in seconds
 my $end_date = 789; # int | The ending of the range being requested, unix timestamp in seconds
 my $combine_endpoints = 1; # boolean | Whether to combine counts from different endpoint. Removes the url and method from the result object
@@ -143,13 +143,13 @@ Returns aggregated endpoint usage information by minute
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ReportingUsageApi;
+my $api_instance = KnetikCloud::ReportingUsageApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ReportingUsageApi->new();
 my $start_date = 789; # int | The beginning of the range being requested, unix timestamp in seconds
 my $end_date = 789; # int | The ending of the range being requested, unix timestamp in seconds
 my $combine_endpoints = 1; # boolean | Whether to combine counts from different endpoint. Removes the url and method from the result object
@@ -202,13 +202,13 @@ Returns aggregated endpoint usage information by month
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ReportingUsageApi;
+my $api_instance = KnetikCloud::ReportingUsageApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ReportingUsageApi->new();
 my $start_date = 789; # int | The beginning of the range being requested, unix timestamp in seconds
 my $end_date = 789; # int | The ending of the range being requested, unix timestamp in seconds
 my $combine_endpoints = 1; # boolean | Whether to combine counts from different endpoint. Removes the url and method from the result object
@@ -261,13 +261,13 @@ Returns aggregated endpoint usage information by year
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ReportingUsageApi;
+my $api_instance = KnetikCloud::ReportingUsageApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ReportingUsageApi->new();
 my $start_date = 789; # int | The beginning of the range being requested, unix timestamp in seconds
 my $end_date = 789; # int | The ending of the range being requested, unix timestamp in seconds
 my $combine_endpoints = 1; # boolean | Whether to combine counts from different endpoints. Removes the url and method from the result object
@@ -320,13 +320,13 @@ Returns list of endpoints called (method and url)
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ReportingUsageApi;
+my $api_instance = KnetikCloud::ReportingUsageApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ReportingUsageApi->new();
 my $start_date = 789; # int | The beginning of the range being requested, unix timestamp in seconds
 my $end_date = 789; # int | The ending of the range being requested, unix timestamp in seconds
 

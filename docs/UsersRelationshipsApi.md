@@ -24,13 +24,13 @@ Create a user relationship
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersRelationshipsApi;
+my $api_instance = KnetikCloud::UsersRelationshipsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersRelationshipsApi->new();
 my $relationship = KnetikCloud::Object::UserRelationshipResource->new(); # UserRelationshipResource | The new relationship
 
 eval { 
@@ -71,13 +71,13 @@ Delete a user relationship
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersRelationshipsApi;
+my $api_instance = KnetikCloud::UsersRelationshipsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersRelationshipsApi->new();
 my $id = 789; # int | The id of the relationship
 
 eval { 
@@ -117,13 +117,13 @@ Get a user relationship
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersRelationshipsApi;
+my $api_instance = KnetikCloud::UsersRelationshipsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersRelationshipsApi->new();
 my $id = 789; # int | The id of the relationship
 
 eval { 
@@ -164,13 +164,13 @@ Get a list of user relationships
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersRelationshipsApi;
+my $api_instance = KnetikCloud::UsersRelationshipsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersRelationshipsApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -215,13 +215,13 @@ Update a user relationship
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersRelationshipsApi;
+my $api_instance = KnetikCloud::UsersRelationshipsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersRelationshipsApi->new();
 my $id = 789; # int | The id of the relationship
 my $relationship = KnetikCloud::Object::UserRelationshipResource->new(); # UserRelationshipResource | The new relationship
 

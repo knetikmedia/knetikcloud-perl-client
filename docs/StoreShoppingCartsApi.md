@@ -32,13 +32,13 @@ Adds a custom discount to the cart
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreShoppingCartsApi;
+my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreShoppingCartsApi->new();
 my $id = 'id_example'; # string | The id of the cart
 my $custom_discount = KnetikCloud::Object::CouponDefinition->new(); # CouponDefinition | The details of the discount to add
 
@@ -80,13 +80,13 @@ Adds a discount coupon to the cart
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreShoppingCartsApi;
+my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreShoppingCartsApi->new();
 my $id = 'id_example'; # string | The id of the cart
 my $sku_request = KnetikCloud::Object::SkuRequest->new(); # SkuRequest | The request of the sku
 
@@ -130,13 +130,13 @@ Currently, carts cannot contain virtual and real currency items at the same time
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreShoppingCartsApi;
+my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreShoppingCartsApi->new();
 my $id = 'id_example'; # string | The id of the cart
 my $cart_item_request = KnetikCloud::Object::CartItemRequest->new(); # CartItemRequest | The cart item request object
 
@@ -180,13 +180,13 @@ You don't have to have a user to create a cart but the API requires authenticati
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreShoppingCartsApi;
+my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreShoppingCartsApi->new();
 my $owner = 56; # int | Set the owner of a cart. If not specified, defaults to the calling user's id. If specified and is not the calling user's id, SHOPPING_CARTS_ADMIN permission is required
 my $currency_code = 'currency_code_example'; # string | Set the currency for the cart, by currency code. May be disallowed by site settings.
 
@@ -229,13 +229,13 @@ Returns the cart with the given GUID
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreShoppingCartsApi;
+my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreShoppingCartsApi->new();
 my $id = 'id_example'; # string | The id of the cart
 
 eval { 
@@ -276,13 +276,13 @@ Get a list of carts
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreShoppingCartsApi;
+my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreShoppingCartsApi->new();
 my $filter_owner_id = 56; # int | Filter by the id of the owner
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
@@ -329,13 +329,13 @@ Returns whether a cart requires shipping
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreShoppingCartsApi;
+my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreShoppingCartsApi->new();
 my $id = 'id_example'; # string | The id of the cart
 
 eval { 
@@ -378,13 +378,13 @@ Since a cart can have multiple vendors with different shipping options, the coun
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreShoppingCartsApi;
+my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreShoppingCartsApi->new();
 my $id = 'id_example'; # string | The id of the cart
 
 eval { 
@@ -425,13 +425,13 @@ Removes a discount coupon from the cart
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreShoppingCartsApi;
+my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreShoppingCartsApi->new();
 my $id = 'id_example'; # string | The id of the cart
 my $code = 'code_example'; # string | The SKU code of the coupon to remove
 
@@ -475,15 +475,15 @@ May be disallowed by site settings.
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreShoppingCartsApi;
+my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreShoppingCartsApi->new();
 my $id = 'id_example'; # string | The id of the cart
-my $currency_code = KnetikCloud::Object::string->new(); # string | The code of the currency
+my $currency_code = KnetikCloud::Object::StringWrapper->new(); # StringWrapper | The code of the currency
 
 eval { 
     $api_instance->set_cart_currency(id => $id, currency_code => $currency_code);
@@ -498,7 +498,7 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| The id of the cart | 
- **currency_code** | **string**| The code of the currency | [optional] 
+ **currency_code** | [**StringWrapper**](StringWrapper.md)| The code of the currency | [optional] 
 
 ### Return type
 
@@ -523,15 +523,15 @@ Sets the owner of a cart if none is set already
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreShoppingCartsApi;
+my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreShoppingCartsApi->new();
 my $id = 'id_example'; # string | The id of the cart
-my $user_id = KnetikCloud::Object::int->new(); # int | The id of the user
+my $user_id = KnetikCloud::Object::IntWrapper->new(); # IntWrapper | The id of the user
 
 eval { 
     $api_instance->set_cart_owner(id => $id, user_id => $user_id);
@@ -546,7 +546,7 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| The id of the cart | 
- **user_id** | **int**| The id of the user | [optional] 
+ **user_id** | [**IntWrapper**](IntWrapper.md)| The id of the user | [optional] 
 
 ### Return type
 
@@ -573,13 +573,13 @@ A quantity of zero will remove the item from the cart altogether.
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreShoppingCartsApi;
+my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreShoppingCartsApi->new();
 my $id = 'id_example'; # string | The id of the cart
 my $cart_item_request = KnetikCloud::Object::CartItemRequest->new(); # CartItemRequest | The cart item request object
 
@@ -621,13 +621,13 @@ Modifies or sets the order shipping address
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreShoppingCartsApi;
+my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreShoppingCartsApi->new();
 my $id = 'id_example'; # string | The id of the cart
 my $cart_shipping_address_request = KnetikCloud::Object::CartShippingAddressRequest->new(); # CartShippingAddressRequest | The cart shipping address request object
 

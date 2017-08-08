@@ -24,13 +24,13 @@ Create a sale
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreSalesApi;
+my $api_instance = KnetikCloud::StoreSalesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreSalesApi->new();
 my $catalog_sale = KnetikCloud::Object::CatalogSale->new(); # CatalogSale | The catalog sale object
 
 eval { 
@@ -71,13 +71,13 @@ Delete a sale
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreSalesApi;
+my $api_instance = KnetikCloud::StoreSalesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreSalesApi->new();
 my $id = 56; # int | The id of the sale
 
 eval { 
@@ -117,13 +117,13 @@ Get a single sale
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreSalesApi;
+my $api_instance = KnetikCloud::StoreSalesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreSalesApi->new();
 my $id = 56; # int | The id of the sale
 
 eval { 
@@ -164,13 +164,13 @@ List and search sales
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreSalesApi;
+my $api_instance = KnetikCloud::StoreSalesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreSalesApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -215,13 +215,13 @@ Update a sale
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreSalesApi;
+my $api_instance = KnetikCloud::StoreSalesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreSalesApi->new();
 my $id = 56; # int | The id of the sale
 my $catalog_sale = KnetikCloud::Object::CatalogSale->new(); # CatalogSale | The catalog sale object
 

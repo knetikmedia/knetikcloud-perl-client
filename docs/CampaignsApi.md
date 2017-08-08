@@ -32,13 +32,13 @@ Add a challenge to a campaign
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsApi;
+my $api_instance = KnetikCloud::CampaignsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsApi->new();
 my $id = 789; # int | The id of the campaign
 my $challenge_id = KnetikCloud::Object::int->new(); # int | The id of the challenge
 
@@ -80,13 +80,13 @@ Create a campaign
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsApi;
+my $api_instance = KnetikCloud::CampaignsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsApi->new();
 my $campaign_resource = KnetikCloud::Object::CampaignResource->new(); # CampaignResource | The campaign resource object
 
 eval { 
@@ -129,13 +129,13 @@ Campaign Templates define a type of campaign and the properties they have
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsApi;
+my $api_instance = KnetikCloud::CampaignsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsApi->new();
 my $campaign_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The campaign template resource object
 
 eval { 
@@ -176,13 +176,13 @@ Delete a campaign
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsApi;
+my $api_instance = KnetikCloud::CampaignsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsApi->new();
 my $id = 789; # int | The campaign id
 
 eval { 
@@ -224,13 +224,13 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsApi;
+my $api_instance = KnetikCloud::CampaignsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $cascade = 'cascade_example'; # string | The value needed to delete used templates
 
@@ -272,10 +272,10 @@ Returns a single campaign
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsApi;
+my $api_instance = KnetikCloud::CampaignsApi->new(
+);
 
-my $api_instance = KnetikCloud::CampaignsApi->new();
 my $id = 789; # int | The campaign id
 
 eval { 
@@ -316,10 +316,10 @@ List the challenges associated with a campaign
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsApi;
+my $api_instance = KnetikCloud::CampaignsApi->new(
+);
 
-my $api_instance = KnetikCloud::CampaignsApi->new();
 my $id = 789; # int | The campaign id
 my $filter_start_date = 'filter_start_date_example'; # string | A comma separated string without spaces.  First value is the operator to search on, second value is the challenge start date, a unix timestamp in seconds.  Allowed operators: (GT, LT, EQ, GOE, LOE).
 my $filter_end_date = 'filter_end_date_example'; # string | A comma separated string without spaces.  First value is the operator to search on, second value is the challenge end date, a unix timestamp in seconds.  Allowed operators: (GT, LT, EQ, GOE, LOE).
@@ -370,13 +370,13 @@ Get a single campaign template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsApi;
+my $api_instance = KnetikCloud::CampaignsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsApi->new();
 my $id = 'id_example'; # string | The id of the template
 
 eval { 
@@ -417,13 +417,13 @@ List and search campaign templates
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsApi;
+my $api_instance = KnetikCloud::CampaignsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -468,10 +468,10 @@ List and search campaigns
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsApi;
+my $api_instance = KnetikCloud::CampaignsApi->new(
+);
 
-my $api_instance = KnetikCloud::CampaignsApi->new();
 my $filter_active = 1; # boolean | Filter for campaigns that are active
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
@@ -518,13 +518,13 @@ Remove a challenge from a campaign
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsApi;
+my $api_instance = KnetikCloud::CampaignsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsApi->new();
 my $campaign_id = 789; # int | The campaign id
 my $id = 789; # int | The challenge id
 
@@ -566,13 +566,13 @@ Update a campaign
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsApi;
+my $api_instance = KnetikCloud::CampaignsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsApi->new();
 my $id = 789; # int | The campaign id
 my $campaign_resource = KnetikCloud::Object::CampaignResource->new(); # CampaignResource | The campaign resource object
 
@@ -615,13 +615,13 @@ Update an campaign template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsApi;
+my $api_instance = KnetikCloud::CampaignsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $campaign_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The campaign template resource object
 

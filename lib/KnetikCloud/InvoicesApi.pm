@@ -28,25 +28,22 @@ use Carp qw( croak );
 use Log::Any qw($log);
 
 use KnetikCloud::ApiClient;
-use KnetikCloud::Configuration;
 
 use base "Class::Data::Inheritable";
 
 __PACKAGE__->mk_classdata('method_documentation' => {});
 
 sub new {
-    my $class   = shift;
-    my (%self) = (
-        'api_client' => KnetikCloud::ApiClient->instance,
-        @_
-    );
+    my $class = shift;
+    my $api_client;
 
-    #my $self = {
-    #    #api_client => $options->{api_client}
-    #    api_client => $default_api_client
-    #}; 
+    if ($_[0] && ref $_[0] && ref $_[0] eq 'KnetikCloud::ApiClient' ) {
+        $api_client = $_[0];
+    } else {
+        $api_client = KnetikCloud::ApiClient->new(@_);
+    }
 
-    bless \%self, $class;
+    bless { api_client => $api_client }, $class;
 
 }
 
@@ -604,10 +601,10 @@ sub get_payment_statuses {
 #
 # pay_invoice
 #
-# Trigger payment of an invoice
+# Pay an invoice using a saved payment method
 # 
 # @param int $id The id of the invoice (required)
-# @param PayBySavedMethodRequest $request Payment info (optional)
+# @param PayBySavedMethodRequest $request The payment method details. Will default to the appropriate user&#39;s wallet in the invoice currency if ommited. (optional)
 {
     my $params = {
     'id' => {
@@ -617,12 +614,12 @@ sub get_payment_statuses {
     },
     'request' => {
         data_type => 'PayBySavedMethodRequest',
-        description => 'Payment info',
+        description => 'The payment method details. Will default to the appropriate user&#39;s wallet in the invoice currency if ommited.',
         required => '0',
     },
     };
     __PACKAGE__->method_documentation->{ 'pay_invoice' } = { 
-    	summary => 'Trigger payment of an invoice',
+    	summary => 'Pay an invoice using a saved payment method',
         params => $params,
         returns => undef,
         };
@@ -683,7 +680,7 @@ sub pay_invoice {
 # @param int $id The id of the invoice (required)
 # @param string $bundle_sku The sku of the bundle in the invoice that contains the given target (required)
 # @param string $sku The sku of an item in the bundle in the invoice (required)
-# @param string $status The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39; (required)
+# @param StringWrapper $status The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39; (required)
 {
     my $params = {
     'id' => {
@@ -702,7 +699,7 @@ sub pay_invoice {
         required => '1',
     },
     'status' => {
-        data_type => 'string',
+        data_type => 'StringWrapper',
         description => 'The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39;',
         required => '1',
     },
@@ -796,7 +793,7 @@ sub set_bundled_invoice_item_fulfillment_status {
 # Set the external reference of an invoice
 # 
 # @param int $id The id of the invoice (required)
-# @param string $external_ref External reference info (optional)
+# @param StringWrapper $external_ref External reference info (optional)
 {
     my $params = {
     'id' => {
@@ -805,7 +802,7 @@ sub set_bundled_invoice_item_fulfillment_status {
         required => '1',
     },
     'external_ref' => {
-        data_type => 'string',
+        data_type => 'StringWrapper',
         description => 'External reference info',
         required => '0',
     },
@@ -871,7 +868,7 @@ sub set_external_ref {
 # 
 # @param int $id The id of the invoice (required)
 # @param string $sku The sku of an item in the invoice (required)
-# @param string $status The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39; (required)
+# @param StringWrapper $status The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39; (required)
 {
     my $params = {
     'id' => {
@@ -885,7 +882,7 @@ sub set_external_ref {
         required => '1',
     },
     'status' => {
-        data_type => 'string',
+        data_type => 'StringWrapper',
         description => 'The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39;',
         required => '1',
     },
@@ -967,7 +964,7 @@ sub set_invoice_item_fulfillment_status {
 # Set the order notes of an invoice
 # 
 # @param int $id The id of the invoice (required)
-# @param string $order_notes Payment status info (optional)
+# @param StringWrapper $order_notes Payment status info (optional)
 {
     my $params = {
     'id' => {
@@ -976,7 +973,7 @@ sub set_invoice_item_fulfillment_status {
         required => '1',
     },
     'order_notes' => {
-        data_type => 'string',
+        data_type => 'StringWrapper',
         description => 'Payment status info',
         required => '0',
     },

@@ -24,13 +24,13 @@ Create a fulfillment type
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::FulfillmentApi;
+my $api_instance = KnetikCloud::FulfillmentApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::FulfillmentApi->new();
 my $type = KnetikCloud::Object::FulfillmentType->new(); # FulfillmentType | The fulfillment type
 
 eval { 
@@ -71,13 +71,13 @@ Delete a fulfillment type
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::FulfillmentApi;
+my $api_instance = KnetikCloud::FulfillmentApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::FulfillmentApi->new();
 my $id = 56; # int | The id
 
 eval { 
@@ -117,10 +117,10 @@ Get a single fulfillment type
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::FulfillmentApi;
+my $api_instance = KnetikCloud::FulfillmentApi->new(
+);
 
-my $api_instance = KnetikCloud::FulfillmentApi->new();
 my $id = 56; # int | The id
 
 eval { 
@@ -161,10 +161,10 @@ List and search fulfillment types
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::FulfillmentApi;
+my $api_instance = KnetikCloud::FulfillmentApi->new(
+);
 
-my $api_instance = KnetikCloud::FulfillmentApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -209,13 +209,13 @@ Update a fulfillment type
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::FulfillmentApi;
+my $api_instance = KnetikCloud::FulfillmentApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::FulfillmentApi->new();
 my $id = 56; # int | The id
 my $fulfillment_type = KnetikCloud::Object::FulfillmentType->new(); # FulfillmentType | The fulfillment type
 

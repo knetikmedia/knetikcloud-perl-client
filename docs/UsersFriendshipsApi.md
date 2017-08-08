@@ -27,13 +27,13 @@ As a user, either creates or confirm a pending request. As an admin, call this e
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersFriendshipsApi;
+my $api_instance = KnetikCloud::UsersFriendshipsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersFriendshipsApi->new();
 my $user_id = 'user_id_example'; # string | The id of the user or 'me' if logged in
 my $id = 56; # int | The id of the user to befriend
 
@@ -75,13 +75,13 @@ Get friends list
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersFriendshipsApi;
+my $api_instance = KnetikCloud::UsersFriendshipsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersFriendshipsApi->new();
 my $user_id = 'user_id_example'; # string | The id of the user or 'me'
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
@@ -128,13 +128,13 @@ This is a unique invite token that allows direct connection to the request user.
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersFriendshipsApi;
+my $api_instance = KnetikCloud::UsersFriendshipsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersFriendshipsApi->new();
 my $user_id = 'user_id_example'; # string | The id of the user or 'me' if logged in
 
 eval { 
@@ -177,13 +177,13 @@ Invites that the specified user received
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersFriendshipsApi;
+my $api_instance = KnetikCloud::UsersFriendshipsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersFriendshipsApi->new();
 my $user_id = 'user_id_example'; # string | The id of the user or 'me'
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
@@ -230,15 +230,15 @@ Immediately connects the requested user with the user mapped by the provided inv
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersFriendshipsApi;
+my $api_instance = KnetikCloud::UsersFriendshipsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersFriendshipsApi->new();
 my $user_id = 'user_id_example'; # string | The id of the user or 'me' if logged in
-my $token = KnetikCloud::Object::string->new(); # string | The invite token
+my $token = KnetikCloud::Object::StringWrapper->new(); # StringWrapper | The invite token
 
 eval { 
     $api_instance->redeem_friendship_token(user_id => $user_id, token => $token);
@@ -253,7 +253,7 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**| The id of the user or &#39;me&#39; if logged in | 
- **token** | **string**| The invite token | [optional] 
+ **token** | [**StringWrapper**](StringWrapper.md)| The invite token | [optional] 
 
 ### Return type
 
@@ -278,13 +278,13 @@ Remove or decline a friend
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersFriendshipsApi;
+my $api_instance = KnetikCloud::UsersFriendshipsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersFriendshipsApi->new();
 my $user_id = 'user_id_example'; # string | The id of the user or 'me' if logged in
 my $id = 56; # int | The id of the user to befriend
 

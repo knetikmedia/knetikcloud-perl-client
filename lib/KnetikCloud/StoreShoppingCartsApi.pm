@@ -28,25 +28,22 @@ use Carp qw( croak );
 use Log::Any qw($log);
 
 use KnetikCloud::ApiClient;
-use KnetikCloud::Configuration;
 
 use base "Class::Data::Inheritable";
 
 __PACKAGE__->mk_classdata('method_documentation' => {});
 
 sub new {
-    my $class   = shift;
-    my (%self) = (
-        'api_client' => KnetikCloud::ApiClient->instance,
-        @_
-    );
+    my $class = shift;
+    my $api_client;
 
-    #my $self = {
-    #    #api_client => $options->{api_client}
-    #    api_client => $default_api_client
-    #}; 
+    if ($_[0] && ref $_[0] && ref $_[0] eq 'KnetikCloud::ApiClient' ) {
+        $api_client = $_[0];
+    } else {
+        $api_client = KnetikCloud::ApiClient->new(@_);
+    }
 
-    bless \%self, $class;
+    bless { api_client => $api_client }, $class;
 
 }
 
@@ -725,7 +722,7 @@ sub remove_discount_from_cart {
 # Sets the currency to use for the cart
 # 
 # @param string $id The id of the cart (required)
-# @param string $currency_code The code of the currency (optional)
+# @param StringWrapper $currency_code The code of the currency (optional)
 {
     my $params = {
     'id' => {
@@ -734,7 +731,7 @@ sub remove_discount_from_cart {
         required => '1',
     },
     'currency_code' => {
-        data_type => 'string',
+        data_type => 'StringWrapper',
         description => 'The code of the currency',
         required => '0',
     },
@@ -799,7 +796,7 @@ sub set_cart_currency {
 # Sets the owner of a cart if none is set already
 # 
 # @param string $id The id of the cart (required)
-# @param int $user_id The id of the user (optional)
+# @param IntWrapper $user_id The id of the user (optional)
 {
     my $params = {
     'id' => {
@@ -808,7 +805,7 @@ sub set_cart_currency {
         required => '1',
     },
     'user_id' => {
-        data_type => 'int',
+        data_type => 'IntWrapper',
         description => 'The id of the user',
         required => '0',
     },

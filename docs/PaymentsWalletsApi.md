@@ -26,13 +26,13 @@ Returns the user's wallet for the given currency code
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsWalletsApi;
+my $api_instance = KnetikCloud::PaymentsWalletsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::PaymentsWalletsApi->new();
 my $user_id = 56; # int | The ID of the user for whom wallet is being retrieved
 my $currency_code = 'currency_code_example'; # string | Currency code of the user's wallet
 
@@ -75,13 +75,13 @@ Retrieve a user's wallet transactions
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsWalletsApi;
+my $api_instance = KnetikCloud::PaymentsWalletsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::PaymentsWalletsApi->new();
 my $user_id = 56; # int | The ID of the user for whom wallet transactions are being retrieved
 my $currency_code = 'currency_code_example'; # string | Currency code of the user's wallet
 my $filter_type = 'filter_type_example'; # string | Filter for transactions with specified type
@@ -138,13 +138,13 @@ List all of a user's wallets
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsWalletsApi;
+my $api_instance = KnetikCloud::PaymentsWalletsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::PaymentsWalletsApi->new();
 my $user_id = 56; # int | The ID of the user for whom wallets are being retrieved
 
 eval { 
@@ -185,13 +185,13 @@ Retrieves a summation of wallet balances by currency code
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsWalletsApi;
+my $api_instance = KnetikCloud::PaymentsWalletsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::PaymentsWalletsApi->new();
 
 eval { 
     my $result = $api_instance->get_wallet_balances();
@@ -228,13 +228,13 @@ Retrieve wallet transactions across the system
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsWalletsApi;
+my $api_instance = KnetikCloud::PaymentsWalletsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::PaymentsWalletsApi->new();
 my $filter_invoice = 56; # int | Filter for transactions from a specific invoice
 my $filter_type = 'filter_type_example'; # string | Filter for transactions with specified type
 my $filter_date = 'filter_date_example'; # string | A comma separated string without spaces.  First value is the operator to search on, second value is the log start date, a unix timestamp in seconds. Can be repeated for a range, eg: GT,123,LT,456  Allowed operators: (GT, LT, EQ, GOE, LOE).
@@ -295,13 +295,13 @@ Retrieve a list of wallets across the system
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsWalletsApi;
+my $api_instance = KnetikCloud::PaymentsWalletsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::PaymentsWalletsApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -346,13 +346,13 @@ Updates the balance for a user's wallet
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsWalletsApi;
+my $api_instance = KnetikCloud::PaymentsWalletsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::PaymentsWalletsApi->new();
 my $user_id = 56; # int | The ID of the user for whom wallet is being modified
 my $currency_code = 'currency_code_example'; # string | Currency code of the user's wallet
 my $request = KnetikCloud::Object::WalletAlterRequest->new(); # WalletAlterRequest | The requested balance modification to be made to the user's wallet

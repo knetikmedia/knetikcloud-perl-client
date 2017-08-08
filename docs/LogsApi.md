@@ -26,13 +26,13 @@ Add a user log entry
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::LogsApi;
+my $api_instance = KnetikCloud::LogsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::LogsApi->new();
 my $log_entry = KnetikCloud::Object::UserActionLog->new(); # UserActionLog | The user log entry to be added
 
 eval { 
@@ -72,13 +72,13 @@ Get an existing BRE event log entry by id
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::LogsApi;
+my $api_instance = KnetikCloud::LogsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::LogsApi->new();
 my $id = 'id_example'; # string | The BRE event log entry id
 
 eval { 
@@ -119,13 +119,13 @@ Returns a list of BRE event log entries
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::LogsApi;
+my $api_instance = KnetikCloud::LogsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::LogsApi->new();
 my $filter_start_date = 'filter_start_date_example'; # string | A comma separated string without spaces.  First value is the operator to search on, second value is the event log start date, a unix timestamp in seconds.  Allowed operators: (GT, LT, EQ, GOE, LOE).
 my $filter_event_name = 'filter_event_name_example'; # string | Filter event logs by event name
 my $filter_event_id = 'filter_event_id_example'; # string | Filter event logs by request id
@@ -176,13 +176,13 @@ Get an existing forward log entry by id
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::LogsApi;
+my $api_instance = KnetikCloud::LogsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::LogsApi->new();
 my $id = 'id_example'; # string | The forward log entry id
 
 eval { 
@@ -223,13 +223,13 @@ Returns a list of forward log entries
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::LogsApi;
+my $api_instance = KnetikCloud::LogsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::LogsApi->new();
 my $filter_start_date = 'filter_start_date_example'; # string | A comma separated string without spaces.  First value is the operator to search on, second value is the log start date, a unix timestamp in seconds.  Allowed operators: (GT, LT, EQ, GOE, LOE).
 my $filter_end_date = 'filter_end_date_example'; # string | A comma separated string without spaces.  First value is the operator to search on, second value is the log end date, a unix timestamp in seconds.  Allowed operators: (GT, LT, EQ, GOE, LOE).
 my $filter_status_code = 56; # int | Filter forward logs by http status code
@@ -280,13 +280,13 @@ Returns a user log entry by id
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::LogsApi;
+my $api_instance = KnetikCloud::LogsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::LogsApi->new();
 my $id = 'id_example'; # string | The user log entry id
 
 eval { 
@@ -327,13 +327,13 @@ Returns a page of user logs entries
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::LogsApi;
+my $api_instance = KnetikCloud::LogsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::LogsApi->new();
 my $filter_user = 56; # int | Filter for actions taken by a specific user by id
 my $filter_action_name = 'filter_action_name_example'; # string | Filter for actions of a specific name
 my $size = 56; # int | The number of objects returned per page

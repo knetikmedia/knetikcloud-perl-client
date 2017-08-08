@@ -23,13 +23,13 @@ A log entry is recorded everytime a user requests a new token. Standard paginati
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UtilSecurityApi;
+my $api_instance = KnetikCloud::UtilSecurityApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UtilSecurityApi->new();
 my $user_id = 56; # int | The user id
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
@@ -76,13 +76,13 @@ Returns the authentication token details. Use /users endpoint for detailed user'
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UtilSecurityApi;
+my $api_instance = KnetikCloud::UtilSecurityApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UtilSecurityApi->new();
 
 eval { 
     my $result = $api_instance->get_user_token_details();

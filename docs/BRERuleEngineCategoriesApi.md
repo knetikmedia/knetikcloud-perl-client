@@ -29,13 +29,13 @@ Templates define a type of BRE category and the properties they have
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineCategoriesApi;
+my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new();
 my $template = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The category template to create
 
 eval { 
@@ -78,13 +78,13 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineCategoriesApi;
+my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $cascade = 'cascade_example'; # string | The value needed to delete used templates
 
@@ -126,13 +126,13 @@ List categories
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineCategoriesApi;
+my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 
@@ -175,13 +175,13 @@ Get a single category
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineCategoriesApi;
+my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new();
 my $name = 'name_example'; # string | The category name
 
 eval { 
@@ -222,13 +222,13 @@ Get a single BRE category template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineCategoriesApi;
+my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new();
 my $id = 'id_example'; # string | The id of the template
 
 eval { 
@@ -269,13 +269,13 @@ List and search BRE category templates
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineCategoriesApi;
+my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -320,13 +320,13 @@ Update a category
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineCategoriesApi;
+my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new();
 my $name = 'name_example'; # string | The category name
 my $category = KnetikCloud::Object::BreCategoryResource->new(); # BreCategoryResource | The updated BRE category information
 
@@ -369,13 +369,13 @@ Update a BRE category template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineCategoriesApi;
+my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $template = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The updated category template definition
 

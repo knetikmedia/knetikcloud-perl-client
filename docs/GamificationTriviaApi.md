@@ -49,13 +49,13 @@ Add an answer to a question
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $question_id = 'question_id_example'; # string | The id of the question
 my $answer = KnetikCloud::Object::AnswerResource->new(); # AnswerResource | The new answer
 
@@ -98,15 +98,15 @@ Add a tag to a question
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $id = 'id_example'; # string | The id of the question
-my $tag = KnetikCloud::Object::string->new(); # string | The new tag
+my $tag = KnetikCloud::Object::StringWrapper->new(); # StringWrapper | The new tag
 
 eval { 
     $api_instance->add_question_tag(id => $id, tag => $tag);
@@ -121,7 +121,7 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| The id of the question | 
- **tag** | **string**| The new tag | [optional] 
+ **tag** | [**StringWrapper**](StringWrapper.md)| The new tag | [optional] 
 
 ### Return type
 
@@ -148,14 +148,14 @@ All questions that dont't have the tag and match filters will have it added. The
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
-my $tag = KnetikCloud::Object::string->new(); # string | The tag to add
+my $tag = KnetikCloud::Object::StringWrapper->new(); # StringWrapper | The tag to add
 my $filter_search = 'filter_search_example'; # string | Filter for documents whose question, answers or tags contains provided string
 my $filter_idset = 'filter_idset_example'; # string | Filter for documents whose id is in the comma separated list provided
 my $filter_category = 'filter_category_example'; # string | Filter for questions with specified category, by id
@@ -178,7 +178,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tag** | **string**| The tag to add | [optional] 
+ **tag** | [**StringWrapper**](StringWrapper.md)| The tag to add | [optional] 
  **filter_search** | **string**| Filter for documents whose question, answers or tags contains provided string | [optional] 
  **filter_idset** | **string**| Filter for documents whose id is in the comma separated list provided | [optional] 
  **filter_category** | **string**| Filter for questions with specified category, by id | [optional] 
@@ -213,13 +213,13 @@ Set up a job to import a set of trivia questions from a cvs file at a remote url
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $request = KnetikCloud::Object::ImportJobResource->new(); # ImportJobResource | The new import job
 
 eval { 
@@ -260,13 +260,13 @@ Create a question
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $question = KnetikCloud::Object::QuestionResource->new(); # QuestionResource | The new question
 
 eval { 
@@ -309,13 +309,13 @@ Question templates define a type of question and the properties they have
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $question_template_resource = KnetikCloud::Object::QuestionTemplateResource->new(); # QuestionTemplateResource | The question template resource object
 
 eval { 
@@ -358,13 +358,13 @@ Also deletes all questions that were imported by it
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $id = 789; # int | The id of the job
 
 eval { 
@@ -404,13 +404,13 @@ Delete a question
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $id = 'id_example'; # string | The id of the question
 
 eval { 
@@ -450,13 +450,13 @@ Remove an answer from a question
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $question_id = 'question_id_example'; # string | The id of the question
 my $id = 'id_example'; # string | The id of the answer
 
@@ -500,13 +500,13 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $cascade = 'cascade_example'; # string | The value needed to delete used templates
 
@@ -548,13 +548,13 @@ Get an import job
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $id = 789; # int | The id of the job
 
 eval { 
@@ -595,13 +595,13 @@ Get a list of import job
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $filter_vendor = 'filter_vendor_example'; # string | Filter for jobs by vendor id
 my $filter_category = 'filter_category_example'; # string | Filter for jobs by category id
 my $filter_name = 'filter_name_example'; # string | Filter for jobs which name *STARTS* with the given string
@@ -654,13 +654,13 @@ Get a single question
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $id = 'id_example'; # string | The id of the question
 
 eval { 
@@ -701,13 +701,13 @@ Get an answer for a question
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $question_id = 'question_id_example'; # string | The id of the question
 my $id = 'id_example'; # string | The id of the answer
 
@@ -750,13 +750,13 @@ List the answers available for a question
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $question_id = 'question_id_example'; # string | The id of the question
 
 eval { 
@@ -799,13 +799,13 @@ The 'since' parameter is important to avoid getting a full list of all questions
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $since = 789; # int | Timestamp in seconds
 
 eval { 
@@ -846,13 +846,13 @@ List the tags for a question
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $id = 'id_example'; # string | The id of the question
 
 eval { 
@@ -893,13 +893,13 @@ Get a single question template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $id = 'id_example'; # string | The id of the template
 
 eval { 
@@ -940,13 +940,13 @@ List and search question templates
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -991,13 +991,13 @@ List and search questions
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -1060,13 +1060,13 @@ This is also provided by the list endpoint so you don't need to call this for pa
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $filter_search = 'filter_search_example'; # string | Filter for documents whose question, answers or tags contains provided string
 my $filter_idset = 'filter_idset_example'; # string | Filter for documents whose id is in the comma separated list provided
 my $filter_category = 'filter_category_example'; # string | Filter for questions with specified category, by id
@@ -1121,13 +1121,13 @@ Will process the CSV file and add new questions asynchronously. The status of th
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $id = 789; # int | The id of the job
 my $publish_now = 1; # boolean | Whether the new questions should be published live immediately
 
@@ -1170,13 +1170,13 @@ Remove a tag from a question
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $id = 'id_example'; # string | The id of the question
 my $tag = 'tag_example'; # string | The tag to remove
 
@@ -1220,13 +1220,13 @@ ll questions that have the tag and match filters will have it removed. The retur
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $tag = 'tag_example'; # string | The tag to remove
 my $filter_search = 'filter_search_example'; # string | Filter for documents whose question, answers or tags contains provided string
 my $filter_idset = 'filter_idset_example'; # string | Filter for documents whose id is in the comma separated list provided
@@ -1285,13 +1285,13 @@ For performance reasons, search & category filters are mutually exclusive. If ca
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $filter_search = 'filter_search_example'; # string | Filter for tags starting with the given text
 my $filter_category = 'filter_category_example'; # string | Filter for tags on questions from a specific category
 my $filter_import_id = 789; # int | Filter for tags on questions from a specific import job
@@ -1338,13 +1338,13 @@ Changes should be made before process is started for there to be any effect.
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $id = 789; # int | The id of the job
 my $request = KnetikCloud::Object::ImportJobResource->new(); # ImportJobResource | The updated job
 
@@ -1387,13 +1387,13 @@ Update a question
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $id = 'id_example'; # string | The id of the question
 my $question = KnetikCloud::Object::QuestionResource->new(); # QuestionResource | The updated question
 
@@ -1436,13 +1436,13 @@ Update an answer for a question
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $question_id = 'question_id_example'; # string | The id of the question
 my $id = 'id_example'; # string | The id of the answer
 my $answer = KnetikCloud::Object::AnswerResource->new(); # AnswerResource | The updated answer
@@ -1486,13 +1486,13 @@ Update a question template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $question_template_resource = KnetikCloud::Object::QuestionTemplateResource->new(); # QuestionTemplateResource | The question template resource object
 
@@ -1537,13 +1537,13 @@ Will update all questions that match filters used (or all questions in system if
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationTriviaApi;
+my $api_instance = KnetikCloud::GamificationTriviaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationTriviaApi->new();
 my $question = KnetikCloud::Object::QuestionResource->new(); # QuestionResource | New values for a set of question fields
 my $filter_search = 'filter_search_example'; # string | Filter for documents whose question, answers or tags contains provided string
 my $filter_idset = 'filter_idset_example'; # string | Filter for documents whose id is in the comma separated list provided

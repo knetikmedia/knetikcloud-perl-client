@@ -23,10 +23,10 @@ Tokens expire in 24 hours
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UtilBatchApi;
+my $api_instance = KnetikCloud::UtilBatchApi->new(
+);
 
-my $api_instance = KnetikCloud::UtilBatchApi->new();
 my $token = 'token_example'; # string | token
 
 eval { 
@@ -69,10 +69,10 @@ Should the request take longer than one of the alloted timeout parameters, a tok
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UtilBatchApi;
+my $api_instance = KnetikCloud::UtilBatchApi->new(
+);
 
-my $api_instance = KnetikCloud::UtilBatchApi->new();
 my $batch = KnetikCloud::Object::Batch->new(); # Batch | The batch object
 
 eval { 

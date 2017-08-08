@@ -39,13 +39,13 @@ If the definition contains a trigger event name, a BRE rule is created, so that 
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationAchievementsApi;
+my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationAchievementsApi->new();
 my $achievement = KnetikCloud::Object::AchievementDefinitionResource->new(); # AchievementDefinitionResource | The achievement definition
 
 eval { 
@@ -88,13 +88,13 @@ Achievement templates define a type of achievement and the properties they have
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationAchievementsApi;
+my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationAchievementsApi->new();
 my $template = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The achievement template to be created
 
 eval { 
@@ -137,13 +137,13 @@ Will also disable the associated generated rule, if any.
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationAchievementsApi;
+my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationAchievementsApi->new();
 my $name = 'name_example'; # string | The name of the achievement
 
 eval { 
@@ -185,13 +185,13 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationAchievementsApi;
+my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationAchievementsApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $cascade = 'cascade_example'; # string | The value needed to delete used templates
 
@@ -233,13 +233,13 @@ Get a single achievement definition
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationAchievementsApi;
+my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationAchievementsApi->new();
 my $name = 'name_example'; # string | The name of the achievement
 
 eval { 
@@ -280,13 +280,13 @@ Get a single achievement template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationAchievementsApi;
+my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationAchievementsApi->new();
 my $id = 'id_example'; # string | The id of the template
 
 eval { 
@@ -327,13 +327,13 @@ List and search achievement templates
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationAchievementsApi;
+my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationAchievementsApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -378,13 +378,13 @@ Get the list of triggers that can be used to trigger an achievement progress upd
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationAchievementsApi;
+my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationAchievementsApi->new();
 
 eval { 
     my $result = $api_instance->get_achievement_triggers();
@@ -421,13 +421,13 @@ Get all achievement definitions in the system
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationAchievementsApi;
+my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationAchievementsApi->new();
 my $filter_tagset = 'filter_tagset_example'; # string | Filter for achievements with specified tags (separated by comma)
 my $filter_name = 'filter_name_example'; # string | Filter for achievements whose name contains a string
 my $filter_hidden = 1; # boolean | Filter for achievements that are hidden or not
@@ -482,13 +482,13 @@ Used by other services that depend on achievements
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationAchievementsApi;
+my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationAchievementsApi->new();
 my $name = 'name_example'; # string | The name of the derived achievement
 
 eval { 
@@ -531,13 +531,13 @@ Assets will not be filled in on the resources returned. Use 'Get a single poll' 
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationAchievementsApi;
+my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationAchievementsApi->new();
 my $user_id = 56; # int | The user's id
 my $achievement_name = 'achievement_name_example'; # string | The achievement's name
 
@@ -582,13 +582,13 @@ Assets will not be filled in on the resources returned. Use 'Get a single poll' 
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationAchievementsApi;
+my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationAchievementsApi->new();
 my $user_id = 56; # int | The user's id
 my $filter_achievement_derived = 1; # boolean | Filter for achievements that are derived from other services
 my $filter_achievement_tagset = 'filter_achievement_tagset_example'; # string | Filter for achievements with specified tags (separated by comma)
@@ -641,13 +641,13 @@ Assets will not be filled in on the resources returned. Use 'Get single achievem
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationAchievementsApi;
+my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationAchievementsApi->new();
 my $achievement_name = 'achievement_name_example'; # string | The achievement's name
 my $filter_achievement_derived = 1; # boolean | Filter for achievements that are derived from other services
 my $filter_achievement_tagset = 'filter_achievement_tagset_example'; # string | Filter for achievements with specified tags (separated by comma)
@@ -700,13 +700,13 @@ Assets will not be filled in on the resources returned. Use 'Get single achievem
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationAchievementsApi;
+my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationAchievementsApi->new();
 my $filter_achievement_derived = 1; # boolean | Filter for achievements that are derived from other services
 my $filter_achievement_tagset = 'filter_achievement_tagset_example'; # string | Filter for achievements with specified tags (separated by comma)
 my $filter_achievement_name = 'filter_achievement_name_example'; # string | Filter for achievements whose name contains a string
@@ -757,16 +757,16 @@ If no progress record yet exists for the user, it will be created. Otherwise it 
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationAchievementsApi;
+my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationAchievementsApi->new();
 my $user_id = 56; # int | The user's id
 my $achievement_name = 'achievement_name_example'; # string | The achievement's name
-my $progress = KnetikCloud::Object::int->new(); # int | The amount to add to the progress value
+my $progress = KnetikCloud::Object::IntWrapper->new(); # IntWrapper | The amount to add to the progress value
 
 eval { 
     my $result = $api_instance->increment_achievement_progress(user_id => $user_id, achievement_name => $achievement_name, progress => $progress);
@@ -783,7 +783,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**| The user&#39;s id | 
  **achievement_name** | **string**| The achievement&#39;s name | 
- **progress** | **int**| The amount to add to the progress value | [optional] 
+ **progress** | [**IntWrapper**](IntWrapper.md)| The amount to add to the progress value | [optional] 
 
 ### Return type
 
@@ -810,16 +810,16 @@ If no progress record yet exists for the user, it will be created. Otherwise it 
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationAchievementsApi;
+my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationAchievementsApi->new();
 my $user_id = 56; # int | The user's id
 my $achievement_name = 'achievement_name_example'; # string | The achievement's name
-my $progress = KnetikCloud::Object::int->new(); # int | The new progress value
+my $progress = KnetikCloud::Object::IntWrapper->new(); # IntWrapper | The new progress value
 
 eval { 
     my $result = $api_instance->set_achievement_progress(user_id => $user_id, achievement_name => $achievement_name, progress => $progress);
@@ -836,7 +836,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**| The user&#39;s id | 
  **achievement_name** | **string**| The achievement&#39;s name | 
- **progress** | **int**| The new progress value | [optional] 
+ **progress** | [**IntWrapper**](IntWrapper.md)| The new progress value | [optional] 
 
 ### Return type
 
@@ -863,13 +863,13 @@ The existing generated rule, if any, will be deleted. A new rule will be created
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationAchievementsApi;
+my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationAchievementsApi->new();
 my $name = 'name_example'; # string | The name of the achievement
 my $achievement = KnetikCloud::Object::AchievementDefinitionResource->new(); # AchievementDefinitionResource | The achievement definition
 
@@ -912,13 +912,13 @@ Update an achievement template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationAchievementsApi;
+my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationAchievementsApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $template = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The updated template
 

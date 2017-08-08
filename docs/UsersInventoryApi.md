@@ -42,13 +42,13 @@ The inventory is fulfilled asynchronously UNLESS the invoice is explicitely skip
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersInventoryApi;
+my $api_instance = KnetikCloud::UsersInventoryApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersInventoryApi->new();
 my $id = 56; # int | The id of the user
 my $user_inventory_add_request = KnetikCloud::Object::UserInventoryAddRequest->new(); # UserInventoryAddRequest | The user inventory add request object
 
@@ -93,13 +93,13 @@ Useful for pre-check and accounts for all various buisness rules
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersInventoryApi;
+my $api_instance = KnetikCloud::UsersInventoryApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersInventoryApi->new();
 my $user_id = 'user_id_example'; # string | The id of the user to check for or 'me' for logged in user
 my $item_id = 56; # int | The id of the item
 my $sku = 'sku_example'; # string | The specific sku of an entitlement list addition to check entitlement for. This is of very limited and specific use and should generally be left out
@@ -143,13 +143,13 @@ Create an entitlement item
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersInventoryApi;
+my $api_instance = KnetikCloud::UsersInventoryApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersInventoryApi->new();
 my $cascade = 1; # boolean | Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values.
 my $entitlement_item = KnetikCloud::Object::EntitlementItem->new(); # EntitlementItem | The entitlement item object
 
@@ -194,13 +194,13 @@ Entitlement templates define a type of entitlement and the properties they have
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersInventoryApi;
+my $api_instance = KnetikCloud::UsersInventoryApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersInventoryApi->new();
 my $template = KnetikCloud::Object::ItemTemplateResource->new(); # ItemTemplateResource | The entitlement template to be created
 
 eval { 
@@ -241,13 +241,13 @@ Delete an entitlement item
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersInventoryApi;
+my $api_instance = KnetikCloud::UsersInventoryApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersInventoryApi->new();
 my $entitlement_id = 56; # int | The id of the entitlement
 
 eval { 
@@ -289,13 +289,13 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersInventoryApi;
+my $api_instance = KnetikCloud::UsersInventoryApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersInventoryApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $cascade = 'cascade_example'; # string | The value needed to delete used templates
 
@@ -337,10 +337,10 @@ Get a single entitlement item
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersInventoryApi;
+my $api_instance = KnetikCloud::UsersInventoryApi->new(
+);
 
-my $api_instance = KnetikCloud::UsersInventoryApi->new();
 my $entitlement_id = 56; # int | The id of the entitlement
 
 eval { 
@@ -381,10 +381,10 @@ List and search entitlement items
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersInventoryApi;
+my $api_instance = KnetikCloud::UsersInventoryApi->new(
+);
 
-my $api_instance = KnetikCloud::UsersInventoryApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -429,13 +429,13 @@ Get a single entitlement template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersInventoryApi;
+my $api_instance = KnetikCloud::UsersInventoryApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersInventoryApi->new();
 my $id = 'id_example'; # string | The id of the template
 
 eval { 
@@ -476,13 +476,13 @@ List and search entitlement templates
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersInventoryApi;
+my $api_instance = KnetikCloud::UsersInventoryApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersInventoryApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -527,13 +527,13 @@ List the user inventory entries for a given user
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersInventoryApi;
+my $api_instance = KnetikCloud::UsersInventoryApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersInventoryApi->new();
 my $id = 56; # int | The id of the user
 my $inactive = 1; # boolean | If true, accepts inactive user inventories
 my $size = 56; # int | The number of objects returned per page
@@ -590,13 +590,13 @@ Get an inventory entry
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersInventoryApi;
+my $api_instance = KnetikCloud::UsersInventoryApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersInventoryApi->new();
 my $user_id = 56; # int | The id of the inventory owner or 'me' for the logged in user
 my $id = 56; # int | The id of the user inventory
 
@@ -639,13 +639,13 @@ List the log entries for this inventory entry
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersInventoryApi;
+my $api_instance = KnetikCloud::UsersInventoryApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersInventoryApi->new();
 my $user_id = 'user_id_example'; # string | The id of the inventory owner or 'me' for the logged in user
 my $id = 56; # int | The id of the user inventory
 my $size = 56; # int | The number of objects returned per page
@@ -692,13 +692,13 @@ List the user inventory entries for all users
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersInventoryApi;
+my $api_instance = KnetikCloud::UsersInventoryApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersInventoryApi->new();
 my $inactive = 1; # boolean | If true, accepts inactive user inventories
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
@@ -753,13 +753,13 @@ Grant an entitlement
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersInventoryApi;
+my $api_instance = KnetikCloud::UsersInventoryApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersInventoryApi->new();
 my $user_id = 56; # int | The id of the user to grant the entitlement to
 my $grant_request = KnetikCloud::Object::EntitlementGrantRequest->new(); # EntitlementGrantRequest | grantRequest
 
@@ -801,13 +801,13 @@ Update an entitlement item
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersInventoryApi;
+my $api_instance = KnetikCloud::UsersInventoryApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersInventoryApi->new();
 my $entitlement_id = 56; # int | The id of the entitlement
 my $cascade = 1; # boolean | Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values.
 my $entitlement_item = KnetikCloud::Object::EntitlementItem->new(); # EntitlementItem | The entitlement item object
@@ -851,13 +851,13 @@ Update an entitlement template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersInventoryApi;
+my $api_instance = KnetikCloud::UsersInventoryApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersInventoryApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $template = KnetikCloud::Object::ItemTemplateResource->new(); # ItemTemplateResource | The updated template
 
@@ -900,13 +900,13 @@ Set the behavior data for an inventory entry
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersInventoryApi;
+my $api_instance = KnetikCloud::UsersInventoryApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersInventoryApi->new();
 my $user_id = 56; # int | The id of the user
 my $id = 56; # int | The id of the user inventory
 my $data = KnetikCloud::Object::object->new(); # object | The data map
@@ -952,13 +952,13 @@ Will change the current grace period for a subscription but not the bill date (p
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersInventoryApi;
+my $api_instance = KnetikCloud::UsersInventoryApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersInventoryApi->new();
 my $user_id = 56; # int | user_id
 my $id = 56; # int | The id of the user inventory
 my $timestamp = KnetikCloud::Object::int->new(); # int | The new expiration date as a unix timestamp in seconds. May be null (no body).
@@ -1002,13 +1002,13 @@ Set the status for an inventory entry
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersInventoryApi;
+my $api_instance = KnetikCloud::UsersInventoryApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersInventoryApi->new();
 my $user_id = 56; # int | The id of the user
 my $id = 56; # int | The id of the user inventory
 my $inventory_status = KnetikCloud::Object::string->new(); # string | The inventory status object
@@ -1052,13 +1052,13 @@ Use an item
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersInventoryApi;
+my $api_instance = KnetikCloud::UsersInventoryApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersInventoryApi->new();
 my $user_id = 'user_id_example'; # string | The id of the user to check for or 'me' for logged in user
 my $item_id = 56; # int | The id of the item
 my $sku = 'sku_example'; # string | The specific sku of an entitlement_list addition to check entitlement for. This is of very limited and specific use and should generally be left out

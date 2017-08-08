@@ -24,10 +24,10 @@ The context type identifies the type of entity (i.e., 'activity') being tracked 
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationLeaderboardsApi;
+my $api_instance = KnetikCloud::GamificationLeaderboardsApi->new(
+);
 
-my $api_instance = KnetikCloud::GamificationLeaderboardsApi->new();
 my $context_type = 'context_type_example'; # string | The context type for the leaderboard
 my $context_id = 'context_id_example'; # string | The context id for the leaderboard
 my $size = 56; # int | The number of objects returned per page
@@ -78,13 +78,13 @@ The context type identifies the type of entity (i.e., 'activity') being tracked 
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationLeaderboardsApi;
+my $api_instance = KnetikCloud::GamificationLeaderboardsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationLeaderboardsApi->new();
 my $context_type = 'context_type_example'; # string | The context type for the leaderboard
 my $context_id = 'context_id_example'; # string | The context id for the leaderboard
 my $id = 'id_example'; # string | The id of a user
@@ -129,10 +129,10 @@ Get a list of available leaderboard strategy names
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationLeaderboardsApi;
+my $api_instance = KnetikCloud::GamificationLeaderboardsApi->new(
+);
 
-my $api_instance = KnetikCloud::GamificationLeaderboardsApi->new();
 
 eval { 
     my $result = $api_instance->get_leaderboard_strategies();

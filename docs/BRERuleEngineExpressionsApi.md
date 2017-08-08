@@ -22,13 +22,13 @@ These are expression types that take a second expression as input and produce a 
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineExpressionsApi;
+my $api_instance = KnetikCloud::BRERuleEngineExpressionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineExpressionsApi->new();
 
 eval { 
     my $result = $api_instance->get_bre_expressions();

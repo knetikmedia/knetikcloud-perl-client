@@ -31,15 +31,15 @@ Add your vote to a poll
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentPollsApi;
+my $api_instance = KnetikCloud::ContentPollsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ContentPollsApi->new();
 my $id = 'id_example'; # string | The poll id
-my $answer_key = KnetikCloud::Object::string->new(); # string | The answer key
+my $answer_key = KnetikCloud::Object::StringWrapper->new(); # StringWrapper | The answer key
 
 eval { 
     my $result = $api_instance->answer_poll(id => $id, answer_key => $answer_key);
@@ -55,7 +55,7 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| The poll id | 
- **answer_key** | **string**| The answer key | [optional] 
+ **answer_key** | [**StringWrapper**](StringWrapper.md)| The answer key | [optional] 
 
 ### Return type
 
@@ -82,13 +82,13 @@ Polls are blobs of text with titles, a category and assets. Formatting and displ
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentPollsApi;
+my $api_instance = KnetikCloud::ContentPollsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ContentPollsApi->new();
 my $poll_resource = KnetikCloud::Object::PollResource->new(); # PollResource | The poll object
 
 eval { 
@@ -131,13 +131,13 @@ Poll templates define a type of poll and the properties they have
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentPollsApi;
+my $api_instance = KnetikCloud::ContentPollsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ContentPollsApi->new();
 my $poll_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The poll template resource object
 
 eval { 
@@ -178,13 +178,13 @@ Delete an existing poll
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentPollsApi;
+my $api_instance = KnetikCloud::ContentPollsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ContentPollsApi->new();
 my $id = 'id_example'; # string | The poll id
 
 eval { 
@@ -226,13 +226,13 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentPollsApi;
+my $api_instance = KnetikCloud::ContentPollsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ContentPollsApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $cascade = 'cascade_example'; # string | The value needed to delete used templates
 
@@ -274,10 +274,10 @@ Get a single poll
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentPollsApi;
+my $api_instance = KnetikCloud::ContentPollsApi->new(
+);
 
-my $api_instance = KnetikCloud::ContentPollsApi->new();
 my $id = 'id_example'; # string | The poll id
 
 eval { 
@@ -318,13 +318,13 @@ Get poll answer
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentPollsApi;
+my $api_instance = KnetikCloud::ContentPollsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ContentPollsApi->new();
 my $id = 'id_example'; # string | The poll id
 
 eval { 
@@ -365,13 +365,13 @@ Get a single poll template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentPollsApi;
+my $api_instance = KnetikCloud::ContentPollsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ContentPollsApi->new();
 my $id = 'id_example'; # string | The id of the template
 
 eval { 
@@ -412,13 +412,13 @@ List and search poll templates
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentPollsApi;
+my $api_instance = KnetikCloud::ContentPollsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ContentPollsApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -465,10 +465,10 @@ Get a list of polls with optional filtering. Assets will not be filled in on the
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentPollsApi;
+my $api_instance = KnetikCloud::ContentPollsApi->new(
+);
 
-my $api_instance = KnetikCloud::ContentPollsApi->new();
 my $filter_category = 'filter_category_example'; # string | Filter for polls from a specific category by id
 my $filter_tagset = 'filter_tagset_example'; # string | Filter for polls with specified tags (separated by comma)
 my $filter_text = 'filter_text_example'; # string | Filter for polls whose text contains a string
@@ -519,13 +519,13 @@ Update an existing poll
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentPollsApi;
+my $api_instance = KnetikCloud::ContentPollsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ContentPollsApi->new();
 my $id = 'id_example'; # string | The poll id
 my $poll_resource = KnetikCloud::Object::PollResource->new(); # PollResource | The poll object
 
@@ -568,13 +568,13 @@ Update a poll template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentPollsApi;
+my $api_instance = KnetikCloud::ContentPollsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ContentPollsApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $poll_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The poll template resource object
 

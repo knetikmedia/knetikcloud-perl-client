@@ -23,13 +23,13 @@ Types include integer, string, user and invoice. These are used to qualify trigg
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineVariablesApi;
+my $api_instance = KnetikCloud::BRERuleEngineVariablesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineVariablesApi->new();
 
 eval { 
     my $result = $api_instance->get_bre_variable_types();
@@ -68,13 +68,13 @@ Used to lookup users to fill in a user constant for example. Only types marked a
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineVariablesApi;
+my $api_instance = KnetikCloud::BRERuleEngineVariablesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineVariablesApi->new();
 my $name = 'name_example'; # string | The name of the type
 my $filter_name = 'filter_name_example'; # string | Filter results by those with names starting with this string
 my $size = 56; # int | The number of objects returned per page

@@ -31,13 +31,13 @@ Articles are blobs of text with titles, a category and assets. Formatting and di
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentArticlesApi;
+my $api_instance = KnetikCloud::ContentArticlesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ContentArticlesApi->new();
 my $article_resource = KnetikCloud::Object::ArticleResource->new(); # ArticleResource | The new article
 
 eval { 
@@ -80,13 +80,13 @@ Article Templates define a type of article and the properties they have
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentArticlesApi;
+my $api_instance = KnetikCloud::ContentArticlesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ContentArticlesApi->new();
 my $article_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The article template resource object
 
 eval { 
@@ -127,13 +127,13 @@ Delete an existing article
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentArticlesApi;
+my $api_instance = KnetikCloud::ContentArticlesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ContentArticlesApi->new();
 my $id = 'id_example'; # string | The article id
 
 eval { 
@@ -175,13 +175,13 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentArticlesApi;
+my $api_instance = KnetikCloud::ContentArticlesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ContentArticlesApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $cascade = 'cascade_example'; # string | The value needed to delete used templates
 
@@ -223,10 +223,10 @@ Get a single article
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentArticlesApi;
+my $api_instance = KnetikCloud::ContentArticlesApi->new(
+);
 
-my $api_instance = KnetikCloud::ContentArticlesApi->new();
 my $id = 'id_example'; # string | The article id
 
 eval { 
@@ -267,13 +267,13 @@ Get a single article template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentArticlesApi;
+my $api_instance = KnetikCloud::ContentArticlesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ContentArticlesApi->new();
 my $id = 'id_example'; # string | The id of the template
 
 eval { 
@@ -314,13 +314,13 @@ List and search article templates
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentArticlesApi;
+my $api_instance = KnetikCloud::ContentArticlesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ContentArticlesApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -367,10 +367,10 @@ Get a list of articles with optional filtering. Assets will not be filled in on 
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentArticlesApi;
+my $api_instance = KnetikCloud::ContentArticlesApi->new(
+);
 
-my $api_instance = KnetikCloud::ContentArticlesApi->new();
 my $filter_category = 'filter_category_example'; # string | Filter for articles from a specific category by id
 my $filter_tagset = 'filter_tagset_example'; # string | Filter for articles with at least one of a specified set of tags (separated by comma)
 my $filter_tag_intersection = 'filter_tag_intersection_example'; # string | Filter for articles with all of a specified set of tags (separated by comma)
@@ -425,13 +425,13 @@ Update an existing article
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentArticlesApi;
+my $api_instance = KnetikCloud::ContentArticlesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ContentArticlesApi->new();
 my $id = 'id_example'; # string | The article id
 my $article_resource = KnetikCloud::Object::ArticleResource->new(); # ArticleResource | The article object
 
@@ -474,13 +474,13 @@ Update an article template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentArticlesApi;
+my $api_instance = KnetikCloud::ContentArticlesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ContentArticlesApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $article_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The article template resource object
 

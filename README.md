@@ -89,37 +89,37 @@ you are accessing. Usually `prefix` and `in` will be determined by the code gene
 the spec and you will not need to set them at run time. If not, `in` will
 default to 'head' and `prefix` to the empty string.
 
-The tokens will be placed in the `KnetikCloud::Configuration` namespace
+The tokens will be placed in a L<KnetikCloud::Configuration> instance
 as follows, but you don't need to know about this.
 
-- `$KnetikCloud::Configuration::username`
+- `$cfg->{username}`
 
     String. The username for basic auth.
 
-- `$KnetikCloud::Configuration::password`
+- `$cfg->{password}`
 
     String. The password for basic auth.
 
-- `$KnetikCloud::Configuration::api_key`
+- `$cfg->{api_key}`
 
     Hashref. Keyed on the name of each key (there can be multiple tokens).
 
-            $KnetikCloud::Configuration::api_key = {
+            $cfg->{api_key} = {
                     secretKey => 'aaaabbbbccccdddd',
                     anotherKey => '1111222233334444',
                     };
 
-- `$KnetikCloud::Configuration::api_key_prefix`
+- `$cfg->{api_key_prefix}`
 
     Hashref. Keyed on the name of each key (there can be multiple tokens). Note not
     all api keys require a prefix.
 
-            $KnetikCloud::Configuration::api_key_prefix = {
+            $cfg->{api_key_prefix} = {
                     secretKey => 'string',
                     anotherKey => 'same or some other string',
                     };
 
-- `$KnetikCloud::Configuration::access_token`
+- `$cfg->{access_token}`
 
     String. The OAuth access token.
 
@@ -128,8 +128,7 @@ as follows, but you don't need to know about this.
 ## `base_url`
 
 The generated code has the `base_url` already set as a default value. This method
-returns (and optionally sets, but only if the API client has not been
-created yet) the current value of `base_url`.
+returns the current value of `base_url`.
 
 ## `api_factory`
 
@@ -264,6 +263,7 @@ use KnetikCloud::MediaVideosApi;
 use KnetikCloud::MessagingApi;
 use KnetikCloud::PaymentsApi;
 use KnetikCloud::PaymentsAppleApi;
+use KnetikCloud::PaymentsFattMerchantApi;
 use KnetikCloud::PaymentsGoogleApi;
 use KnetikCloud::PaymentsOptimalApi;
 use KnetikCloud::PaymentsPayPalClassicApi;
@@ -393,6 +393,8 @@ use KnetikCloud::Object::EventContextResource;
 use KnetikCloud::Object::ExpressionResource;
 use KnetikCloud::Object::Expressionobject;
 use KnetikCloud::Object::FacebookToken;
+use KnetikCloud::Object::FattMerchantPaymentMethod;
+use KnetikCloud::Object::FattMerchantPaymentMethodRequest;
 use KnetikCloud::Object::FinalizeBillingAgreementRequest;
 use KnetikCloud::Object::FinalizePayPalPaymentRequest;
 use KnetikCloud::Object::FlagReportResource;
@@ -409,6 +411,7 @@ use KnetikCloud::Object::GroupResource;
 use KnetikCloud::Object::IOConfig;
 use KnetikCloud::Object::ImportJobOutputResource;
 use KnetikCloud::Object::ImportJobResource;
+use KnetikCloud::Object::IntWrapper;
 use KnetikCloud::Object::IntegerOperationResource;
 use KnetikCloud::Object::InventorySubscriptionResource;
 use KnetikCloud::Object::InvoiceCreateRequest;
@@ -518,6 +521,7 @@ use KnetikCloud::Object::ParameterResource;
 use KnetikCloud::Object::PasswordResetRequest;
 use KnetikCloud::Object::PayBySavedMethodRequest;
 use KnetikCloud::Object::PaymentAuthorizationResource;
+use KnetikCloud::Object::PaymentMethodDetails;
 use KnetikCloud::Object::PaymentMethodResource;
 use KnetikCloud::Object::PaymentMethodTypeResource;
 use KnetikCloud::Object::PermissionResource;
@@ -532,6 +536,7 @@ use KnetikCloud::Object::PropertyFieldListResource;
 use KnetikCloud::Object::PropertyFieldResource;
 use KnetikCloud::Object::QuestionResource;
 use KnetikCloud::Object::QuestionTemplateResource;
+use KnetikCloud::Object::QuickBuyRequest;
 use KnetikCloud::Object::RawEmailResource;
 use KnetikCloud::Object::RawSMSResource;
 use KnetikCloud::Object::ReactivateSubscriptionRequest;
@@ -565,6 +570,7 @@ use KnetikCloud::Object::StateResource;
 use KnetikCloud::Object::StateTaxResource;
 use KnetikCloud::Object::StoreItemTemplateResource;
 use KnetikCloud::Object::StringOperationResource;
+use KnetikCloud::Object::StringWrapper;
 use KnetikCloud::Object::StripeCreatePaymentMethod;
 use KnetikCloud::Object::StripePaymentRequest;
 use KnetikCloud::Object::SubscriptionCreditResource;
@@ -628,6 +634,7 @@ use KnetikCloud::Object::ImagePropertyDefinitionResource;
 use KnetikCloud::Object::IntegerProperty;
 use KnetikCloud::Object::IntegerPropertyDefinitionResource;
 use KnetikCloud::Object::LimitedGettable;
+use KnetikCloud::Object::LogLevelEvent;
 use KnetikCloud::Object::LongProperty;
 use KnetikCloud::Object::LongPropertyDefinitionResource;
 use KnetikCloud::Object::NewCustomerEvent;
@@ -728,6 +735,7 @@ use KnetikCloud::MediaVideosApi;
 use KnetikCloud::MessagingApi;
 use KnetikCloud::PaymentsApi;
 use KnetikCloud::PaymentsAppleApi;
+use KnetikCloud::PaymentsFattMerchantApi;
 use KnetikCloud::PaymentsGoogleApi;
 use KnetikCloud::PaymentsOptimalApi;
 use KnetikCloud::PaymentsPayPalClassicApi;
@@ -854,6 +862,8 @@ use KnetikCloud::Object::EventContextResource;
 use KnetikCloud::Object::ExpressionResource;
 use KnetikCloud::Object::Expressionobject;
 use KnetikCloud::Object::FacebookToken;
+use KnetikCloud::Object::FattMerchantPaymentMethod;
+use KnetikCloud::Object::FattMerchantPaymentMethodRequest;
 use KnetikCloud::Object::FinalizeBillingAgreementRequest;
 use KnetikCloud::Object::FinalizePayPalPaymentRequest;
 use KnetikCloud::Object::FlagReportResource;
@@ -870,6 +880,7 @@ use KnetikCloud::Object::GroupResource;
 use KnetikCloud::Object::IOConfig;
 use KnetikCloud::Object::ImportJobOutputResource;
 use KnetikCloud::Object::ImportJobResource;
+use KnetikCloud::Object::IntWrapper;
 use KnetikCloud::Object::IntegerOperationResource;
 use KnetikCloud::Object::InventorySubscriptionResource;
 use KnetikCloud::Object::InvoiceCreateRequest;
@@ -979,6 +990,7 @@ use KnetikCloud::Object::ParameterResource;
 use KnetikCloud::Object::PasswordResetRequest;
 use KnetikCloud::Object::PayBySavedMethodRequest;
 use KnetikCloud::Object::PaymentAuthorizationResource;
+use KnetikCloud::Object::PaymentMethodDetails;
 use KnetikCloud::Object::PaymentMethodResource;
 use KnetikCloud::Object::PaymentMethodTypeResource;
 use KnetikCloud::Object::PermissionResource;
@@ -993,6 +1005,7 @@ use KnetikCloud::Object::PropertyFieldListResource;
 use KnetikCloud::Object::PropertyFieldResource;
 use KnetikCloud::Object::QuestionResource;
 use KnetikCloud::Object::QuestionTemplateResource;
+use KnetikCloud::Object::QuickBuyRequest;
 use KnetikCloud::Object::RawEmailResource;
 use KnetikCloud::Object::RawSMSResource;
 use KnetikCloud::Object::ReactivateSubscriptionRequest;
@@ -1026,6 +1039,7 @@ use KnetikCloud::Object::StateResource;
 use KnetikCloud::Object::StateTaxResource;
 use KnetikCloud::Object::StoreItemTemplateResource;
 use KnetikCloud::Object::StringOperationResource;
+use KnetikCloud::Object::StringWrapper;
 use KnetikCloud::Object::StripeCreatePaymentMethod;
 use KnetikCloud::Object::StripePaymentRequest;
 use KnetikCloud::Object::SubscriptionCreditResource;
@@ -1089,6 +1103,7 @@ use KnetikCloud::Object::ImagePropertyDefinitionResource;
 use KnetikCloud::Object::IntegerProperty;
 use KnetikCloud::Object::IntegerPropertyDefinitionResource;
 use KnetikCloud::Object::LimitedGettable;
+use KnetikCloud::Object::LogLevelEvent;
 use KnetikCloud::Object::LongProperty;
 use KnetikCloud::Object::LongPropertyDefinitionResource;
 use KnetikCloud::Object::NewCustomerEvent;
@@ -1118,10 +1133,11 @@ use KnetikCloud::Object::VideoProperty;
 
 # for displaying the API response data
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::;
 
-my $api_instance = KnetikCloud::AccessTokenApi->new();
+my $api_instance = KnetikCloud::->new(
+);
+
 my $grant_type = 'grant_type_example'; # string | Grant type
 my $client_id = 'client_id_example'; # string | The id of the client
 my $client_secret = 'client_secret_example'; # string | The secret key of the client.  Used only with a grant_type of client_credentials
@@ -1391,7 +1407,7 @@ Class | Method | HTTP request | Description
 *InvoicesApi* | [**get_invoice_logs**](docs/InvoicesApi.md#get_invoice_logs) | **GET** /invoices/{id}/logs | List invoice logs
 *InvoicesApi* | [**get_invoices**](docs/InvoicesApi.md#get_invoices) | **GET** /invoices | Retrieve invoices
 *InvoicesApi* | [**get_payment_statuses**](docs/InvoicesApi.md#get_payment_statuses) | **GET** /invoices/payment-statuses | Lists available payment statuses
-*InvoicesApi* | [**pay_invoice**](docs/InvoicesApi.md#pay_invoice) | **POST** /invoices/{id}/payments | Trigger payment of an invoice
+*InvoicesApi* | [**pay_invoice**](docs/InvoicesApi.md#pay_invoice) | **POST** /invoices/{id}/payments | Pay an invoice using a saved payment method
 *InvoicesApi* | [**set_bundled_invoice_item_fulfillment_status**](docs/InvoicesApi.md#set_bundled_invoice_item_fulfillment_status) | **PUT** /invoices/{id}/items/{bundleSku}/bundled-skus/{sku}/fulfillment-status | Set the fulfillment status of a bundled invoice item
 *InvoicesApi* | [**set_external_ref**](docs/InvoicesApi.md#set_external_ref) | **PUT** /invoices/{id}/external-ref | Set the external reference of an invoice
 *InvoicesApi* | [**set_invoice_item_fulfillment_status**](docs/InvoicesApi.md#set_invoice_item_fulfillment_status) | **PUT** /invoices/{id}/items/{sku}/fulfillment-status | Set the fulfillment status of an invoice item
@@ -1458,6 +1474,7 @@ Class | Method | HTTP request | Description
 *PaymentsApi* | [**payment_capture**](docs/PaymentsApi.md#payment_capture) | **POST** /payment/authorizations/{id}/capture | Capture an existing invoice payment authorization
 *PaymentsApi* | [**update_payment_method**](docs/PaymentsApi.md#update_payment_method) | **PUT** /users/{user_id}/payment-methods/{id} | Update an existing payment method for a user
 *PaymentsAppleApi* | [**verify_apple_receipt**](docs/PaymentsAppleApi.md#verify_apple_receipt) | **POST** /payment/provider/apple/receipt | Pay invoice with Apple receipt
+*PaymentsFattMerchantApi* | [**create_or_update_fatt_merchant_payment_method**](docs/PaymentsFattMerchantApi.md#create_or_update_fatt_merchant_payment_method) | **PUT** /payment/provider/fattmerchant/payment-methods | Create or update a FattMerchant payment method for a user
 *PaymentsGoogleApi* | [**handle_google_payment**](docs/PaymentsGoogleApi.md#handle_google_payment) | **POST** /payment/provider/google/payments | Mark an invoice paid with Google
 *PaymentsOptimalApi* | [**silent_post_optimal**](docs/PaymentsOptimalApi.md#silent_post_optimal) | **POST** /payment/provider/optimal/silent | Initiate silent post with Optimal
 *PaymentsPayPalClassicApi* | [**create_pay_pal_billing_agreement_url**](docs/PaymentsPayPalClassicApi.md#create_pay_pal_billing_agreement_url) | **POST** /payment/provider/paypal/classic/agreements/start | Create a PayPal Classic billing agreement for the user
@@ -1511,6 +1528,7 @@ Class | Method | HTTP request | Description
 *StoreApi* | [**get_store**](docs/StoreApi.md#get_store) | **GET** /store | Get a listing of store items
 *StoreApi* | [**get_store_item**](docs/StoreApi.md#get_store_item) | **GET** /store/items/{id} | Get a single store item
 *StoreApi* | [**get_store_items**](docs/StoreApi.md#get_store_items) | **GET** /store/items | List and search store items
+*StoreApi* | [**quick_buy**](docs/StoreApi.md#quick_buy) | **POST** /store/quick-buy | One-step purchase and pay for a single SKU item from a user&#39;s wallet
 *StoreApi* | [**update_item_template**](docs/StoreApi.md#update_item_template) | **PUT** /store/items/templates/{id} | Update an item template
 *StoreApi* | [**update_store_item**](docs/StoreApi.md#update_store_item) | **PUT** /store/items/{id} | Update a store item
 *StoreBundlesApi* | [**create_bundle_item**](docs/StoreBundlesApi.md#create_bundle_item) | **POST** /store/bundles | Create a bundle item
@@ -1769,6 +1787,8 @@ Class | Method | HTTP request | Description
  - [KnetikCloud::Object::ExpressionResource](docs/ExpressionResource.md)
  - [KnetikCloud::Object::Expressionobject](docs/Expressionobject.md)
  - [KnetikCloud::Object::FacebookToken](docs/FacebookToken.md)
+ - [KnetikCloud::Object::FattMerchantPaymentMethod](docs/FattMerchantPaymentMethod.md)
+ - [KnetikCloud::Object::FattMerchantPaymentMethodRequest](docs/FattMerchantPaymentMethodRequest.md)
  - [KnetikCloud::Object::FinalizeBillingAgreementRequest](docs/FinalizeBillingAgreementRequest.md)
  - [KnetikCloud::Object::FinalizePayPalPaymentRequest](docs/FinalizePayPalPaymentRequest.md)
  - [KnetikCloud::Object::FlagReportResource](docs/FlagReportResource.md)
@@ -1785,6 +1805,7 @@ Class | Method | HTTP request | Description
  - [KnetikCloud::Object::IOConfig](docs/IOConfig.md)
  - [KnetikCloud::Object::ImportJobOutputResource](docs/ImportJobOutputResource.md)
  - [KnetikCloud::Object::ImportJobResource](docs/ImportJobResource.md)
+ - [KnetikCloud::Object::IntWrapper](docs/IntWrapper.md)
  - [KnetikCloud::Object::IntegerOperationResource](docs/IntegerOperationResource.md)
  - [KnetikCloud::Object::InventorySubscriptionResource](docs/InventorySubscriptionResource.md)
  - [KnetikCloud::Object::InvoiceCreateRequest](docs/InvoiceCreateRequest.md)
@@ -1894,6 +1915,7 @@ Class | Method | HTTP request | Description
  - [KnetikCloud::Object::PasswordResetRequest](docs/PasswordResetRequest.md)
  - [KnetikCloud::Object::PayBySavedMethodRequest](docs/PayBySavedMethodRequest.md)
  - [KnetikCloud::Object::PaymentAuthorizationResource](docs/PaymentAuthorizationResource.md)
+ - [KnetikCloud::Object::PaymentMethodDetails](docs/PaymentMethodDetails.md)
  - [KnetikCloud::Object::PaymentMethodResource](docs/PaymentMethodResource.md)
  - [KnetikCloud::Object::PaymentMethodTypeResource](docs/PaymentMethodTypeResource.md)
  - [KnetikCloud::Object::PermissionResource](docs/PermissionResource.md)
@@ -1908,6 +1930,7 @@ Class | Method | HTTP request | Description
  - [KnetikCloud::Object::PropertyFieldResource](docs/PropertyFieldResource.md)
  - [KnetikCloud::Object::QuestionResource](docs/QuestionResource.md)
  - [KnetikCloud::Object::QuestionTemplateResource](docs/QuestionTemplateResource.md)
+ - [KnetikCloud::Object::QuickBuyRequest](docs/QuickBuyRequest.md)
  - [KnetikCloud::Object::RawEmailResource](docs/RawEmailResource.md)
  - [KnetikCloud::Object::RawSMSResource](docs/RawSMSResource.md)
  - [KnetikCloud::Object::ReactivateSubscriptionRequest](docs/ReactivateSubscriptionRequest.md)
@@ -1941,6 +1964,7 @@ Class | Method | HTTP request | Description
  - [KnetikCloud::Object::StateTaxResource](docs/StateTaxResource.md)
  - [KnetikCloud::Object::StoreItemTemplateResource](docs/StoreItemTemplateResource.md)
  - [KnetikCloud::Object::StringOperationResource](docs/StringOperationResource.md)
+ - [KnetikCloud::Object::StringWrapper](docs/StringWrapper.md)
  - [KnetikCloud::Object::StripeCreatePaymentMethod](docs/StripeCreatePaymentMethod.md)
  - [KnetikCloud::Object::StripePaymentRequest](docs/StripePaymentRequest.md)
  - [KnetikCloud::Object::SubscriptionCreditResource](docs/SubscriptionCreditResource.md)
@@ -2004,6 +2028,7 @@ Class | Method | HTTP request | Description
  - [KnetikCloud::Object::IntegerProperty](docs/IntegerProperty.md)
  - [KnetikCloud::Object::IntegerPropertyDefinitionResource](docs/IntegerPropertyDefinitionResource.md)
  - [KnetikCloud::Object::LimitedGettable](docs/LimitedGettable.md)
+ - [KnetikCloud::Object::LogLevelEvent](docs/LogLevelEvent.md)
  - [KnetikCloud::Object::LongProperty](docs/LongProperty.md)
  - [KnetikCloud::Object::LongPropertyDefinitionResource](docs/LongPropertyDefinitionResource.md)
  - [KnetikCloud::Object::NewCustomerEvent](docs/NewCustomerEvent.md)

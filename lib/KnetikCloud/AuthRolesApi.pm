@@ -28,25 +28,22 @@ use Carp qw( croak );
 use Log::Any qw($log);
 
 use KnetikCloud::ApiClient;
-use KnetikCloud::Configuration;
 
 use base "Class::Data::Inheritable";
 
 __PACKAGE__->mk_classdata('method_documentation' => {});
 
 sub new {
-    my $class   = shift;
-    my (%self) = (
-        'api_client' => KnetikCloud::ApiClient->instance,
-        @_
-    );
+    my $class = shift;
+    my $api_client;
 
-    #my $self = {
-    #    #api_client => $options->{api_client}
-    #    api_client => $default_api_client
-    #}; 
+    if ($_[0] && ref $_[0] && ref $_[0] eq 'KnetikCloud::ApiClient' ) {
+        $api_client = $_[0];
+    } else {
+        $api_client = KnetikCloud::ApiClient->new(@_);
+    }
 
-    bless \%self, $class;
+    bless { api_client => $api_client }, $class;
 
 }
 
@@ -324,11 +321,23 @@ sub get_role {
 #
 # List and search roles
 # 
+# @param string $filter_name Filter for roles that have a name starting with specified string (optional)
+# @param string $filter_role Filter for roles that have a role starting with specified string (optional)
 # @param int $size The number of objects returned per page (optional, default to 25)
 # @param int $page The number of the page returned, starting with 1 (optional, default to 1)
 # @param string $order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional)
 {
     my $params = {
+    'filter_name' => {
+        data_type => 'string',
+        description => 'Filter for roles that have a name starting with specified string',
+        required => '0',
+    },
+    'filter_role' => {
+        data_type => 'string',
+        description => 'Filter for roles that have a role starting with specified string',
+        required => '0',
+    },
     'size' => {
         data_type => 'int',
         description => 'The number of objects returned per page',
@@ -370,6 +379,16 @@ sub get_roles {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    # query params
+    if ( exists $args{'filter_name'}) {
+        $query_params->{'filter_name'} = $self->{api_client}->to_query_value($args{'filter_name'});
+    }
+
+    # query params
+    if ( exists $args{'filter_role'}) {
+        $query_params->{'filter_role'} = $self->{api_client}->to_query_value($args{'filter_role'});
+    }
 
     # query params
     if ( exists $args{'size'}) {

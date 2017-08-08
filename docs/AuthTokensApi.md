@@ -22,13 +22,13 @@ Delete tokens by username, client id, or both
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthTokensApi;
+my $api_instance = KnetikCloud::AuthTokensApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthTokensApi->new();
 my $username = 'username_example'; # string | The username of the user
 my $client_id = 'client_id_example'; # string | The id of the client
 
@@ -70,13 +70,13 @@ Get a single token by username and client id
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthTokensApi;
+my $api_instance = KnetikCloud::AuthTokensApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthTokensApi->new();
 my $username = 'username_example'; # string | The username of the user
 my $client_id = 'client_id_example'; # string | The id of the client
 
@@ -121,13 +121,13 @@ Token value not shown
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthTokensApi;
+my $api_instance = KnetikCloud::AuthTokensApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthTokensApi->new();
 my $filter_client_id = 'filter_client_id_example'; # string | Filters for token whose client id matches provided string
 my $filter_username = 'filter_username_example'; # string | Filters for token whose username matches provided string
 my $size = 56; # int | The number of objects returned per page

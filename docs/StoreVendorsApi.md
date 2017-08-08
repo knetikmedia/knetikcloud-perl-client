@@ -29,13 +29,13 @@ Create a vendor
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreVendorsApi;
+my $api_instance = KnetikCloud::StoreVendorsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreVendorsApi->new();
 my $vendor = KnetikCloud::Object::VendorResource->new(); # VendorResource | The vendor
 
 eval { 
@@ -78,13 +78,13 @@ Vendor Templates define a type of vendor and the properties they have.
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreVendorsApi;
+my $api_instance = KnetikCloud::StoreVendorsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreVendorsApi->new();
 my $vendor_template_resource = KnetikCloud::Object::ItemTemplateResource->new(); # ItemTemplateResource | The new vendor template
 
 eval { 
@@ -125,13 +125,13 @@ Delete a vendor
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreVendorsApi;
+my $api_instance = KnetikCloud::StoreVendorsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreVendorsApi->new();
 my $id = 56; # int | The id of the vendor
 
 eval { 
@@ -171,13 +171,13 @@ Delete a vendor template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreVendorsApi;
+my $api_instance = KnetikCloud::StoreVendorsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreVendorsApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $cascade = 'cascade_example'; # string | force deleting the template if it's attached to other objects, cascade = detach
 
@@ -219,10 +219,10 @@ Get a single vendor
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreVendorsApi;
+my $api_instance = KnetikCloud::StoreVendorsApi->new(
+);
 
-my $api_instance = KnetikCloud::StoreVendorsApi->new();
 my $id = 56; # int | The id of the vendor
 
 eval { 
@@ -265,13 +265,13 @@ Vendor Templates define a type of vendor and the properties they have.
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreVendorsApi;
+my $api_instance = KnetikCloud::StoreVendorsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreVendorsApi->new();
 my $id = 'id_example'; # string | The id of the template
 
 eval { 
@@ -312,13 +312,13 @@ List and search vendor templates
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreVendorsApi;
+my $api_instance = KnetikCloud::StoreVendorsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreVendorsApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -363,10 +363,10 @@ List and search vendors
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreVendorsApi;
+my $api_instance = KnetikCloud::StoreVendorsApi->new(
+);
 
-my $api_instance = KnetikCloud::StoreVendorsApi->new();
 my $filter_name = 'filter_name_example'; # string | Filters vendors by name starting with the text provided in the filter
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
@@ -413,13 +413,13 @@ Update a vendor
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreVendorsApi;
+my $api_instance = KnetikCloud::StoreVendorsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreVendorsApi->new();
 my $id = 56; # int | The id of the vendor
 my $vendor = KnetikCloud::Object::VendorResource->new(); # VendorResource | The vendor
 
@@ -462,13 +462,13 @@ Update a vendor template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreVendorsApi;
+my $api_instance = KnetikCloud::StoreVendorsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreVendorsApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $vendor_template_resource = KnetikCloud::Object::ItemTemplateResource->new(); # ItemTemplateResource | The vendor template resource object
 

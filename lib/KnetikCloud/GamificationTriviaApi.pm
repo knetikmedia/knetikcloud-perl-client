@@ -28,25 +28,22 @@ use Carp qw( croak );
 use Log::Any qw($log);
 
 use KnetikCloud::ApiClient;
-use KnetikCloud::Configuration;
 
 use base "Class::Data::Inheritable";
 
 __PACKAGE__->mk_classdata('method_documentation' => {});
 
 sub new {
-    my $class   = shift;
-    my (%self) = (
-        'api_client' => KnetikCloud::ApiClient->instance,
-        @_
-    );
+    my $class = shift;
+    my $api_client;
 
-    #my $self = {
-    #    #api_client => $options->{api_client}
-    #    api_client => $default_api_client
-    #}; 
+    if ($_[0] && ref $_[0] && ref $_[0] eq 'KnetikCloud::ApiClient' ) {
+        $api_client = $_[0];
+    } else {
+        $api_client = KnetikCloud::ApiClient->new(@_);
+    }
 
-    bless \%self, $class;
+    bless { api_client => $api_client }, $class;
 
 }
 
@@ -135,7 +132,7 @@ sub add_question_answers {
 # Add a tag to a question
 # 
 # @param string $id The id of the question (required)
-# @param string $tag The new tag (optional)
+# @param StringWrapper $tag The new tag (optional)
 {
     my $params = {
     'id' => {
@@ -144,7 +141,7 @@ sub add_question_answers {
         required => '1',
     },
     'tag' => {
-        data_type => 'string',
+        data_type => 'StringWrapper',
         description => 'The new tag',
         required => '0',
     },
@@ -208,7 +205,7 @@ sub add_question_tag {
 #
 # Add a tag to a batch of questions
 # 
-# @param string $tag The tag to add (optional)
+# @param StringWrapper $tag The tag to add (optional)
 # @param string $filter_search Filter for documents whose question, answers or tags contains provided string (optional)
 # @param string $filter_idset Filter for documents whose id is in the comma separated list provided (optional)
 # @param string $filter_category Filter for questions with specified category, by id (optional)
@@ -220,7 +217,7 @@ sub add_question_tag {
 {
     my $params = {
     'tag' => {
-        data_type => 'string',
+        data_type => 'StringWrapper',
         description => 'The tag to add',
         required => '0',
     },

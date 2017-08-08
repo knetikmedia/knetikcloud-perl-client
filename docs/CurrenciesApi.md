@@ -24,13 +24,13 @@ Create a currency
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CurrenciesApi;
+my $api_instance = KnetikCloud::CurrenciesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CurrenciesApi->new();
 my $currency = KnetikCloud::Object::CurrencyResource->new(); # CurrencyResource | The currency object
 
 eval { 
@@ -71,13 +71,13 @@ Delete a currency
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CurrenciesApi;
+my $api_instance = KnetikCloud::CurrenciesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CurrenciesApi->new();
 my $code = 'code_example'; # string | The currency code
 
 eval { 
@@ -117,10 +117,10 @@ List and search currencies
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CurrenciesApi;
+my $api_instance = KnetikCloud::CurrenciesApi->new(
+);
 
-my $api_instance = KnetikCloud::CurrenciesApi->new();
 my $filter_enabled_currencies = 1; # boolean | Filter for alternate currencies setup explicitely in system config
 my $filter_type = 'filter_type_example'; # string | Filter currencies by type.  Allowable values: ('virtual', 'real')
 my $size = 56; # int | The number of objects returned per page
@@ -169,10 +169,10 @@ Get a single currency
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CurrenciesApi;
+my $api_instance = KnetikCloud::CurrenciesApi->new(
+);
 
-my $api_instance = KnetikCloud::CurrenciesApi->new();
 my $code = 'code_example'; # string | The currency code
 
 eval { 
@@ -213,13 +213,13 @@ Update a currency
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CurrenciesApi;
+my $api_instance = KnetikCloud::CurrenciesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CurrenciesApi->new();
 my $code = 'code_example'; # string | The currency code
 my $currency = KnetikCloud::Object::CurrencyResource->new(); # CurrencyResource | The currency object
 

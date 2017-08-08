@@ -133,6 +133,14 @@ isa_ok($api, 'KnetikCloud::StoreApi');
 }
 
 #
+# quick_buy test
+#
+{
+    my $quick_buy_request = undef; # replace NULL with a proper value
+    my $result = $api->quick_buy(quick_buy_request => $quick_buy_request);
+}
+
+#
 # update_item_template test
 #
 {

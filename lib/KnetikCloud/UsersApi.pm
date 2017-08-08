@@ -28,25 +28,22 @@ use Carp qw( croak );
 use Log::Any qw($log);
 
 use KnetikCloud::ApiClient;
-use KnetikCloud::Configuration;
 
 use base "Class::Data::Inheritable";
 
 __PACKAGE__->mk_classdata('method_documentation' => {});
 
 sub new {
-    my $class   = shift;
-    my (%self) = (
-        'api_client' => KnetikCloud::ApiClient->instance,
-        @_
-    );
+    my $class = shift;
+    my $api_client;
 
-    #my $self = {
-    #    #api_client => $options->{api_client}
-    #    api_client => $default_api_client
-    #}; 
+    if ($_[0] && ref $_[0] && ref $_[0] eq 'KnetikCloud::ApiClient' ) {
+        $api_client = $_[0];
+    } else {
+        $api_client = KnetikCloud::ApiClient->new(@_);
+    }
 
-    bless \%self, $class;
+    bless { api_client => $api_client }, $class;
 
 }
 
@@ -57,7 +54,7 @@ sub new {
 # Add a tag to a user
 # 
 # @param int $user_id The id of the user (required)
-# @param string $tag tag (required)
+# @param StringWrapper $tag tag (required)
 {
     my $params = {
     'user_id' => {
@@ -66,7 +63,7 @@ sub new {
         required => '1',
     },
     'tag' => {
-        data_type => 'string',
+        data_type => 'StringWrapper',
         description => 'tag',
         required => '1',
     },
@@ -960,7 +957,7 @@ sub remove_user_tag {
 # Set a user's password
 # 
 # @param int $id The id of the user (required)
-# @param string $password The new plain text password (optional)
+# @param StringWrapper $password The new plain text password (optional)
 {
     my $params = {
     'id' => {
@@ -969,7 +966,7 @@ sub remove_user_tag {
         required => '1',
     },
     'password' => {
-        data_type => 'string',
+        data_type => 'StringWrapper',
         description => 'The new plain text password',
         required => '0',
     },

@@ -149,6 +149,13 @@ __PACKAGE__->method_documentation({
     	format => '',
     	read_only => '',
     		},
+    'cdn_url' => {
+    	datatype => 'string',
+    	base_name => 'cdn_url',
+    	description => 'URL for accessing the resource via CDN if configured (will default to the main url if not)',
+    	format => '',
+    	read_only => '',
+    		},
     'created_date' => {
     	datatype => 'int',
     	base_name => 'created_date',
@@ -180,7 +187,7 @@ __PACKAGE__->method_documentation({
     'url' => {
     	datatype => 'string',
     	base_name => 'url',
-    	description => 'URL for accessing the S3 resource',
+    	description => 'URL for posting and later accessing the S3 resource',
     	format => '',
     	read_only => '',
     		},
@@ -195,6 +202,7 @@ __PACKAGE__->method_documentation({
 
 __PACKAGE__->swagger_types( {
     'action' => 'string',
+    'cdn_url' => 'string',
     'created_date' => 'int',
     'filename' => 'string',
     'id' => 'int',
@@ -205,6 +213,7 @@ __PACKAGE__->swagger_types( {
 
 __PACKAGE__->attribute_map( {
     'action' => 'action',
+    'cdn_url' => 'cdn_url',
     'created_date' => 'created_date',
     'filename' => 'filename',
     'id' => 'id',

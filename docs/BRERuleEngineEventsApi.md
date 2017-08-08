@@ -22,13 +22,13 @@ Parameters within the event must match names and types from the trigger. Actual 
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineEventsApi;
+my $api_instance = KnetikCloud::BRERuleEngineEventsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineEventsApi->new();
 my $bre_event = KnetikCloud::Object::BreEvent->new(); # BreEvent | The BRE event object
 
 eval { 

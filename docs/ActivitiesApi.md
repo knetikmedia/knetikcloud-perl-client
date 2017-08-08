@@ -32,13 +32,13 @@ Create an activity
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ActivitiesApi;
+my $api_instance = KnetikCloud::ActivitiesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ActivitiesApi->new();
 my $activity_resource = KnetikCloud::Object::ActivityResource->new(); # ActivityResource | The activity resource object
 
 eval { 
@@ -81,13 +81,13 @@ Has to enforce extra rules if not used as an admin
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ActivitiesApi;
+my $api_instance = KnetikCloud::ActivitiesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ActivitiesApi->new();
 my $test = 1; # boolean | if true, indicates that the occurrence should NOT be created. This can be used to test for eligibility and valid settings
 my $activity_occurrence_resource = KnetikCloud::Object::ActivityOccurrenceResource->new(); # ActivityOccurrenceResource | The activity occurrence object
 
@@ -132,13 +132,13 @@ Activity Templates define a type of activity and the properties they have
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ActivitiesApi;
+my $api_instance = KnetikCloud::ActivitiesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ActivitiesApi->new();
 my $activity_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The activity template resource object
 
 eval { 
@@ -179,13 +179,13 @@ Delete an activity
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ActivitiesApi;
+my $api_instance = KnetikCloud::ActivitiesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ActivitiesApi->new();
 my $id = 789; # int | The id of the activity
 
 eval { 
@@ -227,13 +227,13 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ActivitiesApi;
+my $api_instance = KnetikCloud::ActivitiesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ActivitiesApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $cascade = 'cascade_example'; # string | The value needed to delete used templates
 
@@ -275,10 +275,10 @@ List activity definitions
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ActivitiesApi;
+my $api_instance = KnetikCloud::ActivitiesApi->new(
+);
 
-my $api_instance = KnetikCloud::ActivitiesApi->new();
 my $filter_template = 1; # boolean | Filter for activities that are templates, or specifically not if false
 my $filter_name = 'filter_name_example'; # string | Filter for activities that have a name starting with specified string
 my $filter_id = 'filter_id_example'; # string | Filter for activities with an id in the given comma separated list of ids
@@ -329,10 +329,10 @@ Get a single activity
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ActivitiesApi;
+my $api_instance = KnetikCloud::ActivitiesApi->new(
+);
 
-my $api_instance = KnetikCloud::ActivitiesApi->new();
 my $id = 789; # int | The id of the activity
 
 eval { 
@@ -373,13 +373,13 @@ Get a single activity template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ActivitiesApi;
+my $api_instance = KnetikCloud::ActivitiesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ActivitiesApi->new();
 my $id = 'id_example'; # string | The id of the template
 
 eval { 
@@ -420,13 +420,13 @@ List and search activity templates
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ActivitiesApi;
+my $api_instance = KnetikCloud::ActivitiesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ActivitiesApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -471,13 +471,13 @@ Sets the status of an activity occurrence to FINISHED and logs metrics
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ActivitiesApi;
+my $api_instance = KnetikCloud::ActivitiesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ActivitiesApi->new();
 my $activity_occurrence_id = 789; # int | The id of the activity occurrence
 my $activity_occurrence_results = KnetikCloud::Object::ActivityOccurrenceResultsResource->new(); # ActivityOccurrenceResultsResource | The activity occurrence object
 
@@ -520,13 +520,13 @@ Update an activity
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ActivitiesApi;
+my $api_instance = KnetikCloud::ActivitiesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ActivitiesApi->new();
 my $id = 789; # int | The id of the activity
 my $activity_resource = KnetikCloud::Object::ActivityResource->new(); # ActivityResource | The activity resource object
 
@@ -571,13 +571,13 @@ If setting to 'FINISHED' you must POST to /results instead to record the metrics
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ActivitiesApi;
+my $api_instance = KnetikCloud::ActivitiesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ActivitiesApi->new();
 my $activity_occurrence_id = 789; # int | The id of the activity occurrence
 my $activity_cccurrence_status = KnetikCloud::Object::string->new(); # string | The activity occurrence status object
 
@@ -619,13 +619,13 @@ Update an activity template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ActivitiesApi;
+my $api_instance = KnetikCloud::ActivitiesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ActivitiesApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $activity_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The activity template resource object
 

@@ -24,13 +24,13 @@ Create a new address
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersAddressesApi;
+my $api_instance = KnetikCloud::UsersAddressesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersAddressesApi->new();
 my $user_id = 'user_id_example'; # string | The id of the user
 my $saved_address_resource = KnetikCloud::Object::SavedAddressResource->new(); # SavedAddressResource | The new address
 
@@ -73,13 +73,13 @@ Delete an address
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersAddressesApi;
+my $api_instance = KnetikCloud::UsersAddressesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersAddressesApi->new();
 my $user_id = 'user_id_example'; # string | The id of the user
 my $id = 56; # int | The id of the address
 
@@ -121,13 +121,13 @@ Get a single address
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersAddressesApi;
+my $api_instance = KnetikCloud::UsersAddressesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersAddressesApi->new();
 my $user_id = 'user_id_example'; # string | The id of the user
 my $id = 56; # int | The id of the address
 
@@ -170,13 +170,13 @@ List and search addresses
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersAddressesApi;
+my $api_instance = KnetikCloud::UsersAddressesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersAddressesApi->new();
 my $user_id = 'user_id_example'; # string | The id of the user
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
@@ -223,13 +223,13 @@ Update an address
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersAddressesApi;
+my $api_instance = KnetikCloud::UsersAddressesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersAddressesApi->new();
 my $user_id = 'user_id_example'; # string | The id of the user
 my $id = 56; # int | The id of the address
 my $saved_address_resource = KnetikCloud::Object::SavedAddressResource->new(); # SavedAddressResource | The saved address resource object

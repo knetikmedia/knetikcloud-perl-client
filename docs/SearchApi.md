@@ -26,13 +26,13 @@ Mainly intended for internal use.
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::SearchApi;
+my $api_instance = KnetikCloud::SearchApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::SearchApi->new();
 my $type = 'type_example'; # string | The index type
 my $id = 'id_example'; # string | The ID of the object
 my $object = KnetikCloud::Object::object->new(); # object | The object to add
@@ -78,13 +78,13 @@ Add a new type mapping to connect data from one index to another, or discover an
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::SearchApi;
+my $api_instance = KnetikCloud::SearchApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::SearchApi->new();
 my $mappings = [KnetikCloud::Object::ARRAY[SearchReferenceMapping]->new()]; # ARRAY[SearchReferenceMapping] | The mappings to add
 
 eval { 
@@ -126,13 +126,13 @@ Mainly intended for internal use. Requires SEARCH_ADMIN.
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::SearchApi;
+my $api_instance = KnetikCloud::SearchApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::SearchApi->new();
 my $type = 'type_example'; # string | The index type
 my $id = 'id_example'; # string | The ID of the object to delete
 
@@ -176,13 +176,13 @@ Mainly intended for internal use
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::SearchApi;
+my $api_instance = KnetikCloud::SearchApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::SearchApi->new();
 my $type = 'type_example'; # string | The index type
 
 eval { 
@@ -224,10 +224,10 @@ The body is an ElasticSearch query in JSON format. Please see their <a href='htt
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::SearchApi;
+my $api_instance = KnetikCloud::SearchApi->new(
+);
 
-my $api_instance = KnetikCloud::SearchApi->new();
 my $type = 'type_example'; # string | The index type
 my $query = KnetikCloud::Object::object->new(); # object | The query to be used for the search
 my $size = 56; # int | The number of objects returned per page

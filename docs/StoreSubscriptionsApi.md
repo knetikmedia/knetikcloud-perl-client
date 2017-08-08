@@ -30,13 +30,13 @@ Creates a subscription item and associated plans
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreSubscriptionsApi;
+my $api_instance = KnetikCloud::StoreSubscriptionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreSubscriptionsApi->new();
 my $subscription_resource = KnetikCloud::Object::SubscriptionResource->new(); # SubscriptionResource | The subscription to be created
 
 eval { 
@@ -79,13 +79,13 @@ Subscription Templates define a type of subscription and the properties they hav
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreSubscriptionsApi;
+my $api_instance = KnetikCloud::StoreSubscriptionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreSubscriptionsApi->new();
 my $subscription_template_resource = KnetikCloud::Object::SubscriptionTemplateResource->new(); # SubscriptionTemplateResource | The new subscription template
 
 eval { 
@@ -128,13 +128,13 @@ Must not be locked or a migration target
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreSubscriptionsApi;
+my $api_instance = KnetikCloud::StoreSubscriptionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreSubscriptionsApi->new();
 my $id = 56; # int | The id of the subscription
 my $plan_id = 'plan_id_example'; # string | The id of the plan
 
@@ -176,13 +176,13 @@ Delete a subscription template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreSubscriptionsApi;
+my $api_instance = KnetikCloud::StoreSubscriptionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreSubscriptionsApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $cascade = 'cascade_example'; # string | force deleting the template if it's attached to other objects, cascade = detach
 
@@ -224,10 +224,10 @@ Retrieve a single subscription item and associated plans
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreSubscriptionsApi;
+my $api_instance = KnetikCloud::StoreSubscriptionsApi->new(
+);
 
-my $api_instance = KnetikCloud::StoreSubscriptionsApi->new();
 my $id = 56; # int | The id of the subscription
 
 eval { 
@@ -270,13 +270,13 @@ Subscription Templates define a type of subscription and the properties they hav
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreSubscriptionsApi;
+my $api_instance = KnetikCloud::StoreSubscriptionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreSubscriptionsApi->new();
 my $id = 'id_example'; # string | The id of the template
 
 eval { 
@@ -317,13 +317,13 @@ List and search subscription templates
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreSubscriptionsApi;
+my $api_instance = KnetikCloud::StoreSubscriptionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreSubscriptionsApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -368,10 +368,10 @@ List available subscription items and associated plans
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreSubscriptionsApi;
+my $api_instance = KnetikCloud::StoreSubscriptionsApi->new(
+);
 
-my $api_instance = KnetikCloud::StoreSubscriptionsApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -416,13 +416,13 @@ Processes subscriptions and charge dues
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreSubscriptionsApi;
+my $api_instance = KnetikCloud::StoreSubscriptionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreSubscriptionsApi->new();
 
 eval { 
     $api_instance->process_subscriptions();
@@ -460,13 +460,13 @@ Will not remove plans left out
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreSubscriptionsApi;
+my $api_instance = KnetikCloud::StoreSubscriptionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreSubscriptionsApi->new();
 my $id = 56; # int | The id of the subscription
 my $subscription_resource = KnetikCloud::Object::SubscriptionResource->new(); # SubscriptionResource | The subscription resource object
 
@@ -508,13 +508,13 @@ Update a subscription template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreSubscriptionsApi;
+my $api_instance = KnetikCloud::StoreSubscriptionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreSubscriptionsApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $subscription_template_resource = KnetikCloud::Object::SubscriptionTemplateResource->new(); # SubscriptionTemplateResource | The subscription template resource object
 

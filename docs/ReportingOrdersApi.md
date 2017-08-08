@@ -20,13 +20,13 @@ Retrieve invoice counts aggregated by time ranges
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ReportingOrdersApi;
+my $api_instance = KnetikCloud::ReportingOrdersApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ReportingOrdersApi->new();
 my $currency_code = 'currency_code_example'; # string | The code for a currency to get sales data for
 my $granularity = 'granularity_example'; # string | The time duration to aggregate by
 my $filter_payment_status = 'filter_payment_status_example'; # string | A payment status to filter results by, can be a comma separated list

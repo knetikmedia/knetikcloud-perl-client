@@ -35,15 +35,15 @@ Add a tag to a user
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersApi;
+my $api_instance = KnetikCloud::UsersApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersApi->new();
 my $user_id = 56; # int | The id of the user
-my $tag = KnetikCloud::Object::string->new(); # string | tag
+my $tag = KnetikCloud::Object::StringWrapper->new(); # StringWrapper | tag
 
 eval { 
     $api_instance->add_user_tag(user_id => $user_id, tag => $tag);
@@ -58,7 +58,7 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**| The id of the user | 
- **tag** | **string**| tag | 
+ **tag** | [**StringWrapper**](StringWrapper.md)| tag | 
 
 ### Return type
 
@@ -85,13 +85,13 @@ User Templates define a type of user and the properties they have
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersApi;
+my $api_instance = KnetikCloud::UsersApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersApi->new();
 my $user_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The user template resource object
 
 eval { 
@@ -134,13 +134,13 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersApi;
+my $api_instance = KnetikCloud::UsersApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $cascade = 'cascade_example'; # string | The value needed to delete used templates
 
@@ -184,13 +184,13 @@ Additional private info is included as USERS_ADMIN
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersApi;
+my $api_instance = KnetikCloud::UsersApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersApi->new();
 my $id = 'id_example'; # string | The id of the user or 'me'
 
 eval { 
@@ -231,13 +231,13 @@ List tags for a user
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersApi;
+my $api_instance = KnetikCloud::UsersApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersApi->new();
 my $user_id = 56; # int | The id of the user
 
 eval { 
@@ -278,13 +278,13 @@ Get a single user template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersApi;
+my $api_instance = KnetikCloud::UsersApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersApi->new();
 my $id = 'id_example'; # string | The id of the template
 
 eval { 
@@ -325,13 +325,13 @@ List and search user templates
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersApi;
+my $api_instance = KnetikCloud::UsersApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -378,13 +378,13 @@ Additional private info is included as USERS_ADMIN
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersApi;
+my $api_instance = KnetikCloud::UsersApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersApi->new();
 my $filter_displayname = 'filter_displayname_example'; # string | Filter for users whose display name starts with provided string.
 my $filter_email = 'filter_email_example'; # string | Filter for users whose email starts with provided string. Requires USERS_ADMIN permission
 my $filter_firstname = 'filter_firstname_example'; # string | Filter for users whose first name starts with provided string. Requires USERS_ADMIN permission
@@ -451,10 +451,10 @@ Finish resetting a user's password using the secret provided from the password-r
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersApi;
+my $api_instance = KnetikCloud::UsersApi->new(
+);
 
-my $api_instance = KnetikCloud::UsersApi->new();
 my $id = 56; # int | The id of the user
 my $new_password_request = KnetikCloud::Object::NewPasswordRequest->new(); # NewPasswordRequest | The new password request object
 
@@ -498,10 +498,10 @@ Password should be in plain text and will be encrypted on receipt. Use SSL for s
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersApi;
+my $api_instance = KnetikCloud::UsersApi->new(
+);
 
-my $api_instance = KnetikCloud::UsersApi->new();
 my $user_resource = KnetikCloud::Object::UserResource->new(); # UserResource | The user resource object
 
 eval { 
@@ -542,13 +542,13 @@ Remove a tag from a user
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersApi;
+my $api_instance = KnetikCloud::UsersApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersApi->new();
 my $user_id = 56; # int | The id of the user
 my $tag = 'tag_example'; # string | The tag to remove
 
@@ -592,15 +592,15 @@ Password should be in plain text and will be encrypted on receipt. Use SSL for s
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersApi;
+my $api_instance = KnetikCloud::UsersApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersApi->new();
 my $id = 56; # int | The id of the user
-my $password = KnetikCloud::Object::string->new(); # string | The new plain text password
+my $password = KnetikCloud::Object::StringWrapper->new(); # StringWrapper | The new plain text password
 
 eval { 
     $api_instance->set_password(id => $id, password => $password);
@@ -615,7 +615,7 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The id of the user | 
- **password** | **string**| The new plain text password | [optional] 
+ **password** | [**StringWrapper**](StringWrapper.md)| The new plain text password | [optional] 
 
 ### Return type
 
@@ -642,10 +642,10 @@ A reset code will be generated and a 'forgot_password' BRE event will be fired w
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersApi;
+my $api_instance = KnetikCloud::UsersApi->new(
+);
 
-my $api_instance = KnetikCloud::UsersApi->new();
 my $id = 56; # int | The id of the user
 
 eval { 
@@ -687,10 +687,10 @@ A reset code will be generated and a 'forgot_password' BRE event will be fired w
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersApi;
+my $api_instance = KnetikCloud::UsersApi->new(
+);
 
-my $api_instance = KnetikCloud::UsersApi->new();
 my $password_reset = KnetikCloud::Object::PasswordResetRequest->new(); # PasswordResetRequest | An object containing one of three methods to look up a user
 
 eval { 
@@ -732,13 +732,13 @@ Password will not be edited on this endpoint, use password specific endpoints.
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersApi;
+my $api_instance = KnetikCloud::UsersApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersApi->new();
 my $id = 'id_example'; # string | The id of the user or 'me'
 my $user_resource = KnetikCloud::Object::UserResource->new(); # UserResource | The user resource object
 
@@ -780,13 +780,13 @@ Update a user template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersApi;
+my $api_instance = KnetikCloud::UsersApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $user_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The user template resource object
 

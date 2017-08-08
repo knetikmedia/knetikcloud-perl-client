@@ -28,25 +28,22 @@ use Carp qw( croak );
 use Log::Any qw($log);
 
 use KnetikCloud::ApiClient;
-use KnetikCloud::Configuration;
 
 use base "Class::Data::Inheritable";
 
 __PACKAGE__->mk_classdata('method_documentation' => {});
 
 sub new {
-    my $class   = shift;
-    my (%self) = (
-        'api_client' => KnetikCloud::ApiClient->instance,
-        @_
-    );
+    my $class = shift;
+    my $api_client;
 
-    #my $self = {
-    #    #api_client => $options->{api_client}
-    #    api_client => $default_api_client
-    #}; 
+    if ($_[0] && ref $_[0] && ref $_[0] eq 'KnetikCloud::ApiClient' ) {
+        $api_client = $_[0];
+    } else {
+        $api_client = KnetikCloud::ApiClient->new(@_);
+    }
 
-    bless \%self, $class;
+    bless { api_client => $api_client }, $class;
 
 }
 
@@ -403,7 +400,7 @@ sub set_subscription_bill_date {
 # 
 # @param int $user_id The id of the user (required)
 # @param int $inventory_id The id of the user&#39;s inventory (required)
-# @param int $payment_method_id The id of the payment method (optional)
+# @param IntWrapper $payment_method_id The id of the payment method (optional)
 {
     my $params = {
     'user_id' => {
@@ -417,7 +414,7 @@ sub set_subscription_bill_date {
         required => '1',
     },
     'payment_method_id' => {
-        data_type => 'int',
+        data_type => 'IntWrapper',
         description => 'The id of the payment method',
         required => '0',
     },
@@ -495,7 +492,7 @@ sub set_subscription_payment_method {
 # 
 # @param int $user_id The id of the user (required)
 # @param int $inventory_id The id of the user&#39;s inventory (required)
-# @param string $status The new status for the subscription. Actual options may differ from the indicated set if the invoice status type data has been altered.  Allowable values: (&#39;current&#39;, &#39;canceled&#39;, &#39;stopped&#39;, &#39;payment_failed&#39;, &#39;suspended&#39;) (required)
+# @param StringWrapper $status The new status for the subscription. Actual options may differ from the indicated set if the invoice status type data has been altered.  Allowable values: (&#39;current&#39;, &#39;canceled&#39;, &#39;stopped&#39;, &#39;payment_failed&#39;, &#39;suspended&#39;) (required)
 {
     my $params = {
     'user_id' => {
@@ -509,7 +506,7 @@ sub set_subscription_payment_method {
         required => '1',
     },
     'status' => {
-        data_type => 'string',
+        data_type => 'StringWrapper',
         description => 'The new status for the subscription. Actual options may differ from the indicated set if the invoice status type data has been altered.  Allowable values: (&#39;current&#39;, &#39;canceled&#39;, &#39;stopped&#39;, &#39;payment_failed&#39;, &#39;suspended&#39;)',
         required => '1',
     },
@@ -592,7 +589,7 @@ sub set_subscription_status {
 # 
 # @param int $user_id The id of the user (required)
 # @param int $inventory_id The id of the user&#39;s inventory (required)
-# @param string $plan_id The id of the new plan. Must be from the same subscription (optional)
+# @param StringWrapper $plan_id The id of the new plan. Must be from the same subscription (optional)
 {
     my $params = {
     'user_id' => {
@@ -606,7 +603,7 @@ sub set_subscription_status {
         required => '1',
     },
     'plan_id' => {
-        data_type => 'string',
+        data_type => 'StringWrapper',
         description => 'The id of the new plan. Must be from the same subscription',
         required => '0',
     },

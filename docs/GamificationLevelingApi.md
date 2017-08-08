@@ -29,13 +29,13 @@ Create a level schema
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationLevelingApi;
+my $api_instance = KnetikCloud::GamificationLevelingApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationLevelingApi->new();
 my $level = KnetikCloud::Object::LevelingResource->new(); # LevelingResource | The level schema definition
 
 eval { 
@@ -76,13 +76,13 @@ Delete a level
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationLevelingApi;
+my $api_instance = KnetikCloud::GamificationLevelingApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationLevelingApi->new();
 my $name = 'name_example'; # string | The level schema name
 
 eval { 
@@ -122,13 +122,13 @@ Retrieve a level
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationLevelingApi;
+my $api_instance = KnetikCloud::GamificationLevelingApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationLevelingApi->new();
 my $name = 'name_example'; # string | The level schema name
 
 eval { 
@@ -169,13 +169,13 @@ Get the list of triggers that can be used to trigger a leveling progress update
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationLevelingApi;
+my $api_instance = KnetikCloud::GamificationLevelingApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationLevelingApi->new();
 
 eval { 
     my $result = $api_instance->get_level_triggers();
@@ -214,13 +214,13 @@ Get a list of levels schemas with optional filtering
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationLevelingApi;
+my $api_instance = KnetikCloud::GamificationLevelingApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationLevelingApi->new();
 my $filter_name = 'filter_name_example'; # string | Filter for level schemas whose name contains a given string
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
@@ -267,13 +267,13 @@ Get a user's progress for a given level schema
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationLevelingApi;
+my $api_instance = KnetikCloud::GamificationLevelingApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationLevelingApi->new();
 my $user_id = 56; # int | The id of the user
 my $name = 'name_example'; # string | The level schema name
 
@@ -318,13 +318,13 @@ Filtering and sorting is based on the LevelingResource object, not the UserLevel
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationLevelingApi;
+my $api_instance = KnetikCloud::GamificationLevelingApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationLevelingApi->new();
 my $user_id = 56; # int | The id of the user
 my $filter_name = 'filter_name_example'; # string | Filter for level schemas whose name contains a given string
 my $size = 56; # int | The number of objects returned per page
@@ -375,16 +375,16 @@ If no progress record yet exists for the user, it will be created. Otherwise the
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationLevelingApi;
+my $api_instance = KnetikCloud::GamificationLevelingApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationLevelingApi->new();
 my $user_id = 56; # int | The id of the user
 my $name = 'name_example'; # string | The level schema name
-my $progress = KnetikCloud::Object::int->new(); # int | The amount of progress to add
+my $progress = KnetikCloud::Object::IntWrapper->new(); # IntWrapper | The amount of progress to add
 
 eval { 
     $api_instance->increment_progress(user_id => $user_id, name => $name, progress => $progress);
@@ -400,7 +400,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**| The id of the user | 
  **name** | **string**| The level schema name | 
- **progress** | **int**| The amount of progress to add | [optional] 
+ **progress** | [**IntWrapper**](IntWrapper.md)| The amount of progress to add | [optional] 
 
 ### Return type
 
@@ -427,16 +427,16 @@ If no progress record yet exists for the user, it will be created. Otherwise it 
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationLevelingApi;
+my $api_instance = KnetikCloud::GamificationLevelingApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationLevelingApi->new();
 my $user_id = 56; # int | The id of the user
 my $name = 'name_example'; # string | The level schema name
-my $progress = KnetikCloud::Object::int->new(); # int | The new progress amount
+my $progress = KnetikCloud::Object::IntWrapper->new(); # IntWrapper | The new progress amount
 
 eval { 
     $api_instance->set_progress(user_id => $user_id, name => $name, progress => $progress);
@@ -452,7 +452,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**| The id of the user | 
  **name** | **string**| The level schema name | 
- **progress** | **int**| The new progress amount | [optional] 
+ **progress** | [**IntWrapper**](IntWrapper.md)| The new progress amount | [optional] 
 
 ### Return type
 
@@ -477,13 +477,13 @@ Update a level
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationLevelingApi;
+my $api_instance = KnetikCloud::GamificationLevelingApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationLevelingApi->new();
 my $name = 'name_example'; # string | The level schema name
 my $new_level = KnetikCloud::Object::LevelingResource->new(); # LevelingResource | The level schema definition
 

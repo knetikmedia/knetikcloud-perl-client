@@ -45,15 +45,15 @@ Whitelisted users can view video regardless of privacy setting.
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $id = 789; # int | The video id
-my $user_id = KnetikCloud::Object::int->new(); # int | The user id
+my $user_id = KnetikCloud::Object::IntWrapper->new(); # IntWrapper | The user id
 
 eval { 
     $api_instance->add_user_to_video_whitelist(id => $id, user_id => $user_id);
@@ -68,7 +68,7 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The video id | 
- **user_id** | **int**| The user id | [optional] 
+ **user_id** | [**IntWrapper**](IntWrapper.md)| The user id | [optional] 
 
 ### Return type
 
@@ -93,13 +93,13 @@ Adds a new video in the system
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $video_resource = KnetikCloud::Object::VideoResource->new(); # VideoResource | The video object
 
 eval { 
@@ -140,13 +140,13 @@ Add a new video comment
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $video_id = 56; # int | The video id 
 my $comment_resource = KnetikCloud::Object::CommentResource->new(); # CommentResource | The comment object
 
@@ -189,13 +189,13 @@ Adds a contributor to a video
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $video_id = 789; # int | The video id
 my $contribution_resource = KnetikCloud::Object::ContributionResource->new(); # ContributionResource | The contribution object
 
@@ -237,15 +237,15 @@ Add a new flag
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $video_id = 789; # int | The video id
-my $reason = KnetikCloud::Object::string->new(); # string | The flag reason
+my $reason = KnetikCloud::Object::StringWrapper->new(); # StringWrapper | The flag reason
 
 eval { 
     my $result = $api_instance->add_video_flag(video_id => $video_id, reason => $reason);
@@ -261,7 +261,7 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **video_id** | **int**| The video id | 
- **reason** | **string**| The flag reason | [optional] 
+ **reason** | [**StringWrapper**](StringWrapper.md)| The flag reason | [optional] 
 
 ### Return type
 
@@ -286,13 +286,13 @@ Adds one or more existing videos as related to this one
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $video_id = 789; # int | The video id
 my $video_relationship_resource = KnetikCloud::Object::VideoRelationshipResource->new(); # VideoRelationshipResource | The video relationship object 
 
@@ -335,13 +335,13 @@ Create a video disposition
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $video_id = 56; # int | The video id
 my $disposition_resource = KnetikCloud::Object::DispositionResource->new(); # DispositionResource | The disposition object
 
@@ -384,13 +384,13 @@ Deletes a video from the system if no resources are attached to it
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $id = 789; # int | The video id
 
 eval { 
@@ -430,13 +430,13 @@ Delete a video comment
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $video_id = 789; # int | The video id
 my $id = 789; # int | The comment id
 
@@ -478,13 +478,13 @@ Delete a video disposition
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $disposition_id = 789; # int | The disposition id
 
 eval { 
@@ -524,13 +524,13 @@ Delete a flag
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $video_id = 789; # int | The video id
 
 eval { 
@@ -570,13 +570,13 @@ Delete a video's relationship
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $video_id = 789; # int | The video id
 my $id = 789; # int | The relationship id
 
@@ -618,13 +618,13 @@ Get user videos
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $user_id = 56; # int | The user id
 my $exclude_flagged = 1; # boolean | Skip videos that have been flagged by the current user
 my $size = 56; # int | The number of objects returned per page
@@ -671,13 +671,13 @@ Loads a specific video details
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $id = 789; # int | The video id
 
 eval { 
@@ -718,10 +718,10 @@ Returns a page of comments for a video
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $video_id = 56; # int | The video id
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
@@ -766,10 +766,10 @@ Returns a page of dispositions for a video
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $video_id = 56; # int | The video id
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
@@ -814,10 +814,10 @@ Returns a page of video relationships
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $video_id = 789; # int | The video id
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
@@ -862,10 +862,10 @@ Search videos using the documented filters
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $exclude_flagged = 1; # boolean | Skip videos that have been flagged by the current user
 my $filter_videos_by_uploader = 56; # int | Filter for videos by uploader id
 my $filter_category = 'filter_category_example'; # string | Filter for videos from a specific category by id
@@ -936,13 +936,13 @@ Remove the user with the id given in the path from the whitelist of users that c
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $video_id = 789; # int | The video id
 my $id = 56; # int | The user id
 
@@ -984,13 +984,13 @@ Removes a contributor from a video
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $video_id = 789; # int | The video id
 my $id = 56; # int | The contributor id
 
@@ -1032,13 +1032,13 @@ Modifies a video's details
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $id = 789; # int | The video id
 my $video_resource = KnetikCloud::Object::VideoResource->new(); # VideoResource | The video object
 
@@ -1080,16 +1080,16 @@ Update a video comment
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $video_id = 789; # int | The video id
 my $id = 789; # int | The comment id
-my $content = KnetikCloud::Object::string->new(); # string | The comment content
+my $content = KnetikCloud::Object::StringWrapper->new(); # StringWrapper | The comment content
 
 eval { 
     $api_instance->update_video_comment(video_id => $video_id, id => $id, content => $content);
@@ -1105,7 +1105,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **video_id** | **int**| The video id | 
  **id** | **int**| The comment id | 
- **content** | **string**| The comment content | [optional] 
+ **content** | [**StringWrapper**](StringWrapper.md)| The comment content | [optional] 
 
 ### Return type
 
@@ -1130,16 +1130,16 @@ Update a video's relationship details
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $video_id = 789; # int | The video id
 my $relationship_id = 789; # int | The relationship id
-my $details = KnetikCloud::Object::string->new(); # string | The video relationship details
+my $details = KnetikCloud::Object::StringWrapper->new(); # StringWrapper | The video relationship details
 
 eval { 
     $api_instance->update_video_relationship(video_id => $video_id, relationship_id => $relationship_id, details => $details);
@@ -1155,7 +1155,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **video_id** | **int**| The video id | 
  **relationship_id** | **int**| The relationship id | 
- **details** | **string**| The video relationship details | [optional] 
+ **details** | [**StringWrapper**](StringWrapper.md)| The video relationship details | [optional] 
 
 ### Return type
 
@@ -1180,10 +1180,10 @@ Increment a video's view count
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaVideosApi;
+my $api_instance = KnetikCloud::MediaVideosApi->new(
+);
 
-my $api_instance = KnetikCloud::MediaVideosApi->new();
 my $id = 789; # int | The video id
 
 eval { 

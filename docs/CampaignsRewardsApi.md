@@ -24,13 +24,13 @@ Create a reward set
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsRewardsApi;
+my $api_instance = KnetikCloud::CampaignsRewardsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsRewardsApi->new();
 my $reward_set_resource = KnetikCloud::Object::RewardSetResource->new(); # RewardSetResource | The reward set resource object
 
 eval { 
@@ -71,13 +71,13 @@ Delete a reward set
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsRewardsApi;
+my $api_instance = KnetikCloud::CampaignsRewardsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsRewardsApi->new();
 my $id = 56; # int | The reward id
 
 eval { 
@@ -117,10 +117,10 @@ Get a single reward set
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsRewardsApi;
+my $api_instance = KnetikCloud::CampaignsRewardsApi->new(
+);
 
-my $api_instance = KnetikCloud::CampaignsRewardsApi->new();
 my $id = 56; # int | The reward id
 
 eval { 
@@ -161,10 +161,10 @@ List and search reward sets
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsRewardsApi;
+my $api_instance = KnetikCloud::CampaignsRewardsApi->new(
+);
 
-my $api_instance = KnetikCloud::CampaignsRewardsApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -209,13 +209,13 @@ Update a reward set
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsRewardsApi;
+my $api_instance = KnetikCloud::CampaignsRewardsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsRewardsApi->new();
 my $id = 56; # int | The reward id
 my $reward_set_resource = KnetikCloud::Object::RewardSetResource->new(); # RewardSetResource | The reward set resource object
 

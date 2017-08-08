@@ -24,13 +24,13 @@ Add a new disposition
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::DispositionsApi;
+my $api_instance = KnetikCloud::DispositionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::DispositionsApi->new();
 my $disposition = KnetikCloud::Object::DispositionResource->new(); # DispositionResource | The new disposition record
 
 eval { 
@@ -71,13 +71,13 @@ Delete a disposition
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::DispositionsApi;
+my $api_instance = KnetikCloud::DispositionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::DispositionsApi->new();
 my $id = 789; # int | The id of the disposition record
 
 eval { 
@@ -117,10 +117,10 @@ Returns a disposition
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::DispositionsApi;
+my $api_instance = KnetikCloud::DispositionsApi->new(
+);
 
-my $api_instance = KnetikCloud::DispositionsApi->new();
 my $id = 789; # int | The id of the disposition record
 
 eval { 
@@ -161,10 +161,10 @@ Returns a list of disposition counts
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::DispositionsApi;
+my $api_instance = KnetikCloud::DispositionsApi->new(
+);
 
-my $api_instance = KnetikCloud::DispositionsApi->new();
 my $filter_context = 'filter_context_example'; # string | Filter for dispositions within a context type (games, articles, polls, etc). Optionally with a specific id like filter_context=video:47
 my $filter_owner = 'filter_owner_example'; # string | Filter for dispositions from a specific user by id or 'me'
 
@@ -207,10 +207,10 @@ Returns a page of dispositions
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::DispositionsApi;
+my $api_instance = KnetikCloud::DispositionsApi->new(
+);
 
-my $api_instance = KnetikCloud::DispositionsApi->new();
 my $filter_context = 'filter_context_example'; # string | Filter for dispositions within a context type (games, articles, polls, etc). Optionally with a specific id like filter_context=video:47
 my $filter_owner = 'filter_owner_example'; # string | Filter for dispositions from a specific user by id or 'me'
 my $size = 56; # int | The number of objects returned per page

@@ -20,10 +20,10 @@ Get access token
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AccessTokenApi;
+my $api_instance = KnetikCloud::AccessTokenApi->new(
+);
 
-my $api_instance = KnetikCloud::AccessTokenApi->new();
 my $grant_type = 'grant_type_example'; # string | Grant type
 my $client_id = 'client_id_example'; # string | The id of the client
 my $client_secret = 'client_secret_example'; # string | The secret key of the client.  Used only with a grant_type of client_credentials

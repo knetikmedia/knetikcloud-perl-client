@@ -25,13 +25,13 @@ Add a new comment
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentCommentsApi;
+my $api_instance = KnetikCloud::ContentCommentsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ContentCommentsApi->new();
 my $comment_resource = KnetikCloud::Object::CommentResource->new(); # CommentResource | The comment to be added
 
 eval { 
@@ -72,13 +72,13 @@ Delete a comment
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentCommentsApi;
+my $api_instance = KnetikCloud::ContentCommentsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ContentCommentsApi->new();
 my $id = 789; # int | The comment id
 
 eval { 
@@ -118,10 +118,10 @@ Return a comment
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentCommentsApi;
+my $api_instance = KnetikCloud::ContentCommentsApi->new(
+);
 
-my $api_instance = KnetikCloud::ContentCommentsApi->new();
 my $id = 789; # int | The comment id
 
 eval { 
@@ -162,10 +162,10 @@ Returns a page of comments
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentCommentsApi;
+my $api_instance = KnetikCloud::ContentCommentsApi->new(
+);
 
-my $api_instance = KnetikCloud::ContentCommentsApi->new();
 my $context = 'context_example'; # string | Get comments by context type
 my $context_id = 56; # int | Get comments by context id
 my $size = 56; # int | The number of objects returned per page
@@ -214,10 +214,10 @@ The body is an ElasticSearch query json. Please see their <a href='https://www.e
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentCommentsApi;
+my $api_instance = KnetikCloud::ContentCommentsApi->new(
+);
 
-my $api_instance = KnetikCloud::ContentCommentsApi->new();
 my $query = KnetikCloud::Object::object->new(); # object | The search query
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
@@ -262,15 +262,15 @@ Update a comment
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ContentCommentsApi;
+my $api_instance = KnetikCloud::ContentCommentsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ContentCommentsApi->new();
 my $id = 789; # int | The comment id
-my $content = KnetikCloud::Object::string->new(); # string | The comment content
+my $content = KnetikCloud::Object::StringWrapper->new(); # StringWrapper | The comment content
 
 eval { 
     $api_instance->update_comment(id => $id, content => $content);
@@ -285,7 +285,7 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The comment id | 
- **content** | **string**| The comment content | [optional] 
+ **content** | [**StringWrapper**](StringWrapper.md)| The comment content | [optional] 
 
 ### Return type
 

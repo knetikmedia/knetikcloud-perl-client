@@ -28,25 +28,22 @@ use Carp qw( croak );
 use Log::Any qw($log);
 
 use KnetikCloud::ApiClient;
-use KnetikCloud::Configuration;
 
 use base "Class::Data::Inheritable";
 
 __PACKAGE__->mk_classdata('method_documentation' => {});
 
 sub new {
-    my $class   = shift;
-    my (%self) = (
-        'api_client' => KnetikCloud::ApiClient->instance,
-        @_
-    );
+    my $class = shift;
+    my $api_client;
 
-    #my $self = {
-    #    #api_client => $options->{api_client}
-    #    api_client => $default_api_client
-    #}; 
+    if ($_[0] && ref $_[0] && ref $_[0] eq 'KnetikCloud::ApiClient' ) {
+        $api_client = $_[0];
+    } else {
+        $api_client = KnetikCloud::ApiClient->new(@_);
+    }
 
-    bless \%self, $class;
+    bless { api_client => $api_client }, $class;
 
 }
 
@@ -921,6 +918,66 @@ sub get_store_items {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('PageResourceStoreItem', $response);
+    return $_response_object;
+}
+
+#
+# quick_buy
+#
+# One-step purchase and pay for a single SKU item from a user's wallet
+# 
+# @param QuickBuyRequest $quick_buy_request Quick buy details (optional)
+{
+    my $params = {
+    'quick_buy_request' => {
+        data_type => 'QuickBuyRequest',
+        description => 'Quick buy details',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'quick_buy' } = { 
+    	summary => 'One-step purchase and pay for a single SKU item from a user&#39;s wallet',
+        params => $params,
+        returns => 'InvoiceResource',
+        };
+}
+# @return InvoiceResource
+#
+sub quick_buy {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/store/quick-buy';
+
+    my $_method = 'POST';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    my $_body_data;
+    # body params
+    if ( exists $args{'quick_buy_request'}) {
+        $_body_data = $args{'quick_buy_request'};
+    }
+
+    # authentication setting, if any
+    my $auth_settings = [qw(OAuth2 )];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('InvoiceResource', $response);
     return $_response_object;
 }
 

@@ -26,13 +26,13 @@ Create a new payment method for a user
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsApi;
+my $api_instance = KnetikCloud::PaymentsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::PaymentsApi->new();
 my $user_id = 56; # int | ID of the user for whom the payment method is being created
 my $payment_method = KnetikCloud::Object::PaymentMethodResource->new(); # PaymentMethodResource | Payment method being created
 
@@ -75,13 +75,13 @@ Delete an existing payment method for a user
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsApi;
+my $api_instance = KnetikCloud::PaymentsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::PaymentsApi->new();
 my $user_id = 56; # int | ID of the user for whom the payment method is being updated
 my $id = 56; # int | ID of the payment method being deleted
 
@@ -123,13 +123,13 @@ Get a single payment method for a user
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsApi;
+my $api_instance = KnetikCloud::PaymentsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::PaymentsApi->new();
 my $user_id = 56; # int | ID of the user for whom the payment method is being retrieved
 my $id = 56; # int | ID of the payment method being retrieved
 
@@ -172,13 +172,13 @@ Get all payment methods for a user
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsApi;
+my $api_instance = KnetikCloud::PaymentsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::PaymentsApi->new();
 my $user_id = 56; # int | ID of the user for whom the payment methods are being retrieved
 my $filter_name = 'filter_name_example'; # string | Filter for payment methods whose name starts with a given string
 my $filter_payment_type = 'filter_payment_type_example'; # string | Filter for payment methods with a specific payment type
@@ -233,13 +233,13 @@ Authorize payment of an invoice for later capture
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsApi;
+my $api_instance = KnetikCloud::PaymentsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::PaymentsApi->new();
 my $request = KnetikCloud::Object::PaymentAuthorizationResource->new(); # PaymentAuthorizationResource | Payment authorization request
 
 eval { 
@@ -280,13 +280,13 @@ Capture an existing invoice payment authorization
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsApi;
+my $api_instance = KnetikCloud::PaymentsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::PaymentsApi->new();
 my $id = 56; # int | ID of the payment authorization to capture
 
 eval { 
@@ -326,13 +326,13 @@ Update an existing payment method for a user
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsApi;
+my $api_instance = KnetikCloud::PaymentsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::PaymentsApi->new();
 my $user_id = 56; # int | ID of the user for whom the payment method is being updated
 my $id = 56; # int | ID of the payment method being updated
 my $payment_method = KnetikCloud::Object::PaymentMethodResource->new(); # PaymentMethodResource | The updated payment method data

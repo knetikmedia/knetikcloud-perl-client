@@ -28,25 +28,22 @@ use Carp qw( croak );
 use Log::Any qw($log);
 
 use KnetikCloud::ApiClient;
-use KnetikCloud::Configuration;
 
 use base "Class::Data::Inheritable";
 
 __PACKAGE__->mk_classdata('method_documentation' => {});
 
 sub new {
-    my $class   = shift;
-    my (%self) = (
-        'api_client' => KnetikCloud::ApiClient->instance,
-        @_
-    );
+    my $class = shift;
+    my $api_client;
 
-    #my $self = {
-    #    #api_client => $options->{api_client}
-    #    api_client => $default_api_client
-    #}; 
+    if ($_[0] && ref $_[0] && ref $_[0] eq 'KnetikCloud::ApiClient' ) {
+        $api_client = $_[0];
+    } else {
+        $api_client = KnetikCloud::ApiClient->new(@_);
+    }
 
-    bless \%self, $class;
+    bless { api_client => $api_client }, $class;
 
 }
 
@@ -57,7 +54,7 @@ sub new {
 # Adds a user to a video's whitelist
 # 
 # @param int $id The video id (required)
-# @param int $user_id The user id (optional)
+# @param IntWrapper $user_id The user id (optional)
 {
     my $params = {
     'id' => {
@@ -66,7 +63,7 @@ sub new {
         required => '1',
     },
     'user_id' => {
-        data_type => 'int',
+        data_type => 'IntWrapper',
         description => 'The user id',
         required => '0',
     },
@@ -343,7 +340,7 @@ sub add_video_contributor {
 # Add a new flag
 # 
 # @param int $video_id The video id (required)
-# @param string $reason The flag reason (optional)
+# @param StringWrapper $reason The flag reason (optional)
 {
     my $params = {
     'video_id' => {
@@ -352,7 +349,7 @@ sub add_video_contributor {
         required => '1',
     },
     'reason' => {
-        data_type => 'string',
+        data_type => 'StringWrapper',
         description => 'The flag reason',
         required => '0',
     },
@@ -1813,7 +1810,7 @@ sub update_video {
 # 
 # @param int $video_id The video id (required)
 # @param int $id The comment id (required)
-# @param string $content The comment content (optional)
+# @param StringWrapper $content The comment content (optional)
 {
     my $params = {
     'video_id' => {
@@ -1827,7 +1824,7 @@ sub update_video {
         required => '1',
     },
     'content' => {
-        data_type => 'string',
+        data_type => 'StringWrapper',
         description => 'The comment content',
         required => '0',
     },
@@ -1905,7 +1902,7 @@ sub update_video_comment {
 # 
 # @param int $video_id The video id (required)
 # @param int $relationship_id The relationship id (required)
-# @param string $details The video relationship details (optional)
+# @param StringWrapper $details The video relationship details (optional)
 {
     my $params = {
     'video_id' => {
@@ -1919,7 +1916,7 @@ sub update_video_comment {
         required => '1',
     },
     'details' => {
-        data_type => 'string',
+        data_type => 'StringWrapper',
         description => 'The video relationship details',
         required => '0',
     },

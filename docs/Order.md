@@ -9,6 +9,7 @@ use KnetikCloud::Object::Order;
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ascending** | **boolean** |  | [optional] 
+**descending** | **boolean** |  | [optional] 
 **direction** | **string** |  | [optional] 
 **ignore_case** | **boolean** |  | [optional] 
 **null_handling** | **string** |  | [optional] 

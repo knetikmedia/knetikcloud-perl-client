@@ -26,13 +26,13 @@ Customer added triggers will not be fired automatically or have rules associated
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineTriggersApi;
+my $api_instance = KnetikCloud::BRERuleEngineTriggersApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineTriggersApi->new();
 my $bre_trigger_resource = KnetikCloud::Object::BreTriggerResource->new(); # BreTriggerResource | The BRE trigger resource object
 
 eval { 
@@ -75,13 +75,13 @@ May fail if there are existing rules against it. Cannot delete core triggers
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineTriggersApi;
+my $api_instance = KnetikCloud::BRERuleEngineTriggersApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineTriggersApi->new();
 my $event_name = 'event_name_example'; # string | The trigger event name
 
 eval { 
@@ -121,13 +121,13 @@ Get a single trigger
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineTriggersApi;
+my $api_instance = KnetikCloud::BRERuleEngineTriggersApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineTriggersApi->new();
 my $event_name = 'event_name_example'; # string | The trigger event name
 
 eval { 
@@ -168,13 +168,13 @@ List triggers
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineTriggersApi;
+my $api_instance = KnetikCloud::BRERuleEngineTriggersApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineTriggersApi->new();
 my $filter_system = 1; # boolean | Filter for triggers that are system triggers when true, or not when false. Leave off for both mixed
 my $filter_category = 'filter_category_example'; # string | Filter for triggers that are within a specific category
 my $filter_tags = 'filter_tags_example'; # string | Filter for triggers that have all of the given tags (comma separated list)
@@ -229,13 +229,13 @@ May fail if new parameters mismatch requirements of existing rules. Cannot updat
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineTriggersApi;
+my $api_instance = KnetikCloud::BRERuleEngineTriggersApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineTriggersApi->new();
 my $event_name = 'event_name_example'; # string | The trigger event name
 my $bre_trigger_resource = KnetikCloud::Object::BreTriggerResource->new(); # BreTriggerResource | The BRE trigger resource object
 

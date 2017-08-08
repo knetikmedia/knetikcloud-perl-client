@@ -26,13 +26,13 @@ Once created you can then use in a custom rule. Note that global definitions can
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineGlobalsApi;
+my $api_instance = KnetikCloud::BRERuleEngineGlobalsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineGlobalsApi->new();
 my $bre_global_resource = KnetikCloud::Object::BreGlobalResource->new(); # BreGlobalResource | The BRE global resource object
 
 eval { 
@@ -75,13 +75,13 @@ May fail if there are existing rules against it. Cannot delete core globals
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineGlobalsApi;
+my $api_instance = KnetikCloud::BRERuleEngineGlobalsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineGlobalsApi->new();
 my $id = 'id_example'; # string | The id of the global definition
 
 eval { 
@@ -121,13 +121,13 @@ Get a single global definition
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineGlobalsApi;
+my $api_instance = KnetikCloud::BRERuleEngineGlobalsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineGlobalsApi->new();
 my $id = 'id_example'; # string | The id of the global definition
 
 eval { 
@@ -168,13 +168,13 @@ List global definitions
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineGlobalsApi;
+my $api_instance = KnetikCloud::BRERuleEngineGlobalsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineGlobalsApi->new();
 my $filter_system = 1; # boolean | Filter for globals that are system globals when true, or not when false. Leave off for both mixed
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
@@ -221,13 +221,13 @@ May fail if new parameters mismatch requirements of existing rules. Cannot updat
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineGlobalsApi;
+my $api_instance = KnetikCloud::BRERuleEngineGlobalsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineGlobalsApi->new();
 my $id = 'id_example'; # string | The id of the global definition
 my $bre_global_resource = KnetikCloud::Object::BreGlobalResource->new(); # BreGlobalResource | The BRE global resource object
 

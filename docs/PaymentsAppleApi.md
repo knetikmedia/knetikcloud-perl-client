@@ -22,10 +22,10 @@ Mark an invoice paid using Apple payment receipt. A receipt will only be accepte
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsAppleApi;
+my $api_instance = KnetikCloud::PaymentsAppleApi->new(
+);
 
-my $api_instance = KnetikCloud::PaymentsAppleApi->new();
 my $request = KnetikCloud::Object::ApplyPaymentRequest->new(); # ApplyPaymentRequest | The request for paying an invoice through an Apple receipt
 
 eval { 

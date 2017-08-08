@@ -30,13 +30,13 @@ A shipping item represents a shipping option and cost. SKUs have to be unique in
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreShippingApi;
+my $api_instance = KnetikCloud::StoreShippingApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreShippingApi->new();
 my $cascade = 1; # boolean | Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values.
 my $shipping_item = KnetikCloud::Object::ShippingItem->new(); # ShippingItem | The shipping item object
 
@@ -81,13 +81,13 @@ Shipping Templates define a type of shipping and the properties they have.
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreShippingApi;
+my $api_instance = KnetikCloud::StoreShippingApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreShippingApi->new();
 my $shipping_template_resource = KnetikCloud::Object::ItemTemplateResource->new(); # ItemTemplateResource | The new shipping template
 
 eval { 
@@ -128,13 +128,13 @@ Delete a shipping item
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreShippingApi;
+my $api_instance = KnetikCloud::StoreShippingApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreShippingApi->new();
 my $id = 56; # int | The id of the shipping item
 
 eval { 
@@ -174,13 +174,13 @@ Delete a shipping template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreShippingApi;
+my $api_instance = KnetikCloud::StoreShippingApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreShippingApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $cascade = 'cascade_example'; # string | force deleting the template if it's attached to other objects, cascade = detach
 
@@ -222,10 +222,10 @@ Get a single shipping item
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreShippingApi;
+my $api_instance = KnetikCloud::StoreShippingApi->new(
+);
 
-my $api_instance = KnetikCloud::StoreShippingApi->new();
 my $id = 56; # int | The id of the shipping item
 
 eval { 
@@ -268,13 +268,13 @@ Shipping Templates define a type of shipping and the properties they have.
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreShippingApi;
+my $api_instance = KnetikCloud::StoreShippingApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreShippingApi->new();
 my $id = 'id_example'; # string | The id of the template
 
 eval { 
@@ -315,13 +315,13 @@ List and search shipping templates
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreShippingApi;
+my $api_instance = KnetikCloud::StoreShippingApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreShippingApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -366,13 +366,13 @@ Update a shipping item
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreShippingApi;
+my $api_instance = KnetikCloud::StoreShippingApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreShippingApi->new();
 my $id = 56; # int | The id of the shipping item
 my $cascade = 1; # boolean | Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values.
 my $shipping_item = KnetikCloud::Object::ShippingItem->new(); # ShippingItem | The shipping item object
@@ -417,13 +417,13 @@ Update a shipping template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreShippingApi;
+my $api_instance = KnetikCloud::StoreShippingApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreShippingApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $shipping_template_resource = KnetikCloud::Object::ItemTemplateResource->new(); # ItemTemplateResource | The shipping template resource object
 

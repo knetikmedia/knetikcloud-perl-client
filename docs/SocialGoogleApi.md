@@ -22,13 +22,13 @@ Links the current user account to a google account, using the acccess token from
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::SocialGoogleApi;
+my $api_instance = KnetikCloud::SocialGoogleApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::SocialGoogleApi->new();
 my $google_token = KnetikCloud::Object::GoogleToken->new(); # GoogleToken | The token from google
 
 eval { 

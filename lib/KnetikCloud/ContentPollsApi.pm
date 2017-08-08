@@ -28,25 +28,22 @@ use Carp qw( croak );
 use Log::Any qw($log);
 
 use KnetikCloud::ApiClient;
-use KnetikCloud::Configuration;
 
 use base "Class::Data::Inheritable";
 
 __PACKAGE__->mk_classdata('method_documentation' => {});
 
 sub new {
-    my $class   = shift;
-    my (%self) = (
-        'api_client' => KnetikCloud::ApiClient->instance,
-        @_
-    );
+    my $class = shift;
+    my $api_client;
 
-    #my $self = {
-    #    #api_client => $options->{api_client}
-    #    api_client => $default_api_client
-    #}; 
+    if ($_[0] && ref $_[0] && ref $_[0] eq 'KnetikCloud::ApiClient' ) {
+        $api_client = $_[0];
+    } else {
+        $api_client = KnetikCloud::ApiClient->new(@_);
+    }
 
-    bless \%self, $class;
+    bless { api_client => $api_client }, $class;
 
 }
 
@@ -57,7 +54,7 @@ sub new {
 # Add your vote to a poll
 # 
 # @param string $id The poll id (required)
-# @param string $answer_key The answer key (optional)
+# @param StringWrapper $answer_key The answer key (optional)
 {
     my $params = {
     'id' => {
@@ -66,7 +63,7 @@ sub new {
         required => '1',
     },
     'answer_key' => {
-        data_type => 'string',
+        data_type => 'StringWrapper',
         description => 'The answer key',
         required => '0',
     },

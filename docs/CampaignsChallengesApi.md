@@ -44,13 +44,13 @@ Challenges do not run on their own.  They must be added to a campaign before eve
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $challenge_resource = KnetikCloud::Object::ChallengeResource->new(); # ChallengeResource | The challenge resource object
 
 eval { 
@@ -91,13 +91,13 @@ Create a challenge activity
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $challenge_id = 789; # int | The challenge id
 my $challenge_activity_resource = KnetikCloud::Object::ChallengeActivityResource->new(); # ChallengeActivityResource | The challenge activity resource object
 my $validate_settings = 1; # boolean | Whether to validate the settings being sent against the available settings on the base activity.
@@ -144,13 +144,13 @@ Challenge Activity Templates define a type of challenge activity and the propert
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $challenge_activity_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The challengeActivity template resource object
 
 eval { 
@@ -193,13 +193,13 @@ Challenge Templates define a type of challenge and the properties they have
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $challenge_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The challenge template resource object
 
 eval { 
@@ -240,13 +240,13 @@ Delete a challenge
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $id = 789; # int | The challenge id
 
 eval { 
@@ -288,13 +288,13 @@ A challenge can have multiple instances of the same activity and thus the id use
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $id = 789; # int | The challenge_activity id
 my $challenge_id = 789; # int | The challenge id
 
@@ -338,13 +338,13 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $cascade = 'cascade_example'; # string | The value needed to delete used templates
 
@@ -386,13 +386,13 @@ Delete a challenge event
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $id = 789; # int | The challenge event id
 
 eval { 
@@ -434,13 +434,13 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $cascade = 'cascade_example'; # string | The value needed to delete used templates
 
@@ -482,10 +482,10 @@ Retrieve a challenge
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $id = 789; # int | The challenge id
 
 eval { 
@@ -526,10 +526,10 @@ List and search challenge activities
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $challenge_id = 789; # int | The challenge id
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
@@ -578,10 +578,10 @@ A challenge can have multiple instances of the same activity and thus the id use
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $id = 789; # int | The challenge_activity id
 my $challenge_id = 789; # int | The challenge id
 
@@ -624,13 +624,13 @@ Get a single challenge activity template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $id = 'id_example'; # string | The id of the template
 
 eval { 
@@ -671,13 +671,13 @@ List and search challenge activity templates
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -722,10 +722,10 @@ Retrieve a single challenge event details
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $id = 789; # int | The challenge event id
 
 eval { 
@@ -766,10 +766,10 @@ Retrieve a list of challenge events
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $filter_start_date = 'filter_start_date_example'; # string | A comma separated string without spaces.  First value is the operator to search on, second value is the event start date, a unix timestamp in seconds.  Allowed operators: (GT, LT, EQ, GOE, LOE).
 my $filter_end_date = 'filter_end_date_example'; # string | A comma separated string without spaces.  First value is the operator to search on, second value is the event end date, a unix timestamp in seconds.  Allowed operators: (GT, LT, EQ, GOE, LOE).
 my $filter_campaigns = 1; # boolean | check only for events from currently running campaigns
@@ -822,13 +822,13 @@ Get a single challenge template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $id = 'id_example'; # string | The id of the template
 
 eval { 
@@ -869,13 +869,13 @@ List and search challenge templates
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -920,10 +920,10 @@ Retrieve a list of challenges
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $filter_template = 1; # boolean | Filter for challenges that are not tied to campaigns (templates)
 my $filter_active_campaign = 1; # boolean | Filter for challenges that are tied to active campaigns
 my $filter_start_date = 'filter_start_date_example'; # string | A comma separated string without spaces.  First value is the operator to search on, second value is the challenge start date, a unix timestamp in seconds.  Allowed operators: (GT, LT, EQ, GOE, LOE).
@@ -978,13 +978,13 @@ If the challenge is a copy, changes will propagate to all the related challenges
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $id = 789; # int | The challenge id
 my $challenge_resource = KnetikCloud::Object::ChallengeResource->new(); # ChallengeResource | The challenge resource object
 
@@ -1029,13 +1029,13 @@ A challenge can have multiple instances of the same activity and thus the id use
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $id = 789; # int | The challenge_activity id
 my $challenge_id = 789; # int | The challenge id
 my $challenge_activity_resource = KnetikCloud::Object::ChallengeActivityResource->new(); # ChallengeActivityResource | The challenge activity resource object
@@ -1080,13 +1080,13 @@ Update an challenge activity template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $challenge_activity_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The challengeActivity template resource object
 
@@ -1129,13 +1129,13 @@ Update a challenge template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CampaignsChallengesApi;
+my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CampaignsChallengesApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $challenge_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The challenge template resource object
 

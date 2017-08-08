@@ -23,13 +23,13 @@ Delete maintenance info
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UtilMaintenanceApi;
+my $api_instance = KnetikCloud::UtilMaintenanceApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UtilMaintenanceApi->new();
 
 eval { 
     $api_instance->delete_maintenance();
@@ -67,10 +67,10 @@ Get current maintenance info. 404 if no maintenance.
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UtilMaintenanceApi;
+my $api_instance = KnetikCloud::UtilMaintenanceApi->new(
+);
 
-my $api_instance = KnetikCloud::UtilMaintenanceApi->new();
 
 eval { 
     my $result = $api_instance->get_maintenance();
@@ -107,13 +107,13 @@ Set current maintenance info
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UtilMaintenanceApi;
+my $api_instance = KnetikCloud::UtilMaintenanceApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UtilMaintenanceApi->new();
 my $maintenance = KnetikCloud::Object::Maintenance->new(); # Maintenance | The maintenance object
 
 eval { 
@@ -153,13 +153,13 @@ Update current maintenance info
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UtilMaintenanceApi;
+my $api_instance = KnetikCloud::UtilMaintenanceApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UtilMaintenanceApi->new();
 my $maintenance = KnetikCloud::Object::Maintenance->new(); # Maintenance | The maintenance object
 
 eval { 

@@ -27,13 +27,13 @@ Add device users
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::DevicesApi;
+my $api_instance = KnetikCloud::DevicesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::DevicesApi->new();
 my $user_resources = [KnetikCloud::Object::ARRAY[SimpleUserResource]->new()]; # ARRAY[SimpleUserResource] | userResources
 my $id = 56; # int | id
 
@@ -76,13 +76,13 @@ Create a device
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::DevicesApi;
+my $api_instance = KnetikCloud::DevicesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::DevicesApi->new();
 my $device = KnetikCloud::Object::DeviceResource->new(); # DeviceResource | device
 
 eval { 
@@ -123,13 +123,13 @@ Delete a device
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::DevicesApi;
+my $api_instance = KnetikCloud::DevicesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::DevicesApi->new();
 my $id = 56; # int | id
 
 eval { 
@@ -169,13 +169,13 @@ Delete a device user
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::DevicesApi;
+my $api_instance = KnetikCloud::DevicesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::DevicesApi->new();
 my $id = 56; # int | The id of the device
 my $user_id = 56; # int | The user id of the device user
 
@@ -217,13 +217,13 @@ Delete all device users
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::DevicesApi;
+my $api_instance = KnetikCloud::DevicesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::DevicesApi->new();
 my $id = 56; # int | The id of the device
 my $filter_id = 'filter_id_example'; # string | Filter for device users to delete with a user id in a given comma separated list of ids
 
@@ -265,13 +265,13 @@ Get a single device
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::DevicesApi;
+my $api_instance = KnetikCloud::DevicesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::DevicesApi->new();
 my $id = 56; # int | id
 
 eval { 
@@ -314,13 +314,13 @@ Get a list of devices with optional filtering
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::DevicesApi;
+my $api_instance = KnetikCloud::DevicesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::DevicesApi->new();
 my $filter_make = 'filter_make_example'; # string | Filter for devices with specified make
 my $filter_model = 'filter_model_example'; # string | Filter for devices with specified model
 my $size = 56; # int | The number of objects returned per page
@@ -369,13 +369,13 @@ Update a device
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::DevicesApi;
+my $api_instance = KnetikCloud::DevicesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::DevicesApi->new();
 my $device = KnetikCloud::Object::DeviceResource->new(); # DeviceResource | device
 my $id = 56; # int | id
 

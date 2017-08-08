@@ -22,13 +22,13 @@ Get user registration counts grouped by time range
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ReportingUsersApi;
+my $api_instance = KnetikCloud::ReportingUsersApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ReportingUsersApi->new();
 my $granularity = 'granularity_example'; # string | The time duration to aggregate by
 my $start_date = 789; # int | The start of the time range to aggregate, unix timestamp in seconds. Default is beginning of time
 my $end_date = 789; # int | The end of the time range to aggregate, unix timestamp in seconds. Default is end of time

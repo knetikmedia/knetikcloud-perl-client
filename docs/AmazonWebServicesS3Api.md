@@ -22,13 +22,13 @@ Requires the file name and file content type (i.e., 'video/mpeg')
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AmazonWebServicesS3Api;
+my $api_instance = KnetikCloud::AmazonWebServicesS3Api->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AmazonWebServicesS3Api->new();
 my $filename = 'filename_example'; # string | The file name
 my $content_type = 'content_type_example'; # string | The content type
 

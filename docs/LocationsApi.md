@@ -23,10 +23,10 @@ Get a list of countries
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::LocationsApi;
+my $api_instance = KnetikCloud::LocationsApi->new(
+);
 
-my $api_instance = KnetikCloud::LocationsApi->new();
 
 eval { 
     my $result = $api_instance->get_countries();
@@ -65,10 +65,10 @@ Determined by geo ip location
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::LocationsApi;
+my $api_instance = KnetikCloud::LocationsApi->new(
+);
 
-my $api_instance = KnetikCloud::LocationsApi->new();
 
 eval { 
     my $result = $api_instance->get_country_by_geo_location();
@@ -105,10 +105,10 @@ Get a list of a country's states
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::LocationsApi;
+my $api_instance = KnetikCloud::LocationsApi->new(
+);
 
-my $api_instance = KnetikCloud::LocationsApi->new();
 my $country_code_iso3 = 'country_code_iso3_example'; # string | The iso3 code of the country
 
 eval { 
@@ -151,10 +151,10 @@ Determined by geo ip location, currency to country mapping and a fallback settin
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::LocationsApi;
+my $api_instance = KnetikCloud::LocationsApi->new(
+);
 
-my $api_instance = KnetikCloud::LocationsApi->new();
 
 eval { 
     my $result = $api_instance->get_currency_by_geo_location();

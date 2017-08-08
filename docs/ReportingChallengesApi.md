@@ -23,13 +23,13 @@ Lists all leaderboard entries with additional user details
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ReportingChallengesApi;
+my $api_instance = KnetikCloud::ReportingChallengesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ReportingChallengesApi->new();
 my $filter_event = 789; # int | A sepecific challenge event id
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned
@@ -78,13 +78,13 @@ Lists all user submitted scores sorted by value, including those that do not ape
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ReportingChallengesApi;
+my $api_instance = KnetikCloud::ReportingChallengesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ReportingChallengesApi->new();
 my $filter_event = 789; # int | A sepecific challenge event id
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned

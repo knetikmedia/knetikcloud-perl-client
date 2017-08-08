@@ -142,6 +142,13 @@ __PACKAGE__->class_documentation({description => '',
 }                                 );
 
 __PACKAGE__->method_documentation({
+    'details' => {
+    	datatype => 'PaymentMethodDetails',
+    	base_name => 'details',
+    	description => 'Additional optional details to store on the payment method. If included, all fields in the details will override any defaults',
+    	format => '',
+    	read_only => '',
+    		},
     'token' => {
     	datatype => 'string',
     	base_name => 'token',
@@ -159,11 +166,13 @@ __PACKAGE__->method_documentation({
 });
 
 __PACKAGE__->swagger_types( {
+    'details' => 'PaymentMethodDetails',
     'token' => 'string',
     'user_id' => 'int'
 } );
 
 __PACKAGE__->attribute_map( {
+    'details' => 'details',
     'token' => 'token',
     'user_id' => 'user_id'
 } );

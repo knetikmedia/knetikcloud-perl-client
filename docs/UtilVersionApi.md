@@ -20,10 +20,10 @@ Get current version info
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UtilVersionApi;
+my $api_instance = KnetikCloud::UtilVersionApi->new(
+);
 
-my $api_instance = KnetikCloud::UtilVersionApi->new();
 
 eval { 
     my $result = $api_instance->get_version();

@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**get_invoice_logs**](InvoicesApi.md#get_invoice_logs) | **GET** /invoices/{id}/logs | List invoice logs
 [**get_invoices**](InvoicesApi.md#get_invoices) | **GET** /invoices | Retrieve invoices
 [**get_payment_statuses**](InvoicesApi.md#get_payment_statuses) | **GET** /invoices/payment-statuses | Lists available payment statuses
-[**pay_invoice**](InvoicesApi.md#pay_invoice) | **POST** /invoices/{id}/payments | Trigger payment of an invoice
+[**pay_invoice**](InvoicesApi.md#pay_invoice) | **POST** /invoices/{id}/payments | Pay an invoice using a saved payment method
 [**set_bundled_invoice_item_fulfillment_status**](InvoicesApi.md#set_bundled_invoice_item_fulfillment_status) | **PUT** /invoices/{id}/items/{bundleSku}/bundled-skus/{sku}/fulfillment-status | Set the fulfillment status of a bundled invoice item
 [**set_external_ref**](InvoicesApi.md#set_external_ref) | **PUT** /invoices/{id}/external-ref | Set the external reference of an invoice
 [**set_invoice_item_fulfillment_status**](InvoicesApi.md#set_invoice_item_fulfillment_status) | **PUT** /invoices/{id}/items/{sku}/fulfillment-status | Set the fulfillment status of an invoice item
@@ -34,13 +34,13 @@ Create an invoice(s) by providing a cart GUID. Note that there may be multiple i
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::InvoicesApi;
+my $api_instance = KnetikCloud::InvoicesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::InvoicesApi->new();
 my $req = KnetikCloud::Object::InvoiceCreateRequest->new(); # InvoiceCreateRequest | Invoice to be created
 
 eval { 
@@ -81,10 +81,10 @@ Lists available fulfillment statuses
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::InvoicesApi;
+my $api_instance = KnetikCloud::InvoicesApi->new(
+);
 
-my $api_instance = KnetikCloud::InvoicesApi->new();
 
 eval { 
     my $result = $api_instance->get_ful_fillment_statuses();
@@ -121,13 +121,13 @@ Retrieve an invoice
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::InvoicesApi;
+my $api_instance = KnetikCloud::InvoicesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::InvoicesApi->new();
 my $id = 56; # int | The id of the invoice
 
 eval { 
@@ -168,13 +168,13 @@ List invoice logs
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::InvoicesApi;
+my $api_instance = KnetikCloud::InvoicesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::InvoicesApi->new();
 my $id = 56; # int | The id of the invoice
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
@@ -221,13 +221,13 @@ Without INVOICES_ADMIN permission the results are automatically filtered for onl
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::InvoicesApi;
+my $api_instance = KnetikCloud::InvoicesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::InvoicesApi->new();
 my $filter_user = 56; # int | The id of a user to get invoices for. Automtically added if not being called with admin permissions.
 my $filter_email = 'filter_email_example'; # string | Filters invoices by customer's email. Admins only.
 my $filter_fulfillment_status = 'filter_fulfillment_status_example'; # string | Filters invoices by fulfillment status type. Can be a comma separated list of statuses
@@ -300,10 +300,10 @@ Lists available payment statuses
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::InvoicesApi;
+my $api_instance = KnetikCloud::InvoicesApi->new(
+);
 
-my $api_instance = KnetikCloud::InvoicesApi->new();
 
 eval { 
     my $result = $api_instance->get_payment_statuses();
@@ -335,20 +335,20 @@ No authorization required
 # **pay_invoice**
 > pay_invoice(id => $id, request => $request)
 
-Trigger payment of an invoice
+Pay an invoice using a saved payment method
 
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::InvoicesApi;
+my $api_instance = KnetikCloud::InvoicesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::InvoicesApi->new();
 my $id = 56; # int | The id of the invoice
-my $request = KnetikCloud::Object::PayBySavedMethodRequest->new(); # PayBySavedMethodRequest | Payment info
+my $request = KnetikCloud::Object::PayBySavedMethodRequest->new(); # PayBySavedMethodRequest | The payment method details. Will default to the appropriate user's wallet in the invoice currency if ommited.
 
 eval { 
     $api_instance->pay_invoice(id => $id, request => $request);
@@ -363,7 +363,7 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The id of the invoice | 
- **request** | [**PayBySavedMethodRequest**](PayBySavedMethodRequest.md)| Payment info | [optional] 
+ **request** | [**PayBySavedMethodRequest**](PayBySavedMethodRequest.md)| The payment method details. Will default to the appropriate user&#39;s wallet in the invoice currency if ommited. | [optional] 
 
 ### Return type
 
@@ -390,17 +390,17 @@ This allows external fulfillment systems to report success or failure. Fulfillme
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::InvoicesApi;
+my $api_instance = KnetikCloud::InvoicesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::InvoicesApi->new();
 my $id = 56; # int | The id of the invoice
 my $bundle_sku = 'bundle_sku_example'; # string | The sku of the bundle in the invoice that contains the given target
 my $sku = 'sku_example'; # string | The sku of an item in the bundle in the invoice
-my $status = KnetikCloud::Object::string->new(); # string | The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  'unfulfilled', 'fulfilled', 'not fulfillable', 'failed', 'processing', 'failed_permanent', 'delayed'
+my $status = KnetikCloud::Object::StringWrapper->new(); # StringWrapper | The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  'unfulfilled', 'fulfilled', 'not fulfillable', 'failed', 'processing', 'failed_permanent', 'delayed'
 
 eval { 
     $api_instance->set_bundled_invoice_item_fulfillment_status(id => $id, bundle_sku => $bundle_sku, sku => $sku, status => $status);
@@ -417,7 +417,7 @@ Name | Type | Description  | Notes
  **id** | **int**| The id of the invoice | 
  **bundle_sku** | **string**| The sku of the bundle in the invoice that contains the given target | 
  **sku** | **string**| The sku of an item in the bundle in the invoice | 
- **status** | **string**| The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39; | 
+ **status** | [**StringWrapper**](StringWrapper.md)| The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39; | 
 
 ### Return type
 
@@ -442,15 +442,15 @@ Set the external reference of an invoice
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::InvoicesApi;
+my $api_instance = KnetikCloud::InvoicesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::InvoicesApi->new();
 my $id = 56; # int | The id of the invoice
-my $external_ref = KnetikCloud::Object::string->new(); # string | External reference info
+my $external_ref = KnetikCloud::Object::StringWrapper->new(); # StringWrapper | External reference info
 
 eval { 
     $api_instance->set_external_ref(id => $id, external_ref => $external_ref);
@@ -465,7 +465,7 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The id of the invoice | 
- **external_ref** | **string**| External reference info | [optional] 
+ **external_ref** | [**StringWrapper**](StringWrapper.md)| External reference info | [optional] 
 
 ### Return type
 
@@ -492,16 +492,16 @@ This allows external fulfillment systems to report success or failure. Fulfillme
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::InvoicesApi;
+my $api_instance = KnetikCloud::InvoicesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::InvoicesApi->new();
 my $id = 56; # int | The id of the invoice
 my $sku = 'sku_example'; # string | The sku of an item in the invoice
-my $status = KnetikCloud::Object::string->new(); # string | The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  'unfulfilled', 'fulfilled', 'not fulfillable', 'failed', 'processing', 'failed_permanent', 'delayed'
+my $status = KnetikCloud::Object::StringWrapper->new(); # StringWrapper | The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  'unfulfilled', 'fulfilled', 'not fulfillable', 'failed', 'processing', 'failed_permanent', 'delayed'
 
 eval { 
     $api_instance->set_invoice_item_fulfillment_status(id => $id, sku => $sku, status => $status);
@@ -517,7 +517,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The id of the invoice | 
  **sku** | **string**| The sku of an item in the invoice | 
- **status** | **string**| The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39; | 
+ **status** | [**StringWrapper**](StringWrapper.md)| The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39; | 
 
 ### Return type
 
@@ -542,15 +542,15 @@ Set the order notes of an invoice
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::InvoicesApi;
+my $api_instance = KnetikCloud::InvoicesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::InvoicesApi->new();
 my $id = 56; # int | The id of the invoice
-my $order_notes = KnetikCloud::Object::string->new(); # string | Payment status info
+my $order_notes = KnetikCloud::Object::StringWrapper->new(); # StringWrapper | Payment status info
 
 eval { 
     $api_instance->set_order_notes(id => $id, order_notes => $order_notes);
@@ -565,7 +565,7 @@ if ($@) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| The id of the invoice | 
- **order_notes** | **string**| Payment status info | [optional] 
+ **order_notes** | [**StringWrapper**](StringWrapper.md)| Payment status info | [optional] 
 
 ### Return type
 
@@ -592,13 +592,13 @@ This may trigger fulfillment if setting the status to 'paid'. This is mainly int
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::InvoicesApi;
+my $api_instance = KnetikCloud::InvoicesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::InvoicesApi->new();
 my $id = 56; # int | The id of the invoice
 my $request = KnetikCloud::Object::InvoicePaymentStatusRequest->new(); # InvoicePaymentStatusRequest | Payment status info
 
@@ -640,13 +640,13 @@ Set or update billing info
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::InvoicesApi;
+my $api_instance = KnetikCloud::InvoicesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::InvoicesApi->new();
 my $id = 56; # int | The id of the invoice
 my $billing_info_request = KnetikCloud::Object::AddressResource->new(); # AddressResource | Address info
 

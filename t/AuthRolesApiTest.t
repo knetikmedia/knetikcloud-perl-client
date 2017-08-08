@@ -66,10 +66,12 @@ isa_ok($api, 'KnetikCloud::AuthRolesApi');
 # get_roles test
 #
 {
+    my $filter_name = undef; # replace NULL with a proper value
+    my $filter_role = undef; # replace NULL with a proper value
     my $size = undef; # replace NULL with a proper value
     my $page = undef; # replace NULL with a proper value
     my $order = undef; # replace NULL with a proper value
-    my $result = $api->get_roles(size => $size, page => $page, order => $order);
+    my $result = $api->get_roles(filter_name => $filter_name, filter_role => $filter_role, size => $size, page => $page, order => $order);
 }
 
 #

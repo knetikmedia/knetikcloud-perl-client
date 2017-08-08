@@ -22,10 +22,10 @@ Mark an invoice paid with Google. Verifies signature from Google and treats the 
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsGoogleApi;
+my $api_instance = KnetikCloud::PaymentsGoogleApi->new(
+);
 
-my $api_instance = KnetikCloud::PaymentsGoogleApi->new();
 my $request = KnetikCloud::Object::GooglePaymentRequest->new(); # GooglePaymentRequest | The request for paying an invoice through a Google in-app payment
 
 eval { 

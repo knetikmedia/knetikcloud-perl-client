@@ -149,6 +149,13 @@ __PACKAGE__->method_documentation({
     	format => '',
     	read_only => '',
     		},
+    'descending' => {
+    	datatype => 'boolean',
+    	base_name => 'descending',
+    	description => '',
+    	format => '',
+    	read_only => '',
+    		},
     'direction' => {
     	datatype => 'string',
     	base_name => 'direction',
@@ -181,6 +188,7 @@ __PACKAGE__->method_documentation({
 
 __PACKAGE__->swagger_types( {
     'ascending' => 'boolean',
+    'descending' => 'boolean',
     'direction' => 'string',
     'ignore_case' => 'boolean',
     'null_handling' => 'string',
@@ -189,6 +197,7 @@ __PACKAGE__->swagger_types( {
 
 __PACKAGE__->attribute_map( {
     'ascending' => 'ascending',
+    'descending' => 'descending',
     'direction' => 'direction',
     'ignore_case' => 'ignore_case',
     'null_handling' => 'null_handling',

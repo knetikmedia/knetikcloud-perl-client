@@ -22,13 +22,13 @@ Get a flag report
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaModerationApi;
+my $api_instance = KnetikCloud::MediaModerationApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaModerationApi->new();
 my $id = 789; # int | The flag report id
 
 eval { 
@@ -71,13 +71,13 @@ Context can be either a free-form string or a pre-defined context name
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaModerationApi;
+my $api_instance = KnetikCloud::MediaModerationApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaModerationApi->new();
 my $exclude_resolved = 1; # boolean | Ignore resolved context
 my $filter_context = 'filter_context_example'; # string | Filter by moderation context
 my $size = 56; # int | The number of objects returned per page
@@ -126,13 +126,13 @@ Lets you set the resolution of a report. Resolution types is {banned,ignore} in 
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaModerationApi;
+my $api_instance = KnetikCloud::MediaModerationApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaModerationApi->new();
 my $id = 789; # int | The flag report id
 my $flag_report_resource = KnetikCloud::Object::FlagReportResource->new(); # FlagReportResource | The new flag report
 

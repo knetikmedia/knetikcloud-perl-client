@@ -27,13 +27,13 @@ Create a new client
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthClientsApi;
+my $api_instance = KnetikCloud::AuthClientsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthClientsApi->new();
 my $client_resource = KnetikCloud::Object::ClientResource->new(); # ClientResource | The client resource object
 
 eval { 
@@ -74,13 +74,13 @@ Delete a client
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthClientsApi;
+my $api_instance = KnetikCloud::AuthClientsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthClientsApi->new();
 my $client_key = 'client_key_example'; # string | The key of the client
 
 eval { 
@@ -120,13 +120,13 @@ Get a single client
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthClientsApi;
+my $api_instance = KnetikCloud::AuthClientsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthClientsApi->new();
 my $client_key = 'client_key_example'; # string | The key of the client
 
 eval { 
@@ -167,13 +167,13 @@ List available client grant types
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthClientsApi;
+my $api_instance = KnetikCloud::AuthClientsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthClientsApi->new();
 
 eval { 
     my $result = $api_instance->get_client_grant_types();
@@ -210,13 +210,13 @@ List and search clients
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthClientsApi;
+my $api_instance = KnetikCloud::AuthClientsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthClientsApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -261,13 +261,13 @@ Set grant types for a client
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthClientsApi;
+my $api_instance = KnetikCloud::AuthClientsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthClientsApi->new();
 my $client_key = 'client_key_example'; # string | The key of the client
 my $grant_list = [KnetikCloud::Object::ARRAY[string]->new()]; # ARRAY[string] | A list of unique grant types
 
@@ -309,13 +309,13 @@ Set redirect uris for a client
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthClientsApi;
+my $api_instance = KnetikCloud::AuthClientsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthClientsApi->new();
 my $client_key = 'client_key_example'; # string | The key of the client
 my $redirect_list = [KnetikCloud::Object::ARRAY[string]->new()]; # ARRAY[string] | A list of unique redirect uris
 
@@ -357,13 +357,13 @@ Update a client
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthClientsApi;
+my $api_instance = KnetikCloud::AuthClientsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthClientsApi->new();
 my $client_key = 'client_key_example'; # string | The key of the client
 my $client_resource = KnetikCloud::Object::ClientResource->new(); # ClientResource | The client resource object
 

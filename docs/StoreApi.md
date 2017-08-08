@@ -19,6 +19,7 @@ Method | HTTP request | Description
 [**get_store**](StoreApi.md#get_store) | **GET** /store | Get a listing of store items
 [**get_store_item**](StoreApi.md#get_store_item) | **GET** /store/items/{id} | Get a single store item
 [**get_store_items**](StoreApi.md#get_store_items) | **GET** /store/items | List and search store items
+[**quick_buy**](StoreApi.md#quick_buy) | **POST** /store/quick-buy | One-step purchase and pay for a single SKU item from a user&#39;s wallet
 [**update_item_template**](StoreApi.md#update_item_template) | **PUT** /store/items/templates/{id} | Update an item template
 [**update_store_item**](StoreApi.md#update_store_item) | **PUT** /store/items/{id} | Update a store item
 
@@ -33,13 +34,13 @@ Item Templates define a type of item and the properties they have.
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreApi;
+my $api_instance = KnetikCloud::StoreApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreApi->new();
 my $item_template_resource = KnetikCloud::Object::StoreItemTemplateResource->new(); # StoreItemTemplateResource | The new item template
 
 eval { 
@@ -82,13 +83,13 @@ SKUs have to be unique in the entire store. If a duplicate SKU is found, a 400 e
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreApi;
+my $api_instance = KnetikCloud::StoreApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreApi->new();
 my $cascade = 1; # boolean | Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values.
 my $store_item = KnetikCloud::Object::StoreItem->new(); # StoreItem | The store item object
 
@@ -131,13 +132,13 @@ Delete an item template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreApi;
+my $api_instance = KnetikCloud::StoreApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $cascade = 'cascade_example'; # string | force deleting the template if it's attached to other objects, cascade = detach
 
@@ -179,13 +180,13 @@ Delete a store item
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreApi;
+my $api_instance = KnetikCloud::StoreApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreApi->new();
 my $id = 56; # int | The id of the item
 
 eval { 
@@ -225,13 +226,13 @@ List available item behaviors
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreApi;
+my $api_instance = KnetikCloud::StoreApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreApi->new();
 
 eval { 
     my $result = $api_instance->get_behaviors();
@@ -270,13 +271,13 @@ Item Templates define a type of item and the properties they have.
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreApi;
+my $api_instance = KnetikCloud::StoreApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreApi->new();
 my $id = 'id_example'; # string | The id of the template
 
 eval { 
@@ -317,13 +318,13 @@ List and search item templates
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreApi;
+my $api_instance = KnetikCloud::StoreApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -370,10 +371,10 @@ The exact structure of each items may differ to include fields specific to the t
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreApi;
+my $api_instance = KnetikCloud::StoreApi->new(
+);
 
-my $api_instance = KnetikCloud::StoreApi->new();
 my $limit = 56; # int | The amount of items returned
 my $page = 56; # int | The page of the request
 my $use_catalog = 1; # boolean | Whether to remove items that are not intended for display or not in date
@@ -422,10 +423,10 @@ Get a single store item
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreApi;
+my $api_instance = KnetikCloud::StoreApi->new(
+);
 
-my $api_instance = KnetikCloud::StoreApi->new();
 my $id = 56; # int | The id of the item
 
 eval { 
@@ -466,10 +467,10 @@ List and search store items
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreApi;
+my $api_instance = KnetikCloud::StoreApi->new(
+);
 
-my $api_instance = KnetikCloud::StoreApi->new();
 my $filter_name_search = 'filter_name_search_example'; # string | Filter for items whose name starts with a given string.
 my $filter_unique_key = 'filter_unique_key_example'; # string | Filter for items whose unique_key is a given string.
 my $filter_published = 1; # boolean | Filter for skus that have been published.
@@ -534,6 +535,55 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **quick_buy**
+> InvoiceResource quick_buy(quick_buy_request => $quick_buy_request)
+
+One-step purchase and pay for a single SKU item from a user's wallet
+
+Used to create and automatically pay an invoice for a single unit of a single SKU from a user's wallet. SKU must be priced in virtual currency and must not be an item that requires shipping. PAYMENTS_ADMIN permission is required if user ID is specified and is not the ID of the currently logged in user. If invoice price does not match expected price, purchase is aborted
+
+### Example 
+```perl
+use Data::Dumper;
+use KnetikCloud::StoreApi;
+my $api_instance = KnetikCloud::StoreApi->new(
+
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
+
+my $quick_buy_request = KnetikCloud::Object::QuickBuyRequest->new(); # QuickBuyRequest | Quick buy details
+
+eval { 
+    my $result = $api_instance->quick_buy(quick_buy_request => $quick_buy_request);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling StoreApi->quick_buy: $@\n";
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **quick_buy_request** | [**QuickBuyRequest**](QuickBuyRequest.md)| Quick buy details | [optional] 
+
+### Return type
+
+[**InvoiceResource**](InvoiceResource.md)
+
+### Authorization
+
+[OAuth2](../README.md#OAuth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **update_item_template**
 > StoreItemTemplateResource update_item_template(id => $id, item_template_resource => $item_template_resource)
 
@@ -542,13 +592,13 @@ Update an item template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreApi;
+my $api_instance = KnetikCloud::StoreApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $item_template_resource = KnetikCloud::Object::StoreItemTemplateResource->new(); # StoreItemTemplateResource | The item template resource object
 
@@ -591,13 +641,13 @@ Update a store item
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreApi;
+my $api_instance = KnetikCloud::StoreApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreApi->new();
 my $id = 56; # int | The id of the item
 my $cascade = 1; # boolean | Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values.
 my $store_item = KnetikCloud::Object::StoreItem->new(); # StoreItem | The store item object

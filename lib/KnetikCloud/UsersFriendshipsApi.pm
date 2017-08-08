@@ -28,25 +28,22 @@ use Carp qw( croak );
 use Log::Any qw($log);
 
 use KnetikCloud::ApiClient;
-use KnetikCloud::Configuration;
 
 use base "Class::Data::Inheritable";
 
 __PACKAGE__->mk_classdata('method_documentation' => {});
 
 sub new {
-    my $class   = shift;
-    my (%self) = (
-        'api_client' => KnetikCloud::ApiClient->instance,
-        @_
-    );
+    my $class = shift;
+    my $api_client;
 
-    #my $self = {
-    #    #api_client => $options->{api_client}
-    #    api_client => $default_api_client
-    #}; 
+    if ($_[0] && ref $_[0] && ref $_[0] eq 'KnetikCloud::ApiClient' ) {
+        $api_client = $_[0];
+    } else {
+        $api_client = KnetikCloud::ApiClient->new(@_);
+    }
 
-    bless \%self, $class;
+    bless { api_client => $api_client }, $class;
 
 }
 
@@ -383,7 +380,7 @@ sub get_invites {
 # Redeem friendship token
 # 
 # @param string $user_id The id of the user or &#39;me&#39; if logged in (required)
-# @param string $token The invite token (optional)
+# @param StringWrapper $token The invite token (optional)
 {
     my $params = {
     'user_id' => {
@@ -392,7 +389,7 @@ sub get_invites {
         required => '1',
     },
     'token' => {
-        data_type => 'string',
+        data_type => 'StringWrapper',
         description => 'The invite token',
         required => '0',
     },

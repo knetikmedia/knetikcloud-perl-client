@@ -23,13 +23,13 @@ Send a raw email to one or more users
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MessagingApi;
+my $api_instance = KnetikCloud::MessagingApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MessagingApi->new();
 my $raw_email_resource = KnetikCloud::Object::RawEmailResource->new(); # RawEmailResource | The new raw email to be sent
 
 eval { 
@@ -71,13 +71,13 @@ Sends a raw SMS text message to one or more users. User's without registered mob
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MessagingApi;
+my $api_instance = KnetikCloud::MessagingApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MessagingApi->new();
 my $raw_sms_resource = KnetikCloud::Object::RawSMSResource->new(); # RawSMSResource | The new raw SMS to be sent
 
 eval { 
@@ -117,13 +117,13 @@ Send a templated email to one or more users
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MessagingApi;
+my $api_instance = KnetikCloud::MessagingApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MessagingApi->new();
 my $message_resource = KnetikCloud::Object::TemplateEmailResource->new(); # TemplateEmailResource | The new template email to be sent
 
 eval { 
@@ -165,13 +165,13 @@ Sends a templated SMS text message to one or more users. User's without register
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MessagingApi;
+my $api_instance = KnetikCloud::MessagingApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MessagingApi->new();
 my $template_sms_resource = KnetikCloud::Object::TemplateSMSResource->new(); # TemplateSMSResource | The new template SMS to be sent
 
 eval { 

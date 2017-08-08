@@ -24,13 +24,13 @@ Create a new permission
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthPermissionsApi;
+my $api_instance = KnetikCloud::AuthPermissionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthPermissionsApi->new();
 my $permission_resource = KnetikCloud::Object::PermissionResource->new(); # PermissionResource | The permission resource object
 
 eval { 
@@ -71,13 +71,13 @@ Delete a permission
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthPermissionsApi;
+my $api_instance = KnetikCloud::AuthPermissionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthPermissionsApi->new();
 my $permission = 'permission_example'; # string | The permission value
 my $force = 1; # boolean | If true, removes permission assigned to roles
 
@@ -119,13 +119,13 @@ Get a single permission
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthPermissionsApi;
+my $api_instance = KnetikCloud::AuthPermissionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthPermissionsApi->new();
 my $permission = 'permission_example'; # string | The permission value
 
 eval { 
@@ -166,13 +166,13 @@ List and search permissions
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthPermissionsApi;
+my $api_instance = KnetikCloud::AuthPermissionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthPermissionsApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -217,13 +217,13 @@ Update a permission
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::AuthPermissionsApi;
+my $api_instance = KnetikCloud::AuthPermissionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::AuthPermissionsApi->new();
 my $permission = 'permission_example'; # string | The permission value
 my $permission_resource = KnetikCloud::Object::PermissionResource->new(); # PermissionResource | The permission resource object
 

@@ -28,13 +28,13 @@ Rules define which actions to run when a given event verifies the specified cond
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineRulesApi;
+my $api_instance = KnetikCloud::BRERuleEngineRulesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineRulesApi->new();
 my $bre_rule = KnetikCloud::Object::BreRule->new(); # BreRule | The BRE rule object
 
 eval { 
@@ -77,13 +77,13 @@ May fail if there are existing rules against it. Cannot delete core rules
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineRulesApi;
+my $api_instance = KnetikCloud::BRERuleEngineRulesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineRulesApi->new();
 my $id = 'id_example'; # string | The id of the rule
 
 eval { 
@@ -123,13 +123,13 @@ Returns a string representation of the provided expression
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineRulesApi;
+my $api_instance = KnetikCloud::BRERuleEngineRulesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineRulesApi->new();
 my $expression = KnetikCloud::Object::Expressionobject->new(); # Expressionobject | The expression
 
 eval { 
@@ -170,13 +170,13 @@ Get a single rule
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineRulesApi;
+my $api_instance = KnetikCloud::BRERuleEngineRulesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineRulesApi->new();
 my $id = 'id_example'; # string | The id of the rule
 
 eval { 
@@ -217,13 +217,13 @@ List rules
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineRulesApi;
+my $api_instance = KnetikCloud::BRERuleEngineRulesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineRulesApi->new();
 my $filter_name = 'filter_name_example'; # string | Filter for rules containing the given name
 my $filter_enabled = 1; # boolean | Filter for rules by active status, null for both
 my $filter_system = 1; # boolean | Filter for rules that are system rules when true, or not when false. Leave off for both mixed
@@ -280,13 +280,13 @@ This is helpful for turning off systems rules which cannot be deleted or modifie
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineRulesApi;
+my $api_instance = KnetikCloud::BRERuleEngineRulesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineRulesApi->new();
 my $id = 'id_example'; # string | The id of the rule
 my $enabled = KnetikCloud::Object::BooleanResource->new(); # BooleanResource | The boolean value
 
@@ -330,13 +330,13 @@ Cannot update system rules
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineRulesApi;
+my $api_instance = KnetikCloud::BRERuleEngineRulesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineRulesApi->new();
 my $id = 'id_example'; # string | The id of the rule
 my $bre_rule = KnetikCloud::Object::BreRule->new(); # BreRule | The BRE rule object
 

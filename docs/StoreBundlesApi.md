@@ -30,13 +30,13 @@ The SKU for the bundle itself must be unique and there can only be one SKU.  Ext
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreBundlesApi;
+my $api_instance = KnetikCloud::StoreBundlesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreBundlesApi->new();
 my $cascade = 1; # boolean | Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values.
 my $bundle_item = KnetikCloud::Object::BundleItem->new(); # BundleItem | The bundle item object
 
@@ -81,13 +81,13 @@ Bundle Templates define a type of bundle and the properties they have.
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreBundlesApi;
+my $api_instance = KnetikCloud::StoreBundlesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreBundlesApi->new();
 my $bundle_template_resource = KnetikCloud::Object::ItemTemplateResource->new(); # ItemTemplateResource | The new bundle template
 
 eval { 
@@ -128,13 +128,13 @@ Delete a bundle item
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreBundlesApi;
+my $api_instance = KnetikCloud::StoreBundlesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreBundlesApi->new();
 my $id = 56; # int | The id of the bundle
 
 eval { 
@@ -174,13 +174,13 @@ Delete a bundle template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreBundlesApi;
+my $api_instance = KnetikCloud::StoreBundlesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreBundlesApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $cascade = 'cascade_example'; # string | force deleting the template if it's attached to other objects, cascade = detach
 
@@ -222,10 +222,10 @@ Get a single bundle item
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreBundlesApi;
+my $api_instance = KnetikCloud::StoreBundlesApi->new(
+);
 
-my $api_instance = KnetikCloud::StoreBundlesApi->new();
 my $id = 56; # int | The id of the bundle
 
 eval { 
@@ -268,10 +268,10 @@ Bundle Templates define a type of bundle and the properties they have.
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreBundlesApi;
+my $api_instance = KnetikCloud::StoreBundlesApi->new(
+);
 
-my $api_instance = KnetikCloud::StoreBundlesApi->new();
 my $id = 'id_example'; # string | The id of the template
 
 eval { 
@@ -312,10 +312,10 @@ List and search bundle templates
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreBundlesApi;
+my $api_instance = KnetikCloud::StoreBundlesApi->new(
+);
 
-my $api_instance = KnetikCloud::StoreBundlesApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -360,13 +360,13 @@ Update a bundle item
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreBundlesApi;
+my $api_instance = KnetikCloud::StoreBundlesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreBundlesApi->new();
 my $id = 56; # int | The id of the bundle
 my $cascade = 1; # boolean | Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values.
 my $bundle_item = KnetikCloud::Object::BundleItem->new(); # BundleItem | The bundle item object
@@ -411,13 +411,13 @@ Update a bundle template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::StoreBundlesApi;
+my $api_instance = KnetikCloud::StoreBundlesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::StoreBundlesApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $bundle_template_resource = KnetikCloud::Object::ItemTemplateResource->new(); # ItemTemplateResource | The bundle template resource object
 

@@ -22,13 +22,13 @@ Get the details for a single transaction
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsTransactionsApi;
+my $api_instance = KnetikCloud::PaymentsTransactionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::PaymentsTransactionsApi->new();
 my $id = 56; # int | id
 
 eval { 
@@ -69,13 +69,13 @@ List and search transactions
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsTransactionsApi;
+my $api_instance = KnetikCloud::PaymentsTransactionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::PaymentsTransactionsApi->new();
 my $filter_invoice = 56; # int | Filter for transactions from a specific invoice
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
@@ -124,13 +124,13 @@ Will not allow for refunding more than the full amount even with multiple partia
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsTransactionsApi;
+my $api_instance = KnetikCloud::PaymentsTransactionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::PaymentsTransactionsApi->new();
 my $id = 56; # int | The id of the transaction to refund
 my $request = KnetikCloud::Object::RefundRequest->new(); # RefundRequest | Request containing refund details
 

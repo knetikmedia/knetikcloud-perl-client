@@ -24,13 +24,13 @@ Create a new config
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ConfigsApi;
+my $api_instance = KnetikCloud::ConfigsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ConfigsApi->new();
 my $config = KnetikCloud::Object::Config->new(); # Config | The config object
 
 eval { 
@@ -71,13 +71,13 @@ Delete an existing config
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ConfigsApi;
+my $api_instance = KnetikCloud::ConfigsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ConfigsApi->new();
 my $name = 'name_example'; # string | The config name
 
 eval { 
@@ -119,13 +119,13 @@ Only configs that are public readable will be shown without admin access
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ConfigsApi;
+my $api_instance = KnetikCloud::ConfigsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ConfigsApi->new();
 my $name = 'name_example'; # string | The config name
 
 eval { 
@@ -166,13 +166,13 @@ List and search configs
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ConfigsApi;
+my $api_instance = KnetikCloud::ConfigsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ConfigsApi->new();
 my $filter_search = 'filter_search_example'; # string | Filter for configs whose name contains the given string
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned
@@ -219,13 +219,13 @@ Update an existing config
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ConfigsApi;
+my $api_instance = KnetikCloud::ConfigsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ConfigsApi->new();
 my $name = 'name_example'; # string | The config name
 my $config = KnetikCloud::Object::Config->new(); # Config | The config object
 

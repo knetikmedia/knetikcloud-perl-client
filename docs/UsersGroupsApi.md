@@ -36,13 +36,13 @@ Adds a new member to the group
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersGroupsApi;
+my $api_instance = KnetikCloud::UsersGroupsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersGroupsApi->new();
 my $unique_name = 'unique_name_example'; # string | The group unique name
 my $user = KnetikCloud::Object::GroupMemberResource->new(); # GroupMemberResource | The id and status for a user to add to the group
 
@@ -85,13 +85,13 @@ Adds multiple members to the group
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersGroupsApi;
+my $api_instance = KnetikCloud::UsersGroupsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersGroupsApi->new();
 my $unique_name = 'unique_name_example'; # string | The group unique name
 my $users = [KnetikCloud::Object::ARRAY[GroupMemberResource]->new()]; # ARRAY[GroupMemberResource] | The id and status for a list of users to add to the group
 
@@ -134,13 +134,13 @@ Create a group
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersGroupsApi;
+my $api_instance = KnetikCloud::UsersGroupsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersGroupsApi->new();
 my $group_resource = KnetikCloud::Object::GroupResource->new(); # GroupResource | The new group
 
 eval { 
@@ -183,13 +183,13 @@ Group Templates define a type of group and the properties they have
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersGroupsApi;
+my $api_instance = KnetikCloud::UsersGroupsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersGroupsApi->new();
 my $group_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The group template resource object
 
 eval { 
@@ -230,13 +230,13 @@ Removes a group from the system IF no resources are attached to it
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersGroupsApi;
+my $api_instance = KnetikCloud::UsersGroupsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersGroupsApi->new();
 my $unique_name = 'unique_name_example'; # string | The group unique name
 
 eval { 
@@ -278,13 +278,13 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersGroupsApi;
+my $api_instance = KnetikCloud::UsersGroupsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersGroupsApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $cascade = 'cascade_example'; # string | The value needed to delete used templates
 
@@ -326,10 +326,10 @@ Loads a specific group's details
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersGroupsApi;
+my $api_instance = KnetikCloud::UsersGroupsApi->new(
+);
 
-my $api_instance = KnetikCloud::UsersGroupsApi->new();
 my $unique_name = 'unique_name_example'; # string | The group unique name
 
 eval { 
@@ -370,10 +370,10 @@ Get a user from a group
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersGroupsApi;
+my $api_instance = KnetikCloud::UsersGroupsApi->new(
+);
 
-my $api_instance = KnetikCloud::UsersGroupsApi->new();
 my $unique_name = 'unique_name_example'; # string | The group unique name
 my $user_id = 56; # int | The id of the user
 
@@ -416,10 +416,10 @@ Lists members of the group
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersGroupsApi;
+my $api_instance = KnetikCloud::UsersGroupsApi->new(
+);
 
-my $api_instance = KnetikCloud::UsersGroupsApi->new();
 my $unique_name = 'unique_name_example'; # string | The group unique name
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
@@ -466,13 +466,13 @@ Get a single group template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersGroupsApi;
+my $api_instance = KnetikCloud::UsersGroupsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersGroupsApi->new();
 my $id = 'id_example'; # string | The id of the template
 
 eval { 
@@ -513,13 +513,13 @@ List and search group templates
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersGroupsApi;
+my $api_instance = KnetikCloud::UsersGroupsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersGroupsApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | a comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -564,10 +564,10 @@ List groups a user is in
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersGroupsApi;
+my $api_instance = KnetikCloud::UsersGroupsApi->new(
+);
 
-my $api_instance = KnetikCloud::UsersGroupsApi->new();
 my $user_id = 56; # int | The id of the user
 
 eval { 
@@ -608,13 +608,13 @@ Removes a user from a group
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersGroupsApi;
+my $api_instance = KnetikCloud::UsersGroupsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersGroupsApi->new();
 my $unique_name = 'unique_name_example'; # string | The group unique name
 my $user_id = 56; # int | The id of the user to remove
 
@@ -656,13 +656,13 @@ Update a group
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersGroupsApi;
+my $api_instance = KnetikCloud::UsersGroupsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersGroupsApi->new();
 my $unique_name = 'unique_name_example'; # string | The group unique name
 my $group_resource = KnetikCloud::Object::GroupResource->new(); # GroupResource | The updated group
 
@@ -704,13 +704,13 @@ Change a user's status
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersGroupsApi;
+my $api_instance = KnetikCloud::UsersGroupsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersGroupsApi->new();
 my $unique_name = 'unique_name_example'; # string | The group unique name
 my $user_id = 56; # int | The user id of the member to modify
 my $status = KnetikCloud::Object::string->new(); # string | The new status for the user
@@ -754,13 +754,13 @@ Update a group template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersGroupsApi;
+my $api_instance = KnetikCloud::UsersGroupsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersGroupsApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $group_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The group template resource object
 
@@ -803,10 +803,10 @@ List and search groups
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersGroupsApi;
+my $api_instance = KnetikCloud::UsersGroupsApi->new(
+);
 
-my $api_instance = KnetikCloud::UsersGroupsApi->new();
 my $filter_template = 'filter_template_example'; # string | Filter for groups using a specific template, by id
 my $filter_member_count = 'filter_member_count_example'; # string | Filters groups by member count. Multiple values possible for range search. Format: filter_member_count=OP,ts&... where OP in (GT, LT, GOE, LOE, EQ). Ex: filter_member_count=GT,14,LT,17
 my $filter_name = 'filter_name_example'; # string | Filter for groups with names starting with the given string

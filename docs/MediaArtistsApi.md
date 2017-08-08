@@ -31,13 +31,13 @@ Adds a new artist in the system. Use specific media contributions endpoint to ad
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaArtistsApi;
+my $api_instance = KnetikCloud::MediaArtistsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaArtistsApi->new();
 my $artist_resource = KnetikCloud::Object::ArtistResource->new(); # ArtistResource | The new artist
 
 eval { 
@@ -80,13 +80,13 @@ Artist Templates define a type of artist and the properties they have
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaArtistsApi;
+my $api_instance = KnetikCloud::MediaArtistsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaArtistsApi->new();
 my $artist_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The artist template resource object
 
 eval { 
@@ -127,13 +127,13 @@ Removes an artist from the system IF no resources are attached to it
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaArtistsApi;
+my $api_instance = KnetikCloud::MediaArtistsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaArtistsApi->new();
 my $id = 789; # int | The artist id
 
 eval { 
@@ -175,13 +175,13 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaArtistsApi;
+my $api_instance = KnetikCloud::MediaArtistsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaArtistsApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $cascade = 'cascade_example'; # string | The value needed to delete used templates
 
@@ -223,10 +223,10 @@ Loads a specific artist details
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaArtistsApi;
+my $api_instance = KnetikCloud::MediaArtistsApi->new(
+);
 
-my $api_instance = KnetikCloud::MediaArtistsApi->new();
 my $id = 789; # int | The artist id
 my $show_contributions = 56; # int | The number of contributions to show fetch
 
@@ -269,13 +269,13 @@ Get a single artist template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaArtistsApi;
+my $api_instance = KnetikCloud::MediaArtistsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaArtistsApi->new();
 my $id = 'id_example'; # string | The id of the template
 
 eval { 
@@ -316,13 +316,13 @@ List and search artist templates
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaArtistsApi;
+my $api_instance = KnetikCloud::MediaArtistsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaArtistsApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -367,10 +367,10 @@ Search for artists
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaArtistsApi;
+my $api_instance = KnetikCloud::MediaArtistsApi->new(
+);
 
-my $api_instance = KnetikCloud::MediaArtistsApi->new();
 my $filter_artists_by_name = 'filter_artists_by_name_example'; # string | Filter for artists which name *STARTS* with the given string
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
@@ -417,13 +417,13 @@ Modifies an artist details
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaArtistsApi;
+my $api_instance = KnetikCloud::MediaArtistsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaArtistsApi->new();
 my $id = 789; # int | The artist id
 my $artist_resource = KnetikCloud::Object::ArtistResource->new(); # ArtistResource | The new artist
 
@@ -465,13 +465,13 @@ Update an artist template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::MediaArtistsApi;
+my $api_instance = KnetikCloud::MediaArtistsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::MediaArtistsApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $artist_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The artist template resource object
 

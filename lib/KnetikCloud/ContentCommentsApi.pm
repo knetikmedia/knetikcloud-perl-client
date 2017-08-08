@@ -28,25 +28,22 @@ use Carp qw( croak );
 use Log::Any qw($log);
 
 use KnetikCloud::ApiClient;
-use KnetikCloud::Configuration;
 
 use base "Class::Data::Inheritable";
 
 __PACKAGE__->mk_classdata('method_documentation' => {});
 
 sub new {
-    my $class   = shift;
-    my (%self) = (
-        'api_client' => KnetikCloud::ApiClient->instance,
-        @_
-    );
+    my $class = shift;
+    my $api_client;
 
-    #my $self = {
-    #    #api_client => $options->{api_client}
-    #    api_client => $default_api_client
-    #}; 
+    if ($_[0] && ref $_[0] && ref $_[0] eq 'KnetikCloud::ApiClient' ) {
+        $api_client = $_[0];
+    } else {
+        $api_client = KnetikCloud::ApiClient->new(@_);
+    }
 
-    bless \%self, $class;
+    bless { api_client => $api_client }, $class;
 
 }
 
@@ -432,7 +429,7 @@ sub search_comments {
 # Update a comment
 # 
 # @param int $id The comment id (required)
-# @param string $content The comment content (optional)
+# @param StringWrapper $content The comment content (optional)
 {
     my $params = {
     'id' => {
@@ -441,7 +438,7 @@ sub search_comments {
         required => '1',
     },
     'content' => {
-        data_type => 'string',
+        data_type => 'StringWrapper',
         description => 'The comment content',
         required => '0',
     },

@@ -20,10 +20,10 @@ Get health info
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UtilHealthApi;
+my $api_instance = KnetikCloud::UtilHealthApi->new(
+);
 
-my $api_instance = KnetikCloud::UtilHealthApi->new();
 
 eval { 
     my $result = $api_instance->get_health();

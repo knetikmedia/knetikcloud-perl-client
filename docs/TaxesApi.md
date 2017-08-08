@@ -30,13 +30,13 @@ Create a country tax
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::TaxesApi;
+my $api_instance = KnetikCloud::TaxesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::TaxesApi->new();
 my $tax_resource = KnetikCloud::Object::CountryTaxResource->new(); # CountryTaxResource | The tax object
 
 eval { 
@@ -77,13 +77,13 @@ Create a state tax
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::TaxesApi;
+my $api_instance = KnetikCloud::TaxesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::TaxesApi->new();
 my $country_code_iso3 = 'country_code_iso3_example'; # string | The iso3 code of the country
 my $tax_resource = KnetikCloud::Object::StateTaxResource->new(); # StateTaxResource | The tax object
 
@@ -126,13 +126,13 @@ Delete an existing tax
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::TaxesApi;
+my $api_instance = KnetikCloud::TaxesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::TaxesApi->new();
 my $country_code_iso3 = 'country_code_iso3_example'; # string | The iso3 code of the country
 
 eval { 
@@ -172,13 +172,13 @@ Delete an existing state tax
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::TaxesApi;
+my $api_instance = KnetikCloud::TaxesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::TaxesApi->new();
 my $country_code_iso3 = 'country_code_iso3_example'; # string | The iso3 code of the country
 my $state_code = 'state_code_example'; # string | The code of the state
 
@@ -220,10 +220,10 @@ Get a single tax
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::TaxesApi;
+my $api_instance = KnetikCloud::TaxesApi->new(
+);
 
-my $api_instance = KnetikCloud::TaxesApi->new();
 my $country_code_iso3 = 'country_code_iso3_example'; # string | The iso3 code of the country
 
 eval { 
@@ -266,10 +266,10 @@ Get a list of taxes
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::TaxesApi;
+my $api_instance = KnetikCloud::TaxesApi->new(
+);
 
-my $api_instance = KnetikCloud::TaxesApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -314,10 +314,10 @@ Get a single state tax
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::TaxesApi;
+my $api_instance = KnetikCloud::TaxesApi->new(
+);
 
-my $api_instance = KnetikCloud::TaxesApi->new();
 my $country_code_iso3 = 'country_code_iso3_example'; # string | The iso3 code of the country
 my $state_code = 'state_code_example'; # string | The code of the state
 
@@ -362,10 +362,10 @@ Get a list of taxes
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::TaxesApi;
+my $api_instance = KnetikCloud::TaxesApi->new(
+);
 
-my $api_instance = KnetikCloud::TaxesApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -412,10 +412,10 @@ Get a list of taxes
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::TaxesApi;
+my $api_instance = KnetikCloud::TaxesApi->new(
+);
 
-my $api_instance = KnetikCloud::TaxesApi->new();
 my $country_code_iso3 = 'country_code_iso3_example'; # string | The iso3 code of the country
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned
@@ -462,13 +462,13 @@ Create or update a tax
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::TaxesApi;
+my $api_instance = KnetikCloud::TaxesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::TaxesApi->new();
 my $country_code_iso3 = 'country_code_iso3_example'; # string | The iso3 code of the country
 my $tax_resource = KnetikCloud::Object::CountryTaxResource->new(); # CountryTaxResource | The tax object
 
@@ -511,13 +511,13 @@ Create or update a state tax
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::TaxesApi;
+my $api_instance = KnetikCloud::TaxesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::TaxesApi->new();
 my $country_code_iso3 = 'country_code_iso3_example'; # string | The iso3 code of the country
 my $state_code = 'state_code_example'; # string | The code of the state
 my $tax_resource = KnetikCloud::Object::StateTaxResource->new(); # StateTaxResource | The tax object

@@ -23,13 +23,13 @@ Stores customer information and creates a payment method that can be used to pay
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsStripeApi;
+my $api_instance = KnetikCloud::PaymentsStripeApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::PaymentsStripeApi->new();
 my $request = KnetikCloud::Object::StripeCreatePaymentMethod->new(); # StripeCreatePaymentMethod | The request to create a Stripe customer with payment info
 
 eval { 
@@ -70,10 +70,10 @@ Pay with a single use token
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsStripeApi;
+my $api_instance = KnetikCloud::PaymentsStripeApi->new(
+);
 
-my $api_instance = KnetikCloud::PaymentsStripeApi->new();
 my $request = KnetikCloud::Object::StripePaymentRequest->new(); # StripePaymentRequest | The request to pay an invoice
 
 eval { 

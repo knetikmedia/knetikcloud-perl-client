@@ -20,13 +20,13 @@ Get a list of available actions
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::BRERuleEngineActionsApi;
+my $api_instance = KnetikCloud::BRERuleEngineActionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::BRERuleEngineActionsApi->new();
 my $filter_category = 'filter_category_example'; # string | Filter for actions that are within a specific category
 my $filter_name = 'filter_name_example'; # string | Filter for actions that have names containing the given string
 my $filter_tags = 'filter_tags_example'; # string | Filter for actions that have all of the given tags (comma separated list)

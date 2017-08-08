@@ -30,13 +30,13 @@ Create a new category
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CategoriesApi;
+my $api_instance = KnetikCloud::CategoriesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CategoriesApi->new();
 my $category = KnetikCloud::Object::CategoryResource->new(); # CategoryResource | The category to create
 
 eval { 
@@ -79,13 +79,13 @@ Templates define a type of category and the properties they have
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CategoriesApi;
+my $api_instance = KnetikCloud::CategoriesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CategoriesApi->new();
 my $template = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The template to create
 
 eval { 
@@ -126,13 +126,13 @@ Delete an existing category
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CategoriesApi;
+my $api_instance = KnetikCloud::CategoriesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CategoriesApi->new();
 my $id = 'id_example'; # string | The id of the category to be deleted
 
 eval { 
@@ -174,13 +174,13 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CategoriesApi;
+my $api_instance = KnetikCloud::CategoriesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CategoriesApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $cascade = 'cascade_example'; # string | The value needed to delete used templates
 
@@ -222,10 +222,10 @@ List and search categories with optional filters
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CategoriesApi;
+my $api_instance = KnetikCloud::CategoriesApi->new(
+);
 
-my $api_instance = KnetikCloud::CategoriesApi->new();
 my $filter_search = 'filter_search_example'; # string | Filter for categories whose names begin with provided string
 my $filter_active = 1; # boolean | Filter for categories that are specifically active or inactive
 my $size = 56; # int | The number of objects returned per page
@@ -274,10 +274,10 @@ Get a single category
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CategoriesApi;
+my $api_instance = KnetikCloud::CategoriesApi->new(
+);
 
-my $api_instance = KnetikCloud::CategoriesApi->new();
 my $id = 'id_example'; # string | The id of the category to retrieve
 
 eval { 
@@ -318,13 +318,13 @@ Get a single category template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CategoriesApi;
+my $api_instance = KnetikCloud::CategoriesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CategoriesApi->new();
 my $id = 'id_example'; # string | The id of the template
 
 eval { 
@@ -365,13 +365,13 @@ List and search category templates
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CategoriesApi;
+my $api_instance = KnetikCloud::CategoriesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CategoriesApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
@@ -416,10 +416,10 @@ List all trivia tags in the system
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CategoriesApi;
+my $api_instance = KnetikCloud::CategoriesApi->new(
+);
 
-my $api_instance = KnetikCloud::CategoriesApi->new();
 my $size = 56; # int | The number of objects returned per page
 my $page = 56; # int | The number of the page returned, starting with 1
 
@@ -462,13 +462,13 @@ Update an existing category
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CategoriesApi;
+my $api_instance = KnetikCloud::CategoriesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CategoriesApi->new();
 my $id = 'id_example'; # string | The id of the category
 my $category = KnetikCloud::Object::CategoryResource->new(); # CategoryResource | The category to update
 
@@ -511,13 +511,13 @@ Update a category template
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::CategoriesApi;
+my $api_instance = KnetikCloud::CategoriesApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::CategoriesApi->new();
 my $id = 'id_example'; # string | The id of the template
 my $template = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The updated template information
 

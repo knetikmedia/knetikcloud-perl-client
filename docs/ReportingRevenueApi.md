@@ -26,13 +26,13 @@ Get basic info about revenue from sales of items and bundles (not subscriptions,
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ReportingRevenueApi;
+my $api_instance = KnetikCloud::ReportingRevenueApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ReportingRevenueApi->new();
 my $currency_code = 'currency_code_example'; # string | The code for a currency to get sales data for
 my $start_date = 789; # int | The start of the time range to aggregate, unix timestamp in seconds. Default is beginning of time
 my $end_date = 789; # int | The end of the time range to aggregate, unix timestamp in seconds. Default is end of time
@@ -79,13 +79,13 @@ Get basic info about revenue loss from refunds (for all item types), summed up w
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ReportingRevenueApi;
+my $api_instance = KnetikCloud::ReportingRevenueApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ReportingRevenueApi->new();
 my $currency_code = 'currency_code_example'; # string | The code for a currency to get refund data for
 my $start_date = 789; # int | The start of the time range to aggregate, unix timestamp in seconds. Default is beginning of time
 my $end_date = 789; # int | The end of the time range to aggregate, unix timestamp in seconds. Default is end of time
@@ -132,13 +132,13 @@ Get basic info about revenue from sales of all types, summed up within a time ra
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ReportingRevenueApi;
+my $api_instance = KnetikCloud::ReportingRevenueApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ReportingRevenueApi->new();
 my $currency_code = 'currency_code_example'; # string | The code for a currency to get sales data for
 my $start_date = 789; # int | The start of the time range to aggregate, unix timestamp in seconds. Default is beginning of time
 my $end_date = 789; # int | The end of the time range to aggregate, unix timestamp in seconds. Default is end of time
@@ -189,13 +189,13 @@ Get basic info about revenue from sales of all types, summed up within a time ra
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ReportingRevenueApi;
+my $api_instance = KnetikCloud::ReportingRevenueApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ReportingRevenueApi->new();
 my $currency_code = 'currency_code_example'; # string | The code for a currency to get sales data for
 my $start_date = 789; # int | The start of the time range to aggregate, unix timestamp in seconds. Default is beginning of time
 my $end_date = 789; # int | The end of the time range to aggregate, unix timestamp in seconds. Default is end of time
@@ -246,13 +246,13 @@ Get basic info about revenue from sales of new subscriptions as well as recurrin
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::ReportingRevenueApi;
+my $api_instance = KnetikCloud::ReportingRevenueApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::ReportingRevenueApi->new();
 my $currency_code = 'currency_code_example'; # string | The code for a currency to get sales data for
 my $start_date = 789; # int | The start of the time range to aggregate, unix timestamp in seconds. Default is beginning of time
 my $end_date = 789; # int | The end of the time range to aggregate, unix timestamp in seconds. Default is end of time

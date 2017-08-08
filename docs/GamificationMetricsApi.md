@@ -22,13 +22,13 @@ Post a new score/stat for an activity occurrence without ending the occurrence i
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::GamificationMetricsApi;
+my $api_instance = KnetikCloud::GamificationMetricsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::GamificationMetricsApi->new();
 my $metric = KnetikCloud::Object::MetricResource->new(); # MetricResource | The new metric
 
 eval { 

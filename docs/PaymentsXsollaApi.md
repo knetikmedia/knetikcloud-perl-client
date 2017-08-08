@@ -21,13 +21,13 @@ Create a payment token that should be used to forward the user to Xsolla so they
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsXsollaApi;
+my $api_instance = KnetikCloud::PaymentsXsollaApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::PaymentsXsollaApi->new();
 my $request = KnetikCloud::Object::XsollaPaymentRequest->new(); # XsollaPaymentRequest | The payment request to be sent to XSolla
 
 eval { 
@@ -70,10 +70,10 @@ Only used by Xsolla to call back to JSAPI after processing user payment action
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::PaymentsXsollaApi;
+my $api_instance = KnetikCloud::PaymentsXsollaApi->new(
+);
 
-my $api_instance = KnetikCloud::PaymentsXsollaApi->new();
 
 eval { 
     $api_instance->receive_xsolla_notification();

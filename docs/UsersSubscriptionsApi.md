@@ -27,13 +27,13 @@ Get details about a user's subscription
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersSubscriptionsApi;
+my $api_instance = KnetikCloud::UsersSubscriptionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersSubscriptionsApi->new();
 my $user_id = 56; # int | The id of the user
 my $inventory_id = 56; # int | The id of the user's inventory
 
@@ -76,13 +76,13 @@ Get details about a user's subscriptions
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersSubscriptionsApi;
+my $api_instance = KnetikCloud::UsersSubscriptionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersSubscriptionsApi->new();
 my $user_id = 56; # int | The id of the user
 
 eval { 
@@ -123,13 +123,13 @@ Reactivate a subscription and charge fee
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersSubscriptionsApi;
+my $api_instance = KnetikCloud::UsersSubscriptionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersSubscriptionsApi->new();
 my $user_id = 56; # int | The id of the user
 my $inventory_id = 56; # int | The id of the user's inventory
 my $reactivate_subscription_request = KnetikCloud::Object::ReactivateSubscriptionRequest->new(); # ReactivateSubscriptionRequest | The reactivate subscription request object inventory
@@ -174,13 +174,13 @@ Set a new date to bill a subscription on
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersSubscriptionsApi;
+my $api_instance = KnetikCloud::UsersSubscriptionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersSubscriptionsApi->new();
 my $user_id = 56; # int | The id of the user
 my $inventory_id = 56; # int | The id of the user's inventory
 my $bill_date = KnetikCloud::Object::int->new(); # int | The new bill date. Unix timestamp in seconds
@@ -226,16 +226,16 @@ May send null to use floating default
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersSubscriptionsApi;
+my $api_instance = KnetikCloud::UsersSubscriptionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersSubscriptionsApi->new();
 my $user_id = 56; # int | The id of the user
 my $inventory_id = 56; # int | The id of the user's inventory
-my $payment_method_id = KnetikCloud::Object::int->new(); # int | The id of the payment method
+my $payment_method_id = KnetikCloud::Object::IntWrapper->new(); # IntWrapper | The id of the payment method
 
 eval { 
     $api_instance->set_subscription_payment_method(user_id => $user_id, inventory_id => $inventory_id, payment_method_id => $payment_method_id);
@@ -251,7 +251,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**| The id of the user | 
  **inventory_id** | **int**| The id of the user&#39;s inventory | 
- **payment_method_id** | **int**| The id of the payment method | [optional] 
+ **payment_method_id** | [**IntWrapper**](IntWrapper.md)| The id of the payment method | [optional] 
 
 ### Return type
 
@@ -273,21 +273,21 @@ void (empty response body)
 
 Set the status of a subscription
 
-The body is a json string (put in quotes) that should match a desired invoice status type. Note that the new status may be blocked if the system is not configured to allow the current status to be changed to the new, to enforce proper flow. The default options for statuses are shown below but may be altered for special use cases
+Note that the new status may be blocked if the system is not configured to allow the current status to be changed to the new, to enforce proper flow. The default options for statuses are shown below but may be altered for special use cases
 
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersSubscriptionsApi;
+my $api_instance = KnetikCloud::UsersSubscriptionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersSubscriptionsApi->new();
 my $user_id = 56; # int | The id of the user
 my $inventory_id = 56; # int | The id of the user's inventory
-my $status = KnetikCloud::Object::string->new(); # string | The new status for the subscription. Actual options may differ from the indicated set if the invoice status type data has been altered.  Allowable values: ('current', 'canceled', 'stopped', 'payment_failed', 'suspended')
+my $status = KnetikCloud::Object::StringWrapper->new(); # StringWrapper | The new status for the subscription. Actual options may differ from the indicated set if the invoice status type data has been altered.  Allowable values: ('current', 'canceled', 'stopped', 'payment_failed', 'suspended')
 
 eval { 
     $api_instance->set_subscription_status(user_id => $user_id, inventory_id => $inventory_id, status => $status);
@@ -303,7 +303,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**| The id of the user | 
  **inventory_id** | **int**| The id of the user&#39;s inventory | 
- **status** | **string**| The new status for the subscription. Actual options may differ from the indicated set if the invoice status type data has been altered.  Allowable values: (&#39;current&#39;, &#39;canceled&#39;, &#39;stopped&#39;, &#39;payment_failed&#39;, &#39;suspended&#39;) | 
+ **status** | [**StringWrapper**](StringWrapper.md)| The new status for the subscription. Actual options may differ from the indicated set if the invoice status type data has been altered.  Allowable values: (&#39;current&#39;, &#39;canceled&#39;, &#39;stopped&#39;, &#39;payment_failed&#39;, &#39;suspended&#39;) | 
 
 ### Return type
 
@@ -328,16 +328,16 @@ Set a new subscription plan for a user
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersSubscriptionsApi;
+my $api_instance = KnetikCloud::UsersSubscriptionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersSubscriptionsApi->new();
 my $user_id = 56; # int | The id of the user
 my $inventory_id = 56; # int | The id of the user's inventory
-my $plan_id = KnetikCloud::Object::string->new(); # string | The id of the new plan. Must be from the same subscription
+my $plan_id = KnetikCloud::Object::StringWrapper->new(); # StringWrapper | The id of the new plan. Must be from the same subscription
 
 eval { 
     $api_instance->set_user_subscription_plan(user_id => $user_id, inventory_id => $inventory_id, plan_id => $plan_id);
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **int**| The id of the user | 
  **inventory_id** | **int**| The id of the user&#39;s inventory | 
- **plan_id** | **string**| The id of the new plan. Must be from the same subscription | [optional] 
+ **plan_id** | [**StringWrapper**](StringWrapper.md)| The id of the new plan. Must be from the same subscription | [optional] 
 
 ### Return type
 
@@ -380,13 +380,13 @@ This new price will be what the user is charged at the begining of each new peri
 ### Example 
 ```perl
 use Data::Dumper;
-use KnetikCloud::Configuration;
 use KnetikCloud::UsersSubscriptionsApi;
+my $api_instance = KnetikCloud::UsersSubscriptionsApi->new(
 
-# Configure OAuth2 access token for authorization: OAuth2
-$KnetikCloud::Configuration::access_token = 'YOUR_ACCESS_TOKEN';
+    # Configure OAuth2 access token for authorization: OAuth2
+    access_token => 'YOUR_ACCESS_TOKEN',
+);
 
-my $api_instance = KnetikCloud::UsersSubscriptionsApi->new();
 my $user_id = 56; # int | The id of the user
 my $inventory_id = 56; # int | The id of the user's inventory
 my $the override details = KnetikCloud::Object::SubscriptionPriceOverrideRequest->new(); # SubscriptionPriceOverrideRequest | override

@@ -25,9 +25,6 @@ Delete maintenance info
 use Data::Dumper;
 use KnetikCloud::UtilMaintenanceApi;
 my $api_instance = KnetikCloud::UtilMaintenanceApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 
@@ -48,7 +45,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -109,9 +106,6 @@ Set current maintenance info
 use Data::Dumper;
 use KnetikCloud::UtilMaintenanceApi;
 my $api_instance = KnetikCloud::UtilMaintenanceApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $maintenance = KnetikCloud::Object::Maintenance->new(); # Maintenance | The maintenance object
@@ -136,7 +130,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -155,9 +149,6 @@ Update current maintenance info
 use Data::Dumper;
 use KnetikCloud::UtilMaintenanceApi;
 my $api_instance = KnetikCloud::UtilMaintenanceApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $maintenance = KnetikCloud::Object::Maintenance->new(); # Maintenance | The maintenance object
@@ -182,7 +173,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

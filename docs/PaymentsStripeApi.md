@@ -25,9 +25,6 @@ Stores customer information and creates a payment method that can be used to pay
 use Data::Dumper;
 use KnetikCloud::PaymentsStripeApi;
 my $api_instance = KnetikCloud::PaymentsStripeApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $request = KnetikCloud::Object::StripeCreatePaymentMethod->new(); # StripeCreatePaymentMethod | The request to create a Stripe customer with payment info
@@ -53,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

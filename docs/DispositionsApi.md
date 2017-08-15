@@ -26,9 +26,6 @@ Add a new disposition
 use Data::Dumper;
 use KnetikCloud::DispositionsApi;
 my $api_instance = KnetikCloud::DispositionsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $disposition = KnetikCloud::Object::DispositionResource->new(); # DispositionResource | The new disposition record
@@ -54,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -73,9 +70,6 @@ Delete a disposition
 use Data::Dumper;
 use KnetikCloud::DispositionsApi;
 my $api_instance = KnetikCloud::DispositionsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 789; # int | The id of the disposition record
@@ -100,7 +94,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

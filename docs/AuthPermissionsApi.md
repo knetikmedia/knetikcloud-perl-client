@@ -26,9 +26,6 @@ Create a new permission
 use Data::Dumper;
 use KnetikCloud::AuthPermissionsApi;
 my $api_instance = KnetikCloud::AuthPermissionsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $permission_resource = KnetikCloud::Object::PermissionResource->new(); # PermissionResource | The permission resource object
@@ -54,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -73,9 +70,6 @@ Delete a permission
 use Data::Dumper;
 use KnetikCloud::AuthPermissionsApi;
 my $api_instance = KnetikCloud::AuthPermissionsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $permission = 'permission_example'; # string | The permission value
@@ -102,7 +96,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -121,9 +115,6 @@ Get a single permission
 use Data::Dumper;
 use KnetikCloud::AuthPermissionsApi;
 my $api_instance = KnetikCloud::AuthPermissionsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $permission = 'permission_example'; # string | The permission value
@@ -149,7 +140,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -168,9 +159,6 @@ List and search permissions
 use Data::Dumper;
 use KnetikCloud::AuthPermissionsApi;
 my $api_instance = KnetikCloud::AuthPermissionsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -200,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -219,9 +207,6 @@ Update a permission
 use Data::Dumper;
 use KnetikCloud::AuthPermissionsApi;
 my $api_instance = KnetikCloud::AuthPermissionsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $permission = 'permission_example'; # string | The permission value
@@ -249,7 +234,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

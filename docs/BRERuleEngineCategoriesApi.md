@@ -31,9 +31,6 @@ Templates define a type of BRE category and the properties they have
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineCategoriesApi;
 my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $template = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The category template to create
@@ -59,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -80,9 +77,6 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineCategoriesApi;
 my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -109,7 +103,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -128,9 +122,6 @@ List categories
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineCategoriesApi;
 my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -158,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -177,9 +168,6 @@ Get a single category
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineCategoriesApi;
 my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $name = 'name_example'; # string | The category name
@@ -205,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -224,9 +212,6 @@ Get a single BRE category template
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineCategoriesApi;
 my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -252,7 +237,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -271,9 +256,6 @@ List and search BRE category templates
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineCategoriesApi;
 my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -303,7 +285,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -322,9 +304,6 @@ Update a category
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineCategoriesApi;
 my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $name = 'name_example'; # string | The category name
@@ -352,7 +331,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -371,9 +350,6 @@ Update a BRE category template
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineCategoriesApi;
 my $api_instance = KnetikCloud::BRERuleEngineCategoriesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -401,7 +377,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

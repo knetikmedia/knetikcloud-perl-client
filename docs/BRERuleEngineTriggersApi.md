@@ -28,9 +28,6 @@ Customer added triggers will not be fired automatically or have rules associated
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineTriggersApi;
 my $api_instance = KnetikCloud::BRERuleEngineTriggersApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $bre_trigger_resource = KnetikCloud::Object::BreTriggerResource->new(); # BreTriggerResource | The BRE trigger resource object
@@ -56,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -77,9 +74,6 @@ May fail if there are existing rules against it. Cannot delete core triggers
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineTriggersApi;
 my $api_instance = KnetikCloud::BRERuleEngineTriggersApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $event_name = 'event_name_example'; # string | The trigger event name
@@ -104,7 +98,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -123,9 +117,6 @@ Get a single trigger
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineTriggersApi;
 my $api_instance = KnetikCloud::BRERuleEngineTriggersApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $event_name = 'event_name_example'; # string | The trigger event name
@@ -151,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -170,9 +161,6 @@ List triggers
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineTriggersApi;
 my $api_instance = KnetikCloud::BRERuleEngineTriggersApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_system = 1; # boolean | Filter for triggers that are system triggers when true, or not when false. Leave off for both mixed
@@ -210,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -231,9 +219,6 @@ May fail if new parameters mismatch requirements of existing rules. Cannot updat
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineTriggersApi;
 my $api_instance = KnetikCloud::BRERuleEngineTriggersApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $event_name = 'event_name_example'; # string | The trigger event name
@@ -261,7 +246,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

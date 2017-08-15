@@ -24,9 +24,6 @@ Get the details for a single transaction
 use Data::Dumper;
 use KnetikCloud::PaymentsTransactionsApi;
 my $api_instance = KnetikCloud::PaymentsTransactionsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | id
@@ -52,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -71,9 +68,6 @@ List and search transactions
 use Data::Dumper;
 use KnetikCloud::PaymentsTransactionsApi;
 my $api_instance = KnetikCloud::PaymentsTransactionsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_invoice = 56; # int | Filter for transactions from a specific invoice
@@ -105,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -126,9 +120,6 @@ Will not allow for refunding more than the full amount even with multiple partia
 use Data::Dumper;
 use KnetikCloud::PaymentsTransactionsApi;
 my $api_instance = KnetikCloud::PaymentsTransactionsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the transaction to refund
@@ -156,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

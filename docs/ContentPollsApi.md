@@ -33,9 +33,6 @@ Add your vote to a poll
 use Data::Dumper;
 use KnetikCloud::ContentPollsApi;
 my $api_instance = KnetikCloud::ContentPollsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The poll id
@@ -63,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -84,9 +81,6 @@ Polls are blobs of text with titles, a category and assets. Formatting and displ
 use Data::Dumper;
 use KnetikCloud::ContentPollsApi;
 my $api_instance = KnetikCloud::ContentPollsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $poll_resource = KnetikCloud::Object::PollResource->new(); # PollResource | The poll object
@@ -112,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -133,9 +127,6 @@ Poll templates define a type of poll and the properties they have
 use Data::Dumper;
 use KnetikCloud::ContentPollsApi;
 my $api_instance = KnetikCloud::ContentPollsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $poll_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The poll template resource object
@@ -161,7 +152,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -180,9 +171,6 @@ Delete an existing poll
 use Data::Dumper;
 use KnetikCloud::ContentPollsApi;
 my $api_instance = KnetikCloud::ContentPollsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The poll id
@@ -207,7 +195,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -228,9 +216,6 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 use Data::Dumper;
 use KnetikCloud::ContentPollsApi;
 my $api_instance = KnetikCloud::ContentPollsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -257,7 +242,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -320,9 +305,6 @@ Get poll answer
 use Data::Dumper;
 use KnetikCloud::ContentPollsApi;
 my $api_instance = KnetikCloud::ContentPollsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The poll id
@@ -348,7 +330,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -367,9 +349,6 @@ Get a single poll template
 use Data::Dumper;
 use KnetikCloud::ContentPollsApi;
 my $api_instance = KnetikCloud::ContentPollsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -395,7 +374,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -414,9 +393,6 @@ List and search poll templates
 use Data::Dumper;
 use KnetikCloud::ContentPollsApi;
 my $api_instance = KnetikCloud::ContentPollsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -446,7 +422,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -521,9 +497,6 @@ Update an existing poll
 use Data::Dumper;
 use KnetikCloud::ContentPollsApi;
 my $api_instance = KnetikCloud::ContentPollsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The poll id
@@ -551,7 +524,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -570,9 +543,6 @@ Update a poll template
 use Data::Dumper;
 use KnetikCloud::ContentPollsApi;
 my $api_instance = KnetikCloud::ContentPollsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -600,7 +570,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

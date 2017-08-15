@@ -22,9 +22,6 @@ Get a list of available subscription reports in most recent first order
 use Data::Dumper;
 use KnetikCloud::ReportingSubscriptionsApi;
 my $api_instance = KnetikCloud::ReportingSubscriptionsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -52,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

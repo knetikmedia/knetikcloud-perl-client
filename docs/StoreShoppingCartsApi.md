@@ -34,9 +34,6 @@ Adds a custom discount to the cart
 use Data::Dumper;
 use KnetikCloud::StoreShoppingCartsApi;
 my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the cart
@@ -63,7 +60,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -82,9 +79,6 @@ Adds a discount coupon to the cart
 use Data::Dumper;
 use KnetikCloud::StoreShoppingCartsApi;
 my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the cart
@@ -111,7 +105,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -132,9 +126,6 @@ Currently, carts cannot contain virtual and real currency items at the same time
 use Data::Dumper;
 use KnetikCloud::StoreShoppingCartsApi;
 my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the cart
@@ -161,7 +152,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -182,9 +173,6 @@ You don't have to have a user to create a cart but the API requires authenticati
 use Data::Dumper;
 use KnetikCloud::StoreShoppingCartsApi;
 my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $owner = 56; # int | Set the owner of a cart. If not specified, defaults to the calling user's id. If specified and is not the calling user's id, SHOPPING_CARTS_ADMIN permission is required
@@ -212,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -231,9 +219,6 @@ Returns the cart with the given GUID
 use Data::Dumper;
 use KnetikCloud::StoreShoppingCartsApi;
 my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the cart
@@ -259,7 +244,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -278,9 +263,6 @@ Get a list of carts
 use Data::Dumper;
 use KnetikCloud::StoreShoppingCartsApi;
 my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_owner_id = 56; # int | Filter by the id of the owner
@@ -312,7 +294,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -331,9 +313,6 @@ Returns whether a cart requires shipping
 use Data::Dumper;
 use KnetikCloud::StoreShoppingCartsApi;
 my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the cart
@@ -359,7 +338,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -380,9 +359,6 @@ Since a cart can have multiple vendors with different shipping options, the coun
 use Data::Dumper;
 use KnetikCloud::StoreShoppingCartsApi;
 my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the cart
@@ -408,7 +384,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -427,9 +403,6 @@ Removes a discount coupon from the cart
 use Data::Dumper;
 use KnetikCloud::StoreShoppingCartsApi;
 my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the cart
@@ -456,7 +429,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -477,9 +450,6 @@ May be disallowed by site settings.
 use Data::Dumper;
 use KnetikCloud::StoreShoppingCartsApi;
 my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the cart
@@ -506,7 +476,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -525,9 +495,6 @@ Sets the owner of a cart if none is set already
 use Data::Dumper;
 use KnetikCloud::StoreShoppingCartsApi;
 my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the cart
@@ -554,7 +521,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -575,9 +542,6 @@ A quantity of zero will remove the item from the cart altogether.
 use Data::Dumper;
 use KnetikCloud::StoreShoppingCartsApi;
 my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the cart
@@ -604,7 +568,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -623,9 +587,6 @@ Modifies or sets the order shipping address
 use Data::Dumper;
 use KnetikCloud::StoreShoppingCartsApi;
 my $api_instance = KnetikCloud::StoreShoppingCartsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the cart
@@ -652,7 +613,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

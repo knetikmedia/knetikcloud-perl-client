@@ -95,7 +95,7 @@ sub create_invoice {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -211,7 +211,7 @@ sub get_invoice {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -300,7 +300,7 @@ sub get_invoice_logs {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -536,7 +536,7 @@ sub get_invoices {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -663,7 +663,7 @@ sub pay_invoice {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     $self->{api_client}->call_api($_resource_path, $_method,
@@ -778,7 +778,7 @@ sub set_bundled_invoice_item_fulfillment_status {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     $self->{api_client}->call_api($_resource_path, $_method,
@@ -852,7 +852,7 @@ sub set_external_ref {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     $self->{api_client}->call_api($_resource_path, $_method,
@@ -949,7 +949,7 @@ sub set_invoice_item_fulfillment_status {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     $self->{api_client}->call_api($_resource_path, $_method,
@@ -1023,7 +1023,7 @@ sub set_order_notes {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     $self->{api_client}->call_api($_resource_path, $_method,
@@ -1097,7 +1097,7 @@ sub set_payment_status {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     $self->{api_client}->call_api($_resource_path, $_method,
@@ -1171,7 +1171,7 @@ sub update_billing_info {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     $self->{api_client}->call_api($_resource_path, $_method,

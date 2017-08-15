@@ -29,9 +29,6 @@ Add device users
 use Data::Dumper;
 use KnetikCloud::DevicesApi;
 my $api_instance = KnetikCloud::DevicesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_resources = [KnetikCloud::Object::ARRAY[SimpleUserResource]->new()]; # ARRAY[SimpleUserResource] | userResources
@@ -59,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -78,9 +75,6 @@ Create a device
 use Data::Dumper;
 use KnetikCloud::DevicesApi;
 my $api_instance = KnetikCloud::DevicesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $device = KnetikCloud::Object::DeviceResource->new(); # DeviceResource | device
@@ -106,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -125,9 +119,6 @@ Delete a device
 use Data::Dumper;
 use KnetikCloud::DevicesApi;
 my $api_instance = KnetikCloud::DevicesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | id
@@ -152,7 +143,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -171,9 +162,6 @@ Delete a device user
 use Data::Dumper;
 use KnetikCloud::DevicesApi;
 my $api_instance = KnetikCloud::DevicesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the device
@@ -200,7 +188,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -219,9 +207,6 @@ Delete all device users
 use Data::Dumper;
 use KnetikCloud::DevicesApi;
 my $api_instance = KnetikCloud::DevicesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the device
@@ -248,7 +233,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -267,9 +252,6 @@ Get a single device
 use Data::Dumper;
 use KnetikCloud::DevicesApi;
 my $api_instance = KnetikCloud::DevicesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | id
@@ -295,7 +277,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -316,9 +298,6 @@ Get a list of devices with optional filtering
 use Data::Dumper;
 use KnetikCloud::DevicesApi;
 my $api_instance = KnetikCloud::DevicesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_make = 'filter_make_example'; # string | Filter for devices with specified make
@@ -352,7 +331,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -371,9 +350,6 @@ Update a device
 use Data::Dumper;
 use KnetikCloud::DevicesApi;
 my $api_instance = KnetikCloud::DevicesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $device = KnetikCloud::Object::DeviceResource->new(); # DeviceResource | device
@@ -401,7 +377,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

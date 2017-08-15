@@ -27,9 +27,6 @@ Returns aggregated endpoint usage information by day
 use Data::Dumper;
 use KnetikCloud::ReportingUsageApi;
 my $api_instance = KnetikCloud::ReportingUsageApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $start_date = 789; # int | The beginning of the range being requested, unix timestamp in seconds
@@ -67,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -86,9 +83,6 @@ Returns aggregated endpoint usage information by hour
 use Data::Dumper;
 use KnetikCloud::ReportingUsageApi;
 my $api_instance = KnetikCloud::ReportingUsageApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $start_date = 789; # int | The beginning of the range being requested, unix timestamp in seconds
@@ -126,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -145,9 +139,6 @@ Returns aggregated endpoint usage information by minute
 use Data::Dumper;
 use KnetikCloud::ReportingUsageApi;
 my $api_instance = KnetikCloud::ReportingUsageApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $start_date = 789; # int | The beginning of the range being requested, unix timestamp in seconds
@@ -185,7 +176,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -204,9 +195,6 @@ Returns aggregated endpoint usage information by month
 use Data::Dumper;
 use KnetikCloud::ReportingUsageApi;
 my $api_instance = KnetikCloud::ReportingUsageApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $start_date = 789; # int | The beginning of the range being requested, unix timestamp in seconds
@@ -244,7 +232,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -263,9 +251,6 @@ Returns aggregated endpoint usage information by year
 use Data::Dumper;
 use KnetikCloud::ReportingUsageApi;
 my $api_instance = KnetikCloud::ReportingUsageApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $start_date = 789; # int | The beginning of the range being requested, unix timestamp in seconds
@@ -303,7 +288,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -322,9 +307,6 @@ Returns list of endpoints called (method and url)
 use Data::Dumper;
 use KnetikCloud::ReportingUsageApi;
 my $api_instance = KnetikCloud::ReportingUsageApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $start_date = 789; # int | The beginning of the range being requested, unix timestamp in seconds
@@ -352,7 +334,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

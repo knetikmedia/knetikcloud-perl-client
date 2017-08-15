@@ -95,7 +95,7 @@ sub create_config {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -162,7 +162,7 @@ sub delete_config {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     $self->{api_client}->call_api($_resource_path, $_method,
@@ -225,7 +225,7 @@ sub get_config {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -318,7 +318,7 @@ sub get_configs {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -396,7 +396,7 @@ sub update_config {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     $self->{api_client}->call_api($_resource_path, $_method,

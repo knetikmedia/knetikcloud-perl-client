@@ -95,7 +95,7 @@ sub link_accounts1 {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     $self->{api_client}->call_api($_resource_path, $_method,

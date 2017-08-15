@@ -41,9 +41,6 @@ If the definition contains a trigger event name, a BRE rule is created, so that 
 use Data::Dumper;
 use KnetikCloud::GamificationAchievementsApi;
 my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $achievement = KnetikCloud::Object::AchievementDefinitionResource->new(); # AchievementDefinitionResource | The achievement definition
@@ -69,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -90,9 +87,6 @@ Achievement templates define a type of achievement and the properties they have
 use Data::Dumper;
 use KnetikCloud::GamificationAchievementsApi;
 my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $template = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The achievement template to be created
@@ -118,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -139,9 +133,6 @@ Will also disable the associated generated rule, if any.
 use Data::Dumper;
 use KnetikCloud::GamificationAchievementsApi;
 my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $name = 'name_example'; # string | The name of the achievement
@@ -166,7 +157,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -187,9 +178,6 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 use Data::Dumper;
 use KnetikCloud::GamificationAchievementsApi;
 my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -216,7 +204,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -235,9 +223,6 @@ Get a single achievement definition
 use Data::Dumper;
 use KnetikCloud::GamificationAchievementsApi;
 my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $name = 'name_example'; # string | The name of the achievement
@@ -263,7 +248,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -282,9 +267,6 @@ Get a single achievement template
 use Data::Dumper;
 use KnetikCloud::GamificationAchievementsApi;
 my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -310,7 +292,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -329,9 +311,6 @@ List and search achievement templates
 use Data::Dumper;
 use KnetikCloud::GamificationAchievementsApi;
 my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -361,7 +340,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -380,9 +359,6 @@ Get the list of triggers that can be used to trigger an achievement progress upd
 use Data::Dumper;
 use KnetikCloud::GamificationAchievementsApi;
 my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 
@@ -404,7 +380,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -423,9 +399,6 @@ Get all achievement definitions in the system
 use Data::Dumper;
 use KnetikCloud::GamificationAchievementsApi;
 my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_tagset = 'filter_tagset_example'; # string | Filter for achievements with specified tags (separated by comma)
@@ -463,7 +436,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -484,9 +457,6 @@ Used by other services that depend on achievements
 use Data::Dumper;
 use KnetikCloud::GamificationAchievementsApi;
 my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $name = 'name_example'; # string | The name of the derived achievement
@@ -512,7 +482,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -533,9 +503,6 @@ Assets will not be filled in on the resources returned. Use 'Get a single poll' 
 use Data::Dumper;
 use KnetikCloud::GamificationAchievementsApi;
 my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The user's id
@@ -563,7 +530,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -584,9 +551,6 @@ Assets will not be filled in on the resources returned. Use 'Get a single poll' 
 use Data::Dumper;
 use KnetikCloud::GamificationAchievementsApi;
 my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The user's id
@@ -622,7 +586,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -643,9 +607,6 @@ Assets will not be filled in on the resources returned. Use 'Get single achievem
 use Data::Dumper;
 use KnetikCloud::GamificationAchievementsApi;
 my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $achievement_name = 'achievement_name_example'; # string | The achievement's name
@@ -681,7 +642,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -702,9 +663,6 @@ Assets will not be filled in on the resources returned. Use 'Get single achievem
 use Data::Dumper;
 use KnetikCloud::GamificationAchievementsApi;
 my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_achievement_derived = 1; # boolean | Filter for achievements that are derived from other services
@@ -738,7 +696,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -759,9 +717,6 @@ If no progress record yet exists for the user, it will be created. Otherwise it 
 use Data::Dumper;
 use KnetikCloud::GamificationAchievementsApi;
 my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The user's id
@@ -791,7 +746,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -812,9 +767,6 @@ If no progress record yet exists for the user, it will be created. Otherwise it 
 use Data::Dumper;
 use KnetikCloud::GamificationAchievementsApi;
 my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The user's id
@@ -844,7 +796,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -865,9 +817,6 @@ The existing generated rule, if any, will be deleted. A new rule will be created
 use Data::Dumper;
 use KnetikCloud::GamificationAchievementsApi;
 my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $name = 'name_example'; # string | The name of the achievement
@@ -895,7 +844,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -914,9 +863,6 @@ Update an achievement template
 use Data::Dumper;
 use KnetikCloud::GamificationAchievementsApi;
 my $api_instance = KnetikCloud::GamificationAchievementsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -944,7 +890,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

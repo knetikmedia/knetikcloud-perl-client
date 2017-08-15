@@ -31,9 +31,6 @@ Create a vendor
 use Data::Dumper;
 use KnetikCloud::StoreVendorsApi;
 my $api_instance = KnetikCloud::StoreVendorsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $vendor = KnetikCloud::Object::VendorResource->new(); # VendorResource | The vendor
@@ -59,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -80,9 +77,6 @@ Vendor Templates define a type of vendor and the properties they have.
 use Data::Dumper;
 use KnetikCloud::StoreVendorsApi;
 my $api_instance = KnetikCloud::StoreVendorsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $vendor_template_resource = KnetikCloud::Object::ItemTemplateResource->new(); # ItemTemplateResource | The new vendor template
@@ -108,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -127,9 +121,6 @@ Delete a vendor
 use Data::Dumper;
 use KnetikCloud::StoreVendorsApi;
 my $api_instance = KnetikCloud::StoreVendorsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the vendor
@@ -154,7 +145,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -173,9 +164,6 @@ Delete a vendor template
 use Data::Dumper;
 use KnetikCloud::StoreVendorsApi;
 my $api_instance = KnetikCloud::StoreVendorsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -202,7 +190,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -267,9 +255,6 @@ Vendor Templates define a type of vendor and the properties they have.
 use Data::Dumper;
 use KnetikCloud::StoreVendorsApi;
 my $api_instance = KnetikCloud::StoreVendorsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -295,7 +280,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -314,9 +299,6 @@ List and search vendor templates
 use Data::Dumper;
 use KnetikCloud::StoreVendorsApi;
 my $api_instance = KnetikCloud::StoreVendorsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -346,7 +328,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -415,9 +397,6 @@ Update a vendor
 use Data::Dumper;
 use KnetikCloud::StoreVendorsApi;
 my $api_instance = KnetikCloud::StoreVendorsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the vendor
@@ -445,7 +424,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -464,9 +443,6 @@ Update a vendor template
 use Data::Dumper;
 use KnetikCloud::StoreVendorsApi;
 my $api_instance = KnetikCloud::StoreVendorsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -494,7 +470,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

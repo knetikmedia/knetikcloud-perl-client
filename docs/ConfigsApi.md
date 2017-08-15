@@ -26,9 +26,6 @@ Create a new config
 use Data::Dumper;
 use KnetikCloud::ConfigsApi;
 my $api_instance = KnetikCloud::ConfigsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $config = KnetikCloud::Object::Config->new(); # Config | The config object
@@ -54,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -73,9 +70,6 @@ Delete an existing config
 use Data::Dumper;
 use KnetikCloud::ConfigsApi;
 my $api_instance = KnetikCloud::ConfigsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $name = 'name_example'; # string | The config name
@@ -100,7 +94,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -121,9 +115,6 @@ Only configs that are public readable will be shown without admin access
 use Data::Dumper;
 use KnetikCloud::ConfigsApi;
 my $api_instance = KnetikCloud::ConfigsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $name = 'name_example'; # string | The config name
@@ -149,7 +140,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -168,9 +159,6 @@ List and search configs
 use Data::Dumper;
 use KnetikCloud::ConfigsApi;
 my $api_instance = KnetikCloud::ConfigsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_search = 'filter_search_example'; # string | Filter for configs whose name contains the given string
@@ -202,7 +190,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -221,9 +209,6 @@ Update an existing config
 use Data::Dumper;
 use KnetikCloud::ConfigsApi;
 my $api_instance = KnetikCloud::ConfigsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $name = 'name_example'; # string | The config name
@@ -250,7 +235,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

@@ -32,9 +32,6 @@ SKUs have to be unique in the entire store.
 use Data::Dumper;
 use KnetikCloud::StoreCouponsApi;
 my $api_instance = KnetikCloud::StoreCouponsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $cascade = 1; # boolean | Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values.
@@ -62,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -83,9 +80,6 @@ Coupon Templates define a type of coupon and the properties they have.
 use Data::Dumper;
 use KnetikCloud::StoreCouponsApi;
 my $api_instance = KnetikCloud::StoreCouponsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $coupon_template_resource = KnetikCloud::Object::ItemTemplateResource->new(); # ItemTemplateResource | The new coupon template
@@ -111,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -130,9 +124,6 @@ Delete a coupon item
 use Data::Dumper;
 use KnetikCloud::StoreCouponsApi;
 my $api_instance = KnetikCloud::StoreCouponsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the coupon
@@ -157,7 +148,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -176,9 +167,6 @@ Delete a coupon template
 use Data::Dumper;
 use KnetikCloud::StoreCouponsApi;
 my $api_instance = KnetikCloud::StoreCouponsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -205,7 +193,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -224,9 +212,6 @@ Get a single coupon item
 use Data::Dumper;
 use KnetikCloud::StoreCouponsApi;
 my $api_instance = KnetikCloud::StoreCouponsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the coupon
@@ -252,7 +237,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -273,9 +258,6 @@ Coupon Templates define a type of coupon and the properties they have.
 use Data::Dumper;
 use KnetikCloud::StoreCouponsApi;
 my $api_instance = KnetikCloud::StoreCouponsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -301,7 +283,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -320,9 +302,6 @@ List and search coupon templates
 use Data::Dumper;
 use KnetikCloud::StoreCouponsApi;
 my $api_instance = KnetikCloud::StoreCouponsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -352,7 +331,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -371,9 +350,6 @@ Update a coupon item
 use Data::Dumper;
 use KnetikCloud::StoreCouponsApi;
 my $api_instance = KnetikCloud::StoreCouponsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the coupon
@@ -403,7 +379,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -422,9 +398,6 @@ Update a coupon template
 use Data::Dumper;
 use KnetikCloud::StoreCouponsApi;
 my $api_instance = KnetikCloud::StoreCouponsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -452,7 +425,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

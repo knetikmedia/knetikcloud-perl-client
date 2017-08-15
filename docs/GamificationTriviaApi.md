@@ -51,9 +51,6 @@ Add an answer to a question
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $question_id = 'question_id_example'; # string | The id of the question
@@ -81,7 +78,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -100,9 +97,6 @@ Add a tag to a question
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the question
@@ -129,7 +123,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -150,9 +144,6 @@ All questions that dont't have the tag and match filters will have it added. The
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $tag = KnetikCloud::Object::StringWrapper->new(); # StringWrapper | The tag to add
@@ -194,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -215,9 +206,6 @@ Set up a job to import a set of trivia questions from a cvs file at a remote url
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $request = KnetikCloud::Object::ImportJobResource->new(); # ImportJobResource | The new import job
@@ -243,7 +231,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -262,9 +250,6 @@ Create a question
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $question = KnetikCloud::Object::QuestionResource->new(); # QuestionResource | The new question
@@ -290,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -311,9 +296,6 @@ Question templates define a type of question and the properties they have
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $question_template_resource = KnetikCloud::Object::QuestionTemplateResource->new(); # QuestionTemplateResource | The question template resource object
@@ -339,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -360,9 +342,6 @@ Also deletes all questions that were imported by it
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 789; # int | The id of the job
@@ -387,7 +366,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -406,9 +385,6 @@ Delete a question
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the question
@@ -433,7 +409,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -452,9 +428,6 @@ Remove an answer from a question
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $question_id = 'question_id_example'; # string | The id of the question
@@ -481,7 +454,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -502,9 +475,6 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -531,7 +501,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -550,9 +520,6 @@ Get an import job
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 789; # int | The id of the job
@@ -578,7 +545,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -597,9 +564,6 @@ Get a list of import job
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_vendor = 'filter_vendor_example'; # string | Filter for jobs by vendor id
@@ -637,7 +601,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -656,9 +620,6 @@ Get a single question
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the question
@@ -684,7 +645,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -703,9 +664,6 @@ Get an answer for a question
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $question_id = 'question_id_example'; # string | The id of the question
@@ -733,7 +691,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -752,9 +710,6 @@ List the answers available for a question
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $question_id = 'question_id_example'; # string | The id of the question
@@ -780,7 +735,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -801,9 +756,6 @@ The 'since' parameter is important to avoid getting a full list of all questions
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $since = 789; # int | Timestamp in seconds
@@ -829,7 +781,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -848,9 +800,6 @@ List the tags for a question
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the question
@@ -876,7 +825,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -895,9 +844,6 @@ Get a single question template
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -923,7 +869,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -942,9 +888,6 @@ List and search question templates
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -974,7 +917,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -993,9 +936,6 @@ List and search questions
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -1041,7 +981,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1062,9 +1002,6 @@ This is also provided by the list endpoint so you don't need to call this for pa
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_search = 'filter_search_example'; # string | Filter for documents whose question, answers or tags contains provided string
@@ -1102,7 +1039,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1123,9 +1060,6 @@ Will process the CSV file and add new questions asynchronously. The status of th
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 789; # int | The id of the job
@@ -1153,7 +1087,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1172,9 +1106,6 @@ Remove a tag from a question
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the question
@@ -1201,7 +1132,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1222,9 +1153,6 @@ ll questions that have the tag and match filters will have it removed. The retur
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $tag = 'tag_example'; # string | The tag to remove
@@ -1266,7 +1194,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1287,9 +1215,6 @@ For performance reasons, search & category filters are mutually exclusive. If ca
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_search = 'filter_search_example'; # string | Filter for tags starting with the given text
@@ -1319,7 +1244,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1340,9 +1265,6 @@ Changes should be made before process is started for there to be any effect.
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 789; # int | The id of the job
@@ -1370,7 +1292,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1389,9 +1311,6 @@ Update a question
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the question
@@ -1419,7 +1338,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1438,9 +1357,6 @@ Update an answer for a question
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $question_id = 'question_id_example'; # string | The id of the question
@@ -1469,7 +1385,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1488,9 +1404,6 @@ Update a question template
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -1518,7 +1431,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1539,9 +1452,6 @@ Will update all questions that match filters used (or all questions in system if
 use Data::Dumper;
 use KnetikCloud::GamificationTriviaApi;
 my $api_instance = KnetikCloud::GamificationTriviaApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $question = KnetikCloud::Object::QuestionResource->new(); # QuestionResource | New values for a set of question fields
@@ -1581,7 +1491,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

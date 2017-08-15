@@ -33,9 +33,6 @@ Articles are blobs of text with titles, a category and assets. Formatting and di
 use Data::Dumper;
 use KnetikCloud::ContentArticlesApi;
 my $api_instance = KnetikCloud::ContentArticlesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $article_resource = KnetikCloud::Object::ArticleResource->new(); # ArticleResource | The new article
@@ -61,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -82,9 +79,6 @@ Article Templates define a type of article and the properties they have
 use Data::Dumper;
 use KnetikCloud::ContentArticlesApi;
 my $api_instance = KnetikCloud::ContentArticlesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $article_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The article template resource object
@@ -110,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -129,9 +123,6 @@ Delete an existing article
 use Data::Dumper;
 use KnetikCloud::ContentArticlesApi;
 my $api_instance = KnetikCloud::ContentArticlesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The article id
@@ -156,7 +147,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -177,9 +168,6 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 use Data::Dumper;
 use KnetikCloud::ContentArticlesApi;
 my $api_instance = KnetikCloud::ContentArticlesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -206,7 +194,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -269,9 +257,6 @@ Get a single article template
 use Data::Dumper;
 use KnetikCloud::ContentArticlesApi;
 my $api_instance = KnetikCloud::ContentArticlesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -297,7 +282,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -316,9 +301,6 @@ List and search article templates
 use Data::Dumper;
 use KnetikCloud::ContentArticlesApi;
 my $api_instance = KnetikCloud::ContentArticlesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -348,7 +330,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -358,7 +340,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_articles**
-> PageResourceArticleResource get_articles(filter_category => $filter_category, filter_tagset => $filter_tagset, filter_tag_intersection => $filter_tag_intersection, filter_tag_exclusion => $filter_tag_exclusion, filter_title => $filter_title, size => $size, page => $page, order => $order)
+> PageResourceArticleResource get_articles(filter_active_only => $filter_active_only, filter_category => $filter_category, filter_tagset => $filter_tagset, filter_tag_intersection => $filter_tag_intersection, filter_tag_exclusion => $filter_tag_exclusion, filter_title => $filter_title, size => $size, page => $page, order => $order)
 
 List and search articles
 
@@ -371,6 +353,7 @@ use KnetikCloud::ContentArticlesApi;
 my $api_instance = KnetikCloud::ContentArticlesApi->new(
 );
 
+my $filter_active_only = 1; # boolean | Filter for articles that are active (true) or inactive (false)
 my $filter_category = 'filter_category_example'; # string | Filter for articles from a specific category by id
 my $filter_tagset = 'filter_tagset_example'; # string | Filter for articles with at least one of a specified set of tags (separated by comma)
 my $filter_tag_intersection = 'filter_tag_intersection_example'; # string | Filter for articles with all of a specified set of tags (separated by comma)
@@ -381,7 +364,7 @@ my $page = 56; # int | The number of the page returned, starting with 1
 my $order = 'order_example'; # string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
 
 eval { 
-    my $result = $api_instance->get_articles(filter_category => $filter_category, filter_tagset => $filter_tagset, filter_tag_intersection => $filter_tag_intersection, filter_tag_exclusion => $filter_tag_exclusion, filter_title => $filter_title, size => $size, page => $page, order => $order);
+    my $result = $api_instance->get_articles(filter_active_only => $filter_active_only, filter_category => $filter_category, filter_tagset => $filter_tagset, filter_tag_intersection => $filter_tag_intersection, filter_tag_exclusion => $filter_tag_exclusion, filter_title => $filter_title, size => $size, page => $page, order => $order);
     print Dumper($result);
 };
 if ($@) {
@@ -393,6 +376,7 @@ if ($@) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **filter_active_only** | **boolean**| Filter for articles that are active (true) or inactive (false) | [optional] 
  **filter_category** | **string**| Filter for articles from a specific category by id | [optional] 
  **filter_tagset** | **string**| Filter for articles with at least one of a specified set of tags (separated by comma) | [optional] 
  **filter_tag_intersection** | **string**| Filter for articles with all of a specified set of tags (separated by comma) | [optional] 
@@ -427,9 +411,6 @@ Update an existing article
 use Data::Dumper;
 use KnetikCloud::ContentArticlesApi;
 my $api_instance = KnetikCloud::ContentArticlesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The article id
@@ -457,7 +438,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -476,9 +457,6 @@ Update an article template
 use Data::Dumper;
 use KnetikCloud::ContentArticlesApi;
 my $api_instance = KnetikCloud::ContentArticlesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -506,7 +484,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

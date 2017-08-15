@@ -30,9 +30,6 @@ Rules define which actions to run when a given event verifies the specified cond
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineRulesApi;
 my $api_instance = KnetikCloud::BRERuleEngineRulesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $bre_rule = KnetikCloud::Object::BreRule->new(); # BreRule | The BRE rule object
@@ -58,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -79,9 +76,6 @@ May fail if there are existing rules against it. Cannot delete core rules
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineRulesApi;
 my $api_instance = KnetikCloud::BRERuleEngineRulesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the rule
@@ -106,7 +100,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -125,9 +119,6 @@ Returns a string representation of the provided expression
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineRulesApi;
 my $api_instance = KnetikCloud::BRERuleEngineRulesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $expression = KnetikCloud::Object::Expressionobject->new(); # Expressionobject | The expression
@@ -153,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -172,9 +163,6 @@ Get a single rule
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineRulesApi;
 my $api_instance = KnetikCloud::BRERuleEngineRulesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the rule
@@ -200,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -219,9 +207,6 @@ List rules
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineRulesApi;
 my $api_instance = KnetikCloud::BRERuleEngineRulesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_name = 'filter_name_example'; # string | Filter for rules containing the given name
@@ -261,7 +246,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -282,9 +267,6 @@ This is helpful for turning off systems rules which cannot be deleted or modifie
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineRulesApi;
 my $api_instance = KnetikCloud::BRERuleEngineRulesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the rule
@@ -311,7 +293,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -332,9 +314,6 @@ Cannot update system rules
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineRulesApi;
 my $api_instance = KnetikCloud::BRERuleEngineRulesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the rule
@@ -362,7 +341,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

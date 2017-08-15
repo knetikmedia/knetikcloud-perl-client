@@ -28,9 +28,6 @@ Returns the user's wallet for the given currency code
 use Data::Dumper;
 use KnetikCloud::PaymentsWalletsApi;
 my $api_instance = KnetikCloud::PaymentsWalletsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The ID of the user for whom wallet is being retrieved
@@ -58,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -77,9 +74,6 @@ Retrieve a user's wallet transactions
 use Data::Dumper;
 use KnetikCloud::PaymentsWalletsApi;
 my $api_instance = KnetikCloud::PaymentsWalletsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The ID of the user for whom wallet transactions are being retrieved
@@ -121,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -140,9 +134,6 @@ List all of a user's wallets
 use Data::Dumper;
 use KnetikCloud::PaymentsWalletsApi;
 my $api_instance = KnetikCloud::PaymentsWalletsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The ID of the user for whom wallets are being retrieved
@@ -168,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -187,9 +178,6 @@ Retrieves a summation of wallet balances by currency code
 use Data::Dumper;
 use KnetikCloud::PaymentsWalletsApi;
 my $api_instance = KnetikCloud::PaymentsWalletsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 
@@ -211,7 +199,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -230,9 +218,6 @@ Retrieve wallet transactions across the system
 use Data::Dumper;
 use KnetikCloud::PaymentsWalletsApi;
 my $api_instance = KnetikCloud::PaymentsWalletsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_invoice = 56; # int | Filter for transactions from a specific invoice
@@ -278,7 +263,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -297,9 +282,6 @@ Retrieve a list of wallets across the system
 use Data::Dumper;
 use KnetikCloud::PaymentsWalletsApi;
 my $api_instance = KnetikCloud::PaymentsWalletsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -329,7 +311,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -348,9 +330,6 @@ Updates the balance for a user's wallet
 use Data::Dumper;
 use KnetikCloud::PaymentsWalletsApi;
 my $api_instance = KnetikCloud::PaymentsWalletsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The ID of the user for whom wallet is being modified
@@ -380,7 +359,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

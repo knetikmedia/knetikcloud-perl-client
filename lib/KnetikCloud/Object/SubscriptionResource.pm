@@ -156,6 +156,13 @@ __PACKAGE__->method_documentation({
     	format => '',
     	read_only => '',
     		},
+    'behaviors' => {
+    	datatype => 'ARRAY[Behavior]',
+    	base_name => 'behaviors',
+    	description => 'The behaviors linked to the item, describing various options and interactions. May not be included in item lists',
+    	format => '',
+    	read_only => '',
+    		},
     'category' => {
     	datatype => 'string',
     	base_name => 'category',
@@ -287,6 +294,7 @@ __PACKAGE__->method_documentation({
 __PACKAGE__->swagger_types( {
     'additional_properties' => 'HASH[string,Property]',
     'availability' => 'string',
+    'behaviors' => 'ARRAY[Behavior]',
     'category' => 'string',
     'consolidation_day_of_month' => 'int',
     'created_date' => 'int',
@@ -310,6 +318,7 @@ __PACKAGE__->swagger_types( {
 __PACKAGE__->attribute_map( {
     'additional_properties' => 'additional_properties',
     'availability' => 'availability',
+    'behaviors' => 'behaviors',
     'category' => 'category',
     'consolidation_day_of_month' => 'consolidation_day_of_month',
     'created_date' => 'created_date',

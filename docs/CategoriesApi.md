@@ -32,9 +32,6 @@ Create a new category
 use Data::Dumper;
 use KnetikCloud::CategoriesApi;
 my $api_instance = KnetikCloud::CategoriesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $category = KnetikCloud::Object::CategoryResource->new(); # CategoryResource | The category to create
@@ -60,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -81,9 +78,6 @@ Templates define a type of category and the properties they have
 use Data::Dumper;
 use KnetikCloud::CategoriesApi;
 my $api_instance = KnetikCloud::CategoriesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $template = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The template to create
@@ -109,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -128,9 +122,6 @@ Delete an existing category
 use Data::Dumper;
 use KnetikCloud::CategoriesApi;
 my $api_instance = KnetikCloud::CategoriesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the category to be deleted
@@ -155,7 +146,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -176,9 +167,6 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 use Data::Dumper;
 use KnetikCloud::CategoriesApi;
 my $api_instance = KnetikCloud::CategoriesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -205,7 +193,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -320,9 +308,6 @@ Get a single category template
 use Data::Dumper;
 use KnetikCloud::CategoriesApi;
 my $api_instance = KnetikCloud::CategoriesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -348,7 +333,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -367,9 +352,6 @@ List and search category templates
 use Data::Dumper;
 use KnetikCloud::CategoriesApi;
 my $api_instance = KnetikCloud::CategoriesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -399,7 +381,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -464,9 +446,6 @@ Update an existing category
 use Data::Dumper;
 use KnetikCloud::CategoriesApi;
 my $api_instance = KnetikCloud::CategoriesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the category
@@ -494,7 +473,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -513,9 +492,6 @@ Update a category template
 use Data::Dumper;
 use KnetikCloud::CategoriesApi;
 my $api_instance = KnetikCloud::CategoriesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -543,7 +519,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

@@ -171,7 +171,7 @@ sub get_usage_by_day {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -307,7 +307,7 @@ sub get_usage_by_hour {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -443,7 +443,7 @@ sub get_usage_by_minute {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -579,7 +579,7 @@ sub get_usage_by_month {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -715,7 +715,7 @@ sub get_usage_by_year {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -796,7 +796,7 @@ sub get_usage_endpoints {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,

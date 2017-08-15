@@ -22,9 +22,6 @@ Get a list of available actions
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineActionsApi;
 my $api_instance = KnetikCloud::BRERuleEngineActionsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_category = 'filter_category_example'; # string | Filter for actions that are within a specific category
@@ -56,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

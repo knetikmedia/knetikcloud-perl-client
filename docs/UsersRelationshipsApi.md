@@ -26,9 +26,6 @@ Create a user relationship
 use Data::Dumper;
 use KnetikCloud::UsersRelationshipsApi;
 my $api_instance = KnetikCloud::UsersRelationshipsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $relationship = KnetikCloud::Object::UserRelationshipResource->new(); # UserRelationshipResource | The new relationship
@@ -54,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -73,9 +70,6 @@ Delete a user relationship
 use Data::Dumper;
 use KnetikCloud::UsersRelationshipsApi;
 my $api_instance = KnetikCloud::UsersRelationshipsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 789; # int | The id of the relationship
@@ -100,7 +94,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -119,9 +113,6 @@ Get a user relationship
 use Data::Dumper;
 use KnetikCloud::UsersRelationshipsApi;
 my $api_instance = KnetikCloud::UsersRelationshipsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 789; # int | The id of the relationship
@@ -147,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -166,9 +157,6 @@ Get a list of user relationships
 use Data::Dumper;
 use KnetikCloud::UsersRelationshipsApi;
 my $api_instance = KnetikCloud::UsersRelationshipsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -198,7 +186,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -217,9 +205,6 @@ Update a user relationship
 use Data::Dumper;
 use KnetikCloud::UsersRelationshipsApi;
 my $api_instance = KnetikCloud::UsersRelationshipsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 789; # int | The id of the relationship
@@ -247,7 +232,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

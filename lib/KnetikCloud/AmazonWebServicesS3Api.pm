@@ -49,9 +49,91 @@ sub new {
 
 
 #
+# get_download_url
+#
+# Get a temporary signed S3 URL for download
+# 
+# @param string $bucket S3 bucket name (optional)
+# @param string $path The path to the file relative the bucket (the s3 object key) (optional)
+# @param int $expiration The number of seconds this URL will be valid. Default to 60 (optional, default to 60)
+{
+    my $params = {
+    'bucket' => {
+        data_type => 'string',
+        description => 'S3 bucket name',
+        required => '0',
+    },
+    'path' => {
+        data_type => 'string',
+        description => 'The path to the file relative the bucket (the s3 object key)',
+        required => '0',
+    },
+    'expiration' => {
+        data_type => 'int',
+        description => 'The number of seconds this URL will be valid. Default to 60',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'get_download_url' } = { 
+    	summary => 'Get a temporary signed S3 URL for download',
+        params => $params,
+        returns => 'string',
+        };
+}
+# @return string
+#
+sub get_download_url {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/amazon/s3/downloadurl';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('application/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    # query params
+    if ( exists $args{'bucket'}) {
+        $query_params->{'bucket'} = $self->{api_client}->to_query_value($args{'bucket'});
+    }
+
+    # query params
+    if ( exists $args{'path'}) {
+        $query_params->{'path'} = $self->{api_client}->to_query_value($args{'path'});
+    }
+
+    # query params
+    if ( exists $args{'expiration'}) {
+        $query_params->{'expiration'} = $self->{api_client}->to_query_value($args{'expiration'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('string', $response);
+    return $_response_object;
+}
+
+#
 # get_signed_s3_url
 #
-# Get a signed S3 URL
+# Get a signed S3 URL for upload
 # 
 # @param string $filename The file name (optional)
 # @param string $content_type The content type (optional)
@@ -69,7 +151,7 @@ sub new {
     },
     };
     __PACKAGE__->method_documentation->{ 'get_signed_s3_url' } = { 
-    	summary => 'Get a signed S3 URL',
+    	summary => 'Get a signed S3 URL for upload',
         params => $params,
         returns => 'AmazonS3Activity',
         };
@@ -106,7 +188,7 @@ sub get_signed_s3_url {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,

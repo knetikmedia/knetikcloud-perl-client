@@ -28,9 +28,6 @@ Mainly intended for internal use.
 use Data::Dumper;
 use KnetikCloud::SearchApi;
 my $api_instance = KnetikCloud::SearchApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $type = 'type_example'; # string | The index type
@@ -59,7 +56,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -80,9 +77,6 @@ Add a new type mapping to connect data from one index to another, or discover an
 use Data::Dumper;
 use KnetikCloud::SearchApi;
 my $api_instance = KnetikCloud::SearchApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $mappings = [KnetikCloud::Object::ARRAY[SearchReferenceMapping]->new()]; # ARRAY[SearchReferenceMapping] | The mappings to add
@@ -107,7 +101,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -128,9 +122,6 @@ Mainly intended for internal use. Requires SEARCH_ADMIN.
 use Data::Dumper;
 use KnetikCloud::SearchApi;
 my $api_instance = KnetikCloud::SearchApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $type = 'type_example'; # string | The index type
@@ -157,7 +148,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -178,9 +169,6 @@ Mainly intended for internal use
 use Data::Dumper;
 use KnetikCloud::SearchApi;
 my $api_instance = KnetikCloud::SearchApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $type = 'type_example'; # string | The index type
@@ -205,7 +193,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

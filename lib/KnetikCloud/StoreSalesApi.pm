@@ -95,7 +95,7 @@ sub create_catalog_sale {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -162,7 +162,7 @@ sub delete_catalog_sale {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     $self->{api_client}->call_api($_resource_path, $_method,
@@ -225,7 +225,7 @@ sub get_catalog_sale {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -307,7 +307,7 @@ sub get_catalog_sales {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -385,7 +385,7 @@ sub update_catalog_sale {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,

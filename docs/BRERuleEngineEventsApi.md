@@ -24,9 +24,6 @@ Parameters within the event must match names and types from the trigger. Actual 
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineEventsApi;
 my $api_instance = KnetikCloud::BRERuleEngineEventsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $bre_event = KnetikCloud::Object::BreEvent->new(); # BreEvent | The BRE event object
@@ -52,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

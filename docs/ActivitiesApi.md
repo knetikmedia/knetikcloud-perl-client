@@ -34,9 +34,6 @@ Create an activity
 use Data::Dumper;
 use KnetikCloud::ActivitiesApi;
 my $api_instance = KnetikCloud::ActivitiesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $activity_resource = KnetikCloud::Object::ActivityResource->new(); # ActivityResource | The activity resource object
@@ -62,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -83,9 +80,6 @@ Has to enforce extra rules if not used as an admin
 use Data::Dumper;
 use KnetikCloud::ActivitiesApi;
 my $api_instance = KnetikCloud::ActivitiesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $test = 1; # boolean | if true, indicates that the occurrence should NOT be created. This can be used to test for eligibility and valid settings
@@ -113,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -134,9 +128,6 @@ Activity Templates define a type of activity and the properties they have
 use Data::Dumper;
 use KnetikCloud::ActivitiesApi;
 my $api_instance = KnetikCloud::ActivitiesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $activity_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The activity template resource object
@@ -162,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -181,9 +172,6 @@ Delete an activity
 use Data::Dumper;
 use KnetikCloud::ActivitiesApi;
 my $api_instance = KnetikCloud::ActivitiesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 789; # int | The id of the activity
@@ -208,7 +196,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -229,9 +217,6 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 use Data::Dumper;
 use KnetikCloud::ActivitiesApi;
 my $api_instance = KnetikCloud::ActivitiesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -258,7 +243,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -375,9 +360,6 @@ Get a single activity template
 use Data::Dumper;
 use KnetikCloud::ActivitiesApi;
 my $api_instance = KnetikCloud::ActivitiesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -403,7 +385,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -422,9 +404,6 @@ List and search activity templates
 use Data::Dumper;
 use KnetikCloud::ActivitiesApi;
 my $api_instance = KnetikCloud::ActivitiesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -454,7 +433,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -473,9 +452,6 @@ Sets the status of an activity occurrence to FINISHED and logs metrics
 use Data::Dumper;
 use KnetikCloud::ActivitiesApi;
 my $api_instance = KnetikCloud::ActivitiesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $activity_occurrence_id = 789; # int | The id of the activity occurrence
@@ -503,7 +479,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -522,9 +498,6 @@ Update an activity
 use Data::Dumper;
 use KnetikCloud::ActivitiesApi;
 my $api_instance = KnetikCloud::ActivitiesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 789; # int | The id of the activity
@@ -552,7 +525,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -573,9 +546,6 @@ If setting to 'FINISHED' you must POST to /results instead to record the metrics
 use Data::Dumper;
 use KnetikCloud::ActivitiesApi;
 my $api_instance = KnetikCloud::ActivitiesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $activity_occurrence_id = 789; # int | The id of the activity occurrence
@@ -602,7 +572,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -621,9 +591,6 @@ Update an activity template
 use Data::Dumper;
 use KnetikCloud::ActivitiesApi;
 my $api_instance = KnetikCloud::ActivitiesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -651,7 +618,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

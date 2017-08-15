@@ -341,7 +341,13 @@ sub update_params_for_auth {
         if (!defined($auth)) {
             # TODO show warning about auth setting not defined
         }
-        elsif ($auth eq 'OAuth2') {
+        elsif ($auth eq 'oauth2_client_credentials_grant') {
+            
+            if ($self->{config}{access_token}) {
+                $header_params->{'Authorization'} = 'Bearer ' . $self->{config}{access_token};
+            }
+        }
+elsif ($auth eq 'oauth2_password_grant') {
             
             if ($self->{config}{access_token}) {
                 $header_params->{'Authorization'} = 'Bearer ' . $self->{config}{access_token};

@@ -24,9 +24,6 @@ Stores customer information and creates a payment method that can be used to pay
 use Data::Dumper;
 use KnetikCloud::PaymentsFattMerchantApi;
 my $api_instance = KnetikCloud::PaymentsFattMerchantApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $request = KnetikCloud::Object::FattMerchantPaymentMethodRequest->new(); # FattMerchantPaymentMethodRequest | Request containing payment method information for user
@@ -52,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

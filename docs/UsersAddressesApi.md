@@ -26,9 +26,6 @@ Create a new address
 use Data::Dumper;
 use KnetikCloud::UsersAddressesApi;
 my $api_instance = KnetikCloud::UsersAddressesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 'user_id_example'; # string | The id of the user
@@ -56,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -75,9 +72,6 @@ Delete an address
 use Data::Dumper;
 use KnetikCloud::UsersAddressesApi;
 my $api_instance = KnetikCloud::UsersAddressesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 'user_id_example'; # string | The id of the user
@@ -104,7 +98,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -123,9 +117,6 @@ Get a single address
 use Data::Dumper;
 use KnetikCloud::UsersAddressesApi;
 my $api_instance = KnetikCloud::UsersAddressesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 'user_id_example'; # string | The id of the user
@@ -153,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -172,9 +163,6 @@ List and search addresses
 use Data::Dumper;
 use KnetikCloud::UsersAddressesApi;
 my $api_instance = KnetikCloud::UsersAddressesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 'user_id_example'; # string | The id of the user
@@ -206,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -225,9 +213,6 @@ Update an address
 use Data::Dumper;
 use KnetikCloud::UsersAddressesApi;
 my $api_instance = KnetikCloud::UsersAddressesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 'user_id_example'; # string | The id of the user
@@ -257,7 +242,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

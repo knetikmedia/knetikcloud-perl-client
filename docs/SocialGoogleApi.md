@@ -24,9 +24,6 @@ Links the current user account to a google account, using the acccess token from
 use Data::Dumper;
 use KnetikCloud::SocialGoogleApi;
 my $api_instance = KnetikCloud::SocialGoogleApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $google_token = KnetikCloud::Object::GoogleToken->new(); # GoogleToken | The token from google
@@ -51,7 +48,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

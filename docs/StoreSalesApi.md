@@ -26,9 +26,6 @@ Create a sale
 use Data::Dumper;
 use KnetikCloud::StoreSalesApi;
 my $api_instance = KnetikCloud::StoreSalesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $catalog_sale = KnetikCloud::Object::CatalogSale->new(); # CatalogSale | The catalog sale object
@@ -54,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -73,9 +70,6 @@ Delete a sale
 use Data::Dumper;
 use KnetikCloud::StoreSalesApi;
 my $api_instance = KnetikCloud::StoreSalesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the sale
@@ -100,7 +94,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -119,9 +113,6 @@ Get a single sale
 use Data::Dumper;
 use KnetikCloud::StoreSalesApi;
 my $api_instance = KnetikCloud::StoreSalesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the sale
@@ -147,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -166,9 +157,6 @@ List and search sales
 use Data::Dumper;
 use KnetikCloud::StoreSalesApi;
 my $api_instance = KnetikCloud::StoreSalesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -198,7 +186,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -217,9 +205,6 @@ Update a sale
 use Data::Dumper;
 use KnetikCloud::StoreSalesApi;
 my $api_instance = KnetikCloud::StoreSalesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the sale
@@ -247,7 +232,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

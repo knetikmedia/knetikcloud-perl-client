@@ -24,9 +24,6 @@ Delete tokens by username, client id, or both
 use Data::Dumper;
 use KnetikCloud::AuthTokensApi;
 my $api_instance = KnetikCloud::AuthTokensApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $username = 'username_example'; # string | The username of the user
@@ -53,7 +50,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -72,9 +69,6 @@ Get a single token by username and client id
 use Data::Dumper;
 use KnetikCloud::AuthTokensApi;
 my $api_instance = KnetikCloud::AuthTokensApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $username = 'username_example'; # string | The username of the user
@@ -102,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -123,9 +117,6 @@ Token value not shown
 use Data::Dumper;
 use KnetikCloud::AuthTokensApi;
 my $api_instance = KnetikCloud::AuthTokensApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_client_id = 'filter_client_id_example'; # string | Filters for token whose client id matches provided string
@@ -159,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

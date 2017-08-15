@@ -37,9 +37,6 @@ Add a tag to a user
 use Data::Dumper;
 use KnetikCloud::UsersApi;
 my $api_instance = KnetikCloud::UsersApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The id of the user
@@ -66,7 +63,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -87,9 +84,6 @@ User Templates define a type of user and the properties they have
 use Data::Dumper;
 use KnetikCloud::UsersApi;
 my $api_instance = KnetikCloud::UsersApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The user template resource object
@@ -115,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -136,9 +130,6 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 use Data::Dumper;
 use KnetikCloud::UsersApi;
 my $api_instance = KnetikCloud::UsersApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -165,7 +156,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -186,9 +177,6 @@ Additional private info is included as USERS_ADMIN
 use Data::Dumper;
 use KnetikCloud::UsersApi;
 my $api_instance = KnetikCloud::UsersApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the user or 'me'
@@ -214,7 +202,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -233,9 +221,6 @@ List tags for a user
 use Data::Dumper;
 use KnetikCloud::UsersApi;
 my $api_instance = KnetikCloud::UsersApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The id of the user
@@ -261,7 +246,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -280,9 +265,6 @@ Get a single user template
 use Data::Dumper;
 use KnetikCloud::UsersApi;
 my $api_instance = KnetikCloud::UsersApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -308,7 +290,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -327,9 +309,6 @@ List and search user templates
 use Data::Dumper;
 use KnetikCloud::UsersApi;
 my $api_instance = KnetikCloud::UsersApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -359,7 +338,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -380,9 +359,6 @@ Additional private info is included as USERS_ADMIN
 use Data::Dumper;
 use KnetikCloud::UsersApi;
 my $api_instance = KnetikCloud::UsersApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_displayname = 'filter_displayname_example'; # string | Filter for users whose display name starts with provided string.
@@ -432,7 +408,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -544,9 +520,6 @@ Remove a tag from a user
 use Data::Dumper;
 use KnetikCloud::UsersApi;
 my $api_instance = KnetikCloud::UsersApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The id of the user
@@ -573,7 +546,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -594,9 +567,6 @@ Password should be in plain text and will be encrypted on receipt. Use SSL for s
 use Data::Dumper;
 use KnetikCloud::UsersApi;
 my $api_instance = KnetikCloud::UsersApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the user
@@ -623,7 +593,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -734,9 +704,6 @@ Password will not be edited on this endpoint, use password specific endpoints.
 use Data::Dumper;
 use KnetikCloud::UsersApi;
 my $api_instance = KnetikCloud::UsersApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the user or 'me'
@@ -763,7 +730,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -782,9 +749,6 @@ Update a user template
 use Data::Dumper;
 use KnetikCloud::UsersApi;
 my $api_instance = KnetikCloud::UsersApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -812,7 +776,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

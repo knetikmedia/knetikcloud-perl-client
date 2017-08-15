@@ -28,9 +28,6 @@ Get basic info about revenue from sales of items and bundles (not subscriptions,
 use Data::Dumper;
 use KnetikCloud::ReportingRevenueApi;
 my $api_instance = KnetikCloud::ReportingRevenueApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $currency_code = 'currency_code_example'; # string | The code for a currency to get sales data for
@@ -60,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -81,9 +78,6 @@ Get basic info about revenue loss from refunds (for all item types), summed up w
 use Data::Dumper;
 use KnetikCloud::ReportingRevenueApi;
 my $api_instance = KnetikCloud::ReportingRevenueApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $currency_code = 'currency_code_example'; # string | The code for a currency to get refund data for
@@ -113,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -134,9 +128,6 @@ Get basic info about revenue from sales of all types, summed up within a time ra
 use Data::Dumper;
 use KnetikCloud::ReportingRevenueApi;
 my $api_instance = KnetikCloud::ReportingRevenueApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $currency_code = 'currency_code_example'; # string | The code for a currency to get sales data for
@@ -170,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -191,9 +182,6 @@ Get basic info about revenue from sales of all types, summed up within a time ra
 use Data::Dumper;
 use KnetikCloud::ReportingRevenueApi;
 my $api_instance = KnetikCloud::ReportingRevenueApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $currency_code = 'currency_code_example'; # string | The code for a currency to get sales data for
@@ -227,7 +215,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -248,9 +236,6 @@ Get basic info about revenue from sales of new subscriptions as well as recurrin
 use Data::Dumper;
 use KnetikCloud::ReportingRevenueApi;
 my $api_instance = KnetikCloud::ReportingRevenueApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $currency_code = 'currency_code_example'; # string | The code for a currency to get sales data for
@@ -280,7 +265,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

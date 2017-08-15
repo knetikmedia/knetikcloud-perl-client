@@ -95,7 +95,7 @@ sub create_article {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -155,7 +155,7 @@ sub create_article_template {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -222,7 +222,7 @@ sub delete_article {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     $self->{api_client}->call_api($_resource_path, $_method,
@@ -296,7 +296,7 @@ sub delete_article_template {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     $self->{api_client}->call_api($_resource_path, $_method,
@@ -426,7 +426,7 @@ sub get_article_template {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -508,7 +508,7 @@ sub get_article_templates {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -526,6 +526,7 @@ sub get_article_templates {
 #
 # List and search articles
 # 
+# @param boolean $filter_active_only Filter for articles that are active (true) or inactive (false) (optional)
 # @param string $filter_category Filter for articles from a specific category by id (optional)
 # @param string $filter_tagset Filter for articles with at least one of a specified set of tags (separated by comma) (optional)
 # @param string $filter_tag_intersection Filter for articles with all of a specified set of tags (separated by comma) (optional)
@@ -536,6 +537,11 @@ sub get_article_templates {
 # @param string $order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
 {
     my $params = {
+    'filter_active_only' => {
+        data_type => 'boolean',
+        description => 'Filter for articles that are active (true) or inactive (false)',
+        required => '0',
+    },
     'filter_category' => {
         data_type => 'string',
         description => 'Filter for articles from a specific category by id',
@@ -602,6 +608,11 @@ sub get_articles {
         $header_params->{'Accept'} = $_header_accept;
     }
     $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type('application/json');
+
+    # query params
+    if ( exists $args{'filter_active_only'}) {
+        $query_params->{'filter_active_only'} = $self->{api_client}->to_query_value($args{'filter_active_only'});
+    }
 
     # query params
     if ( exists $args{'filter_category'}) {
@@ -723,7 +734,7 @@ sub update_article {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -801,7 +812,7 @@ sub update_article_template {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw(OAuth2 )];
+    my $auth_settings = [qw()];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,

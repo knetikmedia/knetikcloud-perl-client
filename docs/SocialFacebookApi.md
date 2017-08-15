@@ -24,9 +24,6 @@ Links the current user account to a facebook account, using the acccess token fr
 use Data::Dumper;
 use KnetikCloud::SocialFacebookApi;
 my $api_instance = KnetikCloud::SocialFacebookApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $facebook_token = KnetikCloud::Object::FacebookToken->new(); # FacebookToken | The token from facebook
@@ -51,7 +48,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

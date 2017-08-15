@@ -46,9 +46,6 @@ Challenges do not run on their own.  They must be added to a campaign before eve
 use Data::Dumper;
 use KnetikCloud::CampaignsChallengesApi;
 my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $challenge_resource = KnetikCloud::Object::ChallengeResource->new(); # ChallengeResource | The challenge resource object
@@ -74,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -93,9 +90,6 @@ Create a challenge activity
 use Data::Dumper;
 use KnetikCloud::CampaignsChallengesApi;
 my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $challenge_id = 789; # int | The challenge id
@@ -125,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -146,9 +140,6 @@ Challenge Activity Templates define a type of challenge activity and the propert
 use Data::Dumper;
 use KnetikCloud::CampaignsChallengesApi;
 my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $challenge_activity_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The challengeActivity template resource object
@@ -174,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -195,9 +186,6 @@ Challenge Templates define a type of challenge and the properties they have
 use Data::Dumper;
 use KnetikCloud::CampaignsChallengesApi;
 my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $challenge_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The challenge template resource object
@@ -223,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -242,9 +230,6 @@ Delete a challenge
 use Data::Dumper;
 use KnetikCloud::CampaignsChallengesApi;
 my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 789; # int | The challenge id
@@ -269,7 +254,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -290,9 +275,6 @@ A challenge can have multiple instances of the same activity and thus the id use
 use Data::Dumper;
 use KnetikCloud::CampaignsChallengesApi;
 my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 789; # int | The challenge_activity id
@@ -319,7 +301,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -340,9 +322,6 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 use Data::Dumper;
 use KnetikCloud::CampaignsChallengesApi;
 my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -369,7 +348,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -388,9 +367,6 @@ Delete a challenge event
 use Data::Dumper;
 use KnetikCloud::CampaignsChallengesApi;
 my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 789; # int | The challenge event id
@@ -415,7 +391,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -436,9 +412,6 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 use Data::Dumper;
 use KnetikCloud::CampaignsChallengesApi;
 my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -465,7 +438,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -626,9 +599,6 @@ Get a single challenge activity template
 use Data::Dumper;
 use KnetikCloud::CampaignsChallengesApi;
 my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -654,7 +624,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -673,9 +643,6 @@ List and search challenge activity templates
 use Data::Dumper;
 use KnetikCloud::CampaignsChallengesApi;
 my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -705,7 +672,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -824,9 +791,6 @@ Get a single challenge template
 use Data::Dumper;
 use KnetikCloud::CampaignsChallengesApi;
 my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -852,7 +816,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -871,9 +835,6 @@ List and search challenge templates
 use Data::Dumper;
 use KnetikCloud::CampaignsChallengesApi;
 my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -903,7 +864,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -980,9 +941,6 @@ If the challenge is a copy, changes will propagate to all the related challenges
 use Data::Dumper;
 use KnetikCloud::CampaignsChallengesApi;
 my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 789; # int | The challenge id
@@ -1010,7 +968,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1031,9 +989,6 @@ A challenge can have multiple instances of the same activity and thus the id use
 use Data::Dumper;
 use KnetikCloud::CampaignsChallengesApi;
 my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 789; # int | The challenge_activity id
@@ -1063,7 +1018,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1082,9 +1037,6 @@ Update an challenge activity template
 use Data::Dumper;
 use KnetikCloud::CampaignsChallengesApi;
 my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -1112,7 +1064,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1131,9 +1083,6 @@ Update a challenge template
 use Data::Dumper;
 use KnetikCloud::CampaignsChallengesApi;
 my $api_instance = KnetikCloud::CampaignsChallengesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -1161,7 +1110,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

@@ -24,9 +24,6 @@ Will return the url for a hosted payment endpoint to post to. See Optimal docume
 use Data::Dumper;
 use KnetikCloud::PaymentsOptimalApi;
 my $api_instance = KnetikCloud::PaymentsOptimalApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $request = KnetikCloud::Object::OptimalPaymentRequest->new(); # OptimalPaymentRequest | The payment request to initiate
@@ -52,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

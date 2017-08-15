@@ -22,9 +22,6 @@ Retrieve invoice counts aggregated by time ranges
 use Data::Dumper;
 use KnetikCloud::ReportingOrdersApi;
 my $api_instance = KnetikCloud::ReportingOrdersApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $currency_code = 'currency_code_example'; # string | The code for a currency to get sales data for
@@ -64,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

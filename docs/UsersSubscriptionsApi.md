@@ -29,9 +29,6 @@ Get details about a user's subscription
 use Data::Dumper;
 use KnetikCloud::UsersSubscriptionsApi;
 my $api_instance = KnetikCloud::UsersSubscriptionsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The id of the user
@@ -59,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -78,9 +75,6 @@ Get details about a user's subscriptions
 use Data::Dumper;
 use KnetikCloud::UsersSubscriptionsApi;
 my $api_instance = KnetikCloud::UsersSubscriptionsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The id of the user
@@ -106,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -125,9 +119,6 @@ Reactivate a subscription and charge fee
 use Data::Dumper;
 use KnetikCloud::UsersSubscriptionsApi;
 my $api_instance = KnetikCloud::UsersSubscriptionsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The id of the user
@@ -157,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -176,9 +167,6 @@ Set a new date to bill a subscription on
 use Data::Dumper;
 use KnetikCloud::UsersSubscriptionsApi;
 my $api_instance = KnetikCloud::UsersSubscriptionsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The id of the user
@@ -207,7 +195,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -228,9 +216,6 @@ May send null to use floating default
 use Data::Dumper;
 use KnetikCloud::UsersSubscriptionsApi;
 my $api_instance = KnetikCloud::UsersSubscriptionsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The id of the user
@@ -259,7 +244,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -280,9 +265,6 @@ Note that the new status may be blocked if the system is not configured to allow
 use Data::Dumper;
 use KnetikCloud::UsersSubscriptionsApi;
 my $api_instance = KnetikCloud::UsersSubscriptionsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The id of the user
@@ -311,7 +293,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -330,9 +312,6 @@ Set a new subscription plan for a user
 use Data::Dumper;
 use KnetikCloud::UsersSubscriptionsApi;
 my $api_instance = KnetikCloud::UsersSubscriptionsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The id of the user
@@ -361,7 +340,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -382,9 +361,6 @@ This new price will be what the user is charged at the begining of each new peri
 use Data::Dumper;
 use KnetikCloud::UsersSubscriptionsApi;
 my $api_instance = KnetikCloud::UsersSubscriptionsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The id of the user
@@ -413,7 +389,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

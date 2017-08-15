@@ -30,6 +30,16 @@ my $api = KnetikCloud::AmazonWebServicesS3Api->new();
 isa_ok($api, 'KnetikCloud::AmazonWebServicesS3Api');
 
 #
+# get_download_url test
+#
+{
+    my $bucket = undef; # replace NULL with a proper value
+    my $path = undef; # replace NULL with a proper value
+    my $expiration = undef; # replace NULL with a proper value
+    my $result = $api->get_download_url(bucket => $bucket, path => $path, expiration => $expiration);
+}
+
+#
 # get_signed_s3_url test
 #
 {

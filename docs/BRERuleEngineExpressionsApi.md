@@ -24,9 +24,6 @@ These are expression types that take a second expression as input and produce a 
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineExpressionsApi;
 my $api_instance = KnetikCloud::BRERuleEngineExpressionsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 
@@ -48,7 +45,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

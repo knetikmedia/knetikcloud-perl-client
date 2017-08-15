@@ -24,9 +24,6 @@ Get user registration counts grouped by time range
 use Data::Dumper;
 use KnetikCloud::ReportingUsersApi;
 my $api_instance = KnetikCloud::ReportingUsersApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $granularity = 'granularity_example'; # string | The time duration to aggregate by
@@ -60,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

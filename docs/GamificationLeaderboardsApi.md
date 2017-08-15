@@ -80,9 +80,6 @@ The context type identifies the type of entity (i.e., 'activity') being tracked 
 use Data::Dumper;
 use KnetikCloud::GamificationLeaderboardsApi;
 my $api_instance = KnetikCloud::GamificationLeaderboardsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $context_type = 'context_type_example'; # string | The context type for the leaderboard
@@ -112,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

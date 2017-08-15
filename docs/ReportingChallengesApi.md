@@ -25,9 +25,6 @@ Lists all leaderboard entries with additional user details
 use Data::Dumper;
 use KnetikCloud::ReportingChallengesApi;
 my $api_instance = KnetikCloud::ReportingChallengesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_event = 789; # int | A sepecific challenge event id
@@ -59,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -80,9 +77,6 @@ Lists all user submitted scores sorted by value, including those that do not ape
 use Data::Dumper;
 use KnetikCloud::ReportingChallengesApi;
 my $api_instance = KnetikCloud::ReportingChallengesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_event = 789; # int | A sepecific challenge event id
@@ -114,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

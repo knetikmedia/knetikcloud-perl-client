@@ -32,9 +32,6 @@ A shipping item represents a shipping option and cost. SKUs have to be unique in
 use Data::Dumper;
 use KnetikCloud::StoreShippingApi;
 my $api_instance = KnetikCloud::StoreShippingApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $cascade = 1; # boolean | Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values.
@@ -62,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -83,9 +80,6 @@ Shipping Templates define a type of shipping and the properties they have.
 use Data::Dumper;
 use KnetikCloud::StoreShippingApi;
 my $api_instance = KnetikCloud::StoreShippingApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $shipping_template_resource = KnetikCloud::Object::ItemTemplateResource->new(); # ItemTemplateResource | The new shipping template
@@ -111,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -130,9 +124,6 @@ Delete a shipping item
 use Data::Dumper;
 use KnetikCloud::StoreShippingApi;
 my $api_instance = KnetikCloud::StoreShippingApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the shipping item
@@ -157,7 +148,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -176,9 +167,6 @@ Delete a shipping template
 use Data::Dumper;
 use KnetikCloud::StoreShippingApi;
 my $api_instance = KnetikCloud::StoreShippingApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -205,7 +193,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -270,9 +258,6 @@ Shipping Templates define a type of shipping and the properties they have.
 use Data::Dumper;
 use KnetikCloud::StoreShippingApi;
 my $api_instance = KnetikCloud::StoreShippingApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -298,7 +283,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -317,9 +302,6 @@ List and search shipping templates
 use Data::Dumper;
 use KnetikCloud::StoreShippingApi;
 my $api_instance = KnetikCloud::StoreShippingApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -349,7 +331,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -368,9 +350,6 @@ Update a shipping item
 use Data::Dumper;
 use KnetikCloud::StoreShippingApi;
 my $api_instance = KnetikCloud::StoreShippingApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the shipping item
@@ -400,7 +379,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -419,9 +398,6 @@ Update a shipping template
 use Data::Dumper;
 use KnetikCloud::StoreShippingApi;
 my $api_instance = KnetikCloud::StoreShippingApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -449,7 +425,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

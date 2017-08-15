@@ -31,9 +31,6 @@ Create a new role
 use Data::Dumper;
 use KnetikCloud::AuthRolesApi;
 my $api_instance = KnetikCloud::AuthRolesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $role_resource = KnetikCloud::Object::RoleResource->new(); # RoleResource | The role resource object
@@ -59,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -78,9 +75,6 @@ Delete a role
 use Data::Dumper;
 use KnetikCloud::AuthRolesApi;
 my $api_instance = KnetikCloud::AuthRolesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $role = 'role_example'; # string | The role value
@@ -107,7 +101,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -126,9 +120,6 @@ Get roles for a client
 use Data::Dumper;
 use KnetikCloud::AuthRolesApi;
 my $api_instance = KnetikCloud::AuthRolesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $client_key = 'client_key_example'; # string | The client key
@@ -154,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -173,9 +164,6 @@ Get a single role
 use Data::Dumper;
 use KnetikCloud::AuthRolesApi;
 my $api_instance = KnetikCloud::AuthRolesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $role = 'role_example'; # string | The role value
@@ -201,7 +189,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -220,9 +208,6 @@ List and search roles
 use Data::Dumper;
 use KnetikCloud::AuthRolesApi;
 my $api_instance = KnetikCloud::AuthRolesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_name = 'filter_name_example'; # string | Filter for roles that have a name starting with specified string
@@ -256,7 +241,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -275,9 +260,6 @@ Get roles for a user
 use Data::Dumper;
 use KnetikCloud::AuthRolesApi;
 my $api_instance = KnetikCloud::AuthRolesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The user's id
@@ -303,7 +285,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -322,9 +304,6 @@ Set roles for a client
 use Data::Dumper;
 use KnetikCloud::AuthRolesApi;
 my $api_instance = KnetikCloud::AuthRolesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $client_key = 'client_key_example'; # string | The client key
@@ -352,7 +331,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -371,9 +350,6 @@ Set permissions for a role
 use Data::Dumper;
 use KnetikCloud::AuthRolesApi;
 my $api_instance = KnetikCloud::AuthRolesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $role = 'role_example'; # string | The role value
@@ -401,7 +377,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -420,9 +396,6 @@ Set roles for a user
 use Data::Dumper;
 use KnetikCloud::AuthRolesApi;
 my $api_instance = KnetikCloud::AuthRolesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The user's id
@@ -450,7 +423,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -469,9 +442,6 @@ Update a role
 use Data::Dumper;
 use KnetikCloud::AuthRolesApi;
 my $api_instance = KnetikCloud::AuthRolesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $role = 'role_example'; # string | The role value
@@ -499,7 +469,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

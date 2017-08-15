@@ -25,9 +25,6 @@ Types include integer, string, user and invoice. These are used to qualify trigg
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineVariablesApi;
 my $api_instance = KnetikCloud::BRERuleEngineVariablesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 
@@ -49,7 +46,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -70,9 +67,6 @@ Used to lookup users to fill in a user constant for example. Only types marked a
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineVariablesApi;
 my $api_instance = KnetikCloud::BRERuleEngineVariablesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $name = 'name_example'; # string | The name of the type
@@ -104,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

@@ -92,6 +92,7 @@ isa_ok($api, 'KnetikCloud::ContentArticlesApi');
 # get_articles test
 #
 {
+    my $filter_active_only = undef; # replace NULL with a proper value
     my $filter_category = undef; # replace NULL with a proper value
     my $filter_tagset = undef; # replace NULL with a proper value
     my $filter_tag_intersection = undef; # replace NULL with a proper value
@@ -100,7 +101,7 @@ isa_ok($api, 'KnetikCloud::ContentArticlesApi');
     my $size = undef; # replace NULL with a proper value
     my $page = undef; # replace NULL with a proper value
     my $order = undef; # replace NULL with a proper value
-    my $result = $api->get_articles(filter_category => $filter_category, filter_tagset => $filter_tagset, filter_tag_intersection => $filter_tag_intersection, filter_tag_exclusion => $filter_tag_exclusion, filter_title => $filter_title, size => $size, page => $page, order => $order);
+    my $result = $api->get_articles(filter_active_only => $filter_active_only, filter_category => $filter_category, filter_tagset => $filter_tagset, filter_tag_intersection => $filter_tag_intersection, filter_tag_exclusion => $filter_tag_exclusion, filter_title => $filter_title, size => $size, page => $page, order => $order);
 }
 
 #

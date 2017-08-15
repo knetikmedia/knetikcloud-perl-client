@@ -28,9 +28,6 @@ Create a new payment method for a user
 use Data::Dumper;
 use KnetikCloud::PaymentsApi;
 my $api_instance = KnetikCloud::PaymentsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | ID of the user for whom the payment method is being created
@@ -58,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -77,9 +74,6 @@ Delete an existing payment method for a user
 use Data::Dumper;
 use KnetikCloud::PaymentsApi;
 my $api_instance = KnetikCloud::PaymentsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | ID of the user for whom the payment method is being updated
@@ -106,7 +100,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -125,9 +119,6 @@ Get a single payment method for a user
 use Data::Dumper;
 use KnetikCloud::PaymentsApi;
 my $api_instance = KnetikCloud::PaymentsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | ID of the user for whom the payment method is being retrieved
@@ -155,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -174,9 +165,6 @@ Get all payment methods for a user
 use Data::Dumper;
 use KnetikCloud::PaymentsApi;
 my $api_instance = KnetikCloud::PaymentsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | ID of the user for whom the payment methods are being retrieved
@@ -216,7 +204,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -235,9 +223,6 @@ Authorize payment of an invoice for later capture
 use Data::Dumper;
 use KnetikCloud::PaymentsApi;
 my $api_instance = KnetikCloud::PaymentsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $request = KnetikCloud::Object::PaymentAuthorizationResource->new(); # PaymentAuthorizationResource | Payment authorization request
@@ -263,7 +248,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -282,9 +267,6 @@ Capture an existing invoice payment authorization
 use Data::Dumper;
 use KnetikCloud::PaymentsApi;
 my $api_instance = KnetikCloud::PaymentsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | ID of the payment authorization to capture
@@ -309,7 +291,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -328,9 +310,6 @@ Update an existing payment method for a user
 use Data::Dumper;
 use KnetikCloud::PaymentsApi;
 my $api_instance = KnetikCloud::PaymentsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | ID of the user for whom the payment method is being updated
@@ -360,7 +339,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

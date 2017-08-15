@@ -26,9 +26,6 @@ Create a reward set
 use Data::Dumper;
 use KnetikCloud::CampaignsRewardsApi;
 my $api_instance = KnetikCloud::CampaignsRewardsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $reward_set_resource = KnetikCloud::Object::RewardSetResource->new(); # RewardSetResource | The reward set resource object
@@ -54,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -73,9 +70,6 @@ Delete a reward set
 use Data::Dumper;
 use KnetikCloud::CampaignsRewardsApi;
 my $api_instance = KnetikCloud::CampaignsRewardsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The reward id
@@ -100,7 +94,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -211,9 +205,6 @@ Update a reward set
 use Data::Dumper;
 use KnetikCloud::CampaignsRewardsApi;
 my $api_instance = KnetikCloud::CampaignsRewardsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The reward id
@@ -241,7 +232,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

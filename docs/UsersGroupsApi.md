@@ -38,9 +38,6 @@ Adds a new member to the group
 use Data::Dumper;
 use KnetikCloud::UsersGroupsApi;
 my $api_instance = KnetikCloud::UsersGroupsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $unique_name = 'unique_name_example'; # string | The group unique name
@@ -68,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -87,9 +84,6 @@ Adds multiple members to the group
 use Data::Dumper;
 use KnetikCloud::UsersGroupsApi;
 my $api_instance = KnetikCloud::UsersGroupsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $unique_name = 'unique_name_example'; # string | The group unique name
@@ -117,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -136,9 +130,6 @@ Create a group
 use Data::Dumper;
 use KnetikCloud::UsersGroupsApi;
 my $api_instance = KnetikCloud::UsersGroupsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $group_resource = KnetikCloud::Object::GroupResource->new(); # GroupResource | The new group
@@ -164,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -185,9 +176,6 @@ Group Templates define a type of group and the properties they have
 use Data::Dumper;
 use KnetikCloud::UsersGroupsApi;
 my $api_instance = KnetikCloud::UsersGroupsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $group_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The group template resource object
@@ -213,7 +201,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -232,9 +220,6 @@ Removes a group from the system IF no resources are attached to it
 use Data::Dumper;
 use KnetikCloud::UsersGroupsApi;
 my $api_instance = KnetikCloud::UsersGroupsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $unique_name = 'unique_name_example'; # string | The group unique name
@@ -259,7 +244,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -280,9 +265,6 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 use Data::Dumper;
 use KnetikCloud::UsersGroupsApi;
 my $api_instance = KnetikCloud::UsersGroupsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -309,7 +291,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -468,9 +450,6 @@ Get a single group template
 use Data::Dumper;
 use KnetikCloud::UsersGroupsApi;
 my $api_instance = KnetikCloud::UsersGroupsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -496,7 +475,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -515,9 +494,6 @@ List and search group templates
 use Data::Dumper;
 use KnetikCloud::UsersGroupsApi;
 my $api_instance = KnetikCloud::UsersGroupsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -547,7 +523,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -610,9 +586,6 @@ Removes a user from a group
 use Data::Dumper;
 use KnetikCloud::UsersGroupsApi;
 my $api_instance = KnetikCloud::UsersGroupsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $unique_name = 'unique_name_example'; # string | The group unique name
@@ -639,7 +612,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -658,9 +631,6 @@ Update a group
 use Data::Dumper;
 use KnetikCloud::UsersGroupsApi;
 my $api_instance = KnetikCloud::UsersGroupsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $unique_name = 'unique_name_example'; # string | The group unique name
@@ -687,7 +657,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -706,9 +676,6 @@ Change a user's status
 use Data::Dumper;
 use KnetikCloud::UsersGroupsApi;
 my $api_instance = KnetikCloud::UsersGroupsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $unique_name = 'unique_name_example'; # string | The group unique name
@@ -737,7 +704,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -756,9 +723,6 @@ Update a group template
 use Data::Dumper;
 use KnetikCloud::UsersGroupsApi;
 my $api_instance = KnetikCloud::UsersGroupsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -786,7 +750,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

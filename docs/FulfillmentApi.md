@@ -26,9 +26,6 @@ Create a fulfillment type
 use Data::Dumper;
 use KnetikCloud::FulfillmentApi;
 my $api_instance = KnetikCloud::FulfillmentApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $type = KnetikCloud::Object::FulfillmentType->new(); # FulfillmentType | The fulfillment type
@@ -54,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -73,9 +70,6 @@ Delete a fulfillment type
 use Data::Dumper;
 use KnetikCloud::FulfillmentApi;
 my $api_instance = KnetikCloud::FulfillmentApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id
@@ -100,7 +94,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -211,9 +205,6 @@ Update a fulfillment type
 use Data::Dumper;
 use KnetikCloud::FulfillmentApi;
 my $api_instance = KnetikCloud::FulfillmentApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id
@@ -240,7 +231,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

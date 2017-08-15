@@ -36,9 +36,6 @@ Item Templates define a type of item and the properties they have.
 use Data::Dumper;
 use KnetikCloud::StoreApi;
 my $api_instance = KnetikCloud::StoreApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $item_template_resource = KnetikCloud::Object::StoreItemTemplateResource->new(); # StoreItemTemplateResource | The new item template
@@ -64,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -85,9 +82,6 @@ SKUs have to be unique in the entire store. If a duplicate SKU is found, a 400 e
 use Data::Dumper;
 use KnetikCloud::StoreApi;
 my $api_instance = KnetikCloud::StoreApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $cascade = 1; # boolean | Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values.
@@ -115,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -134,9 +128,6 @@ Delete an item template
 use Data::Dumper;
 use KnetikCloud::StoreApi;
 my $api_instance = KnetikCloud::StoreApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -163,7 +154,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -182,9 +173,6 @@ Delete a store item
 use Data::Dumper;
 use KnetikCloud::StoreApi;
 my $api_instance = KnetikCloud::StoreApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the item
@@ -209,7 +197,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -228,9 +216,6 @@ List available item behaviors
 use Data::Dumper;
 use KnetikCloud::StoreApi;
 my $api_instance = KnetikCloud::StoreApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 
@@ -252,7 +237,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -273,9 +258,6 @@ Item Templates define a type of item and the properties they have.
 use Data::Dumper;
 use KnetikCloud::StoreApi;
 my $api_instance = KnetikCloud::StoreApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -301,7 +283,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -320,9 +302,6 @@ List and search item templates
 use Data::Dumper;
 use KnetikCloud::StoreApi;
 my $api_instance = KnetikCloud::StoreApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -352,7 +331,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -547,9 +526,6 @@ Used to create and automatically pay an invoice for a single unit of a single SK
 use Data::Dumper;
 use KnetikCloud::StoreApi;
 my $api_instance = KnetikCloud::StoreApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $quick_buy_request = KnetikCloud::Object::QuickBuyRequest->new(); # QuickBuyRequest | Quick buy details
@@ -575,7 +551,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -594,9 +570,6 @@ Update an item template
 use Data::Dumper;
 use KnetikCloud::StoreApi;
 my $api_instance = KnetikCloud::StoreApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -624,7 +597,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -643,9 +616,6 @@ Update a store item
 use Data::Dumper;
 use KnetikCloud::StoreApi;
 my $api_instance = KnetikCloud::StoreApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the item
@@ -675,7 +645,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

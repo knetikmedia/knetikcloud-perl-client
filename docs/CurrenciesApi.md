@@ -26,9 +26,6 @@ Create a currency
 use Data::Dumper;
 use KnetikCloud::CurrenciesApi;
 my $api_instance = KnetikCloud::CurrenciesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $currency = KnetikCloud::Object::CurrencyResource->new(); # CurrencyResource | The currency object
@@ -54,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -73,9 +70,6 @@ Delete a currency
 use Data::Dumper;
 use KnetikCloud::CurrenciesApi;
 my $api_instance = KnetikCloud::CurrenciesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $code = 'code_example'; # string | The currency code
@@ -100,7 +94,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -215,9 +209,6 @@ Update a currency
 use Data::Dumper;
 use KnetikCloud::CurrenciesApi;
 my $api_instance = KnetikCloud::CurrenciesApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $code = 'code_example'; # string | The currency code
@@ -244,7 +235,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

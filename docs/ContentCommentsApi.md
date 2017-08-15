@@ -27,9 +27,6 @@ Add a new comment
 use Data::Dumper;
 use KnetikCloud::ContentCommentsApi;
 my $api_instance = KnetikCloud::ContentCommentsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $comment_resource = KnetikCloud::Object::CommentResource->new(); # CommentResource | The comment to be added
@@ -55,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -74,9 +71,6 @@ Delete a comment
 use Data::Dumper;
 use KnetikCloud::ContentCommentsApi;
 my $api_instance = KnetikCloud::ContentCommentsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 789; # int | The comment id
@@ -101,7 +95,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -264,9 +258,6 @@ Update a comment
 use Data::Dumper;
 use KnetikCloud::ContentCommentsApi;
 my $api_instance = KnetikCloud::ContentCommentsApi->new(
-
-    # Configure OAuth2 access token for authorization: OAuth2
-    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 789; # int | The comment id
@@ -293,7 +284,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

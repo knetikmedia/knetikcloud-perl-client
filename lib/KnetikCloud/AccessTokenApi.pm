@@ -56,8 +56,10 @@ sub new {
 # @param string $grant_type Grant type (required)
 # @param string $client_id The id of the client (required)
 # @param string $client_secret The secret key of the client.  Used only with a grant_type of client_credentials (optional)
-# @param string $username The username of the client.  Used only with a grant_type of password (optional)
-# @param string $password The password of the client.  Used only with a grant_type of password (optional)
+# @param string $username The username of the client. Used only with a grant_type of password (optional)
+# @param string $password The password of the client. Used only with a grant_type of password (optional)
+# @param string $token The 3rd party authentication token. Used only with a grant_type of facebook, google, etc (social plugins) (optional)
+# @param string $refresh_token The refresh token obtained during prior authentication. Used only with a grant_type of refresh_token (optional)
 {
     my $params = {
     'grant_type' => {
@@ -77,12 +79,22 @@ sub new {
     },
     'username' => {
         data_type => 'string',
-        description => 'The username of the client.  Used only with a grant_type of password',
+        description => 'The username of the client. Used only with a grant_type of password',
         required => '0',
     },
     'password' => {
         data_type => 'string',
-        description => 'The password of the client.  Used only with a grant_type of password',
+        description => 'The password of the client. Used only with a grant_type of password',
+        required => '0',
+    },
+    'token' => {
+        data_type => 'string',
+        description => 'The 3rd party authentication token. Used only with a grant_type of facebook, google, etc (social plugins)',
+        required => '0',
+    },
+    'refresh_token' => {
+        data_type => 'string',
+        description => 'The refresh token obtained during prior authentication. Used only with a grant_type of refresh_token',
         required => '0',
     },
     };
@@ -145,6 +157,16 @@ sub get_o_auth_token {
     # form params
     if ( exists $args{'password'} ) {
                 $form_params->{'password'} = $self->{api_client}->to_form_value($args{'password'});
+    }
+    
+    # form params
+    if ( exists $args{'token'} ) {
+                $form_params->{'token'} = $self->{api_client}->to_form_value($args{'token'});
+    }
+    
+    # form params
+    if ( exists $args{'refresh_token'} ) {
+                $form_params->{'refresh_token'} = $self->{api_client}->to_form_value($args{'refresh_token'});
     }
     
     my $_body_data;

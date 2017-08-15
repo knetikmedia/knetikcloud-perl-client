@@ -38,7 +38,9 @@ isa_ok($api, 'KnetikCloud::AccessTokenApi');
     my $client_secret = undef; # replace NULL with a proper value
     my $username = undef; # replace NULL with a proper value
     my $password = undef; # replace NULL with a proper value
-    my $result = $api->get_o_auth_token(grant_type => $grant_type, client_id => $client_id, client_secret => $client_secret, username => $username, password => $password);
+    my $token = undef; # replace NULL with a proper value
+    my $refresh_token = undef; # replace NULL with a proper value
+    my $result = $api->get_o_auth_token(grant_type => $grant_type, client_id => $client_id, client_secret => $client_secret, username => $username, password => $password, token => $token, refresh_token => $refresh_token);
 }
 
 

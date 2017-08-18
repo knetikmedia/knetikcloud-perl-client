@@ -31,6 +31,11 @@ Create a level schema
 use Data::Dumper;
 use KnetikCloud::GamificationLevelingApi;
 my $api_instance = KnetikCloud::GamificationLevelingApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $level = KnetikCloud::Object::LevelingResource->new(); # LevelingResource | The level schema definition
@@ -56,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -75,6 +80,11 @@ Delete a level
 use Data::Dumper;
 use KnetikCloud::GamificationLevelingApi;
 my $api_instance = KnetikCloud::GamificationLevelingApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $name = 'name_example'; # string | The level schema name
@@ -99,7 +109,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -118,6 +128,11 @@ Retrieve a level
 use Data::Dumper;
 use KnetikCloud::GamificationLevelingApi;
 my $api_instance = KnetikCloud::GamificationLevelingApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $name = 'name_example'; # string | The level schema name
@@ -143,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -162,6 +177,11 @@ Get the list of triggers that can be used to trigger a leveling progress update
 use Data::Dumper;
 use KnetikCloud::GamificationLevelingApi;
 my $api_instance = KnetikCloud::GamificationLevelingApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 
@@ -183,7 +203,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -204,6 +224,11 @@ Get a list of levels schemas with optional filtering
 use Data::Dumper;
 use KnetikCloud::GamificationLevelingApi;
 my $api_instance = KnetikCloud::GamificationLevelingApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_name = 'filter_name_example'; # string | Filter for level schemas whose name contains a given string
@@ -235,7 +260,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -254,6 +279,11 @@ Get a user's progress for a given level schema
 use Data::Dumper;
 use KnetikCloud::GamificationLevelingApi;
 my $api_instance = KnetikCloud::GamificationLevelingApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The id of the user
@@ -281,7 +311,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -302,6 +332,11 @@ Filtering and sorting is based on the LevelingResource object, not the UserLevel
 use Data::Dumper;
 use KnetikCloud::GamificationLevelingApi;
 my $api_instance = KnetikCloud::GamificationLevelingApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The id of the user
@@ -335,7 +370,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -356,6 +391,11 @@ If no progress record yet exists for the user, it will be created. Otherwise the
 use Data::Dumper;
 use KnetikCloud::GamificationLevelingApi;
 my $api_instance = KnetikCloud::GamificationLevelingApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The id of the user
@@ -384,7 +424,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -405,6 +445,11 @@ If no progress record yet exists for the user, it will be created. Otherwise it 
 use Data::Dumper;
 use KnetikCloud::GamificationLevelingApi;
 my $api_instance = KnetikCloud::GamificationLevelingApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The id of the user
@@ -433,7 +478,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -452,6 +497,11 @@ Update a level
 use Data::Dumper;
 use KnetikCloud::GamificationLevelingApi;
 my $api_instance = KnetikCloud::GamificationLevelingApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $name = 'name_example'; # string | The level schema name
@@ -479,7 +529,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

@@ -84,7 +84,7 @@ sub get_bre_expressions {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,

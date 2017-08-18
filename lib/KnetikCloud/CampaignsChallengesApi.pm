@@ -95,7 +95,7 @@ sub create_challenge {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -184,7 +184,7 @@ sub create_challenge_activity {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -244,7 +244,7 @@ sub create_challenge_activity_template {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -304,7 +304,7 @@ sub create_challenge_template {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -371,7 +371,7 @@ sub delete_challenge {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     $self->{api_client}->call_api($_resource_path, $_method,
@@ -452,7 +452,7 @@ sub delete_challenge_activity {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     $self->{api_client}->call_api($_resource_path, $_method,
@@ -526,7 +526,7 @@ sub delete_challenge_activity_template {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     $self->{api_client}->call_api($_resource_path, $_method,
@@ -589,7 +589,7 @@ sub delete_challenge_event {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     $self->{api_client}->call_api($_resource_path, $_method,
@@ -663,7 +663,7 @@ sub delete_challenge_template {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     $self->{api_client}->call_api($_resource_path, $_method,
@@ -978,7 +978,7 @@ sub get_challenge_activity_template {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -1060,7 +1060,7 @@ sub get_challenge_activity_templates {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -1320,7 +1320,7 @@ sub get_challenge_template {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -1402,7 +1402,7 @@ sub get_challenge_templates {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -1606,7 +1606,7 @@ sub update_challenge {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -1702,7 +1702,7 @@ sub update_challenge_activity {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -1780,7 +1780,7 @@ sub update_challenge_activity_template {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -1858,7 +1858,7 @@ sub update_challenge_template {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,

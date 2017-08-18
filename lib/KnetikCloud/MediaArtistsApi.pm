@@ -95,7 +95,7 @@ sub add_artist {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -155,7 +155,7 @@ sub create_artist_template {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -222,7 +222,7 @@ sub delete_artist {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     $self->{api_client}->call_api($_resource_path, $_method,
@@ -296,7 +296,7 @@ sub delete_artist_template {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     $self->{api_client}->call_api($_resource_path, $_method,
@@ -437,7 +437,7 @@ sub get_artist_template {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -519,7 +519,7 @@ sub get_artist_templates {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -690,7 +690,7 @@ sub update_artist {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     $self->{api_client}->call_api($_resource_path, $_method,
@@ -764,7 +764,7 @@ sub update_artist_template {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,

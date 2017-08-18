@@ -26,6 +26,11 @@ Create a currency
 use Data::Dumper;
 use KnetikCloud::CurrenciesApi;
 my $api_instance = KnetikCloud::CurrenciesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $currency = KnetikCloud::Object::CurrencyResource->new(); # CurrencyResource | The currency object
@@ -51,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -70,6 +75,11 @@ Delete a currency
 use Data::Dumper;
 use KnetikCloud::CurrenciesApi;
 my $api_instance = KnetikCloud::CurrenciesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $code = 'code_example'; # string | The currency code
@@ -94,7 +104,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -209,6 +219,11 @@ Update a currency
 use Data::Dumper;
 use KnetikCloud::CurrenciesApi;
 my $api_instance = KnetikCloud::CurrenciesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $code = 'code_example'; # string | The currency code
@@ -235,7 +250,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

@@ -120,7 +120,7 @@ sub get_user_wallet {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -282,7 +282,7 @@ sub get_user_wallet_transactions {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -349,7 +349,7 @@ sub get_user_wallets {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -398,7 +398,7 @@ sub get_wallet_balances {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -568,7 +568,7 @@ sub get_wallet_transactions {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -650,7 +650,7 @@ sub get_wallets {
 
     my $_body_data;
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,
@@ -746,7 +746,7 @@ sub update_wallet_balance {
     }
 
     # authentication setting, if any
-    my $auth_settings = [qw()];
+    my $auth_settings = [qw(oauth2_client_credentials_grant oauth2_password_grant )];
 
     # make the API Call
     my $response = $self->{api_client}->call_api($_resource_path, $_method,

@@ -28,6 +28,11 @@ Once created you can then use in a custom rule. Note that global definitions can
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineGlobalsApi;
 my $api_instance = KnetikCloud::BRERuleEngineGlobalsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $bre_global_resource = KnetikCloud::Object::BreGlobalResource->new(); # BreGlobalResource | The BRE global resource object
@@ -53,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -74,6 +79,11 @@ May fail if there are existing rules against it. Cannot delete core globals
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineGlobalsApi;
 my $api_instance = KnetikCloud::BRERuleEngineGlobalsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the global definition
@@ -98,7 +108,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -117,6 +127,11 @@ Get a single global definition
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineGlobalsApi;
 my $api_instance = KnetikCloud::BRERuleEngineGlobalsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the global definition
@@ -142,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -161,6 +176,11 @@ List global definitions
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineGlobalsApi;
 my $api_instance = KnetikCloud::BRERuleEngineGlobalsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_system = 1; # boolean | Filter for globals that are system globals when true, or not when false. Leave off for both mixed
@@ -190,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -211,6 +231,11 @@ May fail if new parameters mismatch requirements of existing rules. Cannot updat
 use Data::Dumper;
 use KnetikCloud::BRERuleEngineGlobalsApi;
 my $api_instance = KnetikCloud::BRERuleEngineGlobalsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the global definition
@@ -238,7 +263,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

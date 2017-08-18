@@ -26,6 +26,11 @@ Create a new address
 use Data::Dumper;
 use KnetikCloud::UsersAddressesApi;
 my $api_instance = KnetikCloud::UsersAddressesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 'user_id_example'; # string | The id of the user
@@ -53,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -72,6 +77,11 @@ Delete an address
 use Data::Dumper;
 use KnetikCloud::UsersAddressesApi;
 my $api_instance = KnetikCloud::UsersAddressesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 'user_id_example'; # string | The id of the user
@@ -98,7 +108,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -117,6 +127,11 @@ Get a single address
 use Data::Dumper;
 use KnetikCloud::UsersAddressesApi;
 my $api_instance = KnetikCloud::UsersAddressesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 'user_id_example'; # string | The id of the user
@@ -144,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -163,6 +178,11 @@ List and search addresses
 use Data::Dumper;
 use KnetikCloud::UsersAddressesApi;
 my $api_instance = KnetikCloud::UsersAddressesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 'user_id_example'; # string | The id of the user
@@ -194,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -213,6 +233,11 @@ Update an address
 use Data::Dumper;
 use KnetikCloud::UsersAddressesApi;
 my $api_instance = KnetikCloud::UsersAddressesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 'user_id_example'; # string | The id of the user
@@ -242,7 +267,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

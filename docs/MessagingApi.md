@@ -25,6 +25,11 @@ Send a raw email to one or more users
 use Data::Dumper;
 use KnetikCloud::MessagingApi;
 my $api_instance = KnetikCloud::MessagingApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $raw_email_resource = KnetikCloud::Object::RawEmailResource->new(); # RawEmailResource | The new raw email to be sent
@@ -49,7 +54,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -70,6 +75,11 @@ Sends a raw SMS text message to one or more users. User's without registered mob
 use Data::Dumper;
 use KnetikCloud::MessagingApi;
 my $api_instance = KnetikCloud::MessagingApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $raw_sms_resource = KnetikCloud::Object::RawSMSResource->new(); # RawSMSResource | The new raw SMS to be sent
@@ -94,7 +104,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -113,6 +123,11 @@ Send a templated email to one or more users
 use Data::Dumper;
 use KnetikCloud::MessagingApi;
 my $api_instance = KnetikCloud::MessagingApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $message_resource = KnetikCloud::Object::TemplateEmailResource->new(); # TemplateEmailResource | The new template email to be sent
@@ -137,7 +152,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -158,6 +173,11 @@ Sends a templated SMS text message to one or more users. User's without register
 use Data::Dumper;
 use KnetikCloud::MessagingApi;
 my $api_instance = KnetikCloud::MessagingApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $template_sms_resource = KnetikCloud::Object::TemplateSMSResource->new(); # TemplateSMSResource | The new template SMS to be sent
@@ -182,7 +202,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

@@ -44,6 +44,11 @@ The inventory is fulfilled asynchronously UNLESS the invoice is explicitely skip
 use Data::Dumper;
 use KnetikCloud::UsersInventoryApi;
 my $api_instance = KnetikCloud::UsersInventoryApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the user
@@ -71,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -92,6 +97,11 @@ Useful for pre-check and accounts for all various buisness rules
 use Data::Dumper;
 use KnetikCloud::UsersInventoryApi;
 my $api_instance = KnetikCloud::UsersInventoryApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 'user_id_example'; # string | The id of the user to check for or 'me' for logged in user
@@ -120,7 +130,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -139,6 +149,11 @@ Create an entitlement item
 use Data::Dumper;
 use KnetikCloud::UsersInventoryApi;
 my $api_instance = KnetikCloud::UsersInventoryApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $cascade = 1; # boolean | Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values.
@@ -166,7 +181,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -187,6 +202,11 @@ Entitlement templates define a type of entitlement and the properties they have
 use Data::Dumper;
 use KnetikCloud::UsersInventoryApi;
 my $api_instance = KnetikCloud::UsersInventoryApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $template = KnetikCloud::Object::ItemTemplateResource->new(); # ItemTemplateResource | The entitlement template to be created
@@ -212,7 +232,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -231,6 +251,11 @@ Delete an entitlement item
 use Data::Dumper;
 use KnetikCloud::UsersInventoryApi;
 my $api_instance = KnetikCloud::UsersInventoryApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $entitlement_id = 56; # int | The id of the entitlement
@@ -255,7 +280,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -276,6 +301,11 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 use Data::Dumper;
 use KnetikCloud::UsersInventoryApi;
 my $api_instance = KnetikCloud::UsersInventoryApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -302,7 +332,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -413,6 +443,11 @@ Get a single entitlement template
 use Data::Dumper;
 use KnetikCloud::UsersInventoryApi;
 my $api_instance = KnetikCloud::UsersInventoryApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -438,7 +473,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -457,6 +492,11 @@ List and search entitlement templates
 use Data::Dumper;
 use KnetikCloud::UsersInventoryApi;
 my $api_instance = KnetikCloud::UsersInventoryApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -486,7 +526,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -505,6 +545,11 @@ List the user inventory entries for a given user
 use Data::Dumper;
 use KnetikCloud::UsersInventoryApi;
 my $api_instance = KnetikCloud::UsersInventoryApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the user
@@ -546,7 +591,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -565,6 +610,11 @@ Get an inventory entry
 use Data::Dumper;
 use KnetikCloud::UsersInventoryApi;
 my $api_instance = KnetikCloud::UsersInventoryApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The id of the inventory owner or 'me' for the logged in user
@@ -592,7 +642,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -611,6 +661,11 @@ List the log entries for this inventory entry
 use Data::Dumper;
 use KnetikCloud::UsersInventoryApi;
 my $api_instance = KnetikCloud::UsersInventoryApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 'user_id_example'; # string | The id of the inventory owner or 'me' for the logged in user
@@ -642,7 +697,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -661,6 +716,11 @@ List the user inventory entries for all users
 use Data::Dumper;
 use KnetikCloud::UsersInventoryApi;
 my $api_instance = KnetikCloud::UsersInventoryApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $inactive = 1; # boolean | If true, accepts inactive user inventories
@@ -700,7 +760,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -719,6 +779,11 @@ Grant an entitlement
 use Data::Dumper;
 use KnetikCloud::UsersInventoryApi;
 my $api_instance = KnetikCloud::UsersInventoryApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The id of the user to grant the entitlement to
@@ -745,7 +810,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -764,6 +829,11 @@ Update an entitlement item
 use Data::Dumper;
 use KnetikCloud::UsersInventoryApi;
 my $api_instance = KnetikCloud::UsersInventoryApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $entitlement_id = 56; # int | The id of the entitlement
@@ -792,7 +862,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -811,6 +881,11 @@ Update an entitlement template
 use Data::Dumper;
 use KnetikCloud::UsersInventoryApi;
 my $api_instance = KnetikCloud::UsersInventoryApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -838,7 +913,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -857,6 +932,11 @@ Set the behavior data for an inventory entry
 use Data::Dumper;
 use KnetikCloud::UsersInventoryApi;
 my $api_instance = KnetikCloud::UsersInventoryApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The id of the user
@@ -885,7 +965,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -906,6 +986,11 @@ Will change the current grace period for a subscription but not the bill date (p
 use Data::Dumper;
 use KnetikCloud::UsersInventoryApi;
 my $api_instance = KnetikCloud::UsersInventoryApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | user_id
@@ -934,7 +1019,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -953,6 +1038,11 @@ Set the status for an inventory entry
 use Data::Dumper;
 use KnetikCloud::UsersInventoryApi;
 my $api_instance = KnetikCloud::UsersInventoryApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 56; # int | The id of the user
@@ -981,7 +1071,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -1000,6 +1090,11 @@ Use an item
 use Data::Dumper;
 use KnetikCloud::UsersInventoryApi;
 my $api_instance = KnetikCloud::UsersInventoryApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 'user_id_example'; # string | The id of the user to check for or 'me' for logged in user
@@ -1030,7 +1125,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

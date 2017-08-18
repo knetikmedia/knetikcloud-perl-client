@@ -32,6 +32,11 @@ Create a country tax
 use Data::Dumper;
 use KnetikCloud::TaxesApi;
 my $api_instance = KnetikCloud::TaxesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $tax_resource = KnetikCloud::Object::CountryTaxResource->new(); # CountryTaxResource | The tax object
@@ -57,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -76,6 +81,11 @@ Create a state tax
 use Data::Dumper;
 use KnetikCloud::TaxesApi;
 my $api_instance = KnetikCloud::TaxesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $country_code_iso3 = 'country_code_iso3_example'; # string | The iso3 code of the country
@@ -103,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -122,6 +132,11 @@ Delete an existing tax
 use Data::Dumper;
 use KnetikCloud::TaxesApi;
 my $api_instance = KnetikCloud::TaxesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $country_code_iso3 = 'country_code_iso3_example'; # string | The iso3 code of the country
@@ -146,7 +161,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -165,6 +180,11 @@ Delete an existing state tax
 use Data::Dumper;
 use KnetikCloud::TaxesApi;
 my $api_instance = KnetikCloud::TaxesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $country_code_iso3 = 'country_code_iso3_example'; # string | The iso3 code of the country
@@ -191,7 +211,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -452,6 +472,11 @@ Create or update a tax
 use Data::Dumper;
 use KnetikCloud::TaxesApi;
 my $api_instance = KnetikCloud::TaxesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $country_code_iso3 = 'country_code_iso3_example'; # string | The iso3 code of the country
@@ -479,7 +504,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -498,6 +523,11 @@ Create or update a state tax
 use Data::Dumper;
 use KnetikCloud::TaxesApi;
 my $api_instance = KnetikCloud::TaxesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $country_code_iso3 = 'country_code_iso3_example'; # string | The iso3 code of the country
@@ -527,7 +557,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

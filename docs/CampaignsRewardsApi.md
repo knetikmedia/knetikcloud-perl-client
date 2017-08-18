@@ -26,6 +26,11 @@ Create a reward set
 use Data::Dumper;
 use KnetikCloud::CampaignsRewardsApi;
 my $api_instance = KnetikCloud::CampaignsRewardsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $reward_set_resource = KnetikCloud::Object::RewardSetResource->new(); # RewardSetResource | The reward set resource object
@@ -51,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -70,6 +75,11 @@ Delete a reward set
 use Data::Dumper;
 use KnetikCloud::CampaignsRewardsApi;
 my $api_instance = KnetikCloud::CampaignsRewardsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The reward id
@@ -94,7 +104,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -205,6 +215,11 @@ Update a reward set
 use Data::Dumper;
 use KnetikCloud::CampaignsRewardsApi;
 my $api_instance = KnetikCloud::CampaignsRewardsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The reward id
@@ -232,7 +247,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

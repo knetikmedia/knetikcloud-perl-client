@@ -29,6 +29,11 @@ As a user, either creates or confirm a pending request. As an admin, call this e
 use Data::Dumper;
 use KnetikCloud::UsersFriendshipsApi;
 my $api_instance = KnetikCloud::UsersFriendshipsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 'user_id_example'; # string | The id of the user or 'me' if logged in
@@ -55,7 +60,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -74,6 +79,11 @@ Get friends list
 use Data::Dumper;
 use KnetikCloud::UsersFriendshipsApi;
 my $api_instance = KnetikCloud::UsersFriendshipsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 'user_id_example'; # string | The id of the user or 'me'
@@ -103,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -124,6 +134,11 @@ This is a unique invite token that allows direct connection to the request user.
 use Data::Dumper;
 use KnetikCloud::UsersFriendshipsApi;
 my $api_instance = KnetikCloud::UsersFriendshipsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 'user_id_example'; # string | The id of the user or 'me' if logged in
@@ -149,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -170,6 +185,11 @@ Invites that the specified user received
 use Data::Dumper;
 use KnetikCloud::UsersFriendshipsApi;
 my $api_instance = KnetikCloud::UsersFriendshipsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 'user_id_example'; # string | The id of the user or 'me'
@@ -199,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -220,6 +240,11 @@ Immediately connects the requested user with the user mapped by the provided inv
 use Data::Dumper;
 use KnetikCloud::UsersFriendshipsApi;
 my $api_instance = KnetikCloud::UsersFriendshipsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 'user_id_example'; # string | The id of the user or 'me' if logged in
@@ -246,7 +271,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -265,6 +290,11 @@ Remove or decline a friend
 use Data::Dumper;
 use KnetikCloud::UsersFriendshipsApi;
 my $api_instance = KnetikCloud::UsersFriendshipsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $user_id = 'user_id_example'; # string | The id of the user or 'me' if logged in
@@ -291,7 +321,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

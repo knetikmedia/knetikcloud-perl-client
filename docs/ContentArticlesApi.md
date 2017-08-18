@@ -33,6 +33,11 @@ Articles are blobs of text with titles, a category and assets. Formatting and di
 use Data::Dumper;
 use KnetikCloud::ContentArticlesApi;
 my $api_instance = KnetikCloud::ContentArticlesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $article_resource = KnetikCloud::Object::ArticleResource->new(); # ArticleResource | The new article
@@ -58,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -79,6 +84,11 @@ Article Templates define a type of article and the properties they have
 use Data::Dumper;
 use KnetikCloud::ContentArticlesApi;
 my $api_instance = KnetikCloud::ContentArticlesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $article_template_resource = KnetikCloud::Object::TemplateResource->new(); # TemplateResource | The article template resource object
@@ -104,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -123,6 +133,11 @@ Delete an existing article
 use Data::Dumper;
 use KnetikCloud::ContentArticlesApi;
 my $api_instance = KnetikCloud::ContentArticlesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The article id
@@ -147,7 +162,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -168,6 +183,11 @@ If cascade = 'detach', it will force delete the template even if it's attached t
 use Data::Dumper;
 use KnetikCloud::ContentArticlesApi;
 my $api_instance = KnetikCloud::ContentArticlesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -194,7 +214,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -257,6 +277,11 @@ Get a single article template
 use Data::Dumper;
 use KnetikCloud::ContentArticlesApi;
 my $api_instance = KnetikCloud::ContentArticlesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -282,7 +307,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -301,6 +326,11 @@ List and search article templates
 use Data::Dumper;
 use KnetikCloud::ContentArticlesApi;
 my $api_instance = KnetikCloud::ContentArticlesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -330,7 +360,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -411,6 +441,11 @@ Update an existing article
 use Data::Dumper;
 use KnetikCloud::ContentArticlesApi;
 my $api_instance = KnetikCloud::ContentArticlesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The article id
@@ -438,7 +473,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -457,6 +492,11 @@ Update an article template
 use Data::Dumper;
 use KnetikCloud::ContentArticlesApi;
 my $api_instance = KnetikCloud::ContentArticlesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -484,7 +524,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

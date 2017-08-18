@@ -36,6 +36,11 @@ Create an invoice(s) by providing a cart GUID. Note that there may be multiple i
 use Data::Dumper;
 use KnetikCloud::InvoicesApi;
 my $api_instance = KnetikCloud::InvoicesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $req = KnetikCloud::Object::InvoiceCreateRequest->new(); # InvoiceCreateRequest | Invoice to be created
@@ -61,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -120,6 +125,11 @@ Retrieve an invoice
 use Data::Dumper;
 use KnetikCloud::InvoicesApi;
 my $api_instance = KnetikCloud::InvoicesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the invoice
@@ -145,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -164,6 +174,11 @@ List invoice logs
 use Data::Dumper;
 use KnetikCloud::InvoicesApi;
 my $api_instance = KnetikCloud::InvoicesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the invoice
@@ -193,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -214,6 +229,11 @@ Without INVOICES_ADMIN permission the results are automatically filtered for onl
 use Data::Dumper;
 use KnetikCloud::InvoicesApi;
 my $api_instance = KnetikCloud::InvoicesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_user = 56; # int | The id of a user to get invoices for. Automtically added if not being called with admin permissions.
@@ -271,7 +291,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -330,6 +350,11 @@ Pay an invoice using a saved payment method
 use Data::Dumper;
 use KnetikCloud::InvoicesApi;
 my $api_instance = KnetikCloud::InvoicesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the invoice
@@ -356,7 +381,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -377,6 +402,11 @@ This allows external fulfillment systems to report success or failure. Fulfillme
 use Data::Dumper;
 use KnetikCloud::InvoicesApi;
 my $api_instance = KnetikCloud::InvoicesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the invoice
@@ -407,7 +437,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -426,6 +456,11 @@ Set the external reference of an invoice
 use Data::Dumper;
 use KnetikCloud::InvoicesApi;
 my $api_instance = KnetikCloud::InvoicesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the invoice
@@ -452,7 +487,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -473,6 +508,11 @@ This allows external fulfillment systems to report success or failure. Fulfillme
 use Data::Dumper;
 use KnetikCloud::InvoicesApi;
 my $api_instance = KnetikCloud::InvoicesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the invoice
@@ -501,7 +541,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -520,6 +560,11 @@ Set the order notes of an invoice
 use Data::Dumper;
 use KnetikCloud::InvoicesApi;
 my $api_instance = KnetikCloud::InvoicesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the invoice
@@ -546,7 +591,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -567,6 +612,11 @@ This may trigger fulfillment if setting the status to 'paid'. This is mainly int
 use Data::Dumper;
 use KnetikCloud::InvoicesApi;
 my $api_instance = KnetikCloud::InvoicesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the invoice
@@ -593,7 +643,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -612,6 +662,11 @@ Set or update billing info
 use Data::Dumper;
 use KnetikCloud::InvoicesApi;
 my $api_instance = KnetikCloud::InvoicesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the invoice
@@ -638,7 +693,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

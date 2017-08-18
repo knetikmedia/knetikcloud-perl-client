@@ -25,6 +25,11 @@ Lists all leaderboard entries with additional user details
 use Data::Dumper;
 use KnetikCloud::ReportingChallengesApi;
 my $api_instance = KnetikCloud::ReportingChallengesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_event = 789; # int | A sepecific challenge event id
@@ -56,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -77,6 +82,11 @@ Lists all user submitted scores sorted by value, including those that do not ape
 use Data::Dumper;
 use KnetikCloud::ReportingChallengesApi;
 my $api_instance = KnetikCloud::ReportingChallengesApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filter_event = 789; # int | A sepecific challenge event id
@@ -108,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

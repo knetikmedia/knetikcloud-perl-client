@@ -24,6 +24,11 @@ Post a new score/stat for an activity occurrence without ending the occurrence i
 use Data::Dumper;
 use KnetikCloud::GamificationMetricsApi;
 my $api_instance = KnetikCloud::GamificationMetricsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $metric = KnetikCloud::Object::MetricResource->new(); # MetricResource | The new metric
@@ -48,7 +53,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

@@ -28,6 +28,11 @@ Mainly intended for internal use.
 use Data::Dumper;
 use KnetikCloud::SearchApi;
 my $api_instance = KnetikCloud::SearchApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $type = 'type_example'; # string | The index type
@@ -56,7 +61,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -77,6 +82,11 @@ Add a new type mapping to connect data from one index to another, or discover an
 use Data::Dumper;
 use KnetikCloud::SearchApi;
 my $api_instance = KnetikCloud::SearchApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $mappings = [KnetikCloud::Object::ARRAY[SearchReferenceMapping]->new()]; # ARRAY[SearchReferenceMapping] | The mappings to add
@@ -101,7 +111,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -122,6 +132,11 @@ Mainly intended for internal use. Requires SEARCH_ADMIN.
 use Data::Dumper;
 use KnetikCloud::SearchApi;
 my $api_instance = KnetikCloud::SearchApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $type = 'type_example'; # string | The index type
@@ -148,7 +163,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -169,6 +184,11 @@ Mainly intended for internal use
 use Data::Dumper;
 use KnetikCloud::SearchApi;
 my $api_instance = KnetikCloud::SearchApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $type = 'type_example'; # string | The index type
@@ -193,7 +213,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

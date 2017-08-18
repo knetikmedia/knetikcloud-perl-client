@@ -32,6 +32,11 @@ Creates a subscription item and associated plans
 use Data::Dumper;
 use KnetikCloud::StoreSubscriptionsApi;
 my $api_instance = KnetikCloud::StoreSubscriptionsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $subscription_resource = KnetikCloud::Object::SubscriptionResource->new(); # SubscriptionResource | The subscription to be created
@@ -57,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -78,6 +83,11 @@ Subscription Templates define a type of subscription and the properties they hav
 use Data::Dumper;
 use KnetikCloud::StoreSubscriptionsApi;
 my $api_instance = KnetikCloud::StoreSubscriptionsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $subscription_template_resource = KnetikCloud::Object::SubscriptionTemplateResource->new(); # SubscriptionTemplateResource | The new subscription template
@@ -103,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -124,6 +134,11 @@ Must not be locked or a migration target
 use Data::Dumper;
 use KnetikCloud::StoreSubscriptionsApi;
 my $api_instance = KnetikCloud::StoreSubscriptionsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the subscription
@@ -150,7 +165,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -169,6 +184,11 @@ Delete a subscription template
 use Data::Dumper;
 use KnetikCloud::StoreSubscriptionsApi;
 my $api_instance = KnetikCloud::StoreSubscriptionsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -195,7 +215,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -260,6 +280,11 @@ Subscription Templates define a type of subscription and the properties they hav
 use Data::Dumper;
 use KnetikCloud::StoreSubscriptionsApi;
 my $api_instance = KnetikCloud::StoreSubscriptionsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -285,7 +310,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -304,6 +329,11 @@ List and search subscription templates
 use Data::Dumper;
 use KnetikCloud::StoreSubscriptionsApi;
 my $api_instance = KnetikCloud::StoreSubscriptionsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $size = 56; # int | The number of objects returned per page
@@ -333,7 +363,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -400,6 +430,11 @@ Processes subscriptions and charge dues
 use Data::Dumper;
 use KnetikCloud::StoreSubscriptionsApi;
 my $api_instance = KnetikCloud::StoreSubscriptionsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 
@@ -420,7 +455,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -441,6 +476,11 @@ Will not remove plans left out
 use Data::Dumper;
 use KnetikCloud::StoreSubscriptionsApi;
 my $api_instance = KnetikCloud::StoreSubscriptionsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 56; # int | The id of the subscription
@@ -467,7 +507,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -486,6 +526,11 @@ Update a subscription template
 use Data::Dumper;
 use KnetikCloud::StoreSubscriptionsApi;
 my $api_instance = KnetikCloud::StoreSubscriptionsApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $id = 'id_example'; # string | The id of the template
@@ -513,7 +558,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

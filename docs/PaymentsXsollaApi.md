@@ -23,6 +23,11 @@ Create a payment token that should be used to forward the user to Xsolla so they
 use Data::Dumper;
 use KnetikCloud::PaymentsXsollaApi;
 my $api_instance = KnetikCloud::PaymentsXsollaApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $request = KnetikCloud::Object::XsollaPaymentRequest->new(); # XsollaPaymentRequest | The payment request to be sent to XSolla
@@ -48,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

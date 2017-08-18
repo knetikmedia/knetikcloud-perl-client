@@ -25,6 +25,11 @@ Delete maintenance info
 use Data::Dumper;
 use KnetikCloud::UtilMaintenanceApi;
 my $api_instance = KnetikCloud::UtilMaintenanceApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 
@@ -45,7 +50,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -106,6 +111,11 @@ Set current maintenance info
 use Data::Dumper;
 use KnetikCloud::UtilMaintenanceApi;
 my $api_instance = KnetikCloud::UtilMaintenanceApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $maintenance = KnetikCloud::Object::Maintenance->new(); # Maintenance | The maintenance object
@@ -130,7 +140,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -149,6 +159,11 @@ Update current maintenance info
 use Data::Dumper;
 use KnetikCloud::UtilMaintenanceApi;
 my $api_instance = KnetikCloud::UtilMaintenanceApi->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $maintenance = KnetikCloud::Object::Maintenance->new(); # Maintenance | The maintenance object
@@ -173,7 +188,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

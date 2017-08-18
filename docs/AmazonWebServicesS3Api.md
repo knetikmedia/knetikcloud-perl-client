@@ -25,6 +25,11 @@ To give access to files in your own S3 account, you will need to grant KnetikcCl
 use Data::Dumper;
 use KnetikCloud::AmazonWebServicesS3Api;
 my $api_instance = KnetikCloud::AmazonWebServicesS3Api->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $bucket = 'bucket_example'; # string | S3 bucket name
@@ -54,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -75,6 +80,11 @@ Requires the file name and file content type (i.e., 'video/mpeg'). Make a PUT to
 use Data::Dumper;
 use KnetikCloud::AmazonWebServicesS3Api;
 my $api_instance = KnetikCloud::AmazonWebServicesS3Api->new(
+
+    # Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
+    # Configure OAuth2 access token for authorization: oauth2_password_grant
+    access_token => 'YOUR_ACCESS_TOKEN',
 );
 
 my $filename = 'filename_example'; # string | The file name
@@ -102,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

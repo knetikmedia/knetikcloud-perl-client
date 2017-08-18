@@ -149,14 +149,23 @@ __PACKAGE__->method_documentation({
     	format => '',
     	read_only => '',
     		},
+    'user_id' => {
+    	datatype => 'int',
+    	base_name => 'user_id',
+    	description => 'The id of a user to bill. Must have PAYMENTS_ADMIN permission',
+    	format => '',
+    	read_only => '',
+    		},
 });
 
 __PACKAGE__->swagger_types( {
-    'payment_method' => 'int'
+    'payment_method' => 'int',
+    'user_id' => 'int'
 } );
 
 __PACKAGE__->attribute_map( {
-    'payment_method' => 'payment_method'
+    'payment_method' => 'payment_method',
+    'user_id' => 'user_id'
 } );
 
 __PACKAGE__->mk_accessors(keys %{__PACKAGE__->attribute_map});
